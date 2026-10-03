@@ -4,12 +4,6 @@
 
 Benchmark nội bộ (CRM / Order / Support) có nhiều phiên bản DOM/UI gây vỡ locator, dùng để so sánh selector truyền thống (CSS/XPath/Playwright) với agent dùng semantic DOM + LLM và self-healing.
 
-## Trạng thái
-| Tuần | Nội dung | Trạng thái |
-|---|---|---|
-| W1 (27/09-03/10) | Benchmark spec, repo, 10 pilot tasks | Hoàn thành bản v0.1 |
-| W2 (04/10-10/10) | Web app v1 + baseline selectors | Chưa bắt đầu |
-
 ## Cấu trúc
 ```
 docs/benchmark-spec.md        Đặc tả benchmark (app, task, mutation, metric, protocol)
