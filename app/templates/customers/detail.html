@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Chi tiết khách hàng</h1>
+<dl>
+    <dt>Mã khách hàng</dt>
+    <dd>{{ customer.id }}</dd>
+    <dt>Tên khách hàng</dt>
+    <dd>{{ customer.name }}</dd>
+    <dt>Email</dt>
+    <dd>{{ customer.email }}</dd>
+    <dt>Số điện thoại</dt>
+    <dd>{{ customer.phone }}</dd>
+</dl>
+<p><a id="edit-customer" href="/customers/{{ customer.id }}/edit">Sửa</a></p>
+<p><a href="/customers">Về danh sách khách hàng</a></p>
+{% endblock %}

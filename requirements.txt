@@ -1,2 +1,8 @@
 jsonschema>=4.0
 pytest>=8.0
+fastapi
+uvicorn
+jinja2
+python-multipart
+itsdangerous
+httpx

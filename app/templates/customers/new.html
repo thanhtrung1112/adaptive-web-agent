@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Thêm khách hàng</h1>
+
+{% if error %}
+<p role="alert">{{ error }}</p>
+{% endif %}
+
+<form method="post" action="/customers/new">
+    <p>
+        <label for="customer-name">Tên khách hàng</label>
+        <input
+            id="customer-name"
+            name="name"
+            type="text"
+            value="{{ values.get('name', '') }}"
+            required
+        >
+    </p>
+
+    <p>
+        <label for="customer-email">Email</label>
+        <input
+            id="customer-email"
+            name="email"
+            type="email"
+            value="{{ values.get('email', '') }}"
+            required
+        >
+    </p>
+
+    <p>
+        <label for="customer-phone">Số điện thoại</label>
+        <input
+            id="customer-phone"
+            name="phone"
+            type="tel"
+            value="{{ values.get('phone', '') }}"
+            required
+        >
+    </p>
+
+    <button id="save-customer" type="submit">Lưu</button>
+    <a href="/customers">Hủy</a>
+</form>
+{% endblock %}

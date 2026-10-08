@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Form gửi các cặp sku/qty; thêm dòng bằng JavaScript bên dưới. -->
+<h1>Tạo đơn hàng</h1>
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+{% if not customers or not products %}
+<p>Chưa đủ dữ liệu khách hàng hoặc sản phẩm để tạo đơn.</p>
+{% endif %}
+<form method="post" action="/orders/new">
+    <label for="order-customer">Khách hàng</label>
+    <select id="order-customer" name="customer_id" required>
+        <option value="">Chọn khách hàng</option>
+        {% for customer in customers %}
+        <option value="{{ customer.id }}" {% if selected_customer == customer.id|string %}selected{% endif %}>{{ customer.name }} — {{ customer.email }}</option>
+        {% endfor %}
+    </select>
+    <div id="order-lines">
+        {% for line in lines %}
+        <fieldset class="order-line">
+            <legend>Sản phẩm {{ loop.index }}</legend>
+            <label for="order-sku-{{ loop.index }}">Sản phẩm</label>
+            <select id="order-sku-{{ loop.index }}" name="sku" required>
+                <option value="">Chọn sản phẩm</option>
+                {% for product in products %}
+                <option value="{{ product.sku }}" {% if line.sku == product.sku %}selected{% endif %}>{{ product.sku }} — {{ product.name }}</option>
+                {% endfor %}
+            </select>
+            <label for="order-qty-{{ loop.index }}">Số lượng</label>
+            <input id="order-qty-{{ loop.index }}" name="qty" type="number" min="1" max="1000000" step="1" value="{{ line.qty }}" required>
+            <button type="button" class="remove-line">Xóa dòng</button>
+        </fieldset>
+        {% endfor %}
+    </div>
+    <p><button id="add-order-line" type="button">Thêm dòng</button></p>
+    <button id="save-order" type="submit" {% if not customers or not products %}disabled{% endif %}>Xác nhận tạo đơn</button>
+    <a href="/orders">Hủy</a>
+</form>
+<script src="{{ url_for('static', path='/orders.js') }}" defer></script>
+{% endblock %}

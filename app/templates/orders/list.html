@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Danh sách dẫn tới form tạo đơn và trang chi tiết. -->
+<h1>Đơn hàng</h1>
+<p><a id="create-order" href="/orders/new">Tạo đơn</a></p>
+<table>
+    <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Trạng thái</th></tr></thead>
+    <tbody>
+    {% for order in orders %}
+    <tr><td><a href="/orders/{{ order.id }}">{{ order.id }}</a></td>
+        <td>{{ order.customer_name }} — {{ order.customer_email }}</td><td>{{ order.status }}</td></tr>
+    {% else %}<tr><td colspan="3">Chưa có đơn hàng.</td></tr>{% endfor %}
+    </tbody>
+</table>
+<p><a href="/">Về trang chủ</a></p>
+{% endblock %}
