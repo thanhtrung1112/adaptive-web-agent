@@ -96,3 +96,8 @@ button {
 [role="alert"] {
     color: #b91c1c;
 }
+/* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */
+select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; }
+textarea { display: block; width: min(100%, 480px); min-height: 100px; }
+nav { padding-top: 16px; }
+fieldset { margin: 16px 0; }

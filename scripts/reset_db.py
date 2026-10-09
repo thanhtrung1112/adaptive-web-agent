@@ -14,7 +14,7 @@ from app.seed import reset_database
 
 # Reset chủ động cả CRM và Order; không chạy tự động khi mở ứng dụng.
 def main():
-    parser = argparse.ArgumentParser(description="Xóa dữ liệu CRM/Order chạy thử và nạp seed_v1.")
+    parser = argparse.ArgumentParser(description="Xóa dữ liệu CRM/Order/Support chạy thử và nạp seed_v1.")
     parser.add_argument("--yes", action="store_true", help="Đồng ý thay dữ liệu hiện tại bằng seed.")
     args = parser.parse_args()
 
@@ -25,7 +25,7 @@ def main():
         )
 
     count = reset_database()
-    print(f"Đã reset seed_v1 (CRM + Order): {count} khách hàng, đã nạp sản phẩm và đơn mẫu.")
+    print(f"Đã reset seed_v1 (CRM + Order + Support): {count} khách hàng, đã nạp sản phẩm, đơn mẫu, nhân viên và ticket.")
     print(f"Database: {DB_PATH}")
 
 

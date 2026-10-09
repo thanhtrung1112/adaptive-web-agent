@@ -2,14 +2,25 @@
 {% block content %}
 <!-- Danh sách dẫn tới form tạo đơn và trang chi tiết. -->
 <h1>Đơn hàng</h1>
+<!-- T006: lọc trước, liên kết CSV mang đúng khoảng ngày vừa áp dụng. -->
+<form method="get" action="/orders">
+    <label for="orders-from">Từ ngày (UTC)</label>
+    <input id="orders-from" name="from" type="date" value="{{ date_from }}">
+    <label for="orders-to">Đến ngày (UTC)</label>
+    <input id="orders-to" name="to" type="date" value="{{ date_to }}">
+    <button id="filter-orders" type="submit">Lọc</button>
+    <a href="/orders">Xóa bộ lọc</a>
+</form>
+{% if error %}<p role="alert">{{ error }}</p>
+{% else %}<p><a id="export-orders" href="{{ export_url }}">Xuất CSV</a></p>{% endif %}
 <p><a id="create-order" href="/orders/new">Tạo đơn</a></p>
 <table>
-    <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Trạng thái</th></tr></thead>
+    <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Trạng thái</th><th>Ngày tạo (UTC)</th></tr></thead>
     <tbody>
     {% for order in orders %}
     <tr><td><a href="/orders/{{ order.id }}">{{ order.id }}</a></td>
-        <td>{{ order.customer_name }} — {{ order.customer_email }}</td><td>{{ order.status }}</td></tr>
-    {% else %}<tr><td colspan="3">Chưa có đơn hàng.</td></tr>{% endfor %}
+        <td>{{ order.customer_name }} — {{ order.customer_email }}</td><td>{{ order.status }}</td><td>{{ order.created_at[:10] }}</td></tr>
+    {% else %}<tr><td colspan="4">Không có đơn hàng phù hợp.</td></tr>{% endfor %}
     </tbody>
 </table>
 <p><a href="/">Về trang chủ</a></p>

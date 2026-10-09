@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- T007 và T010 dùng chung form; đơn mới được truyền qua query string. -->
+<h1>Tạo ticket</h1>
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+<form method="post" action="/tickets/new">
+<label for="ticket-order">Đơn hàng</label>
+<select id="ticket-order" name="order_id" required><option value="">Chọn đơn hàng</option>
+{% for order in orders %}<option value="{{ order.id }}" {% if selected_order == order.id %}selected{% endif %}>{{ order.id }} — {{ order.customer_email }}</option>{% endfor %}</select>
+<label for="ticket-subject">Tiêu đề</label>
+<input id="ticket-subject" name="subject" maxlength="200" value="{{ subject }}" required>
+<p><button id="save-ticket" type="submit">Gửi</button> <a href="/tickets">Hủy</a></p>
+</form>
+{% endblock %}

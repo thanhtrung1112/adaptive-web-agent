@@ -12,8 +12,8 @@ SEED_PATH = Path(__file__).resolve().parents[1] / "data" / "seed_v1.json"
 # Kiểm tra seed trước khi xóa; toàn bộ thay đổi dữ liệu nằm trong một transaction.
 def reset_database(seed_path: Path = SEED_PATH) -> int:
     payload = json.loads(seed_path.read_text(encoding="utf-8"))
-    if payload.get("seed") != "seed_v1" or payload.get("scope") != "crm_order":
-        raise ValueError("Bản reset hiện tại chỉ hỗ trợ seed_v1 phạm vi CRM và Order.")
+    if payload.get("seed") != "seed_v1" or payload.get("scope") != "crm_order_support":
+        raise ValueError("Cần seed_v1 đầy đủ CRM, Order và Support.")
 
     customers = payload["customers"]
     if not isinstance(customers, list) or not customers:
@@ -71,6 +71,24 @@ def reset_database(seed_path: Path = SEED_PATH) -> int:
             if type(item["qty"]) is not int or item["qty"] <= 0:
                 raise ValueError("Số lượng đơn mẫu phải là số nguyên dương.")
 
+    # Kiểm tra quan hệ Support trước khi xóa dữ liệu hiện tại.
+    staff = payload["staff"]
+    tickets = payload["tickets"]
+    staff_ids = {member["id"] for member in staff}
+    if len(staff_ids) != len(staff) or any(type(m["id"]) is not int or m["id"] <= 0 or not m["name"].strip() for m in staff):
+        raise ValueError("Nhân viên mẫu không hợp lệ.")
+    ticket_ids = set()
+    for ticket in tickets:
+        if type(ticket["id"]) is not int or ticket["id"] <= 0 or ticket["id"] in ticket_ids:
+            raise ValueError("ID ticket không hợp lệ hoặc trùng.")
+        ticket_ids.add(ticket["id"])
+        if ticket["order_id"] not in seen_ids or ticket["status"] not in {"open", "in_progress", "closed"}:
+            raise ValueError("Đơn hoặc trạng thái ticket không hợp lệ.")
+        if ticket["assignee_id"] is not None and ticket["assignee_id"] not in staff_ids:
+            raise ValueError("Người xử lý ticket không tồn tại.")
+        if not ticket["subject"].strip() or not isinstance(ticket["note"], str):
+            raise ValueError("Nội dung ticket không hợp lệ.")
+
     init_db()
     with get_db() as db:
         # Khi thêm Order/Support, cần mở rộng reset theo quan hệ dữ liệu.
@@ -79,15 +97,17 @@ def reset_database(seed_path: Path = SEED_PATH) -> int:
                 "SELECT name FROM sqlite_master WHERE type = 'table'"
             )
         }
-        if tables - {"customers", "products", "orders", "order_items", "sqlite_sequence"}:
+        if tables - {"customers", "products", "orders", "order_items", "staff", "tickets", "sqlite_sequence"}:
             raise ValueError("Database có bảng mới. Hãy mở rộng reset trước khi chạy.")
 
         # Xóa bảng con trước bảng cha để bảo toàn ràng buộc khóa ngoại.
+        db.execute("DELETE FROM tickets")
+        db.execute("DELETE FROM staff")
         db.execute("DELETE FROM order_items")
         db.execute("DELETE FROM orders")
         db.execute("DELETE FROM products")
         db.execute("DELETE FROM customers")
-        db.execute("DELETE FROM sqlite_sequence WHERE name IN ('customers', 'orders')")
+        db.execute("DELETE FROM sqlite_sequence WHERE name IN ('customers', 'orders', 'tickets')")
         db.executemany(
             "INSERT INTO customers (id, name, email, phone) VALUES (?, ?, ?, ?)",
             rows,
@@ -103,4 +123,8 @@ def reset_database(seed_path: Path = SEED_PATH) -> int:
                 "INSERT INTO order_items (order_id, sku, qty) VALUES (?, ?, ?)",
                 [(order["id"], item["sku"], item["qty"]) for item in order["items"]],
             )
+        # Nạp ticket sau đơn và nhân viên để khóa ngoại luôn hợp lệ.
+        db.executemany("INSERT INTO staff(id,name) VALUES (?,?)", [(m["id"], m["name"]) for m in staff])
+        db.executemany("INSERT INTO tickets(id,order_id,subject,status,assignee_id,note) VALUES (?,?,?,?,?,?)",
+                       [(t["id"],t["order_id"],t["subject"],t["status"],t["assignee_id"],t["note"]) for t in tickets])
     return len(rows)

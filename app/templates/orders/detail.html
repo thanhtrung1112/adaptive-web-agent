@@ -2,6 +2,8 @@
 {% block content %}
 <!-- Thể hiện dữ liệu đã lưu, không lấy lại từ form gửi lên. -->
 <h1>Đơn hàng {{ order.id }}</h1>
+<!-- Ticket mới được chọn sẵn đúng đơn đang xem, kể cả đơn vừa tạo. -->
+<p><a id="order-create-ticket" href="/tickets/new?order_id={{ order.id }}">Tạo ticket</a></p>
 <p>Khách hàng: {{ order.customer_name }} — {{ order.customer_email }}</p>
 <p>Trạng thái: <strong>{{ statuses[order.status] }}</strong> ({{ order.status }})</p>
 <!-- T005: chọn nhãn Đã giao để gửi giá trị delivered về server. -->

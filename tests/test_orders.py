@@ -1,3 +1,5 @@
+import csv
+import io
 import tempfile
 import unittest
 from pathlib import Path
@@ -38,11 +40,11 @@ class OrderTests(unittest.TestCase):
         self.assertEqual(self.client.get("/api/orders/" + order["id"]).json(), order)
         for _ in range(2):
             reset_database()
-            self.assertEqual(self.client.get("/api/orders").json()["count"], 1)
+            self.assertEqual(self.client.get("/api/orders").json()["count"], 5)
             self.assertEqual(self.client.get("/api/orders/ORD-1003").json()["status"], "shipped")
             self.assertEqual(self.client.get("/api/orders?customer_email=pham.ha@example.com").json()["count"], 0)
             with get_db() as db:
-                self.assertEqual(db.execute("SELECT COUNT(*) FROM order_items").fetchone()[0], 1)
+                self.assertEqual(db.execute("SELECT COUNT(*) FROM order_items").fetchone()[0], 5)
                 self.assertEqual(db.execute("SELECT COUNT(*) FROM products").fetchone()[0], 2)
 
     # Dữ liệu không hợp lệ không được tạo đơn rỗng hay lưu một phần.
@@ -59,9 +61,9 @@ class OrderTests(unittest.TestCase):
         for payload in cases:
             with self.subTest(payload=payload):
                 self.assertEqual(self.client.post("/orders/new", data=payload).status_code, 400)
-        self.assertEqual(self.client.get("/api/orders").json()["count"], 1)
+        self.assertEqual(self.client.get("/api/orders").json()["count"], 5)
         with get_db() as db:
-            self.assertEqual(db.execute("SELECT COUNT(*) FROM order_items").fetchone()[0], 1)
+            self.assertEqual(db.execute("SELECT COUNT(*) FROM order_items").fetchone()[0], 5)
         self.assertEqual(self.client.get("/orders/ORD-9999").status_code, 404)
 
 
@@ -86,6 +88,39 @@ class OrderTests(unittest.TestCase):
             self.assertEqual(self.client.post("/orders/ORD-1003/status", data={"status": status}).status_code, 400)
         self.assertEqual(self.client.post("/orders/ORD-9999/status", data={"status": "delivered"}).status_code, 404)
         self.assertEqual(self.client.get("/api/orders").json(), before)
+
+
+    # So sánh tập ID CSV với API và tập mong đợi độc lập, gồm cả hai biên ngày.
+    def test_t006_filter_and_csv(self):
+        params = {"from": "2026-09-01", "to": "2026-09-15"}
+        result = self.client.get("/api/orders", params=params).json()
+        expected = ["ORD-1002", "ORD-1003", "ORD-1004"]
+        self.assertEqual([order["id"] for order in result["orders"]], expected)
+        self.assertEqual(result["count"], 3)
+        page = self.client.get("/orders", params=params)
+        self.assertEqual(page.status_code, 200)
+        self.assertIn("from=2026-09-01&amp;to=2026-09-15", page.text)
+        self.assertNotIn("ORD-1001", page.text)
+        download = self.client.get("/orders/export.csv", params=params)
+        self.assertEqual(download.status_code, 200)
+        self.assertIn("attachment", download.headers["content-disposition"])
+        rows = list(csv.DictReader(io.StringIO(download.content.decode("utf-8-sig"))))
+        self.assertEqual([row["id"] for row in rows], expected)
+        combined = self.client.get("/api/orders", params={**params, "customer_email": "tran.hoa@example.com"}).json()
+        self.assertEqual([order["id"] for order in combined["orders"]], ["ORD-1003"])
+
+    # Khoảng rỗng xuất CSV chỉ có tiêu đề; ngày sai bị từ chối ở cả ba đầu vào.
+    def test_date_errors_and_empty_csv(self):
+        for params in [{"from": "2026-09-16", "to": "2026-09-01"},
+                       {"from": "2026-02-30"}, {"to": "bad-date"}]:
+            for path in ["/orders", "/api/orders", "/orders/export.csv"]:
+                self.assertEqual(self.client.get(path, params=params).status_code, 400)
+        params = {"from": "2025-01-01", "to": "2025-01-01"}
+        self.assertEqual(self.client.get("/api/orders", params=params).json()["count"], 0)
+        result = self.client.get("/orders/export.csv", params=params)
+        self.assertEqual(list(csv.DictReader(io.StringIO(result.content.decode("utf-8-sig")))), [])
+        for params, count in [({"from": "2026-09-15"}, 2), ({"to": "2026-09-01"}, 2), ({}, 5)]:
+            self.assertEqual(self.client.get("/api/orders", params=params).json()["count"], count)
 
 
 if __name__ == "__main__":

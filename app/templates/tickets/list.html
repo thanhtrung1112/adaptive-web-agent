@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Điểm vào các nghiệp vụ hỗ trợ T007–T009. -->
+<h1>Hỗ trợ</h1>
+<p><a id="create-ticket" href="/tickets/new">Tạo ticket</a></p>
+<table><thead><tr><th>Mã ticket</th><th>Đơn hàng</th><th>Tiêu đề</th><th>Trạng thái</th></tr></thead>
+<tbody>{% for ticket in tickets %}
+<tr><td><a href="/tickets/{{ ticket.id }}">{{ ticket.id }}</a></td>
+<td><a href="/orders/{{ ticket.order_id }}">{{ ticket.order_id }}</a></td>
+<td>{{ ticket.subject }}</td><td>{{ ticket.status }}</td></tr>
+{% else %}<tr><td colspan="4">Chưa có ticket.</td></tr>{% endfor %}</tbody></table>
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+  "seed": "seed_v1",
+  "path": "data/seed_v1.json",
+  "sha256": "ed7f88bb1d2d4f49984dc0b0c33100f6cc6552e5cc7bb444ab6701fafa624da0",
+  "source": "Dữ liệu tổng hợp do nhóm xây dựng; không dùng dữ liệu cá nhân thật.",
+  "scope": "CRM, Order, Support; pilot T001–T010",
+  "counts": {
+    "customers": 4,
+    "products": 2,
+    "orders": 5,
+    "staff": 2,
+    "tickets": 2
+  },
+  "mutation": "M0",
+  "timezone": "UTC"
+}

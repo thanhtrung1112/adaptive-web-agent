@@ -2,6 +2,8 @@
 
 {% block content %}
 <h1>Chi tiết khách hàng</h1>
+<!-- T010: truyền ID khách sang form tạo đơn để tránh chọn nhầm. -->
+<p><a id="customer-create-order" href="/orders/new?customer_id={{ customer.id }}">Tạo đơn</a></p>
 <dl>
     <dt>Mã khách hàng</dt>
     <dd>{{ customer.id }}</dd>

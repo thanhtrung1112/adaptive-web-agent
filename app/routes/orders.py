@@ -1,8 +1,11 @@
-from datetime import datetime, timezone
+import csv
+import io
+from datetime import date, datetime, timezone
+from urllib.parse import urlencode
 from pathlib import Path
 
-from fastapi import APIRouter, Form, HTTPException, Request
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi import APIRouter, Form, HTTPException, Query, Request
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from fastapi.templating import Jinja2Templates
 
 from app.db import get_db
@@ -18,13 +21,24 @@ templates = Jinja2Templates(directory=str(Path(__file__).resolve().parents[1] / 
 
 
 # Đọc đơn cùng khách hàng và từng sản phẩm để giao diện/API dùng chung dữ liệu.
-def read_orders(customer_email: str | None = None):
+def read_orders(customer_email: str | None = None, date_from: str = "", date_to: str = ""):
     sql = """SELECT o.*, c.name AS customer_name, c.email AS customer_email
              FROM orders o JOIN customers c ON c.id = o.customer_id"""
-    params = ()
+    params = []
+    conditions = []
     if customer_email is not None:
-        sql += " WHERE c.email = ?"
-        params = (customer_email.strip().lower(),)
+        conditions.append("c.email = ?")
+        params.append(customer_email.strip().lower())
+    # Ngày UTC, lấy cả hai đầu mút; dùng chung cho HTML, API và CSV.
+    validate_dates(date_from, date_to)
+    if date_from:
+        conditions.append("date(o.created_at) >= ?")
+        params.append(date_from)
+    if date_to:
+        conditions.append("date(o.created_at) <= ?")
+        params.append(date_to)
+    if conditions:
+        sql += " WHERE " + " AND ".join(conditions)
     with get_db() as db:
         orders = [dict(row) for row in db.execute(sql + " ORDER BY o.id", params)]
         for order in orders:
@@ -36,13 +50,49 @@ def read_orders(customer_email: str | None = None):
     return orders
 
 
-# Hiển thị danh sách đơn đã tạo.
+# Chặn ngày sai định dạng và khoảng ngày đảo ngược trước khi truy vấn.
+def validate_dates(date_from, date_to):
+    for value in (date_from, date_to):
+        if value:
+            try:
+                parsed = date.fromisoformat(value)
+                if parsed.isoformat() != value:
+                    raise ValueError()
+            except ValueError:
+                raise HTTPException(400, "Ngày phải có định dạng YYYY-MM-DD và tồn tại.")
+    if date_from and date_to and date_from > date_to:
+        raise HTTPException(400, "Từ ngày không được lớn hơn Đến ngày.")
+
+
+# Hiển thị danh sách và giữ điều kiện lọc trên liên kết tải CSV.
 @router.get("/orders", response_class=HTMLResponse)
-def list_orders(request: Request):
+def list_orders(request: Request, date_from: str = Query("", alias="from"), date_to: str = Query("", alias="to")):
+    error = None
+    try:
+        orders = read_orders(date_from=date_from, date_to=date_to)
+    except HTTPException as exc:
+        error = exc.detail
+        orders = []
     return templates.TemplateResponse(
         request=request, name="orders/list.html",
-        context={"page_title": "Đơn hàng", "orders": read_orders()},
+        status_code=400 if error else 200,
+        context={"page_title": "Đơn hàng", "orders": orders, "error": error,
+                 "date_from": date_from, "date_to": date_to,
+                 "export_url": "/orders/export.csv?" + urlencode({"from": date_from, "to": date_to})},
     )
+
+
+# Route CSV đặt trước /orders/{order_id}; UTF-8 BOM giúp Excel đọc tiếng Việt.
+@router.get("/orders/export.csv")
+def export_orders(date_from: str = Query("", alias="from"), date_to: str = Query("", alias="to")):
+    orders = read_orders(date_from=date_from, date_to=date_to)
+    output = io.StringIO(newline="")
+    writer = csv.DictWriter(output, fieldnames=["id", "customer_email", "status", "created_at"])
+    writer.writeheader()
+    for order in orders:
+        writer.writerow({key: order[key] for key in writer.fieldnames})
+    return Response(output.getvalue().encode("utf-8-sig"), media_type="text/csv",
+                    headers={"Content-Disposition": 'attachment; filename="orders.csv"'})
 
 
 # Nạp lựa chọn và giữ lại nội dung form khi người dùng nhập sai.
@@ -60,8 +110,9 @@ def render_form(request, error=None, customer_id="", lines=None):
 
 # Route cố định /new đặt trước route /{order_id}.
 @router.get("/orders/new", response_class=HTMLResponse)
-def new_order(request: Request):
-    return render_form(request)
+def new_order(request: Request, customer_id: str = ""):
+    # Giữ khách được chọn khi đi từ trang chi tiết CRM trong T010.
+    return render_form(request, customer_id=customer_id)
 
 
 # Đọc các dòng SKU/qty lặp lại; chỉ lưu khi toàn bộ dữ liệu hợp lệ.
@@ -141,8 +192,8 @@ def update_order_status(request: Request, order_id: str, status: str = Form(""))
 
 # API chỉ đọc phục vụ success criteria T004, không tạo đơn thay giao diện.
 @router.get("/api/orders")
-def get_orders(customer_email: str | None = None):
-    orders = read_orders(customer_email)
+def get_orders(customer_email: str | None = None, date_from: str = Query("", alias="from"), date_to: str = Query("", alias="to")):
+    orders = read_orders(customer_email, date_from, date_to)
     return {"count": len(orders), "orders": orders}
 
 

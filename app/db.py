@@ -28,6 +28,16 @@ def get_db():
 
 def init_db():
     with get_db() as db:
+        # Nhân viên và ticket hỗ trợ; SQLite cho phép khai báo khóa ngoại trước bảng cha.
+        db.execute("CREATE TABLE IF NOT EXISTS staff (id INTEGER PRIMARY KEY, name TEXT NOT NULL)")
+        db.execute("""CREATE TABLE IF NOT EXISTS tickets (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            order_id INTEGER NOT NULL REFERENCES orders(id),
+            subject TEXT NOT NULL,
+            status TEXT NOT NULL CHECK(status IN ('open','in_progress','closed')),
+            assignee_id INTEGER REFERENCES staff(id),
+            note TEXT NOT NULL DEFAULT ''
+        )""")
         db.execute("""
             CREATE TABLE IF NOT EXISTS customers (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
