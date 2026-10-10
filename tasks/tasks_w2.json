@@ -1,0 +1,680 @@
+[
+  {
+    "id": "T001",
+    "title": "Tạo khách hàng mới",
+    "module": "crm",
+    "difficulty": "single",
+    "goal": "Tạo khách hàng mới tên Lê Minh Anh, email minhanh@example.com, số điện thoại 0901234567.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "nút Thêm khách hàng",
+      "ô tên",
+      "ô email",
+      "ô số điện thoại",
+      "nút Lưu"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/customers?email=minhanh@example.com",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "name": "Lê Minh Anh",
+            "phone": "0901234567"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "create"
+    ]
+  },
+  {
+    "id": "T002",
+    "title": "Tìm khách hàng theo email và mở chi tiết",
+    "module": "crm",
+    "difficulty": "single",
+    "goal": "Tìm khách hàng có email tran.hoa@example.com và mở trang chi tiết của khách hàng đó.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 6,
+    "critical_elements": [
+      "ô tìm kiếm",
+      "nút Tìm",
+      "dòng kết quả/liên kết chi tiết"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/session/last_viewed_customer",
+        "expect": {
+          "fields": {
+            "email": "tran.hoa@example.com"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "search",
+      "navigate"
+    ]
+  },
+  {
+    "id": "T003",
+    "title": "Sửa số điện thoại khách hàng",
+    "module": "crm",
+    "difficulty": "multi",
+    "goal": "Đổi số điện thoại của khách hàng Nguyễn Văn Dũng (nguyen.dung@example.com) thành 0987654321.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 10,
+    "critical_elements": [
+      "ô tìm kiếm",
+      "liên kết chi tiết",
+      "nút Sửa",
+      "ô số điện thoại",
+      "nút Lưu"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/customers?email=nguyen.dung@example.com",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "phone": "0987654321"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "search",
+      "edit",
+      "form"
+    ]
+  },
+  {
+    "id": "T004",
+    "title": "Tạo đơn hàng với 2 sản phẩm",
+    "module": "order",
+    "difficulty": "multi",
+    "goal": "Tạo đơn hàng cho khách hàng Phạm Thu Hà (pham.ha@example.com) gồm 2 sản phẩm SKU-100 số lượng 1 và SKU-205 số lượng 3.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 15,
+    "critical_elements": [
+      "nút Tạo đơn",
+      "chọn khách hàng",
+      "chọn sản phẩm",
+      "ô số lượng",
+      "nút Thêm dòng",
+      "nút Xác nhận tạo đơn"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders?customer_email=pham.ha@example.com",
+        "expect": {
+          "count": 1,
+          "items": [
+            {
+              "sku": "SKU-100",
+              "qty": 1
+            },
+            {
+              "sku": "SKU-205",
+              "qty": 3
+            }
+          ],
+          "fields": {
+            "status": "pending"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "create",
+      "dynamic-rows"
+    ]
+  },
+  {
+    "id": "T005",
+    "title": "Đổi trạng thái đơn sang Đã giao",
+    "module": "order",
+    "difficulty": "single",
+    "goal": "Chuyển trạng thái đơn hàng ORD-1003 sang 'Đã giao'.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "dòng/liên kết đơn ORD-1003",
+      "dropdown trạng thái",
+      "nút Cập nhật"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders/ORD-1003",
+        "expect": {
+          "fields": {
+            "status": "delivered"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "status",
+      "dropdown"
+    ]
+  },
+  {
+    "id": "T006",
+    "title": "Lọc đơn theo khoảng ngày và xuất CSV",
+    "module": "order",
+    "difficulty": "multi",
+    "goal": "Lọc các đơn hàng từ ngày 2026-09-01 đến 2026-09-15 rồi xuất danh sách ra file CSV.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 12,
+    "critical_elements": [
+      "ô Từ ngày",
+      "ô Đến ngày",
+      "nút Lọc",
+      "nút Xuất CSV"
+    ],
+    "success_criteria": [
+      {
+        "type": "download_check",
+        "expect": {
+          "format": "csv",
+          "order_ids_equal_to_api": "/api/orders?from=2026-09-01&to=2026-09-15"
+        }
+      }
+    ],
+    "tags": [
+      "filter",
+      "date",
+      "download"
+    ]
+  },
+  {
+    "id": "T007",
+    "title": "Tạo ticket hỗ trợ gắn với đơn hàng",
+    "module": "support",
+    "difficulty": "multi",
+    "goal": "Tạo ticket hỗ trợ với tiêu đề 'Giao hàng chậm' cho đơn hàng ORD-1002.",
+    "start_url": "/tickets",
+    "seed": "seed_v1",
+    "max_steps": 10,
+    "critical_elements": [
+      "nút Tạo ticket",
+      "chọn đơn hàng",
+      "ô tiêu đề",
+      "nút Gửi"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/tickets?order_id=ORD-1002",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "subject": "Giao hàng chậm",
+            "status": "open"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "create",
+      "relation"
+    ]
+  },
+  {
+    "id": "T008",
+    "title": "Gán ticket cho nhân viên",
+    "module": "support",
+    "difficulty": "single",
+    "goal": "Gán ticket TCK-2001 cho nhân viên Hoàng Quang Huy.",
+    "start_url": "/tickets",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "dòng/liên kết ticket TCK-2001",
+      "dropdown người xử lý",
+      "nút Gán"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/tickets/TCK-2001",
+        "expect": {
+          "fields": {
+            "assignee_name": "Hoàng Quang Huy",
+            "status": "in_progress"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "assign",
+      "dropdown"
+    ]
+  },
+  {
+    "id": "T009",
+    "title": "Đóng ticket kèm ghi chú",
+    "module": "support",
+    "difficulty": "multi",
+    "goal": "Đóng ticket TCK-2002 và ghi chú 'Đã hoàn tiền cho khách'.",
+    "start_url": "/tickets",
+    "seed": "seed_v1",
+    "max_steps": 10,
+    "critical_elements": [
+      "dòng/liên kết ticket TCK-2002",
+      "ô ghi chú",
+      "nút Đóng ticket"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/tickets/TCK-2002",
+        "expect": {
+          "fields": {
+            "status": "closed",
+            "note": "Đã hoàn tiền cho khách"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "status",
+      "text-input"
+    ]
+  },
+  {
+    "id": "T010",
+    "title": "Chuỗi: tìm khách, tạo đơn, tạo ticket",
+    "module": "chain",
+    "difficulty": "chain",
+    "goal": "Tìm khách hàng Võ Thanh Tâm (vo.tam@example.com), tạo cho họ một đơn hàng gồm SKU-100 số lượng 2, sau đó tạo ticket 'Hỏi thời gian giao' cho đơn hàng vừa tạo.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 30,
+    "critical_elements": [
+      "ô tìm kiếm",
+      "nút Tạo đơn",
+      "chọn sản phẩm",
+      "ô số lượng",
+      "nút Xác nhận tạo đơn",
+      "nút Tạo ticket",
+      "ô tiêu đề"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders?customer_email=vo.tam@example.com",
+        "expect": {
+          "count": 1,
+          "items": [
+            {
+              "sku": "SKU-100",
+              "qty": 2
+            }
+          ]
+        }
+      },
+      {
+        "type": "api_check",
+        "endpoint": "/api/tickets?customer_email=vo.tam@example.com",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "subject": "Hỏi thời gian giao"
+          },
+          "linked_to_new_order": true
+        }
+      }
+    ],
+    "tags": [
+      "chain",
+      "cross-module",
+      "state-dependency"
+    ]
+  },
+  {
+    "id": "T011",
+    "title": "Tạo khách hàng doanh nghiệp",
+    "module": "crm",
+    "difficulty": "single",
+    "goal": "Tạo khách hàng Công ty Sao Mai, email saomai@example.com, số điện thoại 0901112233.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "nút Thêm khách hàng",
+      "ô tên",
+      "ô email",
+      "ô số điện thoại",
+      "nút Lưu"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/customers?email=saomai@example.com",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "name": "Công ty Sao Mai",
+            "phone": "0901112233"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "create"
+    ]
+  },
+  {
+    "id": "T012",
+    "title": "Mở chi tiết Phạm Thu Hà",
+    "module": "crm",
+    "difficulty": "single",
+    "goal": "Tìm khách hàng pham.ha@example.com và mở trang chi tiết của khách hàng này.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 6,
+    "critical_elements": [
+      "ô tìm kiếm",
+      "nút Tìm",
+      "dòng kết quả/liên kết chi tiết"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/session/last_viewed_customer",
+        "expect": {
+          "fields": {
+            "email": "pham.ha@example.com"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "search",
+      "navigate"
+    ]
+  },
+  {
+    "id": "T013",
+    "title": "Cập nhật điện thoại Trần Hoa",
+    "module": "crm",
+    "difficulty": "multi",
+    "goal": "Đổi số điện thoại khách hàng tran.hoa@example.com thành 0912345678.",
+    "start_url": "/customers",
+    "seed": "seed_v1",
+    "max_steps": 10,
+    "critical_elements": [
+      "ô tìm kiếm",
+      "liên kết chi tiết",
+      "nút Sửa",
+      "ô số điện thoại",
+      "nút Lưu"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/customers?email=tran.hoa@example.com",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "phone": "0912345678"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "search",
+      "edit",
+      "form"
+    ]
+  },
+  {
+    "id": "T014",
+    "title": "Tạo đơn một sản phẩm",
+    "module": "order",
+    "difficulty": "multi",
+    "goal": "Tạo đơn cho Phạm Thu Hà (pham.ha@example.com) gồm SKU-205 số lượng 4.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 15,
+    "critical_elements": [
+      "nút Tạo đơn",
+      "chọn khách hàng",
+      "chọn sản phẩm",
+      "ô số lượng",
+      "nút Thêm dòng",
+      "nút Xác nhận tạo đơn"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders?customer_email=pham.ha@example.com",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "status": "pending"
+          },
+          "items": [
+            {
+              "sku": "SKU-205",
+              "qty": 4
+            }
+          ]
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "create",
+      "dynamic-rows"
+    ]
+  },
+  {
+    "id": "T015",
+    "title": "Chuyển ORD-1002 sang Đã xác nhận",
+    "module": "order",
+    "difficulty": "single",
+    "goal": "Chuyển trạng thái đơn hàng ORD-1002 sang Đã xác nhận.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "dòng/liên kết đơn ORD-1003",
+      "dropdown trạng thái",
+      "nút Cập nhật"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders/ORD-1002",
+        "expect": {
+          "fields": {
+            "status": "confirmed"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "status",
+      "dropdown"
+    ]
+  },
+  {
+    "id": "T016",
+    "title": "Chuyển ORD-1004 sang Đang giao",
+    "module": "order",
+    "difficulty": "single",
+    "goal": "Chuyển trạng thái đơn hàng ORD-1004 sang Đang giao.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "dòng/liên kết đơn ORD-1003",
+      "dropdown trạng thái",
+      "nút Cập nhật"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders/ORD-1004",
+        "expect": {
+          "fields": {
+            "status": "shipped"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "status",
+      "dropdown"
+    ]
+  },
+  {
+    "id": "T017",
+    "title": "Chuyển ORD-1005 sang Đã hủy",
+    "module": "order",
+    "difficulty": "single",
+    "goal": "Chuyển trạng thái đơn hàng ORD-1005 sang Đã hủy.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "dòng/liên kết đơn ORD-1003",
+      "dropdown trạng thái",
+      "nút Cập nhật"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/orders/ORD-1005",
+        "expect": {
+          "fields": {
+            "status": "cancelled"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "status",
+      "dropdown"
+    ]
+  },
+  {
+    "id": "T018",
+    "title": "Xuất đơn trong một ngày",
+    "module": "order",
+    "difficulty": "multi",
+    "goal": "Lọc đơn hàng trong ngày 2026-09-16 rồi xuất danh sách ra CSV.",
+    "start_url": "/orders",
+    "seed": "seed_v1",
+    "max_steps": 12,
+    "critical_elements": [
+      "ô Từ ngày",
+      "ô Đến ngày",
+      "nút Lọc",
+      "nút Xuất CSV"
+    ],
+    "success_criteria": [
+      {
+        "type": "download_check",
+        "expect": {
+          "format": "csv",
+          "order_ids_equal_to_api": "/api/orders?from=2026-09-16&to=2026-09-16"
+        }
+      }
+    ],
+    "tags": [
+      "filter",
+      "date",
+      "download"
+    ]
+  },
+  {
+    "id": "T019",
+    "title": "Gán lại ticket đang xử lý",
+    "module": "support",
+    "difficulty": "single",
+    "goal": "Gán lại ticket TCK-2002 cho Hoàng Quang Huy.",
+    "start_url": "/tickets",
+    "seed": "seed_v1",
+    "max_steps": 8,
+    "critical_elements": [
+      "dòng/liên kết ticket TCK-2001",
+      "dropdown người xử lý",
+      "nút Gán"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/tickets/TCK-2002",
+        "expect": {
+          "fields": {
+            "assignee_name": "Hoàng Quang Huy",
+            "status": "in_progress"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "assign",
+      "dropdown"
+    ]
+  },
+  {
+    "id": "T020",
+    "title": "Tạo và gán ticket mới",
+    "module": "support",
+    "difficulty": "multi",
+    "goal": "Tạo ticket Cần xác nhận địa chỉ cho ORD-1005 rồi gán ticket vừa tạo cho Hoàng Quang Huy.",
+    "start_url": "/tickets",
+    "seed": "seed_v1",
+    "max_steps": 15,
+    "critical_elements": [
+      "nút Tạo ticket",
+      "chọn đơn hàng",
+      "ô tiêu đề",
+      "nút Gửi",
+      "dropdown người xử lý",
+      "nút Gán"
+    ],
+    "success_criteria": [
+      {
+        "type": "api_check",
+        "endpoint": "/api/tickets?order_id=ORD-1005",
+        "expect": {
+          "count": 1,
+          "fields": {
+            "subject": "Cần xác nhận địa chỉ",
+            "assignee_name": "Hoàng Quang Huy",
+            "status": "in_progress"
+          }
+        }
+      }
+    ],
+    "tags": [
+      "form",
+      "create",
+      "relation",
+      "assign"
+    ]
+  }
+]

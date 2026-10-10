@@ -1,0 +1,21 @@
+﻿task_id,module,difficulty,mode,mutation,success,steps_total,steps_done,failed_step,failed_locator,error,check,seconds
+T001,crm,single,css,M0,True,6,6,,,,ok,0.48
+T002,crm,single,css,M0,True,4,4,,,,ok,0.32
+T003,crm,multi,css,M0,True,7,7,,,,ok,0.48
+T004,order,multi,css,M0,True,9,9,,,,ok,0.46
+T005,order,single,css,M0,True,4,4,,,,ok,0.33
+T006,order,multi,css,M0,True,5,5,,,,ok,0.61
+T007,support,multi,css,M0,True,5,5,,,,ok,0.32
+T008,support,single,css,M0,True,4,4,,,,ok,0.32
+T009,support,multi,css,M0,True,4,4,,,,ok,0.32
+T010,chain,chain,css,M0,True,11,11,,,,ok; ok,0.67
+T001,crm,single,xpath,M0,True,6,6,,,,ok,0.32
+T002,crm,single,xpath,M0,True,4,4,,,,ok,0.32
+T003,crm,multi,xpath,M0,True,7,7,,,,ok,0.48
+T004,order,multi,xpath,M0,True,9,9,,,,ok,0.39
+T005,order,single,xpath,M0,True,4,4,,,,ok,0.33
+T006,order,multi,xpath,M0,True,5,5,,,,ok,0.36
+T007,support,multi,xpath,M0,True,5,5,,,,ok,0.3
+T008,support,single,xpath,M0,True,4,4,,,,ok,0.31
+T009,support,multi,xpath,M0,True,4,4,,,,ok,0.3
+T010,chain,chain,xpath,M0,True,11,11,,,,ok; ok,0.64

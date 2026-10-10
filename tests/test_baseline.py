@@ -9,7 +9,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 class BaselineScriptTests(unittest.TestCase):
     def test_every_pilot_task_has_script(self):
-        ids = [t["id"] for t in json.loads((ROOT / "tasks" / "pilot_tasks.json").read_text(encoding="utf-8"))]
+        ids = [t["id"] for t in json.loads((ROOT / "tasks" / "tasks_w2.json").read_text(encoding="utf-8"))]
+        self.assertEqual(len(ids), 20)
         self.assertEqual(sorted(ids), sorted(SCRIPTS))
 
     def test_every_locator_step_has_css_and_xpath(self):

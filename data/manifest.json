@@ -3,7 +3,8 @@
   "path": "data/seed_v1.json",
   "sha256": "638bb0fa96d8e603f7604d40b07d6703b3d0438e9c61205de45cb8c04dddf888",
   "source": "Dữ liệu tổng hợp do nhóm xây dựng; không dùng dữ liệu cá nhân thật.",
-  "scope": "CRM, Order, Support; pilot T001–T010",
+  "scope": "CRM, Order, Support; pilot W1 T001–T010 và bộ W2 T001–T020 dùng chung seed_v1",
+  "task_sets": ["tasks/pilot_tasks.json", "tasks/tasks_w2.json"],
   "counts": {
     "customers": 4,
     "products": 2,

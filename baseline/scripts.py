@@ -92,3 +92,22 @@ SCRIPTS = {
              select("line_sku", SKU_100, n=1), fill("line_qty", "2", n=1), click("btn_save_order"),
              click("btn_order_create_ticket"), fill("ticket_subject", "Hỏi thời gian giao"), click("btn_save_ticket")],
 }
+
+# W2 mở rộng mục tiêu nghiệp vụ trong cùng MVP, không sửa 10 pilot task W1.
+SCRIPTS.update({
+    "T011": [goto("/customers"), click("btn_add_customer"), fill("cust_name", "Công ty Sao Mai"),
+             fill("cust_email", "saomai@example.com"), fill("cust_phone", "0901112233"), click("btn_save_customer")],
+    "T012": [goto("/customers"), *find_customer("pham.ha@example.com")],
+    "T013": [goto("/customers"), *find_customer("tran.hoa@example.com"), click("btn_edit_customer"),
+             fill("cust_phone", "0912345678"), click("btn_save_customer")],
+    "T014": [goto("/orders"), click("btn_create_order"), select("order_customer", "Phạm Thu Hà — pham.ha@example.com"),
+             select("line_sku", SKU_205, n=1), fill("line_qty", "4", n=1), click("btn_save_order")],
+    "T015": [goto("/orders"), click("order_link", oid="ORD-1002"), select("order_status", "Đã xác nhận"), click("btn_update_status")],
+    "T016": [goto("/orders"), click("order_link", oid="ORD-1004"), select("order_status", "Đang giao"), click("btn_update_status")],
+    "T017": [goto("/orders"), click("order_link", oid="ORD-1005"), select("order_status", "Đã hủy"), click("btn_update_status")],
+    "T018": [goto("/orders"), fill("filter_from", "2026-09-16"), fill("filter_to", "2026-09-16"), click("btn_filter"), download("btn_export")],
+    "T019": [goto("/tickets"), click("ticket_link", tid="TCK-2002"), select("ticket_assignee", "Hoàng Quang Huy"), click("btn_assign")],
+    "T020": [goto("/tickets"), click("btn_create_ticket"), select("ticket_order", "ORD-1005 — tran.hoa@example.com"),
+             fill("ticket_subject", "Cần xác nhận địa chỉ"), click("btn_save_ticket"),
+             select("ticket_assignee", "Hoàng Quang Huy"), click("btn_assign")],
+})
