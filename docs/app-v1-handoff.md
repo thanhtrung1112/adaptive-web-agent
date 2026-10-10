@@ -5,7 +5,10 @@
 Ứng dụng local gồm CRM, Order, Support và luồng liên thông cho pilot T001–T010.
 Chỉ dùng dữ liệu tổng hợp trên website nhóm sở hữu. Chưa có xác thực người dùng;
 chỉ chạy trên loopback cho benchmark nội bộ. `data/manifest.json` ghi SHA-256 của seed.
-Khi sửa seed phải cập nhật checksum. Seed không có khách Lê Minh Anh, đơn cho
+Seed và manifest dùng LF theo `.gitattributes`. Khi sửa seed, chạy
+`python scripts/seed_manifest.py --update` để chuẩn hóa LF và cập nhật SHA-256
+theo byte thực tế; chạy `python scripts/seed_manifest.py` để kiểm tra trước commit.
+Seed không có khách Lê Minh Anh, đơn cho
 Phạm Thu Hà/Võ Thanh Tâm hoặc ticket cho ORD-1002, để task tạo mới không đạt giả.
 
 ## Cách kiểm tra từng task
