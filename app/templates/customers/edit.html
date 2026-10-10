@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Sửa khách hàng</h1>
+<p>{{ customer.name }} — {{ customer.email }}</p>
+
+{% if error %}
+<p role="alert">{{ error }}</p>
+{% endif %}
+
+<form method="post" action="/customers/{{ customer.id }}/edit">
+    <p>
+        <label for="customer-phone">Số điện thoại</label>
+        <input id="customer-phone" name="phone" type="tel"
+               value="{{ customer.phone }}" required>
+    </p>
+    <button id="save-customer" type="submit">Lưu</button>
+    <a href="/customers/{{ customer.id }}">Hủy</a>
+</form>
+{% endblock %}

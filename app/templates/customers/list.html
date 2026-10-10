@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Khách hàng</h1>
+
+<form method="get" action="/customers">
+    <label for="customer-search">Tìm khách hàng theo email</label>
+    <input id="customer-search" name="email" type="search"
+           value="{{ email }}" placeholder="Nhập email đầy đủ">
+    <button id="search-customers" type="submit">Tìm</button>
+    <a href="/customers">Xem tất cả</a>
+</form>
+
+<p>
+    <a id="add-customer" href="/customers/new">
+        Thêm khách hàng
+    </a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên khách hàng</th>
+            <th scope="col">Email</th>
+            <th scope="col">Số điện thoại</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for customer in customers %}
+        <tr>
+            <td>{{ customer.id }}</td>
+            <td><a href="/customers/{{ customer.id }}">{{ customer.name }}</a></td>
+            <td>{{ customer.email }}</td>
+            <td>{{ customer.phone }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">{{ 'Không tìm thấy khách hàng phù hợp.' if email else 'Chưa có khách hàng.' }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<p><a href="/">Về trang chủ</a></p>
+{% endblock %}

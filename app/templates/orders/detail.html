@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Thể hiện dữ liệu đã lưu, không lấy lại từ form gửi lên. -->
+<h1>Đơn hàng {{ order.id }}</h1>
+<!-- Ticket mới được chọn sẵn đúng đơn đang xem, kể cả đơn vừa tạo. -->
+<p><a id="order-create-ticket" href="/tickets/new?order_id={{ order.id }}">Tạo ticket</a></p>
+<p>Khách hàng: {{ order.customer_name }} — {{ order.customer_email }}</p>
+<p>Trạng thái: <strong>{{ statuses[order.status] }}</strong> ({{ order.status }})</p>
+<!-- T005: chọn nhãn Đã giao để gửi giá trị delivered về server. -->
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+<form method="post" action="/orders/{{ order.id }}/status">
+    <label for="order-status">Trạng thái đơn hàng</label>
+    <select id="order-status" name="status" required>
+        {% for value, label in statuses.items() %}
+        <option value="{{ value }}" {% if value == order.status %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+    </select>
+    <button id="update-order-status" type="submit">Cập nhật</button>
+</form>
+<table>
+    <thead><tr><th>SKU</th><th>Số lượng</th></tr></thead>
+    <tbody>{% for item in order['items'] %}
+    <tr><td>{{ item.sku }}</td><td>{{ item.qty }}</td></tr>
+    {% endfor %}</tbody>
+</table>
+<p><a href="/orders">Về danh sách đơn hàng</a></p>
+{% endblock %}

@@ -7,4 +7,9 @@ runs/
 *.sqlite3
 models/
 data/raw/
+*.py[cod]
 .pytest_cache/
+# Database chạy thử; dữ liệu seed JSON vẫn được quản lý bằng Git
+data/*.db
+data/*.sqlite
+data/*.sqlite3

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Dữ liệu được đọc từ SQLite sau mỗi cập nhật thành công. -->
+<h1>Ticket {{ ticket.id }}</h1>
+<p>Đơn hàng: <a href="/orders/{{ ticket.order_id }}">{{ ticket.order_id }}</a></p>
+<p>Tiêu đề: {{ ticket.subject }}</p><p>Trạng thái: {{ ticket.status }}</p>
+<p>Người xử lý: {{ ticket.assignee_name or 'Chưa gán' }}</p><p>Ghi chú: {{ ticket.note }}</p>
+{% if error %}<p role="alert">{{ error }}</p>{% endif %}
+{% if ticket.status != 'closed' %}
+<!-- Gán nhân viên và đóng ticket là hai hành động độc lập. -->
+<form method="post" action="/tickets/{{ ticket.id }}/assign">
+<label for="ticket-assignee">Người xử lý</label>
+<select id="ticket-assignee" name="assignee_id" required><option value="">Chọn nhân viên</option>
+{% for member in staff %}<option value="{{ member.id }}" {% if ticket.assignee_id == member.id %}selected{% endif %}>{{ member.name }}</option>{% endfor %}</select>
+<button id="assign-ticket" type="submit">Gán</button></form>
+<form method="post" action="/tickets/{{ ticket.id }}/close">
+<label for="ticket-note">Ghi chú</label><textarea id="ticket-note" name="note" maxlength="2000" required>{{ ticket.note }}</textarea>
+<p><button id="close-ticket" type="submit">Đóng ticket</button></p></form>
+{% endif %}
+<p><a href="/tickets">Về danh sách ticket</a></p>
+{% endblock %}
