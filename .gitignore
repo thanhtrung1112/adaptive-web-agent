@@ -13,3 +13,12 @@ data/raw/
 data/*.db
 data/*.sqlite
 data/*.sqlite3
+
+# Demo/video lưu ngoài bộ mã nguồn và kết quả đo đưa lên Git.
+demo/
+videos/
+*.webm
+*.mp4
+*.mov
+*.avi
+*.mkv

@@ -1,0 +1,2722 @@
+[
+  {
+    "result": {
+      "task_id": "T001",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 6,
+      "steps_done": 6,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.3183
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0944
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']",
+        "success": true,
+        "seconds": 0.1163
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "Lê Minh Anh",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0259
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "minhanh@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0048
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "0901234567",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0047
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.072
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T002",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2132
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0233
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "tran.hoa@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0361
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0944
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "tran.hoa@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='tran.hoa@example.com']]//a",
+        "success": true,
+        "seconds": 0.0594
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T003",
+      "module": "crm",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 7,
+      "steps_done": 7,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.3263
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0166
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "nguyen.dung@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0307
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0589
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "nguyen.dung@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='nguyen.dung@example.com']]//a",
+        "success": true,
+        "seconds": 0.0658
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']",
+        "success": true,
+        "seconds": 0.0674
+      },
+      {
+        "index": 5,
+        "do": "fill",
+        "value": "0987654321",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0217
+      },
+      {
+        "index": 6,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0651
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T004",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 9,
+      "steps_done": 9,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2773
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0256
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']",
+        "success": true,
+        "seconds": 0.1
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Phạm Thu Hà — pham.ha@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0176
+      },
+      {
+        "index": 3,
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]",
+        "success": true,
+        "seconds": 0.0051
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "1",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]",
+        "success": true,
+        "seconds": 0.0047
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#add-order-line",
+        "xpath": "//button[normalize-space()='Thêm dòng']",
+        "success": true,
+        "seconds": 0.033
+      },
+      {
+        "index": 6,
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 2,
+        "css": "#order-sku-2",
+        "xpath": "(//select[@name='sku'])[2]",
+        "success": true,
+        "seconds": 0.0034
+      },
+      {
+        "index": 7,
+        "do": "fill",
+        "value": "3",
+        "n": 2,
+        "css": "#order-qty-2",
+        "xpath": "(//input[@name='qty'])[2]",
+        "success": true,
+        "seconds": 0.0046
+      },
+      {
+        "index": 8,
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']",
+        "success": true,
+        "seconds": 0.0834
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T005",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.175
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0148
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1003",
+        "css": "table a[href='/orders/ORD-1003']",
+        "xpath": "//table//a[normalize-space()='ORD-1003']",
+        "success": true,
+        "seconds": 0.0636
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đã giao",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0158
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0808
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T006",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 5,
+      "steps_done": 5,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.3309
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0154
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "2026-09-01",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0344
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "2026-09-15",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.005
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']",
+        "success": true,
+        "seconds": 0.0603
+      },
+      {
+        "index": 4,
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']",
+        "success": true,
+        "seconds": 0.2158
+      }
+    ],
+    "download": "downloads\\T006_css.csv"
+  },
+  {
+    "result": {
+      "task_id": "T007",
+      "module": "support",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 5,
+      "steps_done": 5,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1848
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0176
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']",
+        "success": true,
+        "seconds": 0.0726
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "ORD-1002 — nguyen.dung@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0168
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "Giao hàng chậm",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0044
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']",
+        "success": true,
+        "seconds": 0.0733
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T008",
+      "module": "support",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1696
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0147
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "tid": "TCK-2001",
+        "css": "table a[href='/tickets/TCK-2001']",
+        "xpath": "//table//a[normalize-space()='TCK-2001']",
+        "success": true,
+        "seconds": 0.071
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0151
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']",
+        "success": true,
+        "seconds": 0.0687
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T009",
+      "module": "support",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.18
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0156
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "tid": "TCK-2002",
+        "css": "table a[href='/tickets/TCK-2002']",
+        "xpath": "//table//a[normalize-space()='TCK-2002']",
+        "success": true,
+        "seconds": 0.0726
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "Đã hoàn tiền cho khách",
+        "css": "#ticket-note",
+        "xpath": "//label[normalize-space()='Ghi chú']/following-sibling::textarea[1]",
+        "success": true,
+        "seconds": 0.0166
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#close-ticket",
+        "xpath": "//button[normalize-space()='Đóng ticket']",
+        "success": true,
+        "seconds": 0.0751
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T010",
+      "module": "chain",
+      "difficulty": "chain",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 11,
+      "steps_done": 11,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok; ok",
+      "seconds": 0.461
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0162
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "vo.tam@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0323
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.064
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "vo.tam@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='vo.tam@example.com']]//a",
+        "success": true,
+        "seconds": 0.056
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#customer-create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']",
+        "success": true,
+        "seconds": 0.0496
+      },
+      {
+        "index": 5,
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]",
+        "success": true,
+        "seconds": 0.0143
+      },
+      {
+        "index": 6,
+        "do": "fill",
+        "value": "2",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]",
+        "success": true,
+        "seconds": 0.0052
+      },
+      {
+        "index": 7,
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']",
+        "success": true,
+        "seconds": 0.0761
+      },
+      {
+        "index": 8,
+        "do": "click",
+        "css": "#order-create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']",
+        "success": true,
+        "seconds": 0.0541
+      },
+      {
+        "index": 9,
+        "do": "fill",
+        "value": "Hỏi thời gian giao",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0151
+      },
+      {
+        "index": 10,
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']",
+        "success": true,
+        "seconds": 0.078
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T011",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 6,
+      "steps_done": 6,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1694
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0149
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']",
+        "success": true,
+        "seconds": 0.0611
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "Công ty Sao Mai",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0152
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "saomai@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0034
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "0901112233",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0045
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0703
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T012",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1658
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0168
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "pham.ha@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.03
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0666
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "pham.ha@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='pham.ha@example.com']]//a",
+        "success": true,
+        "seconds": 0.0524
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T013",
+      "module": "crm",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 7,
+      "steps_done": 7,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.3252
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0147
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "tran.hoa@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0306
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0623
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "tran.hoa@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='tran.hoa@example.com']]//a",
+        "success": true,
+        "seconds": 0.0625
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']",
+        "success": true,
+        "seconds": 0.0558
+      },
+      {
+        "index": 5,
+        "do": "fill",
+        "value": "0912345678",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0185
+      },
+      {
+        "index": 6,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0807
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T014",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 6,
+      "steps_done": 6,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1782
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0233
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']",
+        "success": true,
+        "seconds": 0.0685
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Phạm Thu Hà — pham.ha@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0164
+      },
+      {
+        "index": 3,
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]",
+        "success": true,
+        "seconds": 0.0041
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "4",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]",
+        "success": true,
+        "seconds": 0.0049
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']",
+        "success": true,
+        "seconds": 0.0609
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T015",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1681
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0166
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1002",
+        "css": "table a[href='/orders/ORD-1002']",
+        "xpath": "//table//a[normalize-space()='ORD-1002']",
+        "success": true,
+        "seconds": 0.066
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đã xác nhận",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0203
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0651
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T016",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1868
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0146
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1004",
+        "css": "table a[href='/orders/ORD-1004']",
+        "xpath": "//table//a[normalize-space()='ORD-1004']",
+        "success": true,
+        "seconds": 0.0758
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đang giao",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0163
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0799
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T017",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1824
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0159
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1005",
+        "css": "table a[href='/orders/ORD-1005']",
+        "xpath": "//table//a[normalize-space()='ORD-1005']",
+        "success": true,
+        "seconds": 0.0694
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đã hủy",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0158
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0813
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T018",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 5,
+      "steps_done": 5,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.209
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0188
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "2026-09-16",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0318
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "2026-09-16",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0033
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']",
+        "success": true,
+        "seconds": 0.05
+      },
+      {
+        "index": 4,
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']",
+        "success": true,
+        "seconds": 0.1051
+      }
+    ],
+    "download": "downloads\\T018_css.csv"
+  },
+  {
+    "result": {
+      "task_id": "T019",
+      "module": "support",
+      "difficulty": "single",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.167
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0145
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "tid": "TCK-2002",
+        "css": "table a[href='/tickets/TCK-2002']",
+        "xpath": "//table//a[normalize-space()='TCK-2002']",
+        "success": true,
+        "seconds": 0.0637
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0153
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']",
+        "success": true,
+        "seconds": 0.0736
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T020",
+      "module": "support",
+      "difficulty": "multi",
+      "mode": "css",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 7,
+      "steps_done": 7,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2687
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.014
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']",
+        "success": true,
+        "seconds": 0.0698
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "ORD-1005 — tran.hoa@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0152
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "Cần xác nhận địa chỉ",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0043
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']",
+        "success": true,
+        "seconds": 0.0775
+      },
+      {
+        "index": 5,
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0165
+      },
+      {
+        "index": 6,
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']",
+        "success": true,
+        "seconds": 0.0713
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T001",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 6,
+      "steps_done": 6,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1792
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0152
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']",
+        "success": true,
+        "seconds": 0.0691
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "Lê Minh Anh",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0161
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "minhanh@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0039
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "0901234567",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0035
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0714
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T002",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1681
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0245
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "tran.hoa@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0287
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0629
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "tran.hoa@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='tran.hoa@example.com']]//a",
+        "success": true,
+        "seconds": 0.052
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T003",
+      "module": "crm",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 7,
+      "steps_done": 7,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.3255
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0138
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "nguyen.dung@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0282
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0669
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "nguyen.dung@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='nguyen.dung@example.com']]//a",
+        "success": true,
+        "seconds": 0.0561
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']",
+        "success": true,
+        "seconds": 0.0676
+      },
+      {
+        "index": 5,
+        "do": "fill",
+        "value": "0987654321",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0189
+      },
+      {
+        "index": 6,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0739
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T004",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 9,
+      "steps_done": 9,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2623
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0158
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']",
+        "success": true,
+        "seconds": 0.0777
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Phạm Thu Hà — pham.ha@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.015
+      },
+      {
+        "index": 3,
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]",
+        "success": true,
+        "seconds": 0.0062
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "1",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]",
+        "success": true,
+        "seconds": 0.0039
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#add-order-line",
+        "xpath": "//button[normalize-space()='Thêm dòng']",
+        "success": true,
+        "seconds": 0.0461
+      },
+      {
+        "index": 6,
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 2,
+        "css": "#order-sku-2",
+        "xpath": "(//select[@name='sku'])[2]",
+        "success": true,
+        "seconds": 0.0072
+      },
+      {
+        "index": 7,
+        "do": "fill",
+        "value": "3",
+        "n": 2,
+        "css": "#order-qty-2",
+        "xpath": "(//input[@name='qty'])[2]",
+        "success": true,
+        "seconds": 0.0098
+      },
+      {
+        "index": 8,
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']",
+        "success": true,
+        "seconds": 0.0805
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T005",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1675
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0168
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1003",
+        "css": "table a[href='/orders/ORD-1003']",
+        "xpath": "//table//a[normalize-space()='ORD-1003']",
+        "success": true,
+        "seconds": 0.063
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đã giao",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0178
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0698
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T006",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 5,
+      "steps_done": 5,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.205
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0145
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "2026-09-01",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0298
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "2026-09-15",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0033
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']",
+        "success": true,
+        "seconds": 0.0479
+      },
+      {
+        "index": 4,
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']",
+        "success": true,
+        "seconds": 0.1095
+      }
+    ],
+    "download": "downloads\\T006_xpath.csv"
+  },
+  {
+    "result": {
+      "task_id": "T007",
+      "module": "support",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 5,
+      "steps_done": 5,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1774
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0153
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']",
+        "success": true,
+        "seconds": 0.061
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "ORD-1002 — nguyen.dung@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.015
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "Giao hàng chậm",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0044
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']",
+        "success": true,
+        "seconds": 0.0817
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T008",
+      "module": "support",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1946
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0289
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "tid": "TCK-2001",
+        "css": "table a[href='/tickets/TCK-2001']",
+        "xpath": "//table//a[normalize-space()='TCK-2001']",
+        "success": true,
+        "seconds": 0.0811
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0196
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']",
+        "success": true,
+        "seconds": 0.065
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T009",
+      "module": "support",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.211
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0339
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "tid": "TCK-2002",
+        "css": "table a[href='/tickets/TCK-2002']",
+        "xpath": "//table//a[normalize-space()='TCK-2002']",
+        "success": true,
+        "seconds": 0.0816
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "Đã hoàn tiền cho khách",
+        "css": "#ticket-note",
+        "xpath": "//label[normalize-space()='Ghi chú']/following-sibling::textarea[1]",
+        "success": true,
+        "seconds": 0.0204
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#close-ticket",
+        "xpath": "//button[normalize-space()='Đóng ticket']",
+        "success": true,
+        "seconds": 0.075
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T010",
+      "module": "chain",
+      "difficulty": "chain",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 11,
+      "steps_done": 11,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok; ok",
+      "seconds": 0.5861
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0256
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "vo.tam@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0336
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0726
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "vo.tam@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='vo.tam@example.com']]//a",
+        "success": true,
+        "seconds": 0.067
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#customer-create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']",
+        "success": true,
+        "seconds": 0.0837
+      },
+      {
+        "index": 5,
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]",
+        "success": true,
+        "seconds": 0.0217
+      },
+      {
+        "index": 6,
+        "do": "fill",
+        "value": "2",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]",
+        "success": true,
+        "seconds": 0.0051
+      },
+      {
+        "index": 7,
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']",
+        "success": true,
+        "seconds": 0.0913
+      },
+      {
+        "index": 8,
+        "do": "click",
+        "css": "#order-create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']",
+        "success": true,
+        "seconds": 0.0742
+      },
+      {
+        "index": 9,
+        "do": "fill",
+        "value": "Hỏi thời gian giao",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0195
+      },
+      {
+        "index": 10,
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']",
+        "success": true,
+        "seconds": 0.0916
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T011",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 6,
+      "steps_done": 6,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2074
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0172
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']",
+        "success": true,
+        "seconds": 0.08
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "Công ty Sao Mai",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0297
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "saomai@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0054
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "0901112233",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0073
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0676
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T012",
+      "module": "crm",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1535
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0161
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "pham.ha@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0295
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0491
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "pham.ha@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='pham.ha@example.com']]//a",
+        "success": true,
+        "seconds": 0.0589
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T013",
+      "module": "crm",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 7,
+      "steps_done": 7,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2896
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/customers",
+        "success": true,
+        "seconds": 0.0183
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "tran.hoa@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0323
+      },
+      {
+        "index": 2,
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']",
+        "success": true,
+        "seconds": 0.0491
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "email": "tran.hoa@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='tran.hoa@example.com']]//a",
+        "success": true,
+        "seconds": 0.057
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']",
+        "success": true,
+        "seconds": 0.0516
+      },
+      {
+        "index": 5,
+        "do": "fill",
+        "value": "0912345678",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0189
+      },
+      {
+        "index": 6,
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']",
+        "success": true,
+        "seconds": 0.0624
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T014",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 6,
+      "steps_done": 6,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1941
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0159
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']",
+        "success": true,
+        "seconds": 0.0713
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Phạm Thu Hà — pham.ha@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0188
+      },
+      {
+        "index": 3,
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]",
+        "success": true,
+        "seconds": 0.0035
+      },
+      {
+        "index": 4,
+        "do": "fill",
+        "value": "4",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]",
+        "success": true,
+        "seconds": 0.0053
+      },
+      {
+        "index": 5,
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']",
+        "success": true,
+        "seconds": 0.0792
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T015",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1928
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0185
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1002",
+        "css": "table a[href='/orders/ORD-1002']",
+        "xpath": "//table//a[normalize-space()='ORD-1002']",
+        "success": true,
+        "seconds": 0.0822
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đã xác nhận",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0148
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0774
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T016",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1899
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0144
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1004",
+        "css": "table a[href='/orders/ORD-1004']",
+        "xpath": "//table//a[normalize-space()='ORD-1004']",
+        "success": true,
+        "seconds": 0.0718
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đang giao",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0187
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0851
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T017",
+      "module": "order",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1802
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0167
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "oid": "ORD-1005",
+        "css": "table a[href='/orders/ORD-1005']",
+        "xpath": "//table//a[normalize-space()='ORD-1005']",
+        "success": true,
+        "seconds": 0.0753
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Đã hủy",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0178
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']",
+        "success": true,
+        "seconds": 0.0703
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T018",
+      "module": "order",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 5,
+      "steps_done": 5,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2551
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/orders",
+        "success": true,
+        "seconds": 0.0205
+      },
+      {
+        "index": 1,
+        "do": "fill",
+        "value": "2026-09-16",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.031
+      },
+      {
+        "index": 2,
+        "do": "fill",
+        "value": "2026-09-16",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0032
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']",
+        "success": true,
+        "seconds": 0.0525
+      },
+      {
+        "index": 4,
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']",
+        "success": true,
+        "seconds": 0.1478
+      }
+    ],
+    "download": "downloads\\T018_xpath.csv"
+  },
+  {
+    "result": {
+      "task_id": "T019",
+      "module": "support",
+      "difficulty": "single",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 4,
+      "steps_done": 4,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.1645
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0181
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "tid": "TCK-2002",
+        "css": "table a[href='/tickets/TCK-2002']",
+        "xpath": "//table//a[normalize-space()='TCK-2002']",
+        "success": true,
+        "seconds": 0.0608
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0195
+      },
+      {
+        "index": 3,
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']",
+        "success": true,
+        "seconds": 0.066
+      }
+    ],
+    "download": null
+  },
+  {
+    "result": {
+      "task_id": "T020",
+      "module": "support",
+      "difficulty": "multi",
+      "mode": "xpath",
+      "mutation": "M0",
+      "seed": "seed_v1",
+      "success": true,
+      "steps_total": 7,
+      "steps_done": 7,
+      "retry_count": 0,
+      "failed_step": "",
+      "failed_locator": "",
+      "error": "",
+      "check": "ok",
+      "seconds": 0.2618
+    },
+    "steps": [
+      {
+        "index": 0,
+        "do": "goto",
+        "url": "/tickets",
+        "success": true,
+        "seconds": 0.0157
+      },
+      {
+        "index": 1,
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']",
+        "success": true,
+        "seconds": 0.0757
+      },
+      {
+        "index": 2,
+        "do": "select",
+        "label": "ORD-1005 — tran.hoa@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0162
+      },
+      {
+        "index": 3,
+        "do": "fill",
+        "value": "Cần xác nhận địa chỉ",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]",
+        "success": true,
+        "seconds": 0.0046
+      },
+      {
+        "index": 4,
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']",
+        "success": true,
+        "seconds": 0.0689
+      },
+      {
+        "index": 5,
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]",
+        "success": true,
+        "seconds": 0.0167
+      },
+      {
+        "index": 6,
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']",
+        "success": true,
+        "seconds": 0.064
+      }
+    ],
+    "download": null
+  }
+]

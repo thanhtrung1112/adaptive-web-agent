@@ -52,5 +52,7 @@ App chỉ có một tiến trình Uvicorn; baseline phải cố định phiên b
 Các test trong `tests/` kiểm tra HTTP, template, database, CSV và quan hệ dữ liệu.
 Chúng chưa thay thế kiểm thử thao tác thực tế trên trình duyệt, đặc biệt JavaScript
 Thêm dòng của form đơn hàng. Cần chạy baseline CSS/XPath riêng cho kết quả W2.
-Các dependency trong requirements chưa khóa phiên bản; lưu môi trường đã kiểm chứng
-trước khi chốt bộ benchmark chính thức.
+Môi trường W2 đã khóa trong `requirements-lock.txt`. Bộ đầy đủ 20 task nằm ở
+`tasks/tasks_w2.json`; kết quả CSS/XPath và báo cáo xem `docs/weekly/W2.md`.
+Runner baseline tự tạo server và SQLite tạm riêng, reset trước mỗi task; không
+reset database đang dùng cho thao tác thủ công.

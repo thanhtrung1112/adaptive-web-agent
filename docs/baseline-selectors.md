@@ -1,58 +1,51 @@
-# Baseline selectors (B0) cho MiniBiz v1
+# Baseline CSS và XPath W2
 
-## 1. Selector / locator là gì
-Để điều khiển trình duyệt, script phải chỉ rõ "phần tử nào trên trang". Chỉ dẫn đó là **selector** (Playwright gọi là **locator**). Hai dạng phổ biến:
+## Phạm vi
+20 task khác nhau trong `tasks/tasks_w2.json`: 6 CRM, 8 Order, 5 Support, 1 chain.
+10 pilot task W1 giữ nguyên trong `tasks/pilot_tasks.json`. T011–T020 mở rộng mục tiêu
+và dữ liệu trong chức năng hiện có; không coi đây là 20 loại workflow hoàn toàn khác nhau.
+Mỗi bước có CSS/XPath viết tay trên M0, không tự phục hồi, không retry, không LLM.
 
-| Dạng | Ý tưởng | Ví dụ trên MiniBiz |
-|---|---|---|
-| CSS | chọn theo `id`, `name`, thuộc tính | `#save-customer`, `table a[href='/orders/ORD-1003']` |
-| XPath | chọn theo text hiển thị, label, quan hệ cấu trúc | `//button[normalize-space()='Lưu']`, `//label[normalize-space()='Email']/following-sibling::input[1]` |
-
-## 2. Baseline B0 là gì
-Baseline là **mốc so sánh** mà agent thích nghi phải thắng. B0 là script tự động hóa viết tay: mỗi bước (nhập ô, bấm nút, chọn dropdown) có một selector cố định, viết một lần trên giao diện gốc (M0). Selector **không tự sửa**: khi giao diện đổi và selector không còn khớp thì bước đó thất bại. Đó là hiện tượng "vỡ locator" mà đề tài giải quyết, nên không có B0 thì không có số liệu nào để nói agent tốt hơn bao nhiêu.
-
-B0 được viết **hai bản tương đương** (CSS và XPath) cho mọi bước, vì chúng vỡ theo hai kiểu khác nhau:
-
-| Mutation | CSS (id/name) | XPath (text/cấu trúc) |
-|---|---|---|
-| M1: đổi `id`, `class`, `name` | vỡ | thường còn sống |
-| M2: đổi nhãn/text | còn sống | vỡ |
-| M3: di chuyển node, thêm sibling | vỡ nếu dựa vị trí | vỡ nếu dựa `following-sibling`, chỉ số `[n]` |
-| M4: đổi layout | gần như vỡ hết | gần như vỡ hết |
-
-## 3. Cài đặt
-- `baseline/scripts.py`: bảng `S` chứa cặp (CSS, XPath) cho từng phần tử; `SCRIPTS` mô tả T001-T010 bằng các bước `goto`, `fill`, `click`, `select`, `download`.
-- `baseline/run_baseline.py`: chạy bằng Playwright ở chế độ `css`, `xpath` hoặc `both`. Mỗi task: reset database về `seed_v1` (gọi `app.seed.reset_database()`), mở browser context mới, chạy từng bước với timeout 3 giây, rồi chấm.
-- `baseline/checker.py`: chấm theo `success_criteria` bằng JSON API (kiểm tra dữ liệu cuối, không đọc giao diện). API được gọi qua **chính browser context của task**, vì `/api/session/last_viewed_customer` (T002) phụ thuộc cookie phiên.
-- Quy ước nghiêm: locator phải khớp đúng một phần tử (Playwright strict mode), không retry, không tự sửa, không dùng LLM.
-
-## 4. Chạy
-```bash
-pip install -r requirements.txt
-pip install playwright && playwright install chromium
-python -m uvicorn app.main:app --port 8000          # terminal 1
-python -m baseline.run_baseline --mode both          # terminal 2 (cùng thư mục repo)
+## Cài và chạy từ repo
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+.\.venv\Scripts\python.exe -m playwright install chromium
+.\.venv\Scripts\python.exe scripts/validate_tasks.py tasks/tasks_w2.json
+.\.venv\Scripts\python.exe -m baseline.run_baseline --mode both
 ```
-Runner reset database trực tiếp nên phải chạy trong cùng thư mục repo với web. Kết quả ghi vào `runs/baseline_M0_<thời gian>/` (`results.csv`, `traces.json`, `summary.json`).
+Không cần mở Uvicorn trước. Runner tự khởi động server trên cổng local rảnh và database
+SQLite tạm; server và runner dùng cùng MINIBIZ_DB_PATH. App người dùng trên cổng 8000
+không bị reset. Chạy task tuần tự, reset seed và browser context mới trước mỗi task.
+Ví dụ kiểm tra riêng: thêm `--tasks T002 T006 T010`. ID sai bị từ chối.
 
-## 5. Kết quả (DOM gốc M0, 10 task pilot)
-| Cấu hình | Thành công | Thời gian trung vị |
-|---|---|---|
-| B0-CSS | 10/10 | 0.42 s |
-| B0-XPath | 10/10 | 0.38 s |
+## Giao thức và cách chấm
+- Timeout mỗi hành động: 5 giây; max_steps theo từng task; không retry.
+- Một goto/fill/select/click/download tính một bước. API chấm không tính vào bước.
+- Latency đo từ hành động đầu đến hành động cuối, gồm tải trang/CSV; không gồm
+  reset, tạo context hoặc API chấm. p95 dùng nearest-rank trên toàn bộ task.
+- API chấm T002 dùng cùng cookie; T010 đối chiếu ticket.order_id với đơn mới.
+- CSV phải có header mã đơn và đúng số lần xuất hiện của từng ID (không chấp nhận lặp dòng).
+- Giá trị 100% trên M0 không chứng minh khả năng thích nghi mutation.
+- Mỗi cấu hình chạy một lần/task. Chưa có ước lượng độ biến thiên hoặc ý nghĩa thống kê.
 
-100% ở M0 là đúng kỳ vọng vì baseline viết trên chính DOM này; nó làm mốc trần để thấy mức tụt khi áp mutation.
+## Kết quả đã lưu
+| Cấu hình | Thành công | Median (s) | p95 (s) | Bước trung bình |
+|---|---|---|---|---|
+| CSS | 20/20 | 0.1858 | 0.3309 | 5.5 |
+| XPath | 20/20 | 0.1906 | 0.3217 | 5.5 |
 
-Kiểm chứng bộ chấm phát hiện được lỗi thật: trên bản sao của app, đổi `id` hai nút và đổi nhãn hai nút rồi chạy T001, T006, T007:
+Nguồn: `results/w2/baseline_M0_results.csv` và `baseline_M0_summary.json`.
+Metadata ghi commit nền, trạng thái chưa commit lúc chạy, hash LF từng tệp nguồn,
+hash seed/task, Python, thư viện và Chromium. Vì có chỉnh sửa chưa commit, không được
+coi commit nền một mình là phiên bản đã đo; đối chiếu thêm source_hashes_lf.
+Trace từng bước và CSV tải về nằm cùng thư mục kết quả. Kết quả pilot 10 task cũ
+được giữ ở `results/w2/pilot_10_tasks/`, không trộn vào kết quả 20 task.
 
-| Cấu hình | Thành công | Task hỏng và lý do |
-|---|---|---|
-| B0-CSS | 1/3 | T001, T007 (đổi `id` nút) |
-| B0-XPath | 1/3 | T006, T007 (đổi nhãn nút) |
+## Bằng chứng nộp
+Repo lưu mã nguồn, task, CSV/JSON kết quả, trace và báo cáo. Không lưu demo/video
+trong repo. Link demo hoặc video cho LMS sẽ bổ sung riêng khi nhóm chuẩn bị nộp.
 
-Khớp với bảng mục 2: đổi `id` làm hỏng CSS, đổi nhãn làm hỏng XPath.
-
-## 6. Giới hạn
-- Chỉ có **10 task** (T001-T010), vì seed của app chỉ phục vụ pilot; mở rộng lên 20 task cần bổ sung seed và chức năng (tìm theo tên, sửa tên, số điện thoại tùy chọn...).
-- Tìm khách hàng chỉ theo email đầy đủ, nên script dùng email.
-- Chưa có B1 (Playwright `get_by_role`/`get_by_label`/`get_by_text`) và chưa có cơ chế mutation; phép thử ở mục 5 làm thủ công trên bản sao.
+## Giới hạn
+Chỉ M0, Chromium, website local và dữ liệu tổng hợp. Chưa B1 semantic locator,
+mutation, LLM hoặc self-healing. Phần này đáp ứng baseline W2, không thay thế harness W8.

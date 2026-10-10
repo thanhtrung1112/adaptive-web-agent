@@ -1,10 +1,12 @@
 import sqlite3
+import os
 from contextlib import contextmanager
 from pathlib import Path
 
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
-DB_PATH = ROOT_DIR / "data" / "minibiz.sqlite3"
+# Runner có thể dùng database tạm riêng, không reset database người dùng.
+DB_PATH = Path(os.environ.get("MINIBIZ_DB_PATH", ROOT_DIR / "data" / "minibiz.sqlite3"))
 
 
 @contextmanager

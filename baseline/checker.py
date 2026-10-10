@@ -5,6 +5,7 @@ vì /api/session/last_viewed_customer phụ thuộc cookie phiên của trình d
 """
 import csv
 import urllib.parse
+from collections import Counter
 
 
 def _api_check(get, c):
@@ -14,15 +15,19 @@ def _api_check(get, c):
         rows = next((v for v in data.values() if isinstance(v, list)), [])
         if "count" in exp and data["count"] != exp["count"]:
             return False, f"{c['endpoint']}: count={data['count']} (cần {exp['count']})"
+        if len(rows) != data["count"]:
+            return False, "count không khớp số bản ghi API"
+        if not rows and exp.get("count") == 0:
+            return (not exp.get("fields") and "items" not in exp), "kiểm tra tập rỗng"
         target = rows[0] if rows else None
-    if not target:
+    if target is None:
         return False, f"{c['endpoint']}: không có dữ liệu"
     for k, v in exp.get("fields", {}).items():
         if target.get(k) != v:
             return False, f"{c['endpoint']}: {k}={target.get(k)!r} (cần {v!r})"
     if "items" in exp:
-        got = {(i["sku"], i["qty"]) for i in target.get("items", [])}
-        want = {(i["sku"], i["qty"]) for i in exp["items"]}
+        got = Counter((i["sku"], i["qty"]) for i in target.get("items", []))
+        want = Counter((i["sku"], i["qty"]) for i in exp["items"])
         if got != want:
             return False, f"{c['endpoint']}: items={sorted(got)} (cần {sorted(want)})"
     if exp.get("linked_to_new_order"):
@@ -37,10 +42,13 @@ def _download_check(get, c, path):
     if not path:
         return False, "không có file tải về"
     with open(path, encoding="utf-8-sig", newline="") as f:
-        rows = list(csv.DictReader(f))
-    got = {r.get("id") or r.get("order_id") for r in rows}
+        reader = csv.DictReader(f)
+        if not reader.fieldnames or not ({"id", "order_id"} & set(reader.fieldnames)):
+            return False, "CSV thiếu cột mã đơn"
+        rows = list(reader)
+    got = Counter(r.get("id") or r.get("order_id") for r in rows)
     api = get(c["expect"]["order_ids_equal_to_api"])
-    want = {o["id"] for o in next(v for v in api.values() if isinstance(v, list))}
+    want = Counter(o["id"] for o in next(v for v in api.values() if isinstance(v, list)))
     return (got == want), ("ok" if got == want else f"csv orders={sorted(got)} (cần {sorted(want)})")
 
 

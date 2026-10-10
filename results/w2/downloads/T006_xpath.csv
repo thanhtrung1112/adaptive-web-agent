@@ -1,0 +1,4 @@
+﻿id,customer_email,status,created_at
+ORD-1002,nguyen.dung@example.com,pending,2026-09-01T00:00:00+00:00
+ORD-1003,tran.hoa@example.com,shipped,2026-09-10T09:00:00+00:00
+ORD-1004,nguyen.dung@example.com,confirmed,2026-09-15T23:59:59+00:00

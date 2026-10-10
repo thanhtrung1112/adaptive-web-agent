@@ -26,8 +26,23 @@ Kiểm thử dùng database tạm, không ghi vào database đang dùng. Cảnh 
 từ TestClient/httpx có thể xuất hiện; đọc kết quả OK/FAILED để biết trạng thái kiểm thử.
 Hướng dẫn đối chiếu T001–T010: [Bàn giao app v1](docs/app-v1-handoff.md).
 
-App v1 hiện phục vụ DOM gốc M0. Chưa bao gồm mutation, baseline trình duyệt,
-bộ 20 task hoặc LLM/self-healing. Các kiểm thử tích hợp không phải số liệu benchmark.
+App v1 hiện phục vụ DOM gốc M0. Đã có bộ 20 task W2 và baseline CSS/XPath.
+Chưa có mutation hoặc LLM/self-healing. Kiểm thử tích hợp tách biệt với số liệu benchmark.
+
+## Chạy baseline W2
+
+Cài bằng `requirements-lock.txt` để dùng phiên bản đã kiểm chứng.
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
+.\.venv\Scripts\python.exe -m playwright install chromium
+.\.venv\Scripts\python.exe scripts/validate_tasks.py tasks/tasks_w2.json
+.\.venv\Scripts\python.exe -m baseline.run_baseline --mode both
+```
+
+Runner tự mở server/database tạm, không cần server app đang chạy.
+Xem [giao thức baseline](docs/baseline-selectors.md), [báo cáo W2](docs/weekly/W2.md)
+và kết quả 40 lượt chạy ở `results/w2/`.
 
 Đồ án: **Nghiên cứu và xây dựng AI Agent thích nghi tự động hóa tác vụ nghiệp vụ trên Web dựa trên mô hình ngôn ngữ lớn và phân tích DOM.**
 
