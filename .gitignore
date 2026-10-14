@@ -22,3 +22,6 @@ videos/
 *.mov
 *.avi
 *.mkv
+
+# Log server thu DOM có đường dẫn máy cục bộ; giữ JSON/HTML mẫu làm bằng chứng.
+results/w3/**/server.log

@@ -1,0 +1,10 @@
+{
+  "checked_at_utc": "2026-10-14T13:11:42.379277+00:00",
+  "snapshots": 17,
+  "schema_and_html_hashes_passed": 17,
+  "notebook_cells_executed": 5,
+  "unit_tests_passed": 28,
+  "unit_tests_command": "python -m unittest discover -s tests -v",
+  "coverage_scope": "representative UI states for T001-T020; not full task replay",
+  "candidate_generator_integrated": false
+}

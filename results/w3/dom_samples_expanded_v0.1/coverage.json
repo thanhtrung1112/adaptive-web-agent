@@ -1,0 +1,106 @@
+{
+  "scope": "representative UI states, not full task replay",
+  "tasks": {
+    "T001": [
+      "customers-list",
+      "customers-new"
+    ],
+    "T002": [
+      "customers-list",
+      "customers-search",
+      "customers-detail"
+    ],
+    "T003": [
+      "customers-list",
+      "customers-search",
+      "customers-detail",
+      "customers-edit"
+    ],
+    "T004": [
+      "orders-list",
+      "orders-new",
+      "orders-two-lines"
+    ],
+    "T005": [
+      "orders-list",
+      "orders-detail",
+      "orders-updated"
+    ],
+    "T006": [
+      "orders-list",
+      "orders-filtered"
+    ],
+    "T007": [
+      "tickets-list",
+      "tickets-new"
+    ],
+    "T008": [
+      "tickets-list",
+      "tickets-detail",
+      "tickets-assigned"
+    ],
+    "T009": [
+      "tickets-list",
+      "tickets-detail",
+      "tickets-closed"
+    ],
+    "T010": [
+      "customers-list",
+      "customers-search",
+      "customers-detail",
+      "orders-new",
+      "orders-detail",
+      "tickets-new",
+      "tickets-prefilled"
+    ],
+    "T011": [
+      "customers-list",
+      "customers-new"
+    ],
+    "T012": [
+      "customers-list",
+      "customers-search",
+      "customers-detail"
+    ],
+    "T013": [
+      "customers-list",
+      "customers-search",
+      "customers-detail",
+      "customers-edit"
+    ],
+    "T014": [
+      "orders-list",
+      "orders-new"
+    ],
+    "T015": [
+      "orders-list",
+      "orders-detail",
+      "orders-updated"
+    ],
+    "T016": [
+      "orders-list",
+      "orders-detail",
+      "orders-updated"
+    ],
+    "T017": [
+      "orders-list",
+      "orders-detail",
+      "orders-updated"
+    ],
+    "T018": [
+      "orders-list",
+      "orders-filtered"
+    ],
+    "T019": [
+      "tickets-list",
+      "tickets-detail",
+      "tickets-assigned"
+    ],
+    "T020": [
+      "tickets-list",
+      "tickets-new",
+      "tickets-detail",
+      "tickets-assigned"
+    ]
+  }
+}

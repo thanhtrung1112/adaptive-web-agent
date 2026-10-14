@@ -1,0 +1,216 @@
+[
+  {
+    "state": "customers-list",
+    "task_id": "T001",
+    "related_tasks": [
+      "T001",
+      "T002",
+      "T003",
+      "T010",
+      "T011",
+      "T012",
+      "T013"
+    ],
+    "elements": 58,
+    "visible": 53,
+    "controls": 13
+  },
+  {
+    "state": "customers-new",
+    "task_id": "T001",
+    "related_tasks": [
+      "T001",
+      "T011"
+    ],
+    "elements": 29,
+    "visible": 24,
+    "controls": 9
+  },
+  {
+    "state": "customers-search",
+    "task_id": "T002",
+    "related_tasks": [
+      "T002",
+      "T003",
+      "T010",
+      "T012",
+      "T013"
+    ],
+    "elements": 40,
+    "visible": 35,
+    "controls": 10
+  },
+  {
+    "state": "customers-detail",
+    "task_id": "T002",
+    "related_tasks": [
+      "T002",
+      "T003",
+      "T010",
+      "T012",
+      "T013"
+    ],
+    "elements": 32,
+    "visible": 27,
+    "controls": 7
+  },
+  {
+    "state": "customers-edit",
+    "task_id": "T003",
+    "related_tasks": [
+      "T003",
+      "T013"
+    ],
+    "elements": 24,
+    "visible": 19,
+    "controls": 7
+  },
+  {
+    "state": "orders-list",
+    "task_id": "T004",
+    "related_tasks": [
+      "T004",
+      "T005",
+      "T006",
+      "T014",
+      "T015",
+      "T016",
+      "T017",
+      "T018"
+    ],
+    "elements": 68,
+    "visible": 63,
+    "controls": 16
+  },
+  {
+    "state": "orders-filtered",
+    "task_id": "T006",
+    "related_tasks": [
+      "T006",
+      "T018"
+    ],
+    "elements": 56,
+    "visible": 51,
+    "controls": 14
+  },
+  {
+    "state": "orders-new",
+    "task_id": "T004",
+    "related_tasks": [
+      "T004",
+      "T010",
+      "T014"
+    ],
+    "elements": 41,
+    "visible": 27,
+    "controls": 11
+  },
+  {
+    "state": "orders-two-lines",
+    "task_id": "T004",
+    "related_tasks": [
+      "T004"
+    ],
+    "elements": 51,
+    "visible": 34,
+    "controls": 14
+  },
+  {
+    "state": "orders-detail",
+    "task_id": "T005",
+    "related_tasks": [
+      "T005",
+      "T010",
+      "T015",
+      "T016",
+      "T017"
+    ],
+    "elements": 42,
+    "visible": 32,
+    "controls": 8
+  },
+  {
+    "state": "orders-updated",
+    "task_id": "T005",
+    "related_tasks": [
+      "T005",
+      "T015",
+      "T016",
+      "T017"
+    ],
+    "elements": 42,
+    "visible": 32,
+    "controls": 8
+  },
+  {
+    "state": "tickets-list",
+    "task_id": "T007",
+    "related_tasks": [
+      "T007",
+      "T008",
+      "T009",
+      "T019",
+      "T020"
+    ],
+    "elements": 41,
+    "visible": 36,
+    "controls": 9
+  },
+  {
+    "state": "tickets-new",
+    "task_id": "T007",
+    "related_tasks": [
+      "T007",
+      "T010",
+      "T020"
+    ],
+    "elements": 31,
+    "visible": 20,
+    "controls": 8
+  },
+  {
+    "state": "tickets-prefilled",
+    "task_id": "T010",
+    "related_tasks": [
+      "T010"
+    ],
+    "elements": 31,
+    "visible": 20,
+    "controls": 8
+  },
+  {
+    "state": "tickets-detail",
+    "task_id": "T008",
+    "related_tasks": [
+      "T008",
+      "T009",
+      "T019",
+      "T020"
+    ],
+    "elements": 37,
+    "visible": 29,
+    "controls": 10
+  },
+  {
+    "state": "tickets-assigned",
+    "task_id": "T008",
+    "related_tasks": [
+      "T008",
+      "T019",
+      "T020"
+    ],
+    "elements": 37,
+    "visible": 29,
+    "controls": 10
+  },
+  {
+    "state": "tickets-closed",
+    "task_id": "T009",
+    "related_tasks": [
+      "T009"
+    ],
+    "elements": 25,
+    "visible": 20,
+    "controls": 6
+  }
+]

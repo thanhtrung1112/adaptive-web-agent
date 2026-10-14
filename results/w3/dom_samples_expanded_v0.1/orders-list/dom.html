@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59910/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<!-- Danh sách dẫn tới form tạo đơn và trang chi tiết. -->
+<h1>Đơn hàng</h1>
+<!-- T006: lọc trước, liên kết CSV mang đúng khoảng ngày vừa áp dụng. -->
+<form method="get" action="/orders">
+    <label for="orders-from">Từ ngày (UTC)</label>
+    <input id="orders-from" name="from" type="date" value="">
+    <label for="orders-to">Đến ngày (UTC)</label>
+    <input id="orders-to" name="to" type="date" value="">
+    <button id="filter-orders" type="submit">Lọc</button>
+    <a href="/orders">Xóa bộ lọc</a>
+</form>
+<p><a id="export-orders" href="/orders/export.csv?from=&amp;to=">Xuất CSV</a></p>
+<p><a id="create-order" href="/orders/new">Tạo đơn</a></p>
+<table>
+    <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Trạng thái</th><th>Ngày tạo (UTC)</th></tr></thead>
+    <tbody>
+    
+    <tr><td><a href="/orders/ORD-1001">ORD-1001</a></td>
+        <td>Trần Hoa — tran.hoa@example.com</td><td>confirmed</td><td>2026-08-31</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1002">ORD-1002</a></td>
+        <td>Nguyễn Văn Dũng — nguyen.dung@example.com</td><td>pending</td><td>2026-09-01</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1003">ORD-1003</a></td>
+        <td>Trần Hoa — tran.hoa@example.com</td><td>shipped</td><td>2026-09-10</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1004">ORD-1004</a></td>
+        <td>Nguyễn Văn Dũng — nguyen.dung@example.com</td><td>confirmed</td><td>2026-09-15</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1005">ORD-1005</a></td>
+        <td>Trần Hoa — tran.hoa@example.com</td><td>pending</td><td>2026-09-16</td></tr>
+    
+    </tbody>
+</table>
+<p><a href="/">Về trang chủ</a></p>
+
+    </main>
+
+</body></html>

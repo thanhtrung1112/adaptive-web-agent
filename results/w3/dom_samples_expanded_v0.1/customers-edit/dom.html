@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa khách hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59910/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<h1>Sửa khách hàng</h1>
+<p>Trần Hoa — tran.hoa@example.com</p>
+
+
+
+<form method="post" action="/customers/1/edit">
+    <p>
+        <label for="customer-phone">Số điện thoại</label>
+        <input id="customer-phone" name="phone" type="tel" value="0900000001" required="">
+    </p>
+    <button id="save-customer" type="submit">Lưu</button>
+    <a href="/customers/1">Hủy</a>
+</form>
+
+    </main>
+
+</body></html>
