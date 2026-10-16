@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đơn hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59910/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<!-- Thể hiện dữ liệu đã lưu, không lấy lại từ form gửi lên. -->
+<h1>Đơn hàng ORD-1003</h1>
+<!-- Ticket mới được chọn sẵn đúng đơn đang xem, kể cả đơn vừa tạo. -->
+<p><a id="order-create-ticket" href="/tickets/new?order_id=ORD-1003">Tạo ticket</a></p>
+<p>Khách hàng: Trần Hoa — tran.hoa@example.com</p>
+<p>Trạng thái: <strong>Đã giao</strong> (delivered)</p>
+<!-- T005: chọn nhãn Đã giao để gửi giá trị delivered về server. -->
+
+<form method="post" action="/orders/ORD-1003/status">
+    <label for="order-status">Trạng thái đơn hàng</label>
+    <select id="order-status" name="status" required="">
+        
+        <option value="pending">Chờ xác nhận</option>
+        
+        <option value="confirmed">Đã xác nhận</option>
+        
+        <option value="shipped">Đang giao</option>
+        
+        <option value="delivered" selected="">Đã giao</option>
+        
+        <option value="cancelled">Đã hủy</option>
+        
+    </select>
+    <button id="update-order-status" type="submit">Cập nhật</button>
+</form>
+<table>
+    <thead><tr><th>SKU</th><th>Số lượng</th></tr></thead>
+    <tbody>
+    <tr><td>SKU-100</td><td>2</td></tr>
+    </tbody>
+</table>
+<p><a href="/orders">Về danh sách đơn hàng</a></p>
+
+    </main>
+
+</body></html>

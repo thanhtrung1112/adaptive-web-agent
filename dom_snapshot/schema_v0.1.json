@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MiniBiz DOM snapshot v0.1",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "snapshot_id": {
+      "type": "string"
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "captured_at_utc": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "viewport": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "width",
+        "height"
+      ],
+      "additionalProperties": false
+    },
+    "html_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "provenance": {
+      "type": "object"
+    },
+    "elements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "element_id": {
+            "type": "string",
+            "pattern": "^e[1-9][0-9]*$"
+          },
+          "parent_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "tag": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string"
+          },
+          "attributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name_hint": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "readonly": {
+            "type": "boolean"
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "checked": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "selected": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "bounding_box": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "locator": {
+            "type": "object",
+            "properties": {
+              "strategy": {
+                "const": "xpath"
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "strategy",
+              "value"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "element_id",
+          "parent_id",
+          "tag",
+          "text",
+          "attributes",
+          "label",
+          "name_hint",
+          "visible",
+          "enabled",
+          "readonly",
+          "value",
+          "checked",
+          "selected",
+          "bounding_box",
+          "locator"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "snapshot_id",
+    "task_id",
+    "state",
+    "captured_at_utc",
+    "url",
+    "title",
+    "viewport",
+    "html_sha256",
+    "provenance",
+    "elements"
+  ],
+  "additionalProperties": false
+}

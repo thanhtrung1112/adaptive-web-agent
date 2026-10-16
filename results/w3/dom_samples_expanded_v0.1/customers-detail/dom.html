@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết khách hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59910/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<h1>Chi tiết khách hàng</h1>
+<!-- T010: truyền ID khách sang form tạo đơn để tránh chọn nhầm. -->
+<p><a id="customer-create-order" href="/orders/new?customer_id=1">Tạo đơn</a></p>
+<dl>
+    <dt>Mã khách hàng</dt>
+    <dd>1</dd>
+    <dt>Tên khách hàng</dt>
+    <dd>Trần Hoa</dd>
+    <dt>Email</dt>
+    <dd>tran.hoa@example.com</dd>
+    <dt>Số điện thoại</dt>
+    <dd>0900000001</dd>
+</dl>
+<p><a id="edit-customer" href="/customers/1/edit">Sửa</a></p>
+<p><a href="/customers">Về danh sách khách hàng</a></p>
+
+    </main>
+
+</body></html>
