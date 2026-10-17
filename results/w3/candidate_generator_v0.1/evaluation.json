@@ -1,0 +1,86 @@
+{
+  "misses": [
+    {
+      "mutation": "combined",
+      "rank_of_target": 2,
+      "selector": "#order-sku-1",
+      "state": "orders-two-lines",
+      "target": "e30",
+      "top1": "e40"
+    },
+    {
+      "mutation": "combined",
+      "rank_of_target": 2,
+      "selector": "#order-qty-2",
+      "state": "orders-two-lines",
+      "target": "e45",
+      "top1": "e35"
+    }
+  ],
+  "note": "Mô phỏng trên snapshot; chưa phải mutation thật của app (W4).",
+  "results": {
+    "combined": {
+      "mean_controls": 11.1,
+      "mrr": 0.987,
+      "targets": 79,
+      "top1": 0.975,
+      "top3": 1.0,
+      "top5": 1.0
+    },
+    "decoy": {
+      "mean_controls": 12.4,
+      "mrr": 1.0,
+      "targets": 79,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0
+    },
+    "ids": {
+      "mean_controls": 11.1,
+      "mrr": 1.0,
+      "targets": 79,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0
+    },
+    "labels": {
+      "mean_controls": 11.1,
+      "mrr": 1.0,
+      "targets": 79,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0
+    },
+    "none": {
+      "mean_controls": 11.1,
+      "mrr": 1.0,
+      "targets": 79,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0
+    },
+    "wrap": {
+      "mean_controls": 11.1,
+      "mrr": 1.0,
+      "targets": 79,
+      "top1": 1.0,
+      "top3": 1.0,
+      "top5": 1.0
+    }
+  },
+  "seed": 0,
+  "snapshot_set": "dom_samples_expanded_v0.1",
+  "weights": {
+    "form": 1,
+    "href": 2,
+    "id": 2,
+    "label": 3,
+    "name": 2,
+    "options": 1,
+    "path": 1,
+    "placeholder": 1.5,
+    "tag": 3,
+    "text": 3,
+    "type": 1
+  }
+}
