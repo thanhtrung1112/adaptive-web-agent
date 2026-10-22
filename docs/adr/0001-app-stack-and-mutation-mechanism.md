@@ -1,7 +1,8 @@
 # ADR-0001: Stack của MiniBiz và cơ chế mutation
 
-- Trạng thái: Đề xuất (cần hai thành viên xác nhận)
-- Ngày: 2026-10-02
+- Trạng thái: Accepted — Vũ Văn Bình và Nguyễn Thành Trung đã xác nhận ngày 2026-10-17.
+- Ngày đề xuất: 2026-10-02.
+- Ngày chấp thuận: 2026-10-17.
 
 ## Bối cảnh
 Benchmark cần một app nghiệp vụ nhỏ sinh được nhiều phiên bản DOM tái lập, dễ chạy trong Docker và với Playwright.
