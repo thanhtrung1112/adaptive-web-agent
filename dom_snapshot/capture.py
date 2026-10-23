@@ -27,4 +27,5 @@ def save_snapshot(directory, html, snapshot):
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=False)
     (directory/'dom.html').write_bytes(html.encode('utf-8'))
-    (directory/'features.json').write_text(json.dumps(snapshot, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+    # Explicit LF matches .gitattributes; checksums must survive a Windows Git checkout.
+    (directory/'features.json').write_text(json.dumps(snapshot, ensure_ascii=False, indent=2)+'\n', encoding='utf-8', newline='\n')

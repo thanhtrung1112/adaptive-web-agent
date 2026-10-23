@@ -9,3 +9,9 @@ data/manifest.json text eol=lf
 *.css text eol=lf
 *.js text eol=lf
 requirements*.txt text eol=lf
+
+# Raw captured HTML retains template whitespace to preserve DOM evidence/checksums.
+# Disable only end-of-line whitespace warnings for this dataset's dom.html files.
+results/w4/binh_v1/snapshots/**/dom.html whitespace=-blank-at-eol
+# The evidence manifest hashes this text log too; keep its bytes stable on Windows.
+results/w4/binh_v1/test_log.txt text eol=lf

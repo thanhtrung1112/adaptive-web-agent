@@ -26,8 +26,20 @@ Kiểm thử dùng database tạm, không ghi vào database đang dùng. Cảnh 
 từ TestClient/httpx có thể xuất hiện; đọc kết quả OK/FAILED để biết trạng thái kiểm thử.
 Hướng dẫn đối chiếu T001–T010: [Bàn giao app v1](docs/app-v1-handoff.md).
 
-App v1 hiện phục vụ DOM gốc M0. Đã có bộ 20 task W2 và baseline CSS/XPath.
-Chưa có mutation hoặc LLM/self-healing. Kiểm thử tích hợp tách biệt với số liệu benchmark.
+App có DOM gốc M0 và các mutation phát triển M1–M3 của W4.
+Kiểm thử chức năng bằng oracle tách biệt với kết quả B0/embedding; chưa có LLM/self-healing.
+
+## Phần dữ liệu/app W4 — Vũ Văn Bình
+
+```powershell
+.\.venv\Scripts\python.exe scripts/validate_tasks.py tasks/tasks_w4.json
+.\.venv\Scripts\python.exe -m w4.run --seeds 7
+```
+
+30 task × M0/M1/M2/M3 trên app thật, server/database tạm; full snapshots ở `runs/`.
+Xem [hướng dẫn bàn giao W4](docs/w4-binh-handoff.md) và
+[tiến độ phần Bình](docs/weekly/W4.md). Embedding baseline của Trung cần tích hợp riêng.
+Mẫu dữ liệu công bố: `results/w4/binh_v1/`, với ground truth riêng phía evaluator.
 
 ## Chạy baseline W2
 

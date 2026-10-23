@@ -6,6 +6,7 @@ from app.db import init_db
 from app.routes.customers import router as customers_router
 from app.routes.orders import router as orders_router
 from app.routes.tickets import router as tickets_router
+from app.mutations import MutationMiddleware
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -35,6 +36,8 @@ app.add_middleware(
     same_site="lax",
 )
 
+# Mutation at the HTML render boundary; API/static payloads remain unchanged.
+app.add_middleware(MutationMiddleware)
 app.include_router(customers_router)
 # Đăng ký các trang và API của module đơn hàng.
 app.include_router(orders_router)

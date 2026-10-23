@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo đơn | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59286/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <span style="display:contents"><span style="display:contents"><a class="brand" href="/">MiniBiz</a></span></span>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><span style="display:contents"><span style="display:contents"><a href="/customers">Khách hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/orders">Đơn hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/tickets">Hỗ trợ</a></span></span></nav>
+    <main class="container">
+        
+<!-- Form gửi các cặp sku/qty; thêm dòng bằng JavaScript bên dưới. -->
+<h1>Tạo đơn hàng</h1>
+
+
+<form method="post" action="/orders/new">
+    <span style="display:contents"><span style="display:contents"><label for="order-customer">Khách hàng</label></span></span>
+    <span style="display:contents"><span style="display:contents"><select id="order-customer" name="customer_id" required="">
+        <option value="">Chọn khách hàng</option>
+        
+        <option value="1">Trần Hoa — tran.hoa@example.com</option>
+        
+        <option value="2">Nguyễn Văn Dũng — nguyen.dung@example.com</option>
+        
+        <option value="3">Phạm Thu Hà — pham.ha@example.com</option>
+        
+        <option value="4">Võ Thanh Tâm — vo.tam@example.com</option>
+        
+    </select></span></span>
+    <div id="order-lines">
+        
+        <fieldset class="order-line">
+            <legend>Sản phẩm 1</legend>
+            <span style="display:contents"><span style="display:contents"><label for="order-sku-1">Sản phẩm</label></span></span>
+            <span style="display:contents"><span style="display:contents"><select id="order-sku-1" name="sku" required="">
+                <option value="">Chọn sản phẩm</option>
+                
+                <option value="SKU-100">SKU-100 — Bàn phím</option>
+                
+                <option value="SKU-205">SKU-205 — Chuột máy tính</option>
+                
+            </select></span></span>
+            <span style="display:contents"><span style="display:contents"><label for="order-qty-1">Số lượng</label></span></span>
+            <span style="display:contents"><span style="display:contents"><input id="order-qty-1" name="qty" type="number" min="1" max="1000000" step="1" value="1" required=""></span></span>
+            <span style="display:contents"><span style="display:contents"><button type="button" class="remove-line">Xóa dòng</button></span></span>
+        </fieldset>
+        
+    <fieldset class="order-line">
+            <legend>Sản phẩm 2</legend>
+            <span style="display:contents"><span style="display:contents"><label for="order-sku-2">Sản phẩm</label></span></span>
+            <span style="display:contents"><span style="display:contents"><select id="order-sku-2" name="sku" required="">
+                <option value="">Chọn sản phẩm</option>
+                
+                <option value="SKU-100">SKU-100 — Bàn phím</option>
+                
+                <option value="SKU-205">SKU-205 — Chuột máy tính</option>
+                
+            </select></span></span>
+            <span style="display:contents"><span style="display:contents"><label for="order-qty-2">Số lượng</label></span></span>
+            <span style="display:contents"><span style="display:contents"><input id="order-qty-2" name="qty" type="number" min="1" max="1000000" step="1" value="1" required=""></span></span>
+            <span style="display:contents"><span style="display:contents"><button type="button" class="remove-line">Xóa dòng</button></span></span>
+        </fieldset></div>
+    <p><span style="display:contents"><span style="display:contents"><button id="add-order-line" type="button">Thêm dòng</button></span></span></p>
+    <span style="display:contents"><span style="display:contents"><button id="save-order" type="submit">Xác nhận tạo đơn</button></span></span>
+    <span style="display:contents"><span style="display:contents"><a href="/orders">Hủy</a></span></span>
+</form>
+<script src="http://127.0.0.1:59286/static/orders.js?mutation=M3&amp;seed=7" defer=""></script>
+
+    </main>
+
+</body></html>
