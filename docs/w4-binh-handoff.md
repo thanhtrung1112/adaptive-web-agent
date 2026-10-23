@@ -156,3 +156,37 @@ Port server/URL tuyệt đối cũng có thể khác giữa các run cô lập; 
 để kết luận mutation không tái lập. Hash trong manifest xác nhận nguyên vẹn từng artifact của chính run đó.
 Critical_elements T015–T017/T019 trong W2 có mô tả mã đơn/ticket kế thừa chưa chính xác;
 giữ nguyên các object theo yêu cầu, evaluator dựa success criteria và script đúng, ghi errata ở decision log.
+
+## Bàn giao dataset đầy đủ và kiểm tra bổ sung
+
+Theo dõi triển khai tại [Issue #13](https://github.com/thanhtrung1112/adaptive-web-agent/issues/13)
+và [PR #14](https://github.com/thanhtrung1112/adaptive-web-agent/pull/14).
+
+Trung chạy từ thư mục gốc repo (output phải chưa tồn tại):
+
+```powershell
+.\.venv\Scripts\python.exe -m w4.run --seeds 7 --output runs/w4-trung-full
+.\.venv\Scripts\python.exe -m w4.validate_dataset runs/w4-trung-full
+.\.venv\Scripts\python.exe -m w4.integration_example runs/w4-trung-full
+```
+
+Trước khi chạy embedding, kiểm tra summary có 120/120 lượt hoàn tất và đạt;
+validation của full dataset kỳ vọng 692 snapshot, 429 pair ở phiên bản hiện tại.
+Nếu khác, đối chiếu revision, task hash, cấu hình và lỗi trace, không tự thay số liệu cho khớp.
+Đọc toàn bộ ground_truth/pairs.json ở phía evaluator; gọi ranking_inputs cho từng pair.
+Chỉ descriptor và candidates đi vào ranker. Target dùng để chấm sau khi ranker trả kết quả.
+
+Nếu chuyển full run qua Drive, giữ toàn bộ thư mục (metadata, coverage, summary, pairs,
+snapshots, validation), bỏ database chạy thử khỏi gói. Gửi kèm SHA-256 của archive và revision;
+người nhận kiểm tra archive hash và chạy validator. File validation ghi checksum từng snapshot.
+Không cần đưa full run, database, DOCX hoặc archive vào Git.
+
+Kiểm tra bộ mẫu đã commit mà không làm thay đổi bằng chứng cũ:
+
+```powershell
+.\.venv\Scripts\python.exe -m w4.validate_dataset results/w4/binh_v1 --check-only
+```
+
+Kỳ vọng `PASS: 24 snapshots, 18 evaluation pairs`. Kết quả này chỉ xác nhận bộ mẫu,
+không xác nhận full replay hoặc chất lượng embedding. Validator mới kiểm tra seed hợp lệ,
+task_id của cả hai snapshot, metadata pair và tham chiếu snapshot.

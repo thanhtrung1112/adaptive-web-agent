@@ -1,4 +1,5 @@
 """W4 contract, genuine mutation, context persistence and dynamic form regression tests."""
+import shutil
 import hashlib
 import json
 import subprocess
@@ -159,6 +160,68 @@ class W4BrowserTests(unittest.TestCase):
             with self.assertRaises(ValueError): read_snapshot(root,'../outside.json')
             (root/'snapshots/M3/dom.html').write_text('tampered',encoding='utf-8')
             with self.assertRaisesRegex(ValueError,'checksum'): validate(root)
+
+
+
+
+class W4DatasetValidationTests(unittest.TestCase):
+    # Use real published snapshots; mutate only copies, never historical evidence.
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.root = Path(temp.name) / 'dataset'
+        source = ROOT / 'results/w4/binh_v1'
+        self.pair = json.loads((source/'ground_truth/pairs.json').read_text(encoding='utf-8'))[0]
+        for key in ('reference_snapshot', 'candidate_snapshot'):
+            folder = Path(self.pair[key]).parent
+            shutil.copytree(source/folder, self.root/folder)
+        (self.root/'ground_truth').mkdir()
+        self.save_pair()
+
+    def save_pair(self):
+        (self.root/'ground_truth/pairs.json').write_text(json.dumps([self.pair]), encoding='utf-8')
+
+    def test_read_only_validation_preserves_report(self):
+        report = self.root/'validation.json'
+        report.write_text('historical report', encoding='utf-8')
+        result = validate(self.root, write_report=False)
+        self.assertEqual((result['snapshot_count'], result['pair_count']), (2, 1))
+        self.assertEqual(report.read_text(encoding='utf-8'), 'historical report')
+
+    def test_invalid_snapshot_seed_including_missing_and_bool(self):
+        path = self.root/self.pair['candidate_snapshot']
+        snap = json.loads(path.read_text(encoding='utf-8'))
+        for value in (None, True, -1, 2147483648, '7', 7.0):
+            with self.subTest(value=value):
+                snap['provenance']['mutation_seed'] = value
+                if value is None:
+                    del snap['provenance']['mutation_seed']
+                path.write_text(json.dumps(snap), encoding='utf-8')
+                with self.assertRaisesRegex(ValueError, 'mutation_seed'):
+                    validate(self.root, write_report=False)
+
+    def test_candidate_task_mismatch_is_rejected(self):
+        path = self.root/self.pair['candidate_snapshot']
+        snap = json.loads(path.read_text(encoding='utf-8'))
+        snap['task_id'] = 'T030'
+        path.write_text(json.dumps(snap), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'task_id mismatch'):
+            validate(self.root, write_report=False)
+
+    def test_invalid_pair_metadata_and_unknown_snapshot(self):
+        original = dict(self.pair)
+        for field, value, message in (
+            ('mutation_seed', True, 'mutation_seed'),
+            ('mutation_seed', 8, 'provenance mismatch'),
+            ('mutation', 'M0', 'Pair mutation'),
+            ('step_index', -1, 'step_index'),
+            ('candidate_snapshot', '../outside.json', 'unknown snapshot'),
+        ):
+            with self.subTest(field=field, value=value):
+                self.pair = {**original, field: value}
+                self.save_pair()
+                with self.assertRaisesRegex(ValueError, message):
+                    validate(self.root, write_report=False)
 
 
 if __name__=='__main__': unittest.main()
