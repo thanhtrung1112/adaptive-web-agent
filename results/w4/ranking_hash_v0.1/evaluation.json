@@ -1,0 +1,149 @@
+{
+  "encoder": "hash",
+  "kinds": {
+    "combined": {
+      "alpha_chosen_on_dev": 0.75,
+      "test": {
+        "embedding": {
+          "mrr": 0.853,
+          "targets": 27,
+          "top1": 0.741,
+          "top3": 0.963
+        },
+        "features": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "flatten": {
+      "alpha_chosen_on_dev": 0.25,
+      "test": {
+        "embedding": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "hard": {
+      "alpha_chosen_on_dev": 1.0,
+      "test": {
+        "embedding": {
+          "mrr": 0.835,
+          "targets": 27,
+          "top1": 0.704,
+          "top3": 0.963
+        },
+        "features": {
+          "mrr": 0.944,
+          "targets": 27,
+          "top1": 0.889,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 0.944,
+          "targets": 27,
+          "top1": 0.889,
+          "top3": 1.0
+        }
+      }
+    },
+    "ids": {
+      "alpha_chosen_on_dev": 0.25,
+      "test": {
+        "embedding": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "labels": {
+      "alpha_chosen_on_dev": 0.5,
+      "test": {
+        "embedding": {
+          "mrr": 0.853,
+          "targets": 27,
+          "top1": 0.741,
+          "top3": 0.963
+        },
+        "features": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "none": {
+      "alpha_chosen_on_dev": 0.25,
+      "test": {
+        "embedding": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "targets": 27,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    }
+  },
+  "model": "hashing char n-gram (offline)",
+  "note": "Mô phỏng trên snapshot; chưa phải mutation thật.",
+  "split_sizes": {
+    "dev": 52,
+    "test": 27
+  }
+}

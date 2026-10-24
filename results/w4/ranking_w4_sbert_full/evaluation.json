@@ -1,0 +1,446 @@
+{
+  "alpha_chosen_on_dev": 0.5,
+  "by_mutation": {
+    "M1": {
+      "all": {
+        "embedding": {
+          "mrr": 0.986,
+          "pairs": 143,
+          "top1": 0.972,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 143,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 143,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      },
+      "test": {
+        "embedding": {
+          "mrr": 0.976,
+          "pairs": 41,
+          "top1": 0.951,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 41,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 41,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "M2": {
+      "all": {
+        "embedding": {
+          "mrr": 0.931,
+          "pairs": 143,
+          "top1": 0.881,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 143,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 143,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      },
+      "test": {
+        "embedding": {
+          "mrr": 0.919,
+          "pairs": 41,
+          "top1": 0.854,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 41,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 41,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "M3": {
+      "all": {
+        "embedding": {
+          "mrr": 0.986,
+          "pairs": 143,
+          "top1": 0.972,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 143,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 143,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      },
+      "test": {
+        "embedding": {
+          "mrr": 0.976,
+          "pairs": 41,
+          "top1": 0.951,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 41,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 41,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    }
+  },
+  "dataset": "runs/w4-trung-full",
+  "dataset_metadata": {
+    "data_seed": "seed_v1",
+    "development_seeds": [
+      7
+    ],
+    "git_commit": "788762af8bb5eab2c2dc563da44234f09480cb03",
+    "git_status": "?? docs/semantic-ranking-v0.1.md\n?? ranking/\n?? requirements-ranking.txt\n?? results/w4/ranking_hash_v0.1/\n?? results/w4/ranking_sbert_v0.1/\n?? results/w4/ranking_w4_hash_binh_v1/\n?? results/w4/ranking_w4_sbert_binh_v1/\n?? tests/test_ranking.py\n?? tests/test_ranking_w4.py\n",
+    "mutations": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "task_sha256": "88d53067a0affc327e0224c34520aee5efb5310d4d8a67542b778e66aa4cc2bd"
+  },
+  "dev_mrr_by_alpha": {
+    "0.0": 0.972,
+    "0.25": 0.99,
+    "0.5": 1.0,
+    "0.75": 1.0,
+    "1.0": 1.0
+  },
+  "encoder": "sbert",
+  "encoder_load_s": 24.62,
+  "latency_ms_per_pair": {
+    "embedding": {
+      "median_ms": 0.79,
+      "p95_ms": 1.43
+    },
+    "features": {
+      "median_ms": 0.67,
+      "p95_ms": 1.25
+    },
+    "hybrid": {
+      "median_ms": 0.79,
+      "p95_ms": 1.36
+    }
+  },
+  "misses": [
+    {
+      "mode": "embedding",
+      "mutation": "M1",
+      "rank_of_target": 2,
+      "step_index": 6,
+      "target": "e40",
+      "task_id": "T004",
+      "top1": "e30"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M1",
+      "rank_of_target": 2,
+      "step_index": 7,
+      "target": "e45",
+      "task_id": "T004",
+      "top1": "e35"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M1",
+      "rank_of_target": 2,
+      "step_index": 6,
+      "target": "e40",
+      "task_id": "T024",
+      "top1": "e30"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M1",
+      "rank_of_target": 2,
+      "step_index": 7,
+      "target": "e45",
+      "task_id": "T024",
+      "top1": "e35"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 4,
+      "target": "e30",
+      "task_id": "T003",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 1,
+      "target": "e30",
+      "task_id": "T004",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 5,
+      "target": "e38",
+      "task_id": "T004",
+      "top1": "e39"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 6,
+      "target": "e40",
+      "task_id": "T004",
+      "top1": "e30"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 7,
+      "target": "e45",
+      "task_id": "T004",
+      "top1": "e35"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 2,
+      "target": "e22",
+      "task_id": "T006",
+      "top1": "e20"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 4,
+      "target": "e19",
+      "task_id": "T010",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 4,
+      "target": "e30",
+      "task_id": "T013",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 1,
+      "target": "e30",
+      "task_id": "T014",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 2,
+      "target": "e22",
+      "task_id": "T018",
+      "top1": "e20"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 4,
+      "target": "e30",
+      "task_id": "T023",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 1,
+      "target": "e30",
+      "task_id": "T024",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 5,
+      "target": "e38",
+      "task_id": "T024",
+      "top1": "e39"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 6,
+      "target": "e40",
+      "task_id": "T024",
+      "top1": "e30"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 7,
+      "target": "e45",
+      "task_id": "T024",
+      "top1": "e35"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 2,
+      "step_index": 2,
+      "target": "e22",
+      "task_id": "T026",
+      "top1": "e20"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M2",
+      "rank_of_target": 3,
+      "step_index": 4,
+      "target": "e19",
+      "task_id": "T030",
+      "top1": "e14"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M3",
+      "rank_of_target": 2,
+      "step_index": 6,
+      "target": "e66",
+      "task_id": "T004",
+      "top1": "e46"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M3",
+      "rank_of_target": 2,
+      "step_index": 7,
+      "target": "e75",
+      "task_id": "T004",
+      "top1": "e55"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M3",
+      "rank_of_target": 2,
+      "step_index": 6,
+      "target": "e66",
+      "task_id": "T024",
+      "top1": "e46"
+    },
+    {
+      "mode": "embedding",
+      "mutation": "M3",
+      "rank_of_target": 2,
+      "step_index": 7,
+      "target": "e75",
+      "task_id": "T024",
+      "top1": "e55"
+    }
+  ],
+  "model": "paraphrase-multilingual-MiniLM-L12-v2",
+  "note": "Dữ liệu mutation phát triển (seed phát triển); không dùng held-out W11.",
+  "overall": {
+    "all": {
+      "embedding": {
+        "mrr": 0.968,
+        "pairs": 429,
+        "top1": 0.942,
+        "top3": 1.0
+      },
+      "features": {
+        "mrr": 1.0,
+        "pairs": 429,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "hybrid": {
+        "mrr": 1.0,
+        "pairs": 429,
+        "top1": 1.0,
+        "top3": 1.0
+      }
+    },
+    "test": {
+      "embedding": {
+        "mrr": 0.957,
+        "pairs": 123,
+        "top1": 0.919,
+        "top3": 1.0
+      },
+      "features": {
+        "mrr": 1.0,
+        "pairs": 123,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "hybrid": {
+        "mrr": 1.0,
+        "pairs": 123,
+        "top1": 1.0,
+        "top3": 1.0
+      }
+    }
+  },
+  "pairs": 429,
+  "split_pairs": {
+    "dev": 306,
+    "test": 123
+  }
+}
