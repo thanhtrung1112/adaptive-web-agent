@@ -1,0 +1,16 @@
+{
+  "scope": "representative last pre-action snapshot per selected task, NOT full replay snapshots",
+  "sample_tasks": [
+    "T001",
+    "T004",
+    "T006",
+    "T009",
+    "T024",
+    "T030"
+  ],
+  "sample_pairs": 18,
+  "full_replay_expected_rows": 120,
+  "full_replay_completed_rows": 120,
+  "full_replay_snapshot_count": 692,
+  "regenerate_full_dataset": "python -m w4.run --seeds 7"
+}

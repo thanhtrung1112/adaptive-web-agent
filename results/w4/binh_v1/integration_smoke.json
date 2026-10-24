@@ -1,0 +1,66 @@
+{
+  "scope": "adapter smoke using W3 ranker, NOT embedding",
+  "ranking": [
+    {
+      "element_id": "e28",
+      "score": 0.842,
+      "parts": {
+        "tag": 1.0,
+        "type": 1.0,
+        "text": 1.0,
+        "id": 0.13,
+        "form": 1.0,
+        "path": 1.0
+      }
+    },
+    {
+      "element_id": "e27",
+      "score": 0.176,
+      "parts": {
+        "tag": 0.0,
+        "type": 0.0,
+        "text": 0.0,
+        "id": 0.13,
+        "form": 1.0,
+        "path": 0.67
+      }
+    },
+    {
+      "element_id": "e29",
+      "score": 0.164,
+      "parts": {
+        "tag": 0.0,
+        "type": 0.0,
+        "text": 0.0,
+        "id": 0.0,
+        "form": 1.0,
+        "path": 0.8
+      }
+    },
+    {
+      "element_id": "e21",
+      "score": 0.164,
+      "parts": {
+        "tag": 0.0,
+        "type": 0.0,
+        "text": 0.0,
+        "id": 0.07,
+        "form": 1.0,
+        "path": 0.67
+      }
+    },
+    {
+      "element_id": "e24",
+      "score": 0.164,
+      "parts": {
+        "tag": 0.0,
+        "type": 0.0,
+        "text": 0.0,
+        "id": 0.07,
+        "form": 1.0,
+        "path": 0.67
+      }
+    }
+  ],
+  "target_rank": 1
+}

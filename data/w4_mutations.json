@@ -1,0 +1,28 @@
+{
+  "version": "w4-real-app-v1",
+  "partition": "development",
+  "data_seed": "seed_v1",
+  "data_manifest": "data/manifest.json",
+  "task_file": "tasks/tasks_w4.json",
+  "task_count": 30,
+  "task_sha256": "88d53067a0affc327e0224c34520aee5efb5310d4d8a67542b778e66aa4cc2bd",
+  "mutation_modes": {
+    "M0": "identity HTML",
+    "M1": "opaque ID + IDREF rewrite; name/class kept for transport/style",
+    "M2": "seeded synonym labels/buttons/placeholders, option values unchanged",
+    "M3": "1 + seed % 2 span wrappers with display:contents, no table/option rewrites"
+  },
+  "development_seeds": [
+    7,
+    8
+  ],
+  "held_out": {
+    "status": "reserved for W11, not accessed/generated",
+    "seeds": null
+  },
+  "snapshot_schema": "dom_snapshot/schema_v0.1.json",
+  "ground_truth": "evaluation-only pairs.json; not provided to ranking",
+  "full_dataset_generation": "python -m w4.run --seeds 7",
+  "published_subset": "results/w4/binh_v1",
+  "scope_note": "functionality oracle is not B0/B1/A1/A2 or embedding success"
+}

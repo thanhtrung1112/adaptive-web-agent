@@ -1,0 +1,48 @@
+C:\Users\admin\Downloads\adaptive-web-agent-main\adaptive-web-agent-review\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_every_locator_step_has_css_and_xpath (test_baseline.BaselineScriptTests.test_every_locator_step_has_css_and_xpath) ... ok
+test_every_pilot_task_has_script (test_baseline.BaselineScriptTests.test_every_pilot_task_has_script) ... ok
+test_controls_of_customer_form (test_candidates.FeatureTests.test_controls_of_customer_form) ... ok
+test_original_element_ranks_first_on_unchanged_page (test_candidates.GeneratorTests.test_original_element_ranks_first_on_unchanged_page) ... ok
+test_survives_id_and_text_change (test_candidates.GeneratorTests.test_survives_id_and_text_change) ... ok
+test_mutation_is_deterministic (test_candidates.MutationTests.test_mutation_is_deterministic) ... ok
+test_mutations_keep_original_element_ids (test_candidates.MutationTests.test_mutations_keep_original_element_ids) ... ok
+test_unchanged_and_single_mutations_are_perfect (test_candidates.MutationTests.test_unchanged_and_single_mutations_are_perfect) ... ok
+test_ground_truth_covers_all_baseline_selectors (test_candidates.TargetTests.test_ground_truth_covers_all_baseline_selectors) ... ok
+test_all_twenty_tasks_require_action (test_checker.CheckerTests.test_all_twenty_tasks_require_action) ... ok
+test_chain_wrong_order_fails (test_checker.CheckerTests.test_chain_wrong_order_fails) ... ok
+test_csv_rejects_duplicates_and_missing_header (test_checker.CheckerTests.test_csv_rejects_duplicates_and_missing_header) ... ok
+test_pilot_preserved (test_checker.CheckerTests.test_pilot_preserved) ... ok
+test_invalid_edit_preserves_data (test_customers.CustomerTests.test_invalid_edit_preserves_data) ... ok
+test_missing_customer_does_not_record_view (test_customers.CustomerTests.test_missing_customer_does_not_record_view) ... ok
+test_search_then_detail_records_view_only_after_opening (test_customers.CustomerTests.test_search_then_detail_records_view_only_after_opening) ... ok
+test_t001_create_still_works (test_customers.CustomerTests.test_t001_create_still_works) ... ok
+test_t003_updates_only_target_phone (test_customers.CustomerTests.test_t003_updates_only_target_phone) ... ok
+test_dynamic_nodes_and_unique_references (test_dom_snapshot.DOMSnapshotTests.test_dynamic_nodes_and_unique_references) ... ok
+test_labelledby_and_capture_does_not_mutate_dom (test_dom_snapshot.DOMSnapshotTests.test_labelledby_and_capture_does_not_mutate_dom) ... ok
+test_labels_runtime_values_and_disabled_ancestor (test_dom_snapshot.DOMSnapshotTests.test_labels_runtime_values_and_disabled_ancestor) ... ok
+test_reject_duplicate_ids_broken_parent_and_wrong_type (test_dom_snapshot.DOMSnapshotTests.test_reject_duplicate_ids_broken_parent_and_wrong_type) ... ok
+test_selected_options_and_textarea_runtime (test_dom_snapshot.DOMSnapshotTests.test_selected_options_and_textarea_runtime) ... ok
+test_date_errors_and_empty_csv (test_orders.OrderTests.test_date_errors_and_empty_csv) ... ok
+test_invalid_forms_do_not_write (test_orders.OrderTests.test_invalid_forms_do_not_write) ... ok
+test_invalid_status_leaves_order_unchanged (test_orders.OrderTests.test_invalid_status_leaves_order_unchanged) ... ok
+test_t004_and_reset (test_orders.OrderTests.test_t004_and_reset) ... ok
+test_t005_status_update_and_reset (test_orders.OrderTests.test_t005_status_update_and_reset) ... ok
+test_t006_filter_and_csv (test_orders.OrderTests.test_t006_filter_and_csv) ... ok
+test_invalid_seed_preserves_existing_data (test_seed.SeedTests.test_invalid_seed_preserves_existing_data) ... ok
+test_reset_restores_data_and_next_id (test_seed.SeedTests.test_reset_restores_data_and_next_id) ... ok
+test_invalid_input (test_support.SupportTests.test_invalid_input) ... ok
+test_t007_create (test_support.SupportTests.test_t007_create) ... ok
+test_t008_t009_and_reset (test_support.SupportTests.test_t008_t009_and_reset) ... ok
+test_t010_chain (test_support.SupportTests.test_t010_chain) ... ok
+test_dynamic_form_two_seeds_all_modes_and_labels (test_w4.W4BrowserTests.test_dynamic_form_two_seeds_all_modes_and_labels) ... ok
+test_paired_dataset_contract_and_corrupt_html (test_w4.W4BrowserTests.test_paired_dataset_contract_and_corrupt_html) ... ok
+test_runtime_determinism_get_search_navigation_and_csv (test_w4.W4BrowserTests.test_runtime_determinism_get_search_navigation_and_csv) ... ok
+test_invalid_context_and_error_response_retain_mutation (test_w4.W4ContractTests.test_invalid_context_and_error_response_retain_mutation) ... ok
+test_pure_mutation_reproducible_across_processes (test_w4.W4ContractTests.test_pure_mutation_reproducible_across_processes) ... ok
+test_thirty_tasks_preserve_w2_and_require_action (test_w4.W4ContractTests.test_thirty_tasks_preserve_w2_and_require_action) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 11.736s
+
+OK

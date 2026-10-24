@@ -1,0 +1,5262 @@
+[
+  {
+    "result": {
+      "task_id": "T001",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T002",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T003",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T004",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T005",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T006",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T007",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T008",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T009",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T010",
+      "module": "chain",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 11,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T011",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T012",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T013",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T014",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T015",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T016",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T017",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T018",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T019",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T020",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T021",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T022",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T023",
+      "module": "crm",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T024",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T025",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T026",
+      "module": "order",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T027",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T028",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T029",
+      "module": "support",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T030",
+      "module": "chain",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 13,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 11,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 12,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T001",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T002",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T003",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T004",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T005",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T006",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T007",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T008",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T009",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T010",
+      "module": "chain",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 11,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T011",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T012",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T013",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T014",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T015",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T016",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T017",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T018",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T019",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T020",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T021",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T022",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T023",
+      "module": "crm",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T024",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T025",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T026",
+      "module": "order",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T027",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T028",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T029",
+      "module": "support",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T030",
+      "module": "chain",
+      "mutation": "M1",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 13,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 11,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 12,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T001",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T002",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T003",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T004",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T005",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T006",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T007",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T008",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T009",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T010",
+      "module": "chain",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 11,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T011",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T012",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T013",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T014",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T015",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T016",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T017",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T018",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T019",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T020",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T021",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T022",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T023",
+      "module": "crm",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T024",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T025",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T026",
+      "module": "order",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T027",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T028",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T029",
+      "module": "support",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T030",
+      "module": "chain",
+      "mutation": "M2",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 13,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 11,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 12,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T001",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T002",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T003",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T004",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T005",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T006",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T007",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T008",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T009",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T010",
+      "module": "chain",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 11,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T011",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T012",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T013",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T014",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T015",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T016",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T017",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T018",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T019",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T020",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T021",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 6,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T022",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T023",
+      "module": "crm",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T024",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 9,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T025",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T026",
+      "module": "order",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 5,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "download",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T027",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T028",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 4,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T029",
+      "module": "support",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 7,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  },
+  {
+    "result": {
+      "task_id": "T030",
+      "module": "chain",
+      "mutation": "M3",
+      "mutation_seed": 7,
+      "runner": "functionality_oracle_NOT_embedding",
+      "success": true,
+      "precondition_success": false,
+      "steps_done": 13,
+      "error": ""
+    },
+    "steps": [
+      {
+        "index": 0,
+        "action": "goto",
+        "passed": true
+      },
+      {
+        "index": 1,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 2,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 3,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 4,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 5,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 6,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 7,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 8,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 9,
+        "action": "fill",
+        "passed": true
+      },
+      {
+        "index": 10,
+        "action": "click",
+        "passed": true
+      },
+      {
+        "index": 11,
+        "action": "select",
+        "passed": true
+      },
+      {
+        "index": 12,
+        "action": "click",
+        "passed": true
+      }
+    ]
+  }
+]

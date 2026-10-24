@@ -1,0 +1,40 @@
+{
+  "verified_at_utc": "2026-10-22T03:02:58.692777+00:00",
+  "test_command": "python -m unittest discover -s tests -v",
+  "tests": {
+    "passed": 41,
+    "run": 41,
+    "seconds": 11.736,
+    "status": "OK"
+  },
+  "validator": {
+    "tasks": 30,
+    "module_counts": {
+      "crm": 9,
+      "order": 11,
+      "support": 8,
+      "chain": 2
+    }
+  },
+  "source_hashes_match_current_worktree": true,
+  "task_hash_matches_current_file": true,
+  "full_run": {
+    "run_directory": "runs/w4-release",
+    "passed": 120,
+    "total": 120,
+    "snapshots_validated": 692,
+    "pairs_validated": 429,
+    "schema_html_hash_pair_checks": "passed"
+  },
+  "development_seed_scope": "full replay seed 7; browser/determinism regression tests seeds 7 and 8; M0 replay uses 0",
+  "b0_m0": {
+    "css": "30/30",
+    "xpath": "30/30"
+  },
+  "b0_probe_scope": "T004 only, eight runs; not full mutation matrix",
+  "timing_note": "local verification with other checks running; no performance comparison claimed",
+  "embedding_evaluated": false,
+  "integration_smoke": "existing W3 ranker only, one pair",
+  "held_out_accessed": false,
+  "git_actions": "no commit/push/merge/tag/Issue/PR created"
+}

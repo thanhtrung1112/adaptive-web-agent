@@ -22,6 +22,10 @@ from app import db
 from app.seed import reset_database
 from baseline.checker import check_all
 from baseline.scripts import SCRIPTS
+from baseline.w4_scripts import EXTRA_SCRIPTS
+
+# Extend task coverage without changing any existing B0 locator or W2 script.
+SCRIPTS = {**SCRIPTS, **EXTRA_SCRIPTS}
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -54,11 +58,13 @@ def run_step(page, base, step, mode, path):
     return None
 
 # Reset từng task; cookie mới; luôn đóng context kể cả task bị lỗi.
-def run_task(browser, base, task, mode, out, record_video=False, slow_ms=0):
+def run_task(browser, base, task, mode, out, record_video=False, slow_ms=0, mutation='M0', mutation_seed=0):
     reset_database()
     options = {'accept_downloads':True, 'viewport':{'width':1280,'height':800}}
     if record_video: options['record_video_dir'] = str(out / 'videos')
     ctx = browser.new_context(**options)
+    # Context selects app version; frozen CSS/XPath selectors are never translated here.
+    ctx.add_cookies([{'name':'minibiz_mutation','value':f'{mutation}:{mutation_seed}','url':base}])
     page = ctx.new_page()
     page.set_default_timeout(5000)
     steps = SCRIPTS[task['id']]
@@ -84,7 +90,7 @@ def run_task(browser, base, task, mode, out, record_video=False, slow_ms=0):
             return response.json()
         ok, msg = check_all(get, task, dl) if failed is None else (False, 'Lỗi thực thi trước khi chấm')
         row = {'task_id':task['id'], 'module':task['module'], 'difficulty':task['difficulty'],
-               'mode':mode, 'mutation':'M0', 'seed':task['seed'], 'success':ok,
+               'mode':mode, 'mutation':mutation, 'mutation_seed':mutation_seed, 'seed':task['seed'], 'success':ok,
                'steps_total':len(steps), 'steps_done':done, 'retry_count':0,
                'failed_step':failed if failed is not None else '',
                'failed_locator':steps[failed].get(mode,'') if failed is not None else '',
@@ -112,25 +118,30 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', choices=['css','xpath','both'], default='both')
     parser.add_argument('--tasks', nargs='+')
+    parser.add_argument('--task-file', type=Path, default=ROOT/'tasks/tasks_w2.json')
+    parser.add_argument('--mutation', choices=['M0','M1','M2','M3'], default='M0')
+    parser.add_argument('--mutation-seed', type=int, default=0)
     parser.add_argument('--headed', action='store_true')
     parser.add_argument('--record-video', action='store_true')
     parser.add_argument('--slow-ms', type=int, default=0, help='Chỉ dùng cho demo, không dùng số liệu timing này làm benchmark')
     args = parser.parse_args()
-    tasks = json.loads((ROOT/'tasks/tasks_w2.json').read_text(encoding='utf-8'))
+    tasks = json.loads(args.task_file.read_text(encoding='utf-8'))
     if args.tasks and set(args.tasks)-{t['id'] for t in tasks}: parser.error('Task ID không tồn tại')
     tasks = [t for t in tasks if not args.tasks or t['id'] in args.tasks]
     if any(t['id'] not in SCRIPTS or len(SCRIPTS[t['id']])>t['max_steps'] for t in tasks): parser.error('Thiếu script hoặc vượt max_steps')
-    out = ROOT/'runs'/datetime.now(timezone.utc).strftime('baseline_M0_%Y%m%dT%H%M%S_%fZ')
+    if not 0 <= args.mutation_seed <= 2147483647: parser.error('mutation-seed out of range')
+    out = ROOT/'runs'/datetime.now(timezone.utc).strftime(f'baseline_{args.mutation}_%Y%m%dT%H%M%S_%fZ')
     out.mkdir(parents=True)
     modes = ['css','xpath'] if args.mode=='both' else [args.mode]
     metadata = {'started_at_utc':datetime.now(timezone.utc).isoformat(),
         'git_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
         'git_status':subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True),
         'source_hashes_lf':source_hashes(), 'seed_sha256':hashlib.sha256((ROOT/'data/seed_v1.json').read_bytes()).hexdigest(),
-        'tasks_sha256':hashlib.sha256((ROOT/'tasks/tasks_w2.json').read_bytes()).hexdigest(),
+        'tasks_sha256':hashlib.sha256(args.task_file.read_bytes()).hexdigest(),
+        'task_file':str(args.task_file),
         'python':sys.version, 'platform':platform.platform(),
         'packages':{name:importlib.metadata.version(name) for name in ('playwright','fastapi','starlette','uvicorn')},
-        'task_count':len(tasks),'modes':modes,'repetitions':1,'slow_ms':args.slow_ms,
+        'task_count':len(tasks),'modes':modes,'mutation':args.mutation,'mutation_seed':args.mutation_seed,'repetitions':1,'slow_ms':args.slow_ms,
         'protocol':'isolated SQLite + new browser context per task; 5s action timeout; no retries; latency excludes reset/context/API check; includes goto and download; UTC date filters'}
     rows, traces = [], []
     original_db = db.DB_PATH
@@ -158,7 +169,7 @@ def main():
                         try:
                             for mode in modes:
                                 for task in tasks:
-                                    row, trace = run_task(browser,base,task,mode,out,args.record_video,args.slow_ms)
+                                    row, trace = run_task(browser,base,task,mode,out,args.record_video,args.slow_ms,args.mutation,args.mutation_seed)
                                     rows.append(row); traces.append(trace)
                                     print(f"{mode} {task['id']} {'PASS' if row['success'] else 'FAIL'} {row['seconds']}s {row['error'] or row['check']}",flush=True)
                         finally: browser.close()

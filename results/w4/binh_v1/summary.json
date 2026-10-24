@@ -1,0 +1,28 @@
+{
+  "scope": "full task replays using evaluator oracle; NOT embedding/B0 success",
+  "expected_rows": 120,
+  "completed_rows": 120,
+  "passed": 120,
+  "all_passed": true,
+  "by_mutation": {
+    "M0": {
+      "total": 30,
+      "passed": 30
+    },
+    "M1": {
+      "total": 30,
+      "passed": 30
+    },
+    "M2": {
+      "total": 30,
+      "passed": 30
+    },
+    "M3": {
+      "total": 30,
+      "passed": 30
+    }
+  },
+  "snapshot_count": 692,
+  "pair_count": 429,
+  "embedding_evaluated": false
+}

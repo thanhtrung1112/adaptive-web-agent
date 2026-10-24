@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết ticket | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59286/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<!-- Dữ liệu được đọc từ SQLite sau mỗi cập nhật thành công. -->
+<h1>Ticket TCK-2002</h1>
+<p>Đơn hàng: <a href="/orders/ORD-1003">ORD-1003</a></p>
+<p>Tiêu đề: Yêu cầu hoàn tiền</p><p>Trạng thái: in_progress</p>
+<p>Người xử lý: Nguyễn Mai Lan</p><p>Ghi chú: </p>
+
+
+<!-- Gán nhân viên và đóng ticket là hai hành động độc lập. -->
+<form method="post" action="/tickets/TCK-2002/assign">
+<label for="ticket-assignee">Người xử lý</label>
+<select id="ticket-assignee" name="assignee_id" required=""><option value="">Chọn nhân viên</option>
+<option value="1">Hoàng Quang Huy</option><option value="2" selected="">Nguyễn Mai Lan</option></select>
+<button id="assign-ticket" type="submit">Gán</button></form>
+<form method="post" action="/tickets/TCK-2002/close">
+<label for="ticket-note">Ghi chú</label><textarea id="ticket-note" name="note" maxlength="2000" required=""></textarea>
+<p><button id="close-ticket" type="submit">Đóng ticket</button></p></form>
+
+<p><a href="/tickets">Về danh sách ticket</a></p>
+
+    </main>
+
+</body></html>

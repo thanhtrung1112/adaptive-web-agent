@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết ticket | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:59286/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <span style="display:contents"><span style="display:contents"><a class="brand" href="/">MiniBiz</a></span></span>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><span style="display:contents"><span style="display:contents"><a href="/customers">Khách hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/orders">Đơn hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/tickets">Hỗ trợ</a></span></span></nav>
+    <main class="container">
+        
+<!-- Dữ liệu được đọc từ SQLite sau mỗi cập nhật thành công. -->
+<h1>Ticket TCK-2003</h1>
+<p>Đơn hàng: <span style="display:contents"><span style="display:contents"><a href="/orders/ORD-1006">ORD-1006</a></span></span></p>
+<p>Tiêu đề: Hỏi lịch giao</p><p>Trạng thái: open</p>
+<p>Người xử lý: Chưa gán</p><p>Ghi chú: </p>
+
+
+<!-- Gán nhân viên và đóng ticket là hai hành động độc lập. -->
+<form method="post" action="/tickets/TCK-2003/assign">
+<span style="display:contents"><span style="display:contents"><label for="ticket-assignee">Người xử lý</label></span></span>
+<span style="display:contents"><span style="display:contents"><select id="ticket-assignee" name="assignee_id" required=""><option value="">Chọn nhân viên</option>
+<option value="1">Hoàng Quang Huy</option><option value="2">Nguyễn Mai Lan</option></select></span></span>
+<span style="display:contents"><span style="display:contents"><button id="assign-ticket" type="submit">Gán</button></span></span></form>
+<form method="post" action="/tickets/TCK-2003/close">
+<span style="display:contents"><span style="display:contents"><label for="ticket-note">Ghi chú</label></span></span><span style="display:contents"><span style="display:contents"><textarea id="ticket-note" name="note" maxlength="2000" required=""></textarea></span></span>
+<p><span style="display:contents"><span style="display:contents"><button id="close-ticket" type="submit">Đóng ticket</button></span></span></p></form>
+
+<p><span style="display:contents"><span style="display:contents"><a href="/tickets">Về danh sách ticket</a></span></span></p>
+
+    </main>
+
+</body></html>
