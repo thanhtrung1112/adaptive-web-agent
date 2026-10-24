@@ -1,0 +1,220 @@
+{
+  "alpha_chosen_on_dev": 0.0,
+  "by_mutation": {
+    "M1": {
+      "all": {
+        "embedding": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      },
+      "test": {
+        "embedding": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "M2": {
+      "all": {
+        "embedding": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      },
+      "test": {
+        "embedding": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    },
+    "M3": {
+      "all": {
+        "embedding": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 6,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      },
+      "test": {
+        "embedding": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "features": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        },
+        "hybrid": {
+          "mrr": 1.0,
+          "pairs": 2,
+          "top1": 1.0,
+          "top3": 1.0
+        }
+      }
+    }
+  },
+  "dataset": "results/w4/binh_v1",
+  "dataset_metadata": {
+    "data_seed": "seed_v1",
+    "development_seeds": [
+      7
+    ],
+    "git_commit": "0fdeb0120e37dc24ae85555fe7c5da17b5bd466b",
+    "git_status": " M README.md\n M app/main.py\n M app/static/orders.js\n M baseline/run_baseline.py\n M data/manifest.json\n D docs/weekly/W2-report.pdf\n M docs/weekly/W2.md\n M dom_snapshot/capture.py\n M scripts/build_w2_report.py\n?? app/mutations.py\n?? baseline/w4_scripts.py\n?? data/w4_mutations.json\n?? docs/DoAn_Version_W2.docx\n?? docs/DoAn_Version_W3.docx\n?? docs/decisions/\n?? docs/w4-binh-handoff.md\n?? docs/w4-github-drafts.md\n?? docs/weekly/W2-report.docx\n?? docs/weekly/W3-report.docx\n?? docs/weekly/W4.md\n?? results/w4/\n?? tasks/tasks_w4.json\n?? tests/test_w4.py\n?? w4/\n",
+    "mutations": [
+      "M0",
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "task_sha256": "88d53067a0affc327e0224c34520aee5efb5310d4d8a67542b778e66aa4cc2bd"
+  },
+  "dev_mrr_by_alpha": {
+    "0.0": 1.0,
+    "0.25": 1.0,
+    "0.5": 1.0,
+    "0.75": 1.0,
+    "1.0": 1.0
+  },
+  "encoder": "hash",
+  "encoder_load_s": 0.0,
+  "latency_ms_per_pair": {
+    "embedding": {
+      "median_ms": 1.07,
+      "p95_ms": 3.4
+    },
+    "features": {
+      "median_ms": 0.89,
+      "p95_ms": 1.6
+    },
+    "hybrid": {
+      "median_ms": 0.96,
+      "p95_ms": 1.69
+    }
+  },
+  "misses": [],
+  "model": "hashing char n-gram (offline)",
+  "note": "Dữ liệu mutation phát triển (seed phát triển); không dùng held-out W11.",
+  "overall": {
+    "all": {
+      "embedding": {
+        "mrr": 1.0,
+        "pairs": 18,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "features": {
+        "mrr": 1.0,
+        "pairs": 18,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "hybrid": {
+        "mrr": 1.0,
+        "pairs": 18,
+        "top1": 1.0,
+        "top3": 1.0
+      }
+    },
+    "test": {
+      "embedding": {
+        "mrr": 1.0,
+        "pairs": 6,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "features": {
+        "mrr": 1.0,
+        "pairs": 6,
+        "top1": 1.0,
+        "top3": 1.0
+      },
+      "hybrid": {
+        "mrr": 1.0,
+        "pairs": 6,
+        "top1": 1.0,
+        "top3": 1.0
+      }
+    }
+  },
+  "pairs": 18,
+  "split_pairs": {
+    "dev": 12,
+    "test": 6
+  }
+}

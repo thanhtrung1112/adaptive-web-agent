@@ -1,0 +1,3 @@
+numpy>=1.26
+# Chỉ cần cho `python -m ranking.evaluate --encoder sbert` (kéo theo torch, tải mô hình ở lần chạy đầu):
+sentence-transformers>=3.0
