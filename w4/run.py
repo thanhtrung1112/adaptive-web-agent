@@ -40,7 +40,7 @@ def write_json(path, value):
 
 
 # Each task runs on reset DB + fresh cookie context. Oracle success is not B0/A1 success.
-def replay(browser, base, task, mutation, seed, out, metadata, snapshots):
+def replay(browser, base, task, mutation, seed, out, metadata, snapshots, translate=oracle_css):
     reset_database()
     refs, trace, failure, downloaded, pre_ok = [], [], '', None, None
     with browser.new_context(viewport={'width':1280,'height':800},accept_downloads=True) as ctx:
@@ -60,7 +60,7 @@ def replay(browser, base, task, mutation, seed, out, metadata, snapshots):
                 if step['do'] == 'goto':
                     step['url'] = context_url(step['url'],mutation,seed)
                 else:
-                    loc = page.locator(oracle_css(step['css'],mutation,seed))
+                    loc = page.locator(translate(step['css'],mutation,seed))
                     loc.wait_for(state='visible')
                     if snapshots:
                         sid = f'{mutation}-s{seed}-{task["id"]}-step{i:02d}'
@@ -73,7 +73,7 @@ def replay(browser, base, task, mutation, seed, out, metadata, snapshots):
                         refs.append({'task_id':task['id'],'step_index':i,'action':step['do'],
                                      'mutation':mutation,'mutation_seed':seed,
                                      'snapshot':f'snapshots/{sid}/features.json','target_element_id':eid})
-                    step['css'] = oracle_css(step['css'],mutation,seed)
+                    step['css'] = translate(step['css'],mutation,seed)
                 downloaded = run_step(page,base,step,'css',out/'downloads'/f'{mutation}-s{seed}-{task["id"]}.csv') or downloaded
                 if page.url.startswith(base) and not page.url.startswith(base+'/api/'):
                     cookie = next(c['value'] for c in ctx.cookies() if c['name']=='minibiz_mutation')

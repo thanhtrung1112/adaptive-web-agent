@@ -25,3 +25,7 @@ videos/
 
 # Log server thu DOM có đường dẫn máy cục bộ; giữ JSON/HTML mẫu làm bằng chứng.
 results/w3/**/server.log
+
+# Full W5 capture archive is delivered separately.
+results/w5/benchmark_v0.5.0/
+results/w5/probe_v0.5.0/server.log
