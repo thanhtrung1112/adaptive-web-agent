@@ -1,0 +1,1539 @@
+{
+  "snapshot_id": "W5_ORDER-s17-T001-step01",
+  "task_id": "T001",
+  "state": "T001-step01",
+  "captured_at_utc": "2026-10-30T15:34:40.113432+00:00",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "html_sha256": "42560e54acced45143d5a3f9cbb576738d88d4f5e41e993ab84051a62e1e996f",
+  "provenance": {
+    "mutation": "W5_ORDER",
+    "mutation_seed": 17,
+    "data_seed": "seed_v1",
+    "git_commit": "1817dfaba13d51d2ca7f5239b7e7ab8b6bcbb34e",
+    "seed_sha256": "638bb0fa96d8e603f7604d40b07d6703b3d0438e9c61205de45cb8c04dddf888",
+    "capture_kind": "pre-action runtime"
+  },
+  "schema_version": "0.1",
+  "url": "http://127.0.0.1:55772/customers?mutation=W5_ORDER&seed=17",
+  "title": "Khách hàng | MiniBiz Benchmark",
+  "elements": [
+    {
+      "element_id": "e1",
+      "parent_id": null,
+      "tag": "html",
+      "text": "Khách hàng | MiniBiz Benchmark MiniBiz Ứng dụng benchmark nghiệp vụ Web Hỗ trợ · Khách hàng · Đơn hàng Khách hàng Tìm khách hàng theo email Tìm Xem tất cả Thêm khách hàng Số điện thoại ID Tên khách hàng Email 0900000001 1 Trần Hoa tran.hoa@example.com 0900000002 2 Nguyễn Văn Dũng nguyen.dung@example.com 0900000003 3 Phạm Thu Hà pham.ha@example.com 0900000004 4 Võ Thanh Tâm vo.tam@example.com Về trang chủ",
+      "attributes": {
+        "lang": "vi"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 723.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]"
+      }
+    },
+    {
+      "element_id": "e2",
+      "parent_id": "e1",
+      "tag": "head",
+      "text": "Khách hàng | MiniBiz Benchmark",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]"
+      }
+    },
+    {
+      "element_id": "e3",
+      "parent_id": "e2",
+      "tag": "meta",
+      "text": "",
+      "attributes": {
+        "charset": "UTF-8"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='meta'][1]"
+      }
+    },
+    {
+      "element_id": "e4",
+      "parent_id": "e2",
+      "tag": "meta",
+      "text": "",
+      "attributes": {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='meta'][2]"
+      }
+    },
+    {
+      "element_id": "e5",
+      "parent_id": "e2",
+      "tag": "title",
+      "text": "Khách hàng | MiniBiz Benchmark",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='title'][1]"
+      }
+    },
+    {
+      "element_id": "e6",
+      "parent_id": "e2",
+      "tag": "link",
+      "text": "",
+      "attributes": {
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:55772/static/style.css"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='link'][1]"
+      }
+    },
+    {
+      "element_id": "e7",
+      "parent_id": "e1",
+      "tag": "body",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web Hỗ trợ · Khách hàng · Đơn hàng Khách hàng Tìm khách hàng theo email Tìm Xem tất cả Thêm khách hàng Số điện thoại ID Tên khách hàng Email 0900000001 1 Trần Hoa tran.hoa@example.com 0900000002 2 Nguyễn Văn Dũng nguyen.dung@example.com 0900000003 3 Phạm Thu Hà pham.ha@example.com 0900000004 4 Võ Thanh Tâm vo.tam@example.com Về trang chủ",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 723.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]"
+      }
+    },
+    {
+      "element_id": "e8",
+      "parent_id": "e7",
+      "tag": "header",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {
+        "class": "site-header"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 75.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]"
+      }
+    },
+    {
+      "element_id": "e9",
+      "parent_id": "e8",
+      "tag": "div",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {
+        "class": "container"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 18,
+        "width": 1080,
+        "height": 38.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]"
+      }
+    },
+    {
+      "element_id": "e10",
+      "parent_id": "e9",
+      "tag": "a",
+      "text": "MiniBiz",
+      "attributes": {
+        "class": "brand",
+        "href": "/"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 18,
+        "width": 84,
+        "height": 38.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e11",
+      "parent_id": "e9",
+      "tag": "span",
+      "text": "Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 204,
+        "y": 24.390625,
+        "width": 265.984375,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]/*[local-name()='span'][1]"
+      }
+    },
+    {
+      "element_id": "e12",
+      "parent_id": "e7",
+      "tag": "nav",
+      "text": "Hỗ trợ · Khách hàng · Đơn hàng",
+      "attributes": {
+        "class": "container",
+        "aria-label": "Điều hướng chính"
+      },
+      "label": null,
+      "name_hint": "Điều hướng chính",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 75.390625,
+        "width": 1080,
+        "height": 41.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]"
+      }
+    },
+    {
+      "element_id": "e13",
+      "parent_id": "e12",
+      "tag": "a",
+      "text": "Hỗ trợ",
+      "attributes": {
+        "href": "/tickets"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 95.390625,
+        "width": 45.171875,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e14",
+      "parent_id": "e12",
+      "tag": "a",
+      "text": "Khách hàng",
+      "attributes": {
+        "href": "/customers"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 159.390625,
+        "y": 95.390625,
+        "width": 85.40625,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][2]"
+      }
+    },
+    {
+      "element_id": "e15",
+      "parent_id": "e12",
+      "tag": "a",
+      "text": "Đơn hàng",
+      "attributes": {
+        "href": "/orders"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 259.015625,
+        "y": 95.390625,
+        "width": 70.984375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][3]"
+      }
+    },
+    {
+      "element_id": "e16",
+      "parent_id": "e7",
+      "tag": "main",
+      "text": "Khách hàng Tìm khách hàng theo email Tìm Xem tất cả Thêm khách hàng Số điện thoại ID Tên khách hàng Email 0900000001 1 Trần Hoa tran.hoa@example.com 0900000002 2 Nguyễn Văn Dũng nguyen.dung@example.com 0900000003 3 Phạm Thu Hà pham.ha@example.com 0900000004 4 Võ Thanh Tâm vo.tam@example.com Về trang chủ",
+      "attributes": {
+        "class": "container"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 116.984375,
+        "width": 1080,
+        "height": 606.40625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]"
+      }
+    },
+    {
+      "element_id": "e17",
+      "parent_id": "e16",
+      "tag": "h1",
+      "text": "Khách hàng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 170.421875,
+        "width": 1080,
+        "height": 51.1875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='h1'][1]"
+      }
+    },
+    {
+      "element_id": "e18",
+      "parent_id": "e16",
+      "tag": "form",
+      "text": "Tìm khách hàng theo email Tìm Xem tất cả",
+      "attributes": {
+        "method": "get",
+        "action": "/customers"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 243.046875,
+        "width": 1080,
+        "height": 79.1875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]"
+      }
+    },
+    {
+      "element_id": "e19",
+      "parent_id": "e18",
+      "tag": "label",
+      "text": "Tìm khách hàng theo email",
+      "attributes": {
+        "for": "customer-search"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 243.046875,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='label'][1]"
+      }
+    },
+    {
+      "element_id": "e20",
+      "parent_id": "e18",
+      "tag": "input",
+      "text": "",
+      "attributes": {
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "value": "",
+        "placeholder": "Nhập email đầy đủ"
+      },
+      "label": "Tìm khách hàng theo email",
+      "name_hint": "Tìm khách hàng theo email",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": false,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 274.640625,
+        "width": 480,
+        "height": 47.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]"
+      }
+    },
+    {
+      "element_id": "e21",
+      "parent_id": "e18",
+      "tag": "button",
+      "text": "Tìm",
+      "attributes": {
+        "id": "search-customers",
+        "type": "submit"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 584.453125,
+        "y": 275.640625,
+        "width": 67.546875,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]"
+      }
+    },
+    {
+      "element_id": "e22",
+      "parent_id": "e18",
+      "tag": "a",
+      "text": "Xem tất cả",
+      "attributes": {
+        "href": "/customers"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 656.453125,
+        "y": 289.640625,
+        "width": 76.484375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e23",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Thêm khách hàng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 338.234375,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]"
+      }
+    },
+    {
+      "element_id": "e24",
+      "parent_id": "e23",
+      "tag": "a",
+      "text": "Thêm khách hàng",
+      "attributes": {
+        "id": "add-customer",
+        "href": "/customers/new"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 342.234375,
+        "width": 128.078125,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e25",
+      "parent_id": "e16",
+      "tag": "table",
+      "text": "Số điện thoại ID Tên khách hàng Email 0900000001 1 Trần Hoa tran.hoa@example.com 0900000002 2 Nguyễn Văn Dũng nguyen.dung@example.com 0900000003 3 Phạm Thu Hà pham.ha@example.com 0900000004 4 Võ Thanh Tâm vo.tam@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 379.828125,
+        "width": 1080,
+        "height": 253.96875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]"
+      }
+    },
+    {
+      "element_id": "e26",
+      "parent_id": "e25",
+      "tag": "thead",
+      "text": "Số điện thoại ID Tên khách hàng Email",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 380.328125,
+        "width": 1079,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='thead'][1]"
+      }
+    },
+    {
+      "element_id": "e27",
+      "parent_id": "e26",
+      "tag": "tr",
+      "text": "Số điện thoại ID Tên khách hàng Email",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 380.328125,
+        "width": 1079,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='thead'][1]/*[local-name()='tr'][1]"
+      }
+    },
+    {
+      "element_id": "e28",
+      "parent_id": "e27",
+      "tag": "th",
+      "text": "Số điện thoại",
+      "attributes": {
+        "scope": "col"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 380.328125,
+        "width": 245.59375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='thead'][1]/*[local-name()='tr'][1]/*[local-name()='th'][1]"
+      }
+    },
+    {
+      "element_id": "e29",
+      "parent_id": "e27",
+      "tag": "th",
+      "text": "ID",
+      "attributes": {
+        "scope": "col"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 346.09375,
+        "y": 380.328125,
+        "width": 80.265625,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='thead'][1]/*[local-name()='tr'][1]/*[local-name()='th'][2]"
+      }
+    },
+    {
+      "element_id": "e30",
+      "parent_id": "e27",
+      "tag": "th",
+      "text": "Tên khách hàng",
+      "attributes": {
+        "scope": "col"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 426.359375,
+        "y": 380.328125,
+        "width": 304.9375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='thead'][1]/*[local-name()='tr'][1]/*[local-name()='th'][3]"
+      }
+    },
+    {
+      "element_id": "e31",
+      "parent_id": "e27",
+      "tag": "th",
+      "text": "Email",
+      "attributes": {
+        "scope": "col"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 731.296875,
+        "y": 380.328125,
+        "width": 448.203125,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='thead'][1]/*[local-name()='tr'][1]/*[local-name()='th'][4]"
+      }
+    },
+    {
+      "element_id": "e32",
+      "parent_id": "e25",
+      "tag": "tbody",
+      "text": "0900000001 1 Trần Hoa tran.hoa@example.com 0900000002 2 Nguyễn Văn Dũng nguyen.dung@example.com 0900000003 3 Phạm Thu Hà pham.ha@example.com 0900000004 4 Võ Thanh Tâm vo.tam@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 430.921875,
+        "width": 1079,
+        "height": 202.375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]"
+      }
+    },
+    {
+      "element_id": "e33",
+      "parent_id": "e32",
+      "tag": "tr",
+      "text": "0900000001 1 Trần Hoa tran.hoa@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 430.921875,
+        "width": 1079,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][1]"
+      }
+    },
+    {
+      "element_id": "e34",
+      "parent_id": "e33",
+      "tag": "td",
+      "text": "0900000001",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 430.921875,
+        "width": 245.59375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][1]/*[local-name()='td'][1]"
+      }
+    },
+    {
+      "element_id": "e35",
+      "parent_id": "e33",
+      "tag": "td",
+      "text": "1",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 346.09375,
+        "y": 430.921875,
+        "width": 80.265625,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][1]/*[local-name()='td'][2]"
+      }
+    },
+    {
+      "element_id": "e36",
+      "parent_id": "e33",
+      "tag": "td",
+      "text": "Trần Hoa",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 426.359375,
+        "y": 430.921875,
+        "width": 304.9375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][1]/*[local-name()='td'][3]"
+      }
+    },
+    {
+      "element_id": "e37",
+      "parent_id": "e36",
+      "tag": "a",
+      "text": "Trần Hoa",
+      "attributes": {
+        "href": "/customers/1"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 438.859375,
+        "y": 447.421875,
+        "width": 66.109375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][1]/*[local-name()='td'][3]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e38",
+      "parent_id": "e33",
+      "tag": "td",
+      "text": "tran.hoa@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 731.296875,
+        "y": 430.921875,
+        "width": 448.203125,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][1]/*[local-name()='td'][4]"
+      }
+    },
+    {
+      "element_id": "e39",
+      "parent_id": "e32",
+      "tag": "tr",
+      "text": "0900000002 2 Nguyễn Văn Dũng nguyen.dung@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 481.515625,
+        "width": 1079,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][2]"
+      }
+    },
+    {
+      "element_id": "e40",
+      "parent_id": "e39",
+      "tag": "td",
+      "text": "0900000002",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 481.515625,
+        "width": 245.59375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][2]/*[local-name()='td'][1]"
+      }
+    },
+    {
+      "element_id": "e41",
+      "parent_id": "e39",
+      "tag": "td",
+      "text": "2",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 346.09375,
+        "y": 481.515625,
+        "width": 80.265625,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][2]/*[local-name()='td'][2]"
+      }
+    },
+    {
+      "element_id": "e42",
+      "parent_id": "e39",
+      "tag": "td",
+      "text": "Nguyễn Văn Dũng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 426.359375,
+        "y": 481.515625,
+        "width": 304.9375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][2]/*[local-name()='td'][3]"
+      }
+    },
+    {
+      "element_id": "e43",
+      "parent_id": "e42",
+      "tag": "a",
+      "text": "Nguyễn Văn Dũng",
+      "attributes": {
+        "href": "/customers/2"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 438.859375,
+        "y": 498.015625,
+        "width": 130.765625,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][2]/*[local-name()='td'][3]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e44",
+      "parent_id": "e39",
+      "tag": "td",
+      "text": "nguyen.dung@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 731.296875,
+        "y": 481.515625,
+        "width": 448.203125,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][2]/*[local-name()='td'][4]"
+      }
+    },
+    {
+      "element_id": "e45",
+      "parent_id": "e32",
+      "tag": "tr",
+      "text": "0900000003 3 Phạm Thu Hà pham.ha@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 532.109375,
+        "width": 1079,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][3]"
+      }
+    },
+    {
+      "element_id": "e46",
+      "parent_id": "e45",
+      "tag": "td",
+      "text": "0900000003",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 532.109375,
+        "width": 245.59375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][3]/*[local-name()='td'][1]"
+      }
+    },
+    {
+      "element_id": "e47",
+      "parent_id": "e45",
+      "tag": "td",
+      "text": "3",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 346.09375,
+        "y": 532.109375,
+        "width": 80.265625,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][3]/*[local-name()='td'][2]"
+      }
+    },
+    {
+      "element_id": "e48",
+      "parent_id": "e45",
+      "tag": "td",
+      "text": "Phạm Thu Hà",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 426.359375,
+        "y": 532.109375,
+        "width": 304.9375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][3]/*[local-name()='td'][3]"
+      }
+    },
+    {
+      "element_id": "e49",
+      "parent_id": "e48",
+      "tag": "a",
+      "text": "Phạm Thu Hà",
+      "attributes": {
+        "href": "/customers/3"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 438.859375,
+        "y": 548.609375,
+        "width": 98.421875,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][3]/*[local-name()='td'][3]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e50",
+      "parent_id": "e45",
+      "tag": "td",
+      "text": "pham.ha@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 731.296875,
+        "y": 532.109375,
+        "width": 448.203125,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][3]/*[local-name()='td'][4]"
+      }
+    },
+    {
+      "element_id": "e51",
+      "parent_id": "e32",
+      "tag": "tr",
+      "text": "0900000004 4 Võ Thanh Tâm vo.tam@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 582.703125,
+        "width": 1079,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][4]"
+      }
+    },
+    {
+      "element_id": "e52",
+      "parent_id": "e51",
+      "tag": "td",
+      "text": "0900000004",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100.5,
+        "y": 582.703125,
+        "width": 245.59375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][4]/*[local-name()='td'][1]"
+      }
+    },
+    {
+      "element_id": "e53",
+      "parent_id": "e51",
+      "tag": "td",
+      "text": "4",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 346.09375,
+        "y": 582.703125,
+        "width": 80.265625,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][4]/*[local-name()='td'][2]"
+      }
+    },
+    {
+      "element_id": "e54",
+      "parent_id": "e51",
+      "tag": "td",
+      "text": "Võ Thanh Tâm",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 426.359375,
+        "y": 582.703125,
+        "width": 304.9375,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][4]/*[local-name()='td'][3]"
+      }
+    },
+    {
+      "element_id": "e55",
+      "parent_id": "e54",
+      "tag": "a",
+      "text": "Võ Thanh Tâm",
+      "attributes": {
+        "href": "/customers/4"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 438.859375,
+        "y": 599.203125,
+        "width": 105.25,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][4]/*[local-name()='td'][3]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e56",
+      "parent_id": "e51",
+      "tag": "td",
+      "text": "vo.tam@example.com",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 731.296875,
+        "y": 582.703125,
+        "width": 448.203125,
+        "height": 50.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='table'][1]/*[local-name()='tbody'][1]/*[local-name()='tr'][4]/*[local-name()='td'][4]"
+      }
+    },
+    {
+      "element_id": "e57",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Về trang chủ",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 649.796875,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][2]"
+      }
+    },
+    {
+      "element_id": "e58",
+      "parent_id": "e57",
+      "tag": "a",
+      "text": "Về trang chủ",
+      "attributes": {
+        "href": "/"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 653.796875,
+        "width": 90.734375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][2]/*[local-name()='a'][1]"
+      }
+    }
+  ]
+}

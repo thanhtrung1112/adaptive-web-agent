@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "KH1_N5_BaoCao_Tuan5_v0.5.docx": "25c5587b644817c7e01322099a858389b7844f2077b4deb776ef0c470b5d4b82",
+    "KH1_N5_DoAn_Tuan5_v0.5.docx": "fbbc4b303f28fbded41a0468f0895fb2020184bce239fd661f82e0c2780b67dd",
+    "KH1_N5_BaoCao_Tuan5_v0.5.pdf": "a05f45cc05ecfb7ad0fe36bf606959ded98d2de2347fad157f6a7e0a5d5b9f75",
+    "KH1_N5_DoAn_Tuan5_v0.5.pdf": "3e09828a65965fddee64aa00cd63a11ae23357f6a5ae5f846c0cea6309f078c2"
+  },
+  "report_pages": 4,
+  "thesis_pages": 21,
+  "location_in_handoff_archive": "reports/",
+  "chapter_II": "Bản 1, cập nhật mục 2.3 và TOC; giữ kết quả W4 theo lịch sử"
+}

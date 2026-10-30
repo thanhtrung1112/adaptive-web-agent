@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm khách hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:55772/static/style.css">
+<style>* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f5f7fb;
+}
+
+.m2e50e04b52a630b4 {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+}
+
+.mcc65085de2b70ba0 {
+    padding: 18px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.mcc65085de2b70ba0 .m2e50e04b52a630b4 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.m9027c68015d95e2a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+main {
+    padding: 32px 0;
+}
+
+.ma051b4afe960175c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.me3d1a5d3f47f2302 {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+}
+
+.me3d1a5d3f47f2302 h2 {
+    margin-top: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1d4ed8;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+[role="alert"] {
+    color: #b91c1c;
+}
+/* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */
+select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; }
+textarea { display: block; width: min(100%, 480px); min-height: 100px; }
+nav { padding-top: 16px; }
+fieldset { margin: 16px 0; }
+</style></head>
+<body>
+    <header class="mcc65085de2b70ba0">
+        <div class="m2e50e04b52a630b4">
+            <span style="display:contents"><span style="display:contents"><a class="m9027c68015d95e2a" href="/">MiniBiz</a></span></span>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="m2e50e04b52a630b4" aria-label="Điều hướng chính"><span style="display:contents"><span style="display:contents"><a href="/customers">Khách mua hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/orders">Đơn cần hỗ trợ</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/tickets">Hỗ trợ</a></span></span></nav>
+    <main class="m2e50e04b52a630b4">
+        
+<h1>Thêm khách hàng</h1>
+
+
+
+<form method="post" action="/customers/new">
+    <p>
+        <span style="display:contents"><span style="display:contents"><label for="mf3617984b3c5e0d3">Họ tên khách hàng</label></span></span>
+        <span style="display:contents"><span style="display:contents"><input id="mf3617984b3c5e0d3" name="name" type="text" value="" required=""></span></span>
+    </p>
+
+    <p>
+        <span style="display:contents"><span style="display:contents"><label for="m7863785c993f83f8">Email liên hệ</label></span></span>
+        <span style="display:contents"><span style="display:contents"><input id="m7863785c993f83f8" name="email" type="email" value="" required=""></span></span>
+    </p>
+
+    <p>
+        <span style="display:contents"><span style="display:contents"><label for="m7a15d7a4e7074ccc">Điện thoại liên hệ</label></span></span>
+        <span style="display:contents"><span style="display:contents"><input id="m7a15d7a4e7074ccc" name="phone" type="tel" value="" required=""></span></span>
+    </p>
+
+    <span style="display:contents"><span style="display:contents"><button id="m64b896d3690f0daf" type="submit">Lưu thông tin</button></span></span>
+    <span style="display:contents"><span style="display:contents"><a href="/customers">Hủy</a></span></span>
+</form>
+
+    </main>
+
+</body></html>

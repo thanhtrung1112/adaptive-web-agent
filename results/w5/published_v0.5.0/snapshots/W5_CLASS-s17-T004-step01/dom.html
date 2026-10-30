@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:55772/static/style.css">
+<style>* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f5f7fb;
+}
+
+.m2e50e04b52a630b4 {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+}
+
+.mcc65085de2b70ba0 {
+    padding: 18px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.mcc65085de2b70ba0 .m2e50e04b52a630b4 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.m9027c68015d95e2a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+main {
+    padding: 32px 0;
+}
+
+.ma051b4afe960175c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.me3d1a5d3f47f2302 {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+}
+
+.me3d1a5d3f47f2302 h2 {
+    margin-top: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1d4ed8;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+[role="alert"] {
+    color: #b91c1c;
+}
+/* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */
+select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; }
+textarea { display: block; width: min(100%, 480px); min-height: 100px; }
+nav { padding-top: 16px; }
+fieldset { margin: 16px 0; }
+</style></head>
+<body>
+    <header class="mcc65085de2b70ba0">
+        <div class="m2e50e04b52a630b4">
+            <a class="m9027c68015d95e2a" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="m2e50e04b52a630b4" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="m2e50e04b52a630b4">
+        
+<!-- Danh sách dẫn tới form tạo đơn và trang chi tiết. -->
+<h1>Đơn hàng</h1>
+<!-- T006: lọc trước, liên kết CSV mang đúng khoảng ngày vừa áp dụng. -->
+<form method="get" action="/orders">
+    <label for="orders-from">Từ ngày (UTC)</label>
+    <input id="orders-from" name="from" type="date" value="">
+    <label for="orders-to">Đến ngày (UTC)</label>
+    <input id="orders-to" name="to" type="date" value="">
+    <button id="filter-orders" type="submit">Lọc</button>
+    <a href="/orders">Xóa bộ lọc</a>
+</form>
+<p><a id="export-orders" href="/orders/export.csv?from=&amp;to=">Xuất CSV</a></p>
+<p><a id="create-order" href="/orders/new">Tạo đơn</a></p>
+<table>
+    <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Trạng thái</th><th>Ngày tạo (UTC)</th></tr></thead>
+    <tbody>
+    
+    <tr><td><a href="/orders/ORD-1001">ORD-1001</a></td>
+        <td>Trần Hoa — tran.hoa@example.com</td><td>confirmed</td><td>2026-08-31</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1002">ORD-1002</a></td>
+        <td>Nguyễn Văn Dũng — nguyen.dung@example.com</td><td>pending</td><td>2026-09-01</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1003">ORD-1003</a></td>
+        <td>Trần Hoa — tran.hoa@example.com</td><td>shipped</td><td>2026-09-10</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1004">ORD-1004</a></td>
+        <td>Nguyễn Văn Dũng — nguyen.dung@example.com</td><td>confirmed</td><td>2026-09-15</td></tr>
+    
+    <tr><td><a href="/orders/ORD-1005">ORD-1005</a></td>
+        <td>Trần Hoa — tran.hoa@example.com</td><td>pending</td><td>2026-09-16</td></tr>
+    
+    </tbody>
+</table>
+<p><a href="/">Về trang chủ</a></p>
+
+    </main>
+
+</body></html>

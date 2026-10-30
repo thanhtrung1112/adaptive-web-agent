@@ -74,3 +74,13 @@ Benchmark nội bộ (CRM / Order / Support) có nhiều phiên bản DOM/UI gâ
 
 ## Phạm vi và đạo đức
 Chỉ chạy trên website thử nghiệm do nhóm sở hữu (synthetic app). Không tự động hóa website bên thứ ba.
+
+## W5 — mutation benchmark 0.5.0
+
+Năm trục ID/class/text/order/structure và tổ hợp, phiên bản benchmark có checksum.
+[Evidence W05](Evidence/W05/README.md), [hướng dẫn chạy lại](docs/mutation-benchmark-v0.5.0.md).
+
+```powershell
+python -m w5.run --output runs/w5-reproduction --seeds 17 23
+python scripts/build_w5_evidence.py --check
+```

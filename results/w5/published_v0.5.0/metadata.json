@@ -1,0 +1,13 @@
+{
+  "benchmark_version": "0.5.0",
+  "scope": "published loader sample; not full matrix",
+  "source": "results/w5/benchmark_v0.5.0",
+  "task_ids": [
+    "T001",
+    "T004",
+    "T007"
+  ],
+  "seed": 17,
+  "snapshot_count": 42,
+  "pair_count": 36
+}

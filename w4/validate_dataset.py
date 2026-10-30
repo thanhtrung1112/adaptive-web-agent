@@ -15,7 +15,7 @@ def validate_seed(value):
 
 
 # Validate all files, including snapshots without a ranking pair (e.g. final states).
-def validate(root, *, write_report=True):
+def validate(root, *, write_report=True, mutation_modes=('M0','M1','M2','M3')):
     root = Path(root).resolve()
     hashes, snapshots = {}, {}
     paths = sorted((root/'snapshots').glob('*/features.json'))
@@ -29,12 +29,12 @@ def validate(root, *, write_report=True):
         snapshots[key]=snap
         validate_seed(snap['provenance'].get('mutation_seed'))
         if snap['provenance'].get('data_seed')!='seed_v1': raise ValueError('Missing data seed')
-        if snap['provenance'].get('mutation') not in ('M0','M1','M2','M3'): raise ValueError('Invalid mutation metadata')
+        if snap['provenance'].get('mutation') not in mutation_modes: raise ValueError('Invalid mutation metadata')
     pairs = json.loads((root/'ground_truth/pairs.json').read_text(encoding='utf-8'))
     seen = set()
     for pair in pairs:
         validate_seed(pair.get('mutation_seed'))
-        if pair.get('mutation') not in ('M1','M2','M3'):
+        if pair.get('mutation') not in set(mutation_modes) - {'M0'}:
             raise ValueError('Pair mutation must be M1/M2/M3')
         if type(pair.get('step_index')) is not int or pair['step_index'] < 0:
             raise ValueError('Invalid pair step_index')

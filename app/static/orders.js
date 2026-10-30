@@ -9,7 +9,7 @@ const seed = config.get('seed') || '0';
 // Same FNV-1a 64-bit as app/mutations.py, including fields cloned in the browser.
 function fieldId(name, number) {
     const original = `order-${name}-${number}`;
-    if (mutation !== 'M1') return original;
+    if (!['M1', 'W5_ID', 'W5_COMBINED'].includes(mutation)) return original;
     let hash = 14695981039346656037n;
     for (const byte of new TextEncoder().encode(`${seed}:${original}`)) {
         hash = BigInt.asUintN(64, (hash ^ BigInt(byte)) * 1099511628211n);

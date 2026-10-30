@@ -149,9 +149,10 @@ class MutationMiddleware:
             if len(saved)!=2: saved=['M0','0']
             mode = request.query_params.get('mutation',saved[0])
             seed = int(request.query_params.get('seed',saved[1]))
-            if mode not in MODES or not 0 <= seed <= 2147483647: raise ValueError()
+            from .mutations_w5 import MODES as W5_MODES
+            if mode not in MODES + W5_MODES or not 0 <= seed <= 2147483647: raise ValueError()
         except (ValueError,IndexError):
-            return await PlainTextResponse('mutation must be M0/M1/M2/M3; seed must be 0..2147483647',status_code=400)(scope,receive,send)
+            return await PlainTextResponse('Unsupported mutation; seed must be 0..2147483647',status_code=400)(scope,receive,send)
         start, chunks = None, []
         async def wrapped(message):
             nonlocal start
@@ -164,7 +165,11 @@ class MutationMiddleware:
             payload = b''.join(chunks)
             headers = [(k,v) for k,v in start['headers'] if k.lower() != b'content-length']
             if any(k.lower() == b'content-type' and b'text/html' in v for k,v in headers):
-                payload = mutate_html(payload.decode('utf-8'),mode,seed).encode('utf-8')
+                if mode.startswith('W5_'):
+                    from .mutations_w5 import mutate
+                    payload = mutate(payload.decode('utf-8'),mode,seed).encode('utf-8')
+                else:
+                    payload = mutate_html(payload.decode('utf-8'),mode,seed).encode('utf-8')
             if mode != 'M0':
                 headers = [(k,context_url(v.decode('latin-1'),mode,seed).encode('latin-1') if k.lower() == b'location' else v) for k,v in headers]
             headers += [(b'content-length',str(len(payload)).encode()),

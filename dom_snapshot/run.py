@@ -51,7 +51,14 @@ def isolated_app(out):
                         raise RuntimeError('Server startup timeout')
                     yield base
                 finally:
-                    server.terminate()
+                    # Windows venv python may spawn a child owning the log/SQLite handles.
+                    # Stop only this server's process tree before temporary-directory cleanup.
+                    if os.name == 'nt' and server.poll() is None:
+                        subprocess.run(['taskkill','/PID',str(server.pid),'/T','/F'],
+                                       stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,
+                                       creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+                    if server.poll() is None:
+                        server.terminate()
                     try:
                         server.wait(timeout=10)
                     except subprocess.TimeoutExpired:
