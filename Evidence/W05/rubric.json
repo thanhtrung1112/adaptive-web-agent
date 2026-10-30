@@ -1,0 +1,49 @@
+{
+  "source_file": "TheoDoi_TienDo_11_Nhom_DonGian_2026updated.xlsm",
+  "source_sha256": "af002a8a6b2e7ce57448367e43190e74996edf0df06a5f897500506d42be693e",
+  "sheet": "Theo dõi 11 nhóm",
+  "group_cell": "H3",
+  "group": "KH1-N5",
+  "members_cell": "H4",
+  "members": [
+    "Vũ Văn Bình",
+    "Nguyễn Thành Trung"
+  ],
+  "week_cell": "A45",
+  "week": "W5 25/10 – 31/10",
+  "requirement_cell": "H45",
+  "requirement": "Tạo bộ mutation: đổi id/class/text/order/structure; version benchmark.",
+  "criteria": [
+    {
+      "cell": "B46",
+      "criterion": "Submit đúng hạn",
+      "maximum_points": 1
+    },
+    {
+      "cell": "B47",
+      "criterion": "Đủ nội dung + evidence",
+      "maximum_points": 2
+    },
+    {
+      "cell": "B48",
+      "criterion": "Bám sát deadline / deliverable",
+      "maximum_points": 2
+    },
+    {
+      "cell": "B49",
+      "criterion": "GitHub + phân chia công việc",
+      "maximum_points": 2
+    },
+    {
+      "cell": "B50",
+      "criterion": "Chất lượng chuyên môn / báo cáo",
+      "maximum_points": 1
+    },
+    {
+      "cell": "B51",
+      "criterion": "Tiêu chí chuyên môn riêng",
+      "maximum_points": 2
+    }
+  ],
+  "grading": "Không tự điền điểm hoặc xác nhận nộp thay GVHD."
+}

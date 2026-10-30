@@ -1,0 +1,1163 @@
+{
+  "snapshot_id": "W5_CLASS-s17-T004-step02",
+  "task_id": "T004",
+  "state": "T004-step02",
+  "captured_at_utc": "2026-10-30T15:33:45.408389+00:00",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "html_sha256": "ec30d71dabc1bc915260e1296e692148e3d9178f9cad43c40e51d96f96e94d14",
+  "provenance": {
+    "mutation": "W5_CLASS",
+    "mutation_seed": 17,
+    "data_seed": "seed_v1",
+    "git_commit": "1817dfaba13d51d2ca7f5239b7e7ab8b6bcbb34e",
+    "seed_sha256": "638bb0fa96d8e603f7604d40b07d6703b3d0438e9c61205de45cb8c04dddf888",
+    "capture_kind": "pre-action runtime"
+  },
+  "schema_version": "0.1",
+  "url": "http://127.0.0.1:55772/orders/new",
+  "title": "Tạo đơn | MiniBiz Benchmark",
+  "elements": [
+    {
+      "element_id": "e1",
+      "parent_id": null,
+      "tag": "html",
+      "text": "Tạo đơn | MiniBiz Benchmark * { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #1f2937; background: #f5f7fb; } .m2e50e04b52a630b4 { width: min(1080px, 92%); margin: 0 auto; } .mcc65085de2b70ba0 { padding: 18px 0; background: #ffffff; border-bottom: 1px solid #dbe2ea; } .mcc65085de2b70ba0 .m2e50e04b52a630b4 { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; } .m9027c68015d95e2a { font-size: 24px; font-weight: bold; color: #1d4ed8; text-decoration: none; } main { padding: 32px 0; } .ma051b4afe960175c { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 24px; } .me3d1a5d3f47f2302 { padding: 24px; background: #ffffff; border: 1px solid #dbe2ea; border-radius: 8px; } .me3d1a5d3f47f2302 h2 { margin-top: 0; } table { width: 100%; border-collapse: collapse; background: white; } th, td { padding: 12px; border: 1px solid #dbe2ea; text-align: left; } label { display: block; margin-bottom: 6px; } input { width: 100%; max-width: 480px; padding: 10px; border: 1px solid #9ca3af; border-radius: 4px; font: inherit; } button { padding: 10px 20px; background: #1d4ed8; color: white; border: 0; border-radius: 4px; font: inherit; cursor: pointer; } [role=\"alert\"] { color: #b91c1c; } /* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */ select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; } textarea { display: block; width: min(100%, 480px); min-height: 100px; } nav { padding-top: 16px; } fieldset { margin: 16px 0; } MiniBiz Ứng dụng benchmark nghiệp vụ Web Khách hàng · Đơn hàng · Hỗ trợ Tạo đơn hàng Khách hàng Chọn khách hàng Trần Hoa — tran.hoa@example.com Nguyễn Văn Dũng — nguyen.dung@example.com Phạm Thu Hà — pham.ha@example.com Võ Thanh Tâm — vo.tam@example.com Sản phẩm 1 Sản phẩm Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính Số lượng Xóa dòng Thêm dòng Xác nhận tạo đơn Hủy",
+      "attributes": {
+        "lang": "vi"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 705.796875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]"
+      }
+    },
+    {
+      "element_id": "e2",
+      "parent_id": "e1",
+      "tag": "head",
+      "text": "Tạo đơn | MiniBiz Benchmark * { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #1f2937; background: #f5f7fb; } .m2e50e04b52a630b4 { width: min(1080px, 92%); margin: 0 auto; } .mcc65085de2b70ba0 { padding: 18px 0; background: #ffffff; border-bottom: 1px solid #dbe2ea; } .mcc65085de2b70ba0 .m2e50e04b52a630b4 { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; } .m9027c68015d95e2a { font-size: 24px; font-weight: bold; color: #1d4ed8; text-decoration: none; } main { padding: 32px 0; } .ma051b4afe960175c { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 24px; } .me3d1a5d3f47f2302 { padding: 24px; background: #ffffff; border: 1px solid #dbe2ea; border-radius: 8px; } .me3d1a5d3f47f2302 h2 { margin-top: 0; } table { width: 100%; border-collapse: collapse; background: white; } th, td { padding: 12px; border: 1px solid #dbe2ea; text-align: left; } label { display: block; margin-bottom: 6px; } input { width: 100%; max-width: 480px; padding: 10px; border: 1px solid #9ca3af; border-radius: 4px; font: inherit; } button { padding: 10px 20px; background: #1d4ed8; color: white; border: 0; border-radius: 4px; font: inherit; cursor: pointer; } [role=\"alert\"] { color: #b91c1c; } /* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */ select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; } textarea { display: block; width: min(100%, 480px); min-height: 100px; } nav { padding-top: 16px; } fieldset { margin: 16px 0; }",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]"
+      }
+    },
+    {
+      "element_id": "e3",
+      "parent_id": "e2",
+      "tag": "meta",
+      "text": "",
+      "attributes": {
+        "charset": "UTF-8"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='meta'][1]"
+      }
+    },
+    {
+      "element_id": "e4",
+      "parent_id": "e2",
+      "tag": "meta",
+      "text": "",
+      "attributes": {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='meta'][2]"
+      }
+    },
+    {
+      "element_id": "e5",
+      "parent_id": "e2",
+      "tag": "title",
+      "text": "Tạo đơn | MiniBiz Benchmark",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='title'][1]"
+      }
+    },
+    {
+      "element_id": "e6",
+      "parent_id": "e2",
+      "tag": "link",
+      "text": "",
+      "attributes": {
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:55772/static/style.css"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='link'][1]"
+      }
+    },
+    {
+      "element_id": "e7",
+      "parent_id": "e2",
+      "tag": "style",
+      "text": "* { box-sizing: border-box; } body { margin: 0; font-family: Arial, sans-serif; line-height: 1.6; color: #1f2937; background: #f5f7fb; } .m2e50e04b52a630b4 { width: min(1080px, 92%); margin: 0 auto; } .mcc65085de2b70ba0 { padding: 18px 0; background: #ffffff; border-bottom: 1px solid #dbe2ea; } .mcc65085de2b70ba0 .m2e50e04b52a630b4 { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; } .m9027c68015d95e2a { font-size: 24px; font-weight: bold; color: #1d4ed8; text-decoration: none; } main { padding: 32px 0; } .ma051b4afe960175c { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 24px; } .me3d1a5d3f47f2302 { padding: 24px; background: #ffffff; border: 1px solid #dbe2ea; border-radius: 8px; } .me3d1a5d3f47f2302 h2 { margin-top: 0; } table { width: 100%; border-collapse: collapse; background: white; } th, td { padding: 12px; border: 1px solid #dbe2ea; text-align: left; } label { display: block; margin-bottom: 6px; } input { width: 100%; max-width: 480px; padding: 10px; border: 1px solid #9ca3af; border-radius: 4px; font: inherit; } button { padding: 10px 20px; background: #1d4ed8; color: white; border: 0; border-radius: 4px; font: inherit; cursor: pointer; } [role=\"alert\"] { color: #b91c1c; } /* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */ select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; } textarea { display: block; width: min(100%, 480px); min-height: 100px; } nav { padding-top: 16px; } fieldset { margin: 16px 0; }",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='style'][1]"
+      }
+    },
+    {
+      "element_id": "e8",
+      "parent_id": "e1",
+      "tag": "body",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web Khách hàng · Đơn hàng · Hỗ trợ Tạo đơn hàng Khách hàng Chọn khách hàng Trần Hoa — tran.hoa@example.com Nguyễn Văn Dũng — nguyen.dung@example.com Phạm Thu Hà — pham.ha@example.com Võ Thanh Tâm — vo.tam@example.com Sản phẩm 1 Sản phẩm Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính Số lượng Xóa dòng Thêm dòng Xác nhận tạo đơn Hủy",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 705.796875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]"
+      }
+    },
+    {
+      "element_id": "e9",
+      "parent_id": "e8",
+      "tag": "header",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {
+        "class": "mcc65085de2b70ba0"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 75.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]"
+      }
+    },
+    {
+      "element_id": "e10",
+      "parent_id": "e9",
+      "tag": "div",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {
+        "class": "m2e50e04b52a630b4"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 18,
+        "width": 1080,
+        "height": 38.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]"
+      }
+    },
+    {
+      "element_id": "e11",
+      "parent_id": "e10",
+      "tag": "a",
+      "text": "MiniBiz",
+      "attributes": {
+        "class": "m9027c68015d95e2a",
+        "href": "/"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 18,
+        "width": 84,
+        "height": 38.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e12",
+      "parent_id": "e10",
+      "tag": "span",
+      "text": "Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 204,
+        "y": 24.390625,
+        "width": 265.984375,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]/*[local-name()='span'][1]"
+      }
+    },
+    {
+      "element_id": "e13",
+      "parent_id": "e8",
+      "tag": "nav",
+      "text": "Khách hàng · Đơn hàng · Hỗ trợ",
+      "attributes": {
+        "class": "m2e50e04b52a630b4",
+        "aria-label": "Điều hướng chính"
+      },
+      "label": null,
+      "name_hint": "Điều hướng chính",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 75.390625,
+        "width": 1080,
+        "height": 41.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]"
+      }
+    },
+    {
+      "element_id": "e14",
+      "parent_id": "e13",
+      "tag": "a",
+      "text": "Khách hàng",
+      "attributes": {
+        "href": "/customers"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 95.390625,
+        "width": 85.40625,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e15",
+      "parent_id": "e13",
+      "tag": "a",
+      "text": "Đơn hàng",
+      "attributes": {
+        "href": "/orders"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 199.625,
+        "y": 95.390625,
+        "width": 70.984375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][2]"
+      }
+    },
+    {
+      "element_id": "e16",
+      "parent_id": "e13",
+      "tag": "a",
+      "text": "Hỗ trợ",
+      "attributes": {
+        "href": "/tickets"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 284.828125,
+        "y": 95.390625,
+        "width": 45.171875,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][3]"
+      }
+    },
+    {
+      "element_id": "e17",
+      "parent_id": "e8",
+      "tag": "main",
+      "text": "Tạo đơn hàng Khách hàng Chọn khách hàng Trần Hoa — tran.hoa@example.com Nguyễn Văn Dũng — nguyen.dung@example.com Phạm Thu Hà — pham.ha@example.com Võ Thanh Tâm — vo.tam@example.com Sản phẩm 1 Sản phẩm Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính Số lượng Xóa dòng Thêm dòng Xác nhận tạo đơn Hủy",
+      "attributes": {
+        "class": "m2e50e04b52a630b4"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 116.984375,
+        "width": 1080,
+        "height": 588.8125
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]"
+      }
+    },
+    {
+      "element_id": "e18",
+      "parent_id": "e17",
+      "tag": "h1",
+      "text": "Tạo đơn hàng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 170.421875,
+        "width": 1080,
+        "height": 51.1875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='h1'][1]"
+      }
+    },
+    {
+      "element_id": "e19",
+      "parent_id": "e17",
+      "tag": "form",
+      "text": "Khách hàng Chọn khách hàng Trần Hoa — tran.hoa@example.com Nguyễn Văn Dũng — nguyen.dung@example.com Phạm Thu Hà — pham.ha@example.com Võ Thanh Tâm — vo.tam@example.com Sản phẩm 1 Sản phẩm Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính Số lượng Xóa dòng Thêm dòng Xác nhận tạo đơn Hủy",
+      "attributes": {
+        "method": "post",
+        "action": "/orders/new"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 243.046875,
+        "width": 1080,
+        "height": 430.75
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]"
+      }
+    },
+    {
+      "element_id": "e20",
+      "parent_id": "e19",
+      "tag": "label",
+      "text": "Khách hàng",
+      "attributes": {
+        "for": "order-customer"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 243.046875,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='label'][1]"
+      }
+    },
+    {
+      "element_id": "e21",
+      "parent_id": "e19",
+      "tag": "select",
+      "text": "Chọn khách hàng Trần Hoa — tran.hoa@example.com Nguyễn Văn Dũng — nguyen.dung@example.com Phạm Thu Hà — pham.ha@example.com Võ Thanh Tâm — vo.tam@example.com",
+      "attributes": {
+        "id": "order-customer",
+        "name": "customer_id",
+        "required": ""
+      },
+      "label": "Khách hàng",
+      "name_hint": "Khách hàng",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 282.640625,
+        "width": 398,
+        "height": 37
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]"
+      }
+    },
+    {
+      "element_id": "e22",
+      "parent_id": "e21",
+      "tag": "option",
+      "text": "Chọn khách hàng",
+      "attributes": {
+        "value": ""
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": true,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][1]"
+      }
+    },
+    {
+      "element_id": "e23",
+      "parent_id": "e21",
+      "tag": "option",
+      "text": "Trần Hoa — tran.hoa@example.com",
+      "attributes": {
+        "value": "1"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "1",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][2]"
+      }
+    },
+    {
+      "element_id": "e24",
+      "parent_id": "e21",
+      "tag": "option",
+      "text": "Nguyễn Văn Dũng — nguyen.dung@example.com",
+      "attributes": {
+        "value": "2"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "2",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][3]"
+      }
+    },
+    {
+      "element_id": "e25",
+      "parent_id": "e21",
+      "tag": "option",
+      "text": "Phạm Thu Hà — pham.ha@example.com",
+      "attributes": {
+        "value": "3"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "3",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][4]"
+      }
+    },
+    {
+      "element_id": "e26",
+      "parent_id": "e21",
+      "tag": "option",
+      "text": "Võ Thanh Tâm — vo.tam@example.com",
+      "attributes": {
+        "value": "4"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "4",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][5]"
+      }
+    },
+    {
+      "element_id": "e27",
+      "parent_id": "e19",
+      "tag": "div",
+      "text": "Sản phẩm 1 Sản phẩm Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính Số lượng Xóa dòng",
+      "attributes": {
+        "id": "order-lines"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 343.640625,
+        "width": 1080,
+        "height": 206.96875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]"
+      }
+    },
+    {
+      "element_id": "e28",
+      "parent_id": "e27",
+      "tag": "fieldset",
+      "text": "Sản phẩm 1 Sản phẩm Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính Số lượng Xóa dòng",
+      "attributes": {
+        "class": "m39ef2ede2b4cd068"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 343.640625,
+        "width": 1080,
+        "height": 206.96875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]"
+      }
+    },
+    {
+      "element_id": "e29",
+      "parent_id": "e28",
+      "tag": "legend",
+      "text": "Sản phẩm 1",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 114,
+        "y": 343.640625,
+        "width": 90.28125,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='legend'][1]"
+      }
+    },
+    {
+      "element_id": "e30",
+      "parent_id": "e28",
+      "tag": "label",
+      "text": "Sản phẩm",
+      "attributes": {
+        "for": "order-sku-1"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 114,
+        "y": 374.828125,
+        "width": 1052,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='label'][1]"
+      }
+    },
+    {
+      "element_id": "e31",
+      "parent_id": "e28",
+      "tag": "select",
+      "text": "Chọn sản phẩm SKU-100 — Bàn phím SKU-205 — Chuột máy tính",
+      "attributes": {
+        "id": "order-sku-1",
+        "name": "sku",
+        "required": ""
+      },
+      "label": "Sản phẩm",
+      "name_hint": "Sản phẩm",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 114,
+        "y": 414.421875,
+        "width": 237,
+        "height": 37
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='select'][1]"
+      }
+    },
+    {
+      "element_id": "e32",
+      "parent_id": "e31",
+      "tag": "option",
+      "text": "Chọn sản phẩm",
+      "attributes": {
+        "value": ""
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": true,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='select'][1]/*[local-name()='option'][1]"
+      }
+    },
+    {
+      "element_id": "e33",
+      "parent_id": "e31",
+      "tag": "option",
+      "text": "SKU-100 — Bàn phím",
+      "attributes": {
+        "value": "SKU-100"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "SKU-100",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='select'][1]/*[local-name()='option'][2]"
+      }
+    },
+    {
+      "element_id": "e34",
+      "parent_id": "e31",
+      "tag": "option",
+      "text": "SKU-205 — Chuột máy tính",
+      "attributes": {
+        "value": "SKU-205"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "SKU-205",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='select'][1]/*[local-name()='option'][3]"
+      }
+    },
+    {
+      "element_id": "e35",
+      "parent_id": "e28",
+      "tag": "label",
+      "text": "Số lượng",
+      "attributes": {
+        "for": "order-qty-1"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 114,
+        "y": 459.421875,
+        "width": 1052,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='label'][2]"
+      }
+    },
+    {
+      "element_id": "e36",
+      "parent_id": "e28",
+      "tag": "input",
+      "text": "",
+      "attributes": {
+        "id": "order-qty-1",
+        "name": "qty",
+        "type": "number",
+        "min": "1",
+        "max": "1000000",
+        "step": "1",
+        "value": "1",
+        "required": ""
+      },
+      "label": "Số lượng",
+      "name_hint": "Số lượng",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "1",
+      "checked": false,
+      "selected": null,
+      "bounding_box": {
+        "x": 114,
+        "y": 491.015625,
+        "width": 480,
+        "height": 47.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='input'][1]"
+      }
+    },
+    {
+      "element_id": "e37",
+      "parent_id": "e28",
+      "tag": "button",
+      "text": "Xóa dòng",
+      "attributes": {
+        "type": "button",
+        "class": "mb0b31bd3700d0e56",
+        "disabled": ""
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": false,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 598.453125,
+        "y": 492.015625,
+        "width": 108.515625,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='button'][1]"
+      }
+    },
+    {
+      "element_id": "e38",
+      "parent_id": "e19",
+      "tag": "p",
+      "text": "Thêm dòng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 566.609375,
+        "width": 1080,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]"
+      }
+    },
+    {
+      "element_id": "e39",
+      "parent_id": "e38",
+      "tag": "button",
+      "text": "Thêm dòng",
+      "attributes": {
+        "id": "add-order-line",
+        "type": "button"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 566.609375,
+        "width": 120.9375,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='button'][1]"
+      }
+    },
+    {
+      "element_id": "e40",
+      "parent_id": "e19",
+      "tag": "button",
+      "text": "Xác nhận tạo đơn",
+      "attributes": {
+        "id": "save-order",
+        "type": "submit"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 628.203125,
+        "width": 167.03125,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]"
+      }
+    },
+    {
+      "element_id": "e41",
+      "parent_id": "e19",
+      "tag": "a",
+      "text": "Hủy",
+      "attributes": {
+        "href": "/orders"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 271.484375,
+        "y": 642.203125,
+        "width": 28.453125,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e42",
+      "parent_id": "e17",
+      "tag": "script",
+      "text": "",
+      "attributes": {
+        "src": "http://127.0.0.1:55772/static/orders.js?mutation=W5_CLASS&seed=17",
+        "defer": ""
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='script'][1]"
+      }
+    }
+  ]
+}

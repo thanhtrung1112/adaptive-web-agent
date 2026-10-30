@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm khách hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:55772/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <span style="display:contents"><span style="display:contents"><a class="brand" href="/">MiniBiz</a></span></span>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><span style="display:contents"><span style="display:contents"><a href="/customers">Khách hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/orders">Đơn hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/tickets">Hỗ trợ</a></span></span></nav>
+    <main class="container">
+        
+<h1>Thêm khách hàng</h1>
+
+
+
+<form method="post" action="/customers/new">
+    <p>
+        <span style="display:contents"><span style="display:contents"><label for="customer-name">Tên khách hàng</label></span></span>
+        <span style="display:contents"><span style="display:contents"><input id="customer-name" name="name" type="text" value="" required=""></span></span>
+    </p>
+
+    <p>
+        <span style="display:contents"><span style="display:contents"><label for="customer-email">Email</label></span></span>
+        <span style="display:contents"><span style="display:contents"><input id="customer-email" name="email" type="email" value="" required=""></span></span>
+    </p>
+
+    <p>
+        <span style="display:contents"><span style="display:contents"><label for="customer-phone">Số điện thoại</label></span></span>
+        <span style="display:contents"><span style="display:contents"><input id="customer-phone" name="phone" type="tel" value="" required=""></span></span>
+    </p>
+
+    <span style="display:contents"><span style="display:contents"><button id="save-customer" type="submit">Lưu</button></span></span>
+    <span style="display:contents"><span style="display:contents"><a href="/customers">Hủy</a></span></span>
+</form>
+
+    </main>
+
+</body></html>

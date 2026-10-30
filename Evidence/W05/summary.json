@@ -1,0 +1,40 @@
+{
+  "benchmark_version": "0.5.0",
+  "expected_rows": 390,
+  "completed_rows": 390,
+  "passed": 390,
+  "all_passed": true,
+  "scope": "functionality oracle; NOT adaptive agent or recovery rate",
+  "by_mutation": {
+    "M0": {
+      "total": 30,
+      "passed": 30
+    },
+    "W5_ID": {
+      "total": 60,
+      "passed": 60
+    },
+    "W5_CLASS": {
+      "total": 60,
+      "passed": 60
+    },
+    "W5_TEXT": {
+      "total": 60,
+      "passed": 60
+    },
+    "W5_ORDER": {
+      "total": 60,
+      "passed": 60
+    },
+    "W5_STRUCTURE": {
+      "total": 60,
+      "passed": 60
+    },
+    "W5_COMBINED": {
+      "total": 60,
+      "passed": 60
+    }
+  },
+  "snapshot_count": 2249,
+  "pair_count": 1716
+}
