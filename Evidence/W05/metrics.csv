@@ -1,0 +1,20 @@
+metric,value,unit,scope,source
+functionality_pass,30,runs,M0,Evidence/W05/results.csv
+functionality_total,30,runs,M0,Evidence/W05/results.csv
+functionality_pass,60,runs,W5_ID,Evidence/W05/results.csv
+functionality_total,60,runs,W5_ID,Evidence/W05/results.csv
+functionality_pass,60,runs,W5_CLASS,Evidence/W05/results.csv
+functionality_total,60,runs,W5_CLASS,Evidence/W05/results.csv
+functionality_pass,60,runs,W5_TEXT,Evidence/W05/results.csv
+functionality_total,60,runs,W5_TEXT,Evidence/W05/results.csv
+functionality_pass,60,runs,W5_ORDER,Evidence/W05/results.csv
+functionality_total,60,runs,W5_ORDER,Evidence/W05/results.csv
+functionality_pass,60,runs,W5_STRUCTURE,Evidence/W05/results.csv
+functionality_total,60,runs,W5_STRUCTURE,Evidence/W05/results.csv
+functionality_pass,60,runs,W5_COMBINED,Evidence/W05/results.csv
+functionality_total,60,runs,W5_COMBINED,Evidence/W05/results.csv
+software_tests_passed,85,tests,full regression,Evidence/W05/test-results.txt
+runtime_snapshots,2249,snapshots,full dataset,Evidence/W05/summary.json
+evaluation_pairs,1716,pairs,full dataset,Evidence/W05/summary.json
+locator_probes,65,probes,five selected frozen locators,Evidence/W05/locator-probe.json
+release_software_tests_passed,63,tests,independent W5 on main,Evidence/W05/release-test-results.txt

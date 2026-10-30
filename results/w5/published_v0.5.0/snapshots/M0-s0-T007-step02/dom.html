@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo ticket | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:55772/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<!-- T007 và T010 dùng chung form; đơn mới được truyền qua query string. -->
+<h1>Tạo ticket</h1>
+
+<form method="post" action="/tickets/new">
+<label for="ticket-order">Đơn hàng</label>
+<select id="ticket-order" name="order_id" required=""><option value="">Chọn đơn hàng</option>
+<option value="ORD-1001">ORD-1001 — tran.hoa@example.com</option><option value="ORD-1002">ORD-1002 — nguyen.dung@example.com</option><option value="ORD-1003">ORD-1003 — tran.hoa@example.com</option><option value="ORD-1004">ORD-1004 — nguyen.dung@example.com</option><option value="ORD-1005">ORD-1005 — tran.hoa@example.com</option></select>
+<label for="ticket-subject">Tiêu đề</label>
+<input id="ticket-subject" name="subject" maxlength="200" value="" required="">
+<p><button id="save-ticket" type="submit">Gửi</button> <a href="/tickets">Hủy</a></p>
+</form>
+
+    </main>
+
+</body></html>

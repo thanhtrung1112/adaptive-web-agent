@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo ticket | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:55772/static/style.css">
+<style>* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f5f7fb;
+}
+
+.m2e50e04b52a630b4 {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+}
+
+.mcc65085de2b70ba0 {
+    padding: 18px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.mcc65085de2b70ba0 .m2e50e04b52a630b4 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.m9027c68015d95e2a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+main {
+    padding: 32px 0;
+}
+
+.ma051b4afe960175c {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.me3d1a5d3f47f2302 {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+}
+
+.me3d1a5d3f47f2302 h2 {
+    margin-top: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1d4ed8;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+[role="alert"] {
+    color: #b91c1c;
+}
+/* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */
+select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; }
+textarea { display: block; width: min(100%, 480px); min-height: 100px; }
+nav { padding-top: 16px; }
+fieldset { margin: 16px 0; }
+</style></head>
+<body>
+    <header class="mcc65085de2b70ba0">
+        <div class="m2e50e04b52a630b4">
+            <span style="display:contents"><span style="display:contents"><a class="m9027c68015d95e2a" href="/">MiniBiz</a></span></span>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="m2e50e04b52a630b4" aria-label="Điều hướng chính"><span style="display:contents"><span style="display:contents"><a href="/customers">Khách mua hàng</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/orders">Đơn cần hỗ trợ</a></span></span> · <span style="display:contents"><span style="display:contents"><a href="/tickets">Hỗ trợ</a></span></span></nav>
+    <main class="m2e50e04b52a630b4">
+        
+<!-- T007 và T010 dùng chung form; đơn mới được truyền qua query string. -->
+<h1>Tạo ticket</h1>
+
+<form method="post" action="/tickets/new">
+<span style="display:contents"><span style="display:contents"><label for="mfcad2f0b63a040d4">Đơn cần hỗ trợ</label></span></span>
+<span style="display:contents"><span style="display:contents"><select id="mfcad2f0b63a040d4" name="order_id" required=""><option value="">Chọn đơn hàng</option>
+<option value="ORD-1001">ORD-1001 — tran.hoa@example.com</option><option value="ORD-1002">ORD-1002 — nguyen.dung@example.com</option><option value="ORD-1003">ORD-1003 — tran.hoa@example.com</option><option value="ORD-1004">ORD-1004 — nguyen.dung@example.com</option><option value="ORD-1005">ORD-1005 — tran.hoa@example.com</option></select></span></span>
+<span style="display:contents"><span style="display:contents"><label for="m2463bf6feef41544">Chủ đề hỗ trợ</label></span></span>
+<span style="display:contents"><span style="display:contents"><input id="m2463bf6feef41544" name="subject" maxlength="200" value="" required=""></span></span>
+<p><span style="display:contents"><span style="display:contents"><button id="m8e41c3d907348283" type="submit">Gửi yêu cầu</button></span></span> <span style="display:contents"><span style="display:contents"><a href="/tickets">Hủy</a></span></span></p>
+</form>
+
+    </main>
+
+</body></html>

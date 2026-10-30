@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khách hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:55772/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<h1>Khách hàng</h1>
+
+<form method="get" action="/customers">
+    <label for="md50bda0d6a48952c">Tìm khách hàng theo email</label>
+    <input id="md50bda0d6a48952c" name="email" type="search" value="" placeholder="Nhập email đầy đủ">
+    <button id="mde1e0d70a14a25f1" type="submit">Tìm</button>
+    <a href="/customers">Xem tất cả</a>
+<input type="hidden" name="mutation" value="W5_ID"><input type="hidden" name="seed" value="17"></form>
+
+<p>
+    <a id="ma192bbf6e7b313fb" href="/customers/new">
+        Thêm khách hàng
+    </a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Tên khách hàng</th>
+            <th scope="col">Email</th>
+            <th scope="col">Số điện thoại</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>1</td>
+            <td><a href="/customers/1">Trần Hoa</a></td>
+            <td>tran.hoa@example.com</td>
+            <td>0900000001</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td><a href="/customers/2">Nguyễn Văn Dũng</a></td>
+            <td>nguyen.dung@example.com</td>
+            <td>0900000002</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td><a href="/customers/3">Phạm Thu Hà</a></td>
+            <td>pham.ha@example.com</td>
+            <td>0900000003</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td><a href="/customers/4">Võ Thanh Tâm</a></td>
+            <td>vo.tam@example.com</td>
+            <td>0900000004</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+<p><a href="/">Về trang chủ</a></p>
+
+    </main>
+
+</body></html>
