@@ -1,0 +1,19 @@
+{
+  "requested_cases": [
+    "crm-paraphrase",
+    "order",
+    "support",
+    "missing",
+    "unsupported",
+    "chain"
+  ],
+  "completed_cases": [
+    "crm-paraphrase",
+    "order",
+    "support",
+    "missing",
+    "unsupported",
+    "chain"
+  ],
+  "complete": true
+}
