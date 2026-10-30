@@ -1,0 +1,37 @@
+{
+  "scope": "real LLM-derived plan; M0 fixed accessibility adapter + API readback; not semantic ranking/recovery",
+  "steps": [
+    {
+      "index": 0,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/tickets"
+    },
+    {
+      "index": 1,
+      "control": "ticket_open",
+      "url": "http://127.0.0.1:50275/tickets/TCK-2002"
+    },
+    {
+      "index": 2,
+      "control": "close_note",
+      "url": "http://127.0.0.1:50275/tickets/TCK-2002"
+    },
+    {
+      "index": 3,
+      "control": "close_ticket",
+      "url": "http://127.0.0.1:50275/tickets/TCK-2002"
+    }
+  ],
+  "bindings": {},
+  "checks": [
+    {
+      "kind": "close_ticket",
+      "persisted_state_matches_intent": true
+    }
+  ],
+  "persisted_state_matches_intent": true,
+  "case": "support",
+  "trace_sha256": "7daa8d6b160734c0a75a257729cc752f9cf4d84897ea375881c7af39be913eb9",
+  "started_at_utc": "2026-10-28T13:49:24.558297+00:00",
+  "git_commit": "1bb8e4c464eb9d97d80a4fa53eee9dbe38ab9424"
+}

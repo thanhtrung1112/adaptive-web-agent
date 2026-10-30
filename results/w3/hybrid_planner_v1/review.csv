@@ -1,0 +1,9 @@
+case,schema_valid,status,expected_status,status_matches,latency_seconds,semantic_review,browser_executed,reviewer,review_note,persisted_state_matches_intent,trace
+crm-paraphrase,True,ready,ready,True,54.643,pass_plan_review,True,assistant; not team sign-off,"Đúng email/phone, có tìm và mở form sửa trước khi lưu; có một lần tìm lại dư nhưng không đổi nghĩa.",True,real_model_v2/crm-paraphrase/trace.json
+order,True,ready,ready,True,38.224,pass_plan_review,True,assistant; not team sign-off,"Đúng email, SKU-100=2, SKU-205=3; đúng hai dòng và một lần Thêm dòng.",True,real_model_v2/order/trace.json
+support,True,ready,ready,True,31.143,pass_plan_review,True,assistant; not team sign-off,Đúng TCK-2002; nhập ghi chú trước đóng. Model giữ dấu chấm cuối câu trong ghi chú; cần dùng dấu ngoặc kép nếu muốn phân định nội dung chính xác.,True,real_model_v2/support/trace.json
+missing,True,needs_clarification,needs_clarification,True,17.733,pass_plan_review,False,assistant; not team sign-off,"Hỏi cả email và số mới, không sinh thao tác.",,real_model_v2/missing/trace.json
+unsupported,True,unsupported,unsupported,True,17.645,pass_plan_review,False,assistant; not team sign-off,"Từ chối yêu cầu xóa, không sinh thao tác.",,real_model_v2/unsupported/trace.json
+chain,True,ready,ready,True,61.916,pass_plan_review,True,assistant; not team sign-off,"Đúng khách, SKU-100=2, tiêu đề Cần hỗ trợ; mã đơn lấy từ kết quả runtime.",True,real_model_v2/chain/trace.json
+order-new-wording,True,ready,ready,True,40.491,pass_plan_review,True,assistant; not team sign-off,"Đúng vo.tam@example.com, SKU-205=4, SKU-100=1; API xác nhận đơn được lưu.",True,new_wording/order-new-wording/trace.json
+missing-phone-only,True,needs_clarification,needs_clarification,True,25.675,pass_plan_review,False,assistant; not team sign-off,"Đã có email nên chỉ hỏi số mới, không hỏi lại email.",,new_wording/missing-phone-only/trace.json
