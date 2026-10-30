@@ -42,6 +42,11 @@ Không tự điền điểm, không ghi đã nộp hoặc đã peer-review khi c
 
 Từng người cần Issue riêng, assignee đúng tài khoản, milestone Tuan5, link evidence;
 PR có reviewer khác tác giả. Chỉ tag w05 trên commit đã tích hợp/review.
+Đã tạo [Issue #20 — Bình](https://github.com/thanhtrung1112/adaptive-web-agent/issues/20),
+[Issue #21 — Trung](https://github.com/thanhtrung1112/adaptive-web-agent/issues/21),
+[PR nháp #22](https://github.com/thanhtrung1112/adaptive-web-agent/pull/22) và
+[milestone Tuan5](https://github.com/thanhtrung1112/adaptive-web-agent/milestone/4).
+PR từ main, độc lập PR W3 #19. Chưa có peer review/merge/tag hoặc xác nhận nộp LMS.
 Mẫu nội dung: [docs/w5-github-handoff.md](../../docs/w5-github-handoff.md).
 
 ## Tái lập

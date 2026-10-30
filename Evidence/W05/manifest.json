@@ -20,7 +20,14 @@
         "title": "Sv Nguyễn Thành Trung – Version benchmark và probe mutation W5"
       }
     ],
-    "status": "issues_created_pr_prepared_pending_peer_review",
+    "pull_request": {
+      "number": 22,
+      "url": "https://github.com/thanhtrung1112/adaptive-web-agent/pull/22",
+      "draft": true,
+      "head_sha": "79195a9b10e6d9c6846040ea5799f8c44d9fe45b"
+    },
+    "status": "draft_pr_open_pending_peer_review",
+    "implementation_commit": "79195a9b10e6d9c6846040ea5799f8c44d9fe45b",
     "tag": null,
     "review": "pending actual student review",
     "lms_submission": "not confirmed"
@@ -44,9 +51,9 @@
     "Evidence/W05/locator-probe.json": "dd649fac09f3d62907c59f7c77c3b81c06a2ca4d9e34059e51cb3405a37a2f0e",
     "Evidence/W05/metadata.json": "c4f834fac8a843245e34e3e596d921c3abdbb5e0a0088638463cd336f928449a",
     "Evidence/W05/metrics.csv": "00e67b6e977bb1979c6d9b7ddc4af65c9466d995cf90a80743b8e2acb493028c",
-    "Evidence/W05/README.md": "60c119aa74352a3feaf582c8a60431e49b680f434baf61623048d94d21779199",
+    "Evidence/W05/README.md": "a9b0de0338166b4216f561d3b37c60f48f251b923e21aba35c765363eaa87ad3",
     "Evidence/W05/release-test-results.txt": "e66f169199e2afb1f5ee32e44f46bcdbca7450735215e2870c12e7c04d83ff1c",
-    "Evidence/W05/report-deliverables.json": "77bf3c21de824d96778725922cdcf5c77b56b21bd6659694cef9b91b8eb7da17",
+    "Evidence/W05/report-deliverables.json": "cfdbb34cb0ea2757ca6c47244af5370bdcb3ffc346ad443fdd593eb7413dd5ce",
     "Evidence/W05/results.csv": "559dab79a917177eef7ca6473b07ff01eccd6feff7f0c484bec83ee432284a60",
     "Evidence/W05/rubric.json": "8f41cccf32774555cd65349b26ff7c1427967c51ab36efc3a8c9d22ee485f970",
     "Evidence/W05/summary.json": "f21486baf346b9a9bc153c54396d13f3e70b374e1176c01b60f38dfb60057f3b",
