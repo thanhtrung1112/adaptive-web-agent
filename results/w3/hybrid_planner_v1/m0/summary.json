@@ -1,0 +1,22 @@
+[
+  {
+    "case": "crm-paraphrase",
+    "persisted_state_matches_intent": true,
+    "error": null
+  },
+  {
+    "case": "order",
+    "persisted_state_matches_intent": true,
+    "error": null
+  },
+  {
+    "case": "support",
+    "persisted_state_matches_intent": true,
+    "error": null
+  },
+  {
+    "case": "chain",
+    "persisted_state_matches_intent": true,
+    "error": null
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "scope": "real LLM-derived plan; M0 fixed accessibility adapter + API readback; not semantic ranking/recovery",
+  "steps": [
+    {
+      "index": 0,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/customers"
+    },
+    {
+      "index": 1,
+      "control": "search_email",
+      "url": "http://127.0.0.1:50275/customers"
+    },
+    {
+      "index": 2,
+      "control": "search_submit",
+      "url": "http://127.0.0.1:50275/customers?email=tran.hoa%40example.com"
+    },
+    {
+      "index": 3,
+      "control": "customer_open",
+      "url": "http://127.0.0.1:50275/customers/1"
+    },
+    {
+      "index": 4,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/customers"
+    },
+    {
+      "index": 5,
+      "control": "search_email",
+      "url": "http://127.0.0.1:50275/customers"
+    },
+    {
+      "index": 6,
+      "control": "search_submit",
+      "url": "http://127.0.0.1:50275/customers?email=tran.hoa%40example.com"
+    },
+    {
+      "index": 7,
+      "control": "customer_open",
+      "url": "http://127.0.0.1:50275/customers/1"
+    },
+    {
+      "index": 8,
+      "control": "customer_edit",
+      "url": "http://127.0.0.1:50275/customers/1/edit"
+    },
+    {
+      "index": 9,
+      "control": "edit_phone",
+      "url": "http://127.0.0.1:50275/customers/1/edit"
+    },
+    {
+      "index": 10,
+      "control": "save_phone",
+      "url": "http://127.0.0.1:50275/customers/1"
+    }
+  ],
+  "bindings": {},
+  "checks": [
+    {
+      "kind": "find_customer",
+      "persisted_state_matches_intent": true
+    },
+    {
+      "kind": "update_phone",
+      "persisted_state_matches_intent": true
+    }
+  ],
+  "persisted_state_matches_intent": true,
+  "case": "crm-paraphrase",
+  "trace_sha256": "3e08d63be19306fa10eba71ea6ae28b683e0482488717c7c68572168236419a6",
+  "started_at_utc": "2026-10-28T13:49:21.047311+00:00",
+  "git_commit": "1bb8e4c464eb9d97d80a4fa53eee9dbe38ab9424"
+}

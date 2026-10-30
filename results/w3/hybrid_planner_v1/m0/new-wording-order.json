@@ -1,0 +1,56 @@
+{
+  "scope": "M0 fixed accessibility adapter; not ranking, mutation or general agent success",
+  "steps": [
+    {
+      "index": 0,
+      "control": "navigate",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 1,
+      "control": "order_customer",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 2,
+      "control": "line_sku",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 3,
+      "control": "line_qty",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 4,
+      "control": "add_line",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 5,
+      "control": "line_sku",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 6,
+      "control": "line_qty",
+      "url": "http://127.0.0.1:58269/orders/new"
+    },
+    {
+      "index": 7,
+      "control": "save_order",
+      "url": "http://127.0.0.1:58269/orders/ORD-1006"
+    }
+  ],
+  "bindings": {
+    "$last_order": "ORD-1006"
+  },
+  "checks": [
+    {
+      "kind": "create_order",
+      "persisted_state_matches_intent": true
+    }
+  ],
+  "persisted_state_matches_intent": true,
+  "trace_sha256": "9785654a8bc46b1cc5fcd5a7ea24ee504c94aee6a5255404fce0e6b8105ab880"
+}

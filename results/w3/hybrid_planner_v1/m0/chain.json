@@ -1,0 +1,98 @@
+{
+  "scope": "real LLM-derived plan; M0 fixed accessibility adapter + API readback; not semantic ranking/recovery",
+  "steps": [
+    {
+      "index": 0,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/customers/new"
+    },
+    {
+      "index": 1,
+      "control": "new_name",
+      "url": "http://127.0.0.1:50275/customers/new"
+    },
+    {
+      "index": 2,
+      "control": "new_email",
+      "url": "http://127.0.0.1:50275/customers/new"
+    },
+    {
+      "index": 3,
+      "control": "new_phone",
+      "url": "http://127.0.0.1:50275/customers/new"
+    },
+    {
+      "index": 4,
+      "control": "save_customer",
+      "url": "http://127.0.0.1:50275/customers"
+    },
+    {
+      "index": 5,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 6,
+      "control": "order_customer",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 7,
+      "control": "line_sku",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 8,
+      "control": "line_qty",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 9,
+      "control": "save_order",
+      "url": "http://127.0.0.1:50275/orders/ORD-1006"
+    },
+    {
+      "index": 10,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/tickets/new"
+    },
+    {
+      "index": 11,
+      "control": "ticket_order",
+      "url": "http://127.0.0.1:50275/tickets/new"
+    },
+    {
+      "index": 12,
+      "control": "ticket_subject",
+      "url": "http://127.0.0.1:50275/tickets/new"
+    },
+    {
+      "index": 13,
+      "control": "save_ticket",
+      "url": "http://127.0.0.1:50275/tickets/TCK-2003"
+    }
+  ],
+  "bindings": {
+    "$last_customer": "an.plan@example.com",
+    "$last_order": "ORD-1006"
+  },
+  "checks": [
+    {
+      "kind": "create_customer",
+      "persisted_state_matches_intent": true
+    },
+    {
+      "kind": "create_order",
+      "persisted_state_matches_intent": true
+    },
+    {
+      "kind": "create_ticket",
+      "persisted_state_matches_intent": true
+    }
+  ],
+  "persisted_state_matches_intent": true,
+  "case": "chain",
+  "trace_sha256": "4a6643d558d49f5ba59ae1e5153ecd94241e8deb94370fce211f9d9d8b6d363f",
+  "started_at_utc": "2026-10-28T13:49:26.430171+00:00",
+  "git_commit": "1bb8e4c464eb9d97d80a4fa53eee9dbe38ab9424"
+}

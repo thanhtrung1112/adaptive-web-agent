@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-28",
+  "architecture": "LLM intent + explicit workflow compiler + precondition validation",
+  "model": "qwen3.5:4b",
+  "think": false,
+  "temperature": 0,
+  "seed": 7,
+  "context_length": 8192,
+  "reviewed_cases": 8,
+  "schema_valid": 8,
+  "expected_status": 8,
+  "assistant_plan_review_pass": 8,
+  "m0_browser_cases": 5,
+  "m0_persisted_state_matches_intent": 5,
+  "software_tests": {
+    "tests": 81,
+    "result": "OK",
+    "seconds": 37.455,
+    "command": "python -m unittest discover -s tests -v",
+    "log": "software_tests.log"
+  },
+  "scope": "6 development cases used for prompt revisions + 2 new-wording checks after freeze; one model run each; not W11 held-out, not repeated benchmark or general agent success",
+  "latency_protocol": "wall time includes intent inference/one optional repair, compilation, model metadata HTTP reads; development machine, not a controlled speed benchmark",
+  "limitations": [
+    "six known business operations only",
+    "M0 adapter uses fixed labels/roles, not semantic ranking",
+    "no full 30-task replay",
+    "no mutation or recovery evaluation",
+    "source spans do not prove intent classification correctness",
+    "unquoted note punctuation may be included verbatim",
+    "team/teacher acceptance not inferred"
+  ],
+  "first_iteration": "real_model_v1 preserves CRM missing repeated email and Order illegal slot failures; not omitted from evidence"
+}

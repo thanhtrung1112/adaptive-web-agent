@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "status",
+    "objective",
+    "entities",
+    "questions",
+    "steps",
+    "verification"
+  ],
+  "properties": {
+    "version": {
+      "const": "0.2"
+    },
+    "status": {
+      "enum": [
+        "ready",
+        "needs_clarification",
+        "unsupported"
+      ]
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "value"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "target",
+              "value",
+              "url",
+              "expected"
+            ],
+            "properties": {
+              "action": {
+                "const": "navigate"
+              },
+              "target": {
+                "type": "string"
+              },
+              "value": {
+                "const": ""
+              },
+              "url": {
+                "type": "string"
+              },
+              "expected": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "target",
+              "value",
+              "url",
+              "expected"
+            ],
+            "properties": {
+              "action": {
+                "const": "click"
+              },
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "const": ""
+              },
+              "url": {
+                "const": ""
+              },
+              "expected": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "target",
+              "value",
+              "url",
+              "expected"
+            ],
+            "properties": {
+              "action": {
+                "const": "fill"
+              },
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "const": ""
+              },
+              "expected": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "target",
+              "value",
+              "url",
+              "expected"
+            ],
+            "properties": {
+              "action": {
+                "const": "select"
+              },
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "const": ""
+              },
+              "expected": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "target",
+              "value",
+              "url",
+              "expected"
+            ],
+            "properties": {
+              "action": {
+                "const": "download"
+              },
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {
+                "const": ""
+              },
+              "url": {
+                "const": ""
+              },
+              "expected": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "action",
+              "target",
+              "value",
+              "url",
+              "expected"
+            ],
+            "properties": {
+              "action": {
+                "const": "verify"
+              },
+              "target": {
+                "type": "string"
+              },
+              "value": {
+                "const": ""
+              },
+              "url": {
+                "const": ""
+              },
+              "expected": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        ]
+      }
+    },
+    "verification": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "target",
+          "expected"
+        ],
+        "properties": {
+          "target": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
