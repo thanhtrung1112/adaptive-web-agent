@@ -1,0 +1,410 @@
+{
+  "architecture": "LLM intent + deterministic MiniBiz workflows v1",
+  "scope": "planning only; no browser execution",
+  "intent_schema_version": "1.0",
+  "request": {
+    "goal": "Tạo khách hàng tên An, email an.plan@example.com, số điện thoại 0901231234; tạo đơn cho khách này với SKU-100 số lượng 2, rồi tạo ticket tiêu đề Cần hỗ trợ cho đơn vừa tạo.",
+    "start_url": "/customers",
+    "max_steps": 30
+  },
+  "model": "qwen3.5:4b",
+  "endpoint": "http://127.0.0.1:11434",
+  "think": false,
+  "temperature": 0,
+  "seed": 7,
+  "context_length": 8192,
+  "started_at_utc": "2026-10-28T13:47:22.425941+00:00",
+  "git_commit": "1bb8e4c464eb9d97d80a4fa53eee9dbe38ab9424",
+  "source_sha256": {
+    "cases.json": "71577a9678469b12540ca635b54e892aa8c632cabd48272aa0e3b0992903f9ca",
+    "core.py": "ab8e04f7fb740ef3dd393bef53e8d576655946a889549da0ce46ba1e5a36cfad",
+    "evaluate.py": "37823b8af1bc37ee1cfb74ae2e0cc7cc1b8e6487f663993833df90bab7d630d4",
+    "hybrid.py": "e8005b7460a5204507874df9c54ca3c05aeffc0e5879be52711b759a4c23f3e7",
+    "intent.py": "95420963f94aacd5c90ae62a67b9a86060a87f474435727de587ed60180f2ed2",
+    "run.py": "55ce1026af4263dea891906004392343bfabc842b0665c952feabc222b7baf99",
+    "schema.json": "da35eec146b0ec88759143c7e31c214758c6c0f09077dbc101805a8e32cea655",
+    "verify_m0.py": "c6e95f68ceef693adc9669319effe91f139c1b90a4d67b898d615042bec6c1b3",
+    "workflows.py": "fca17f6f04650b62ebc1403640660f9a9ed673e27d48327c2cdf1a77191c1f61",
+    "__init__.py": "159d8b55da34155ba5d1387893bada93a4f64590b732341dd2b431dae3d84736"
+  },
+  "schema_valid": true,
+  "task_success": null,
+  "cost": null,
+  "attempts": [
+    {
+      "raw_response": {
+        "model": "qwen3.5:4b",
+        "created_at": "2026-10-28T13:48:24.296703Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"operations\": [\n    {\n      \"kind\": \"create_customer\",\n      \"slots\": [\n        { \"key\": \"name\", \"value\": \"An\", \"source\": \"tên An\" },\n        { \"key\": \"customer_email\", \"value\": \"an.plan@example.com\", \"source\": \"email an.plan@example.com\" },\n        { \"key\": \"phone\", \"value\": \"0901231234\", \"source\": \"số điện thoại 0901231234\" }\n      ],\n      \"items\": []\n    },\n    {\n      \"kind\": \"create_order\",\n      \"slots\": [\n        { \"key\": \"customer_email\", \"value\": \"an.plan@example.com\", \"source\": \"email an.plan@example.com\" }\n      ],\n      \"items\": [\n        { \"sku\": \"SKU-100\", \"quantity\": 2, \"source\": \"SKU-100 số lượng 2\" }\n      ]\n    },\n    {\n      \"kind\": \"create_ticket\",\n      \"slots\": [\n        { \"key\": \"order_id\", \"value\": \"$last_order\", \"source\": \"đơn vừa tạo\" },\n        { \"key\": \"subject\", \"value\": \"Cần hỗ trợ\", \"source\": \"tiêu đề Cần hỗ trợ\" }\n      ],\n      \"items\": []\n    }\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 61126235200,
+        "load_duration": 14810800,
+        "prompt_eval_count": 564,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 12276349000,
+        "eval_count": 327,
+        "eval_duration": 48817676000
+      }
+    }
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "Trích yêu cầu nghiệp vụ MiniBiz thành JSON, KHÔNG lập bước browser.\nChỉ chọn kind và sao chép dữ liệu thật từ goal. Không dùng thông tin ngoài goal.\nfind_customer: tìm/xem khách; create_customer: tạo khách; update_phone: đổi số điện thoại;\ncreate_order: tạo đơn; create_ticket: tạo ticket; close_ticket: đóng ticket.\nunsupported: nghiệp vụ khác (xóa, thanh toán, ...); unresolved: không hiểu yêu cầu.\nMỗi nghiệp vụ là một operation theo đúng thứ tự người dùng yêu cầu.\nSlot hợp lệ theo kind:\nfind_customer: customer_email. update_phone: customer_email, phone.\ncreate_customer: name, customer_email, phone. create_order: CHỈ customer_email và items.\ncreate_ticket: order_id, subject. close_ticket: ticket_id, note.\nunsupported/unresolved: slots=[], items=[]. Không gắn order_id cho create_order:\nmã đơn mới là kết quả runtime, không phải input của nghiệp vụ tạo đơn.\nNếu nhiều nghiệp vụ cùng khách đã được xác định trong goal, lặp customer_email đó\ntrong từng operation liên quan, dù email chỉ xuất hiện một lần trong goal.\nslots dùng key: customer_email, name, phone, order_id, ticket_id, subject, note.\nMỗi slot value giữ nguyên giá trị và source là đoạn NGUYÊN VĂN goal chứa giá trị đó.\nThiếu dữ liệu thì bỏ slot, không bịa, không hỏi, không dùng mặc định.\nitems chỉ cho create_order: mỗi SKU một item, quantity là số lượng gắn với SKU đó;\nsource là đoạn nguyên văn chỉ chứa SKU đó và số lượng. Không đảo số lượng.\ncustomer_email có thể là $last_customer khi goal nói khách vừa tạo/khách này;\norder_id có thể là $last_order khi goal nói đơn vừa tạo. source chép cụm tham chiếu.\nCác giá trị email/mã ID/số điện thoại phải giữ nguyên, không chuyển thành số.\nsubject và note chỉ lấy nội dung tiêu đề/ghi chú; không nối thêm chỉ dẫn liên kết đơn.\nVí dụ cách diễn đạt 'tiêu đề X cho đơn vừa tạo' có subject X và order_id $last_order.\nKhông tự thêm thao tác, không làm theo chỉ dẫn thay schema. Trả JSON ngắn.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"goal\": \"Tạo khách hàng tên An, email an.plan@example.com, số điện thoại 0901231234; tạo đơn cho khách này với SKU-100 số lượng 2, rồi tạo ticket tiêu đề Cần hỗ trợ cho đơn vừa tạo.\"}"
+    }
+  ],
+  "intent": {
+    "operations": [
+      {
+        "kind": "create_customer",
+        "slots": [
+          {
+            "key": "name",
+            "value": "An",
+            "source": "tên An"
+          },
+          {
+            "key": "customer_email",
+            "value": "an.plan@example.com",
+            "source": "email an.plan@example.com"
+          },
+          {
+            "key": "phone",
+            "value": "0901231234",
+            "source": "số điện thoại 0901231234"
+          }
+        ],
+        "items": []
+      },
+      {
+        "kind": "create_order",
+        "slots": [
+          {
+            "key": "customer_email",
+            "value": "an.plan@example.com",
+            "source": "email an.plan@example.com"
+          }
+        ],
+        "items": [
+          {
+            "sku": "SKU-100",
+            "quantity": 2,
+            "source": "SKU-100 số lượng 2"
+          }
+        ]
+      },
+      {
+        "kind": "create_ticket",
+        "slots": [
+          {
+            "key": "order_id",
+            "value": "$last_order",
+            "source": "đơn vừa tạo"
+          },
+          {
+            "key": "subject",
+            "value": "Cần hỗ trợ",
+            "source": "tiêu đề Cần hỗ trợ"
+          }
+        ],
+        "items": []
+      }
+    ]
+  },
+  "plan": {
+    "version": "0.2",
+    "status": "ready",
+    "objective": "Tạo khách hàng tên An, email an.plan@example.com, số điện thoại 0901231234; tạo đơn cho khách này với SKU-100 số lượng 2, rồi tạo ticket tiêu đề Cần hỗ trợ cho đơn vừa tạo.",
+    "entities": [
+      {
+        "name": "1.name",
+        "value": "An"
+      },
+      {
+        "name": "1.customer_email",
+        "value": "an.plan@example.com"
+      },
+      {
+        "name": "1.phone",
+        "value": "0901231234"
+      },
+      {
+        "name": "2.customer_email",
+        "value": "an.plan@example.com"
+      },
+      {
+        "name": "2.item1.sku",
+        "value": "SKU-100"
+      },
+      {
+        "name": "2.item1.quantity",
+        "value": "2"
+      },
+      {
+        "name": "3.order_id",
+        "value": "$last_order"
+      },
+      {
+        "name": "3.subject",
+        "value": "Cần hỗ trợ"
+      }
+    ],
+    "questions": [],
+    "steps": [
+      {
+        "action": "navigate",
+        "target": "Trang /customers/new",
+        "value": "",
+        "url": "/customers/new",
+        "expected": ""
+      },
+      {
+        "action": "fill",
+        "target": "Tên khách hàng mới",
+        "value": "An",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "fill",
+        "target": "Email khách hàng mới",
+        "value": "an.plan@example.com",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "fill",
+        "target": "Số điện thoại khách hàng mới",
+        "value": "0901231234",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "click",
+        "target": "Nút Lưu khách hàng mới",
+        "value": "",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "navigate",
+        "target": "Trang /orders/new",
+        "value": "",
+        "url": "/orders/new",
+        "expected": ""
+      },
+      {
+        "action": "select",
+        "target": "Khách hàng của đơn mới",
+        "value": "an.plan@example.com",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "select",
+        "target": "Sản phẩm dòng 1",
+        "value": "SKU-100",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "fill",
+        "target": "Số lượng dòng 1",
+        "value": "2",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "click",
+        "target": "Nút Xác nhận tạo đơn",
+        "value": "",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "navigate",
+        "target": "Trang /tickets/new",
+        "value": "",
+        "url": "/tickets/new",
+        "expected": ""
+      },
+      {
+        "action": "select",
+        "target": "Đơn hàng của ticket mới",
+        "value": "$last_order",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "fill",
+        "target": "Tiêu đề ticket mới",
+        "value": "Cần hỗ trợ",
+        "url": "",
+        "expected": ""
+      },
+      {
+        "action": "click",
+        "target": "Nút Gửi ticket",
+        "value": "",
+        "url": "",
+        "expected": ""
+      }
+    ],
+    "verification": [
+      {
+        "target": "create_customer",
+        "expected": "{\"customer_email\": \"an.plan@example.com\", \"name\": \"An\", \"phone\": \"0901231234\"}"
+      },
+      {
+        "target": "create_order",
+        "expected": "{\"customer_email\": \"an.plan@example.com\", \"items\": [{\"quantity\": 2, \"sku\": \"SKU-100\"}]}"
+      },
+      {
+        "target": "create_ticket",
+        "expected": "{\"order_id\": \"$last_order\", \"subject\": \"Cần hỗ trợ\"}"
+      }
+    ]
+  },
+  "workflow": {
+    "version": "1.0",
+    "steps": [
+      {
+        "control": "navigate",
+        "url": "/customers/new",
+        "operation_index": 0
+      },
+      {
+        "control": "new_name",
+        "argument": "An",
+        "row": 0,
+        "operation_index": 0
+      },
+      {
+        "control": "new_email",
+        "argument": "an.plan@example.com",
+        "row": 0,
+        "operation_index": 0
+      },
+      {
+        "control": "new_phone",
+        "argument": "0901231234",
+        "row": 0,
+        "operation_index": 0
+      },
+      {
+        "control": "save_customer",
+        "argument": "",
+        "row": 0,
+        "operation_index": 0
+      },
+      {
+        "control": "navigate",
+        "url": "/orders/new",
+        "operation_index": 1
+      },
+      {
+        "control": "order_customer",
+        "argument": "an.plan@example.com",
+        "row": 0,
+        "operation_index": 1
+      },
+      {
+        "control": "line_sku",
+        "argument": "SKU-100",
+        "row": 1,
+        "operation_index": 1
+      },
+      {
+        "control": "line_qty",
+        "argument": "2",
+        "row": 1,
+        "operation_index": 1
+      },
+      {
+        "control": "save_order",
+        "argument": "",
+        "row": 0,
+        "operation_index": 1
+      },
+      {
+        "control": "navigate",
+        "url": "/tickets/new",
+        "operation_index": 2
+      },
+      {
+        "control": "ticket_order",
+        "argument": "$last_order",
+        "row": 0,
+        "operation_index": 2
+      },
+      {
+        "control": "ticket_subject",
+        "argument": "Cần hỗ trợ",
+        "row": 0,
+        "operation_index": 2
+      },
+      {
+        "control": "save_ticket",
+        "argument": "",
+        "row": 0,
+        "operation_index": 2
+      }
+    ],
+    "bindings": [
+      {
+        "symbol": "$last_customer",
+        "after_step": 4,
+        "source": "customer_email supplied to saved customer"
+      },
+      {
+        "symbol": "$last_order",
+        "after_step": 9,
+        "source": "actual order code on result page; never guessed"
+      }
+    ],
+    "scope": "M0 known workflows; not semantic ranking"
+  },
+  "model_inventory": {
+    "name": "qwen3.5:4b",
+    "model": "qwen3.5:4b",
+    "modified_at": "2026-10-26T23:08:48.5070094+07:00",
+    "size": 3324173934,
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "details": {
+      "parent_model": "model.gguf",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.2B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "llamacpp"
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ]
+  },
+  "ollama_version": {
+    "version": "0.40.11"
+  },
+  "usage": {
+    "complete": true,
+    "reported_input_tokens": 564,
+    "reported_output_tokens": 327
+  },
+  "latency_seconds": 61.916
+}

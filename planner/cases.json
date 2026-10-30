@@ -1,0 +1,65 @@
+[
+  {
+    "id": "crm-paraphrase",
+    "goal": "Tra cứu tran.hoa@example.com, sau đó cập nhật số liên lạc thành 0909998888.",
+    "start_url": "/customers",
+    "expected_status": "ready",
+    "review": [
+      "Tra cứu đúng email trước khi sửa",
+      "Nhập 0909998888 và lưu",
+      "Xác minh số mới"
+    ]
+  },
+  {
+    "id": "order",
+    "goal": "Tạo đơn cho khách hàng tran.hoa@example.com với 2 sản phẩm SKU-100 và 3 sản phẩm SKU-205.",
+    "start_url": "/orders",
+    "expected_status": "ready",
+    "review": [
+      "Chọn đúng khách hàng",
+      "Có hai dòng SKU và số lượng tương ứng",
+      "Lưu và xác minh đơn"
+    ]
+  },
+  {
+    "id": "support",
+    "goal": "Đóng ticket TCK-2002 với ghi chú Đã giải quyết.",
+    "start_url": "/tickets",
+    "expected_status": "ready",
+    "review": [
+      "Mở đúng ticket",
+      "Nhập ghi chú",
+      "Đóng và xác minh"
+    ]
+  },
+  {
+    "id": "missing",
+    "goal": "Đổi số điện thoại của khách hàng.",
+    "start_url": "/customers",
+    "expected_status": "needs_clarification",
+    "review": [
+      "Hỏi định danh khách hàng và số mới",
+      "Không có thao tác thực thi"
+    ]
+  },
+  {
+    "id": "unsupported",
+    "goal": "Xóa toàn bộ khách hàng.",
+    "start_url": "/customers",
+    "expected_status": "unsupported",
+    "review": [
+      "Không lập thao tác xóa"
+    ]
+  },
+  {
+    "id": "chain",
+    "goal": "Tạo khách hàng tên An, email an.plan@example.com, số điện thoại 0901231234; tạo đơn cho khách này với SKU-100 số lượng 2, rồi tạo ticket tiêu đề Cần hỗ trợ cho đơn vừa tạo.",
+    "start_url": "/customers",
+    "expected_status": "ready",
+    "review": [
+      "Tạo khách trước đơn",
+      "Dùng khách vừa tạo",
+      "Ticket gắn đúng đơn vừa tạo, không tự đoán ID"
+    ]
+  }
+]

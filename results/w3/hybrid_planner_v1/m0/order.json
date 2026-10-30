@@ -1,0 +1,59 @@
+{
+  "scope": "real LLM-derived plan; M0 fixed accessibility adapter + API readback; not semantic ranking/recovery",
+  "steps": [
+    {
+      "index": 0,
+      "control": "navigate",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 1,
+      "control": "order_customer",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 2,
+      "control": "line_sku",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 3,
+      "control": "line_qty",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 4,
+      "control": "add_line",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 5,
+      "control": "line_sku",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 6,
+      "control": "line_qty",
+      "url": "http://127.0.0.1:50275/orders/new"
+    },
+    {
+      "index": 7,
+      "control": "save_order",
+      "url": "http://127.0.0.1:50275/orders/ORD-1006"
+    }
+  ],
+  "bindings": {
+    "$last_order": "ORD-1006"
+  },
+  "checks": [
+    {
+      "kind": "create_order",
+      "persisted_state_matches_intent": true
+    }
+  ],
+  "persisted_state_matches_intent": true,
+  "case": "order",
+  "trace_sha256": "2f19d333a651dcfb28e90a6d4ff841a1f8cb7d641f13ab7ef1bffc8210b4c593",
+  "started_at_utc": "2026-10-28T13:49:22.764795+00:00",
+  "git_commit": "1bb8e4c464eb9d97d80a4fa53eee9dbe38ab9424"
+}

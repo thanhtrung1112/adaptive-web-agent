@@ -20,3 +20,7 @@ results/w4/binh_v1/test_log.txt text eol=lf
 Evidence/W05/** text eol=lf
 Evidence/W05/figures/*.png binary
 results/w5/published_v0.5.0/**/dom.html whitespace=-blank-at-eol
+
+# W3 evidence manifest hashes these files too; keep checkout bytes stable on Windows.
+results/w3/hybrid_planner_v1/README.md text eol=lf
+results/w3/hybrid_planner_v1/software_tests.log text eol=lf

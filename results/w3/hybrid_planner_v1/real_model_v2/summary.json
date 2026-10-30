@@ -1,0 +1,62 @@
+[
+  {
+    "case": "crm-paraphrase",
+    "schema_valid": true,
+    "status": "ready",
+    "expected_status": "ready",
+    "status_matches": true,
+    "latency_seconds": 54.643,
+    "semantic_review": "pending",
+    "browser_executed": false
+  },
+  {
+    "case": "order",
+    "schema_valid": true,
+    "status": "ready",
+    "expected_status": "ready",
+    "status_matches": true,
+    "latency_seconds": 38.224,
+    "semantic_review": "pending",
+    "browser_executed": false
+  },
+  {
+    "case": "support",
+    "schema_valid": true,
+    "status": "ready",
+    "expected_status": "ready",
+    "status_matches": true,
+    "latency_seconds": 31.143,
+    "semantic_review": "pending",
+    "browser_executed": false
+  },
+  {
+    "case": "missing",
+    "schema_valid": true,
+    "status": "needs_clarification",
+    "expected_status": "needs_clarification",
+    "status_matches": true,
+    "latency_seconds": 17.733,
+    "semantic_review": "pending",
+    "browser_executed": false
+  },
+  {
+    "case": "unsupported",
+    "schema_valid": true,
+    "status": "unsupported",
+    "expected_status": "unsupported",
+    "status_matches": true,
+    "latency_seconds": 17.645,
+    "semantic_review": "pending",
+    "browser_executed": false
+  },
+  {
+    "case": "chain",
+    "schema_valid": true,
+    "status": "ready",
+    "expected_status": "ready",
+    "status_matches": true,
+    "latency_seconds": 61.916,
+    "semantic_review": "pending",
+    "browser_executed": false
+  }
+]

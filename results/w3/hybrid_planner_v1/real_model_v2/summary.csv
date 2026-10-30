@@ -1,0 +1,7 @@
+case,schema_valid,status,expected_status,status_matches,latency_seconds,semantic_review,browser_executed
+crm-paraphrase,True,ready,ready,True,54.643,pending,False
+order,True,ready,ready,True,38.224,pending,False
+support,True,ready,ready,True,31.143,pending,False
+missing,True,needs_clarification,needs_clarification,True,17.733,pending,False
+unsupported,True,unsupported,unsupported,True,17.645,pending,False
+chain,True,ready,ready,True,61.916,pending,False

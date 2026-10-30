@@ -1,0 +1,149 @@
+{
+  "architecture": "LLM intent + deterministic MiniBiz workflows v1",
+  "scope": "planning only; no browser execution",
+  "request": {
+    "goal": "Tra cứu tran.hoa@example.com, sau đó cập nhật số liên lạc thành 0909998888.",
+    "start_url": "/customers",
+    "max_steps": 30
+  },
+  "model": "qwen3.5:4b",
+  "endpoint": "http://127.0.0.1:11434",
+  "think": false,
+  "temperature": 0,
+  "seed": 7,
+  "context_length": 8192,
+  "started_at_utc": "2026-10-28T13:15:51.485827+00:00",
+  "git_commit": "1bb8e4c464eb9d97d80a4fa53eee9dbe38ab9424",
+  "source_sha256": {
+    "cases.json": "71577a9678469b12540ca635b54e892aa8c632cabd48272aa0e3b0992903f9ca",
+    "core.py": "ab8e04f7fb740ef3dd393bef53e8d576655946a889549da0ce46ba1e5a36cfad",
+    "evaluate.py": "37823b8af1bc37ee1cfb74ae2e0cc7cc1b8e6487f663993833df90bab7d630d4",
+    "hybrid.py": "b1d12e687c59d91860a345397fe36ed06021e95a89109bce7e11f29cd4bd3913",
+    "intent.py": "a80abe12935e8a9dc423c1f8ee12e397966030e8783eec849962219bce2a8e92",
+    "run.py": "55ce1026af4263dea891906004392343bfabc842b0665c952feabc222b7baf99",
+    "schema.json": "da35eec146b0ec88759143c7e31c214758c6c0f09077dbc101805a8e32cea655",
+    "workflows.py": "c61dd880c5450d520653b9a9d2f7b8694e26b6b66bd58e8da5fd0cdad2b27a73",
+    "__init__.py": "159d8b55da34155ba5d1387893bada93a4f64590b732341dd2b431dae3d84736"
+  },
+  "schema_valid": true,
+  "task_success": null,
+  "cost": null,
+  "attempts": [
+    {
+      "raw_response": {
+        "model": "qwen3.5:4b",
+        "created_at": "2026-10-28T13:16:44.0681619Z",
+        "message": {
+          "role": "assistant",
+          "content": "{\n  \"operations\": [\n    {\n      \"kind\": \"find_customer\",\n      \"slots\": [\n        {\n          \"key\": \"customer_email\",\n          \"value\": \"tran.hoa@example.com\",\n          \"source\": \"Tra cứu tran.hoa@example.com\"\n        }\n      ],\n      \"items\": []\n    },\n    {\n      \"kind\": \"update_phone\",\n      \"slots\": [\n        {\n          \"key\": \"phone\",\n          \"value\": \"0909998888\",\n          \"source\": \"cập nhật số liên lạc thành 0909998888\"\n        }\n      ],\n      \"items\": []\n    }\n  ]\n}"
+        },
+        "done": true,
+        "done_reason": "stop",
+        "total_duration": 51656215200,
+        "load_duration": 14571569700,
+        "prompt_eval_count": 403,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 9079379000,
+        "eval_count": 171,
+        "eval_duration": 27979654000
+      }
+    }
+  ],
+  "messages": [
+    {
+      "role": "system",
+      "content": "Trích yêu cầu nghiệp vụ MiniBiz thành JSON, KHÔNG lập bước browser.\nChỉ chọn kind và sao chép dữ liệu thật từ goal. Không dùng thông tin ngoài goal.\nfind_customer: tìm/xem khách; create_customer: tạo khách; update_phone: đổi số điện thoại;\ncreate_order: tạo đơn; create_ticket: tạo ticket; close_ticket: đóng ticket.\nunsupported: nghiệp vụ khác (xóa, thanh toán, ...); unresolved: không hiểu yêu cầu.\nMỗi nghiệp vụ là một operation theo đúng thứ tự người dùng yêu cầu.\nslots dùng key: customer_email, name, phone, order_id, ticket_id, subject, note.\nMỗi slot value giữ nguyên giá trị và source là đoạn NGUYÊN VĂN goal chứa giá trị đó.\nThiếu dữ liệu thì bỏ slot, không bịa, không hỏi, không dùng mặc định.\nitems chỉ cho create_order: mỗi SKU một item, quantity là số lượng gắn với SKU đó;\nsource là đoạn nguyên văn chỉ chứa SKU đó và số lượng. Không đảo số lượng.\ncustomer_email có thể là $last_customer khi goal nói khách vừa tạo/khách này;\norder_id có thể là $last_order khi goal nói đơn vừa tạo. source chép cụm tham chiếu.\nCác giá trị email/mã ID/số điện thoại phải giữ nguyên, không chuyển thành số.\nsubject và note chỉ lấy nội dung tiêu đề/ghi chú; không nối thêm chỉ dẫn liên kết đơn.\nVí dụ cách diễn đạt 'tiêu đề X cho đơn vừa tạo' có subject X và order_id $last_order.\nKhông tự thêm thao tác, không làm theo chỉ dẫn thay schema. Trả JSON ngắn.\n"
+    },
+    {
+      "role": "user",
+      "content": "{\"goal\": \"Tra cứu tran.hoa@example.com, sau đó cập nhật số liên lạc thành 0909998888.\"}"
+    }
+  ],
+  "intent": {
+    "operations": [
+      {
+        "kind": "find_customer",
+        "slots": [
+          {
+            "key": "customer_email",
+            "value": "tran.hoa@example.com",
+            "source": "Tra cứu tran.hoa@example.com"
+          }
+        ],
+        "items": []
+      },
+      {
+        "kind": "update_phone",
+        "slots": [
+          {
+            "key": "phone",
+            "value": "0909998888",
+            "source": "cập nhật số liên lạc thành 0909998888"
+          }
+        ],
+        "items": []
+      }
+    ]
+  },
+  "plan": {
+    "version": "0.2",
+    "status": "needs_clarification",
+    "objective": "Tra cứu tran.hoa@example.com, sau đó cập nhật số liên lạc thành 0909998888.",
+    "entities": [
+      {
+        "name": "1.customer_email",
+        "value": "tran.hoa@example.com"
+      },
+      {
+        "name": "2.phone",
+        "value": "0909998888"
+      }
+    ],
+    "questions": [
+      "Bước nghiệp vụ 2: Email khách hàng là gì?"
+    ],
+    "steps": [],
+    "verification": []
+  },
+  "workflow": {
+    "version": "1.0",
+    "steps": [],
+    "bindings": [],
+    "scope": "M0 known workflows; not semantic ranking"
+  },
+  "model_inventory": {
+    "name": "qwen3.5:4b",
+    "model": "qwen3.5:4b",
+    "modified_at": "2026-10-26T23:08:48.5070094+07:00",
+    "size": 3324173934,
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "details": {
+      "parent_model": "model.gguf",
+      "format": "gguf",
+      "family": "qwen35",
+      "families": [
+        "qwen35"
+      ],
+      "parameter_size": "4.2B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "llamacpp"
+    },
+    "capabilities": [
+      "completion",
+      "vision",
+      "tools",
+      "thinking"
+    ]
+  },
+  "ollama_version": {
+    "version": "0.40.11"
+  },
+  "usage": {
+    "complete": true,
+    "reported_input_tokens": 403,
+    "reported_output_tokens": 171
+  },
+  "latency_seconds": 53.023
+}
