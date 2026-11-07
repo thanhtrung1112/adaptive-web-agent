@@ -7,8 +7,8 @@ Khi locator B0 hỏng, agent cần chọn lại phần tử trên trang đã đ�
 
 ## Quyết định
 1. **Chế độ mặc định của W6:** `features` (điểm đặc trưng W3), không dùng embedding.
-2. **Bỏ cuộc** khi hạng 1 hơn hạng 2 ít hơn `min_margin = 0,02` (giá trị đặt trước, chưa tinh chỉnh trên dữ liệu).
-3. **Tie-break theo thứ tự dòng** khi gần hòa: chỉ nhận ứng viên **duy nhất** có cùng `ord` và `ord_n` với descriptor; số dòng lặp đã đổi hoặc vẫn mơ hồ thì bỏ cuộc (`ambiguous_order`).
+2. **Bỏ cuộc** khi hạng 1 hơn hạng 2 ít hơn `min_margin = 0,02` (giá trị đặt trước, chưa tinh chỉnh trên dữ liệu). API mặc định dùng ngưỡng này và `use_order=False`; đối chứng đoán theo thứ tự DOM phải truyền tường minh `min_margin=0.0, use_order=False`.
+3. **Tie-break theo thứ tự dòng** khi gần hòa và bật `use_order=True`: chỉ nhận ứng viên **duy nhất** cùng nhóm `(tag, type, form)` và cùng `ord`, `ord_n` với descriptor; số dòng lặp đã đổi hoặc vẫn mơ hồ thì bỏ cuộc (`ambiguous_order`). Ứng viên được chọn phải đạt `min_score`, nếu không bỏ cuộc (`low_score`).
 4. `heal()` chỉ nhận **descriptor và ứng viên**; `element_id`, `target_element_id`, `ref_eid` không được truyền vào (chỉ dùng để chấm).
 5. Mỗi lần gọi trả về `status`, `reason`, `via`, `top1_eid`, `topk` để ghi log; luôn ghi tỷ lệ **chữa nhầm** riêng với tỷ lệ bỏ cuộc.
 
