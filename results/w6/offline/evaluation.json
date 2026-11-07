@@ -1,0 +1,1329 @@
+{
+  "dataset": "runs\\w5-reproduction",
+  "pairs": 1716,
+  "configs": {
+    "A_features_dom_guess": {
+      "mode": "features",
+      "min_margin": 0.0
+    },
+    "B_features_abstain": {
+      "mode": "features",
+      "min_margin": 0.02
+    },
+    "C_features_ordinal": {
+      "mode": "features",
+      "min_margin": 0.02,
+      "use_order": true
+    },
+    "D_hybrid_hash_ordinal": {
+      "mode": "hybrid",
+      "alpha": 0.25,
+      "min_margin": 0.02,
+      "use_order": true
+    }
+  },
+  "rows": [
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "dev",
+      "correct": 101,
+      "wrong": 1,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "test",
+      "correct": 40,
+      "wrong": 1,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "dev",
+      "correct": 101,
+      "wrong": 1,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "test",
+      "correct": 40,
+      "wrong": 1,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "dev",
+      "correct": 100,
+      "wrong": 0,
+      "abstain": 2
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "test",
+      "correct": 39,
+      "wrong": 0,
+      "abstain": 2
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "dev",
+      "correct": 100,
+      "wrong": 0,
+      "abstain": 2
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "test",
+      "correct": 39,
+      "wrong": 0,
+      "abstain": 2
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "dev",
+      "correct": 101,
+      "wrong": 0,
+      "abstain": 1
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "test",
+      "correct": 40,
+      "wrong": 0,
+      "abstain": 1
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "dev",
+      "correct": 101,
+      "wrong": 0,
+      "abstain": 1
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "test",
+      "correct": 40,
+      "wrong": 0,
+      "abstain": 1
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_CLASS",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "dev",
+      "correct": 98,
+      "wrong": 1,
+      "abstain": 3
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "split": "test",
+      "correct": 40,
+      "wrong": 1,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "dev",
+      "correct": 99,
+      "wrong": 0,
+      "abstain": 3
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ID",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ID",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ORDER",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "dev",
+      "correct": 99,
+      "wrong": 0,
+      "abstain": 3
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 17,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "dev",
+      "correct": 102,
+      "wrong": 0,
+      "abstain": 0
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_TEXT",
+      "seed": 23,
+      "split": "test",
+      "correct": 41,
+      "wrong": 0,
+      "abstain": 0
+    }
+  ],
+  "by_mutation": [
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_CLASS",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_COMBINED",
+      "all": {
+        "correct": 282,
+        "wrong": 4,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 282,
+        "wrong": 4,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ID",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_ORDER",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 167,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_STRUCTURE",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 214,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "A_features_dom_guess",
+      "mutation": "W5_TEXT",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_CLASS",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_COMBINED",
+      "all": {
+        "correct": 278,
+        "wrong": 0,
+        "abstain": 8
+      },
+      "unique": {
+        "correct": 278,
+        "wrong": 0,
+        "abstain": 8
+      }
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ID",
+      "all": {
+        "correct": 282,
+        "wrong": 0,
+        "abstain": 4
+      },
+      "unique": {
+        "correct": 282,
+        "wrong": 0,
+        "abstain": 4
+      }
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_ORDER",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 167,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_STRUCTURE",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 214,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "B_features_abstain",
+      "mutation": "W5_TEXT",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_CLASS",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_COMBINED",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ID",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_ORDER",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 167,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 214,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "C_features_ordinal",
+      "mutation": "W5_TEXT",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_CLASS",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_COMBINED",
+      "all": {
+        "correct": 278,
+        "wrong": 2,
+        "abstain": 6
+      },
+      "unique": {
+        "correct": 278,
+        "wrong": 2,
+        "abstain": 6
+      }
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ID",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_ORDER",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 167,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_STRUCTURE",
+      "all": {
+        "correct": 286,
+        "wrong": 0,
+        "abstain": 0
+      },
+      "unique": {
+        "correct": 214,
+        "wrong": 0,
+        "abstain": 0
+      }
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "mutation": "W5_TEXT",
+      "all": {
+        "correct": 283,
+        "wrong": 0,
+        "abstain": 3
+      },
+      "unique": {
+        "correct": 283,
+        "wrong": 0,
+        "abstain": 3
+      }
+    }
+  ],
+  "identical_across_seeds": {
+    "W5_ID": {
+      "groups": 143,
+      "identical": 0
+    },
+    "W5_CLASS": {
+      "groups": 143,
+      "identical": 0
+    },
+    "W5_TEXT": {
+      "groups": 143,
+      "identical": 0
+    },
+    "W5_ORDER": {
+      "groups": 143,
+      "identical": 119
+    },
+    "W5_STRUCTURE": {
+      "groups": 143,
+      "identical": 72
+    },
+    "W5_COMBINED": {
+      "groups": 143,
+      "identical": 0
+    }
+  },
+  "wrong": [
+    {
+      "config": "A_features_dom_guess",
+      "task_id": "T004",
+      "step_index": 6,
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "target": "e67",
+      "chosen": "e47",
+      "score": 0.768,
+      "margin": 0.002,
+      "via": "score"
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "task_id": "T010",
+      "step_index": 8,
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "target": "e30",
+      "chosen": "e24",
+      "score": 0.526,
+      "margin": 0.03,
+      "via": "score"
+    },
+    {
+      "config": "A_features_dom_guess",
+      "task_id": "T024",
+      "step_index": 6,
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "target": "e67",
+      "chosen": "e47",
+      "score": 0.768,
+      "margin": 0.002,
+      "via": "score"
+    },
+    {
+      "config": "D_hybrid_hash_ordinal",
+      "task_id": "T030",
+      "step_index": 8,
+      "mutation": "W5_COMBINED",
+      "seed": 17,
+      "target": "e30",
+      "chosen": "e24",
+      "score": 0.526,
+      "margin": 0.03,
+      "via": "score"
+    },
+    {
+      "config": "A_features_dom_guess",
+      "task_id": "T004",
+      "step_index": 6,
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "target": "e67",
+      "chosen": "e47",
+      "score": 0.632,
+      "margin": 0.002,
+      "via": "score"
+    },
+    {
+      "config": "A_features_dom_guess",
+      "task_id": "T024",
+      "step_index": 6,
+      "mutation": "W5_COMBINED",
+      "seed": 23,
+      "target": "e67",
+      "chosen": "e47",
+      "score": 0.632,
+      "margin": 0.002,
+      "via": "score"
+    }
+  ]
+}
