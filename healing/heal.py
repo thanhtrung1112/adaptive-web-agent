@@ -1,10 +1,10 @@
 """heal(): chọn phần tử thay thế cho locator hỏng, hoặc bỏ cuộc khi không đủ chắc."""
-from healing.ordinal import add_ordinals
+from healing.ordinal import add_ordinals, signature
 from ranking.rank import rank
 
 
 def heal(descriptor, cands, mode="features", encoder=None, alpha=0.5,
-         min_score=0.0, min_margin=0.0, top_k=3, use_order=False):
+         min_score=0.0, min_margin=0.02, top_k=3, use_order=False):
     """Trả về dict:
       status   'healed' | 'abstain'
       eid      element_id được chọn (None nếu abstain)
@@ -17,8 +17,9 @@ def heal(descriptor, cands, mode="features", encoder=None, alpha=0.5,
     Điểm lấy từ ranking.rank (làm tròn 3 chữ số), nên margin có độ phân giải 0.001.
     Hòa hoặc gần hòa (margin < min_margin; hoặc margin 0 khi min_margin = 0): use_order=False thì bỏ cuộc nếu
     min_margin > 0 (nếu min_margin = 0 thì giữ hành vi cũ, hạng đầu theo thứ tự DOM); use_order=True thì chỉ nhận khi
-    đúng MỘT ứng viên trong nhóm gần hòa có cùng `ord` và `ord_n` với descriptor, ngược lại bỏ cuộc
+    đúng MỘT ứng viên trong nhóm gần hòa có cùng (tag, type, form), `ord` và `ord_n` với descriptor, ngược lại bỏ cuộc
     ('ambiguous_order': số dòng lặp đã đổi hoặc vẫn mơ hồ).
+    Ứng viên được chọn qua ordinal cũng phải đạt min_score; score/margin vẫn mô tả hạng 1 để ghi log.
     """
     if not cands:
         return {"status": "abstain", "eid": None, "xpath": "", "score": 0.0, "margin": 0.0, "via": "",
@@ -33,9 +34,12 @@ def heal(descriptor, cands, mode="features", encoder=None, alpha=0.5,
         band = max(min_margin, 0.001)  # nhóm "gần hòa": điểm cách hạng 1 chưa tới min_margin
         tied = {r["element_id"] for r in ranked if top["score"] - r["score"] < band}
         fit = [c["element_id"] for c in add_ordinals(cands) if c["element_id"] in tied
+               and signature(c) == signature(descriptor)
                and c["ord"] == descriptor.get("ord") and c["ord_n"] == descriptor.get("ord_n")]
         if len(fit) == 1:
             chosen, via = fit[0], "ordinal"
+            if next(r["score"] for r in ranked if r["element_id"] == chosen) < min_score:
+                reason = "low_score"
         else:
             reason = "ambiguous_order"
     elif margin < min_margin or (min_margin > 0 and margin == 0):

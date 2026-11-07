@@ -13,9 +13,17 @@ Phạm vi: đo **độ chính xác chọn lại phần tử** trên các cặp (
 | `healing/ordinal.py` | `ord` (vị trí trong nhóm cùng thẻ, type, form) và `ord_n` (kích thước nhóm) để phân biệt dòng lặp |
 | `healing/eval_order.py` | Đo tie-break thứ tự dòng trên biến đổi mô phỏng của snapshot M0 |
 | `healing/evaluate.py` | Đánh giá offline trên dataset có `ground_truth/pairs.json` (4 cấu hình) |
-| `tests/test_healing.py` | 13 test |
+| `tests/test_healing.py` | 16 test, gồm hồi quy các lỗi review W6 |
 
 Điểm lấy từ `ranking.rank` (W3/W4), làm tròn 3 chữ số, nên margin có độ phân giải 0,001. Hòa điểm không được quyết bằng thứ tự DOM trừ cấu hình A.
+
+Sau sửa lỗi review W6, API `heal()` mặc định dùng `features`, `min_margin=0.02`,
+`use_order=False`: khi gần hòa thì bỏ cuộc. Cấu hình C cần truyền `use_order=True`;
+đối chứng A phải truyền tường minh `min_margin=0.0, use_order=False`.
+Tie-break ordinal chỉ xét ứng viên cùng `(tag, type, form)` với descriptor và cùng
+`ord`, `ord_n`; ứng viên thực sự được chọn phải đạt `min_score`, nếu không trả
+`abstain/low_score`. Các trường `score`, `margin`, `top1_eid` vẫn mô tả hạng 1,
+còn `eid` và `xpath` mô tả lựa chọn cuối cùng khi `status=healed`.
 
 ## Cấu hình đánh giá
 | Cấu hình | Mô tả |
@@ -34,6 +42,9 @@ Ngưỡng `min_margin = 0,02` và α = 0,25 là **giá trị đặt trước** (
 - Ground truth (`target_element_id`) chỉ dùng để chấm; không đi vào `heal()`.
 
 ## Kết quả: 1.716 cặp, định dạng đúng / nhầm / bỏ cuộc
+Các bảng kết quả offline dưới đây được giữ từ PR #26, trước sửa lỗi review W6;
+chưa chạy lại đầy đủ bộ 1.716 cặp với bản sửa nên không xem là kết quả mới.
+
 Mỗi mode có 286 lượt (143 bước × 2 seed). Cột phải loại seed trùng biến thể.
 
 **Biến thể HTML giống hệt giữa hai seed (cùng task, bước, mutation):**
@@ -85,7 +96,7 @@ Trong `decoy`, số nút đổi nên `ord_n` lệch, C **từ chối đúng thi�
 
 ## Tái lập
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -q tests/test_healing.py        # kỳ vọng: 13 passed
+.\.venv\Scripts\python.exe -m pytest -q tests/test_healing.py        # kỳ vọng: 16 passed
 .\.venv\Scripts\python.exe -m healing.eval_order --dataset runs/w4-trung-full --out results/w6/offline/order_tiebreak/evaluation.json
 .\.venv\Scripts\python.exe -m healing.evaluate --dataset runs/w5-reproduction --encoder hash --out results/w6/offline/evaluation.json
 ```
