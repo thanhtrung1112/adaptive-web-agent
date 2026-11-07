@@ -24,3 +24,8 @@ results/w5/published_v0.5.0/**/dom.html whitespace=-blank-at-eol
 # W3 evidence manifest hashes these files too; keep checkout bytes stable on Windows.
 results/w3/hybrid_planner_v1/README.md text eol=lf
 results/w3/hybrid_planner_v1/software_tests.log text eol=lf
+
+# W6 evidence: JSON/log checksums survive checkout; captured HTML retains exact bytes.
+Evidence/W06/** text eol=lf
+Evidence/W06/**/dom.html -text whitespace=-blank-at-eol
+Evidence/W06/**/*.png binary

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:61561/static/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="/">MiniBiz</a>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="container" aria-label="Điều hướng chính"><a href="/customers">Khách hàng</a> · <a href="/orders">Đơn hàng</a> · <a href="/tickets">Hỗ trợ</a></nav>
+    <main class="container">
+        
+<!-- Danh sách dẫn tới form tạo đơn và trang chi tiết. -->
+<h1>Đơn hàng</h1>
+<!-- T006: lọc trước, liên kết CSV mang đúng khoảng ngày vừa áp dụng. -->
+<form method="get" action="/orders">
+    <label for="m6a287e7b38852a36">Từ ngày (UTC)</label>
+    <input id="m6a287e7b38852a36" name="from" type="date" value="2026-08-30">
+    <label for="mc26f2657d87db2c7">Đến ngày (UTC)</label>
+    <input id="mc26f2657d87db2c7" name="to" type="date" value="2026-08-30">
+    <button id="m2a8dc3875167e482" type="submit">Lọc</button>
+    <a href="/orders">Xóa bộ lọc</a>
+<input type="hidden" name="mutation" value="W5_ID"><input type="hidden" name="seed" value="18"></form>
+<p><a id="mae1cb928202da2ee" href="/orders/export.csv?from=2026-08-30&amp;to=2026-08-30">Xuất CSV</a></p>
+<p><a id="m7bfc4250a52c03b3" href="/orders/new">Tạo đơn</a></p>
+<table>
+    <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>Trạng thái</th><th>Ngày tạo (UTC)</th></tr></thead>
+    <tbody>
+    <tr><td colspan="4">Không có đơn hàng phù hợp.</td></tr>
+    </tbody>
+</table>
+<p><a href="/">Về trang chủ</a></p>
+
+    </main>
+
+</body></html>

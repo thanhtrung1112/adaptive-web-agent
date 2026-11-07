@@ -1,0 +1,26 @@
+{
+  "scope": "Online frozen B0 with conditional DOM healing; development MiniBiz; no LLM/oracle target mapping",
+  "expected_rows": 30,
+  "completed_rows": 30,
+  "complete": true,
+  "passed": 30,
+  "failed": 0,
+  "task_success_rate": 1.0,
+  "tasks_with_healing": 0,
+  "recovered_tasks": 0,
+  "task_recovery_rate": null,
+  "healing_attempts": 0,
+  "heal_actions_succeeded": 0,
+  "abstentions": 0,
+  "wrong_heal_count": null,
+  "wrong_heal_note": "Not independently target-labelled online; do not infer zero from API task pass.",
+  "median_seconds": 0.6949000000000001,
+  "p95_seconds": 1.5596,
+  "by_mutation": {
+    "M0": {
+      "total": 30,
+      "passed": 30,
+      "tasks_with_healing": 0
+    }
+  }
+}

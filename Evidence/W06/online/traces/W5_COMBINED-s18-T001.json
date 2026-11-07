@@ -1,0 +1,217 @@
+{
+  "result": {
+    "task_id": "T001",
+    "module": "crm",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 18,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 6,
+    "steps_total": 6,
+    "heal_attempts": 5,
+    "heal_actions_succeeded": 5,
+    "abstentions": 0,
+    "seconds": 0.6751,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/customers?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0436
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "#add-customer",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e40",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.753,
+        "margin": 0.18,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e40",
+        "topk": [
+          {
+            "eid": "e40",
+            "score": 0.753
+          },
+          {
+            "eid": "e16",
+            "score": 0.573
+          },
+          {
+            "eid": "e66",
+            "score": 0.562
+          }
+        ]
+      },
+      "url_before": "/customers?mutation=W5_COMBINED&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T001-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.1641
+    },
+    {
+      "index": 2,
+      "action": "fill",
+      "b0_locator": "#customer-name",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e28",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+        "score": 0.725,
+        "margin": 0.221,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e28",
+        "topk": [
+          {
+            "eid": "e28",
+            "score": 0.725
+          },
+          {
+            "eid": "e38",
+            "score": 0.504
+          },
+          {
+            "eid": "e33",
+            "score": 0.475
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T001-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.0807
+    },
+    {
+      "index": 3,
+      "action": "fill",
+      "b0_locator": "#customer-email",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e33",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][2]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+        "score": 0.741,
+        "margin": 0.291,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e33",
+        "topk": [
+          {
+            "eid": "e33",
+            "score": 0.741
+          },
+          {
+            "eid": "e38",
+            "score": 0.45
+          },
+          {
+            "eid": "e28",
+            "score": 0.435
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T001-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][2]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.0613
+    },
+    {
+      "index": 4,
+      "action": "fill",
+      "b0_locator": "#customer-phone",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e38",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][3]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+        "score": 0.738,
+        "margin": 0.24,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e38",
+        "topk": [
+          {
+            "eid": "e38",
+            "score": 0.738
+          },
+          {
+            "eid": "e28",
+            "score": 0.498
+          },
+          {
+            "eid": "e33",
+            "score": 0.438
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T001-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][3]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.0649
+    },
+    {
+      "index": 5,
+      "action": "click",
+      "b0_locator": "#save-customer",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e40",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.648,
+        "margin": 0.481,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e40",
+        "topk": [
+          {
+            "eid": "e40",
+            "score": 0.648
+          },
+          {
+            "eid": "e28",
+            "score": 0.167
+          },
+          {
+            "eid": "e33",
+            "score": 0.155
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T001-step05/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/customers?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.1591
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

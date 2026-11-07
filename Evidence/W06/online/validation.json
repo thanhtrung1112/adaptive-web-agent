@@ -1,0 +1,8 @@
+{
+  "verified": true,
+  "task_runs": 390,
+  "record_descriptors": 143,
+  "snapshots_verified": 643,
+  "source_files_frozen": 60,
+  "note": "Integrity/coverage verification, not independent target correctness labels."
+}

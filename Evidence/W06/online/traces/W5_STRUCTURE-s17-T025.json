@@ -1,0 +1,68 @@
+{
+  "result": {
+    "task_id": "T025",
+    "module": "order",
+    "mutation": "W5_STRUCTURE",
+    "mutation_seed": 17,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 4,
+    "steps_total": 4,
+    "heal_attempts": 0,
+    "heal_actions_succeeded": 0,
+    "abstentions": 0,
+    "seconds": 0.3407,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_STRUCTURE&seed=17",
+      "seconds": 0.0346
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "table a[href='/orders/ORD-1001']",
+      "success": true,
+      "heal": null,
+      "url_before": "/orders?mutation=W5_STRUCTURE&seed=17",
+      "b0_count": 1,
+      "executed_locator": "table a[href='/orders/ORD-1001']",
+      "url_after": "/orders/ORD-1001",
+      "seconds": 0.1019
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "b0_locator": "#order-status",
+      "success": true,
+      "heal": null,
+      "url_before": "/orders/ORD-1001",
+      "b0_count": 1,
+      "executed_locator": "#order-status",
+      "url_after": "/orders/ORD-1001",
+      "seconds": 0.0302
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "b0_locator": "#update-order-status",
+      "success": true,
+      "heal": null,
+      "url_before": "/orders/ORD-1001",
+      "b0_count": 1,
+      "executed_locator": "#update-order-status",
+      "url_after": "/orders/ORD-1001?mutation=W5_STRUCTURE&seed=17",
+      "seconds": 0.0909
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

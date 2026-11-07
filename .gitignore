@@ -23,6 +23,10 @@ videos/
 *.avi
 *.mkv
 
+# W6 publishes lightweight demo screenshots/traces; video remains a separate artifact.
+!Evidence/W06/online/demo/
+!Evidence/W06/online/demo/**
+
 # Log server thu DOM có đường dẫn máy cục bộ; giữ JSON/HTML mẫu làm bằng chứng.
 results/w3/**/server.log
 

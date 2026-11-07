@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết đơn hàng | MiniBiz Benchmark</title>
+    <link rel="stylesheet" href="http://127.0.0.1:61561/static/style.css">
+<style>* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    background: #f5f7fb;
+}
+
+.mcaac963217299021 {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+}
+
+.mc092cccbf85175e1 {
+    padding: 18px 0;
+    background: #ffffff;
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.mc092cccbf85175e1 .mcaac963217299021 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.m7be0778484f491bf {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1d4ed8;
+    text-decoration: none;
+}
+
+main {
+    padding: 32px 0;
+}
+
+.mf37f6cecf4bbe1b5 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.m826aabcf0a64226b {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-radius: 8px;
+}
+
+.m826aabcf0a64226b h2 {
+    margin-top: 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #dbe2ea;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1d4ed8;
+    color: white;
+    border: 0;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+}
+
+[role="alert"] {
+    color: #b91c1c;
+}
+/* Các trường Support dùng cùng kích thước chữ và khoảng cách với CRM. */
+select, textarea { font: inherit; max-width: 100%; padding: 8px; margin: 8px 0; }
+textarea { display: block; width: min(100%, 480px); min-height: 100px; }
+nav { padding-top: 16px; }
+fieldset { margin: 16px 0; }
+</style></head>
+<body>
+    <header class="mc092cccbf85175e1">
+        <div class="mcaac963217299021">
+            <span style="display:contents"><a class="m7be0778484f491bf" href="/">MiniBiz</a></span>
+            <span>Ứng dụng benchmark nghiệp vụ Web</span>
+        </div>
+    </header>
+
+    <!-- Điều hướng chung giữa ba module nghiệp vụ. -->
+    <nav class="mcaac963217299021" aria-label="Điều hướng chính"><span style="display:contents"><a href="/customers">Người đặt hàng</a></span> · <span style="display:contents"><a href="/orders">Đơn liên quan</a></span> · <span style="display:contents"><a href="/tickets">Hỗ trợ</a></span></nav>
+    <main class="mcaac963217299021">
+        
+<!-- Thể hiện dữ liệu đã lưu, không lấy lại từ form gửi lên. -->
+<h1>Đơn hàng ORD-1004</h1>
+<!-- Ticket mới được chọn sẵn đúng đơn đang xem, kể cả đơn vừa tạo. -->
+<p><span style="display:contents"><a id="m4734a310b5cb0e74" href="/tickets/new?order_id=ORD-1004">Thêm ticket</a></span></p>
+<p>Khách hàng: Nguyễn Văn Dũng — nguyen.dung@example.com</p>
+<p>Trạng thái: <strong>Đã xác nhận</strong> (confirmed)</p>
+<!-- T005: chọn nhãn Đã giao để gửi giá trị delivered về server. -->
+
+<form method="post" action="/orders/ORD-1004/status">
+    <span style="display:contents"><label for="mbbd45d302dad241f">Tình trạng đơn</label></span>
+    <span style="display:contents"><select id="mbbd45d302dad241f" name="status" required="">
+        
+        <option value="pending">Chờ xác nhận</option>
+        
+        <option value="confirmed" selected="">Đã xác nhận</option>
+        
+        <option value="shipped">Đang giao</option>
+        
+        <option value="delivered">Đã giao</option>
+        
+        <option value="cancelled">Đã hủy</option>
+        
+    </select></span>
+    <span style="display:contents"><button id="me7b2144d633aec9f" type="submit">Xác nhận cập nhật</button></span>
+</form>
+<table>
+    <thead><tr><th>Số lượng</th><th>SKU</th></tr></thead>
+    <tbody>
+    <tr><td>1</td><td>SKU-100</td></tr>
+    </tbody>
+</table>
+<p><span style="display:contents"><a href="/orders">Về danh sách đơn hàng</a></span></p>
+
+    </main>
+
+</body></html>

@@ -1,0 +1,328 @@
+{
+  "result": {
+    "task_id": "T024",
+    "module": "order",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 18,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 9,
+    "steps_total": 9,
+    "heal_attempts": 8,
+    "heal_actions_succeeded": 8,
+    "abstentions": 0,
+    "seconds": 1.0713,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0423
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "#create-order",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e47",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][2]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.706,
+        "margin": 0.174,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e47",
+        "topk": [
+          {
+            "eid": "e47",
+            "score": 0.706
+          },
+          {
+            "eid": "e18",
+            "score": 0.532
+          },
+          {
+            "eid": "e44",
+            "score": 0.5
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][2]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.1953
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "b0_locator": "#order-customer",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e27",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+        "score": 0.696,
+        "margin": 0.18,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e27",
+        "topk": [
+          {
+            "eid": "e27",
+            "score": 0.696
+          },
+          {
+            "eid": "e39",
+            "score": 0.516
+          },
+          {
+            "eid": "e46",
+            "score": 0.21
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.085
+    },
+    {
+      "index": 3,
+      "action": "select",
+      "b0_locator": "#order-sku-1",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e39",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+        "score": 0.636,
+        "margin": 0.199,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e39",
+        "topk": [
+          {
+            "eid": "e39",
+            "score": 0.636
+          },
+          {
+            "eid": "e27",
+            "score": 0.437
+          },
+          {
+            "eid": "e46",
+            "score": 0.234
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.0784
+    },
+    {
+      "index": 4,
+      "action": "fill",
+      "b0_locator": "#order-qty-1",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e46",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][4]/*[local-name()='input'][1]",
+        "score": 0.772,
+        "margin": 0.54,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e46",
+        "topk": [
+          {
+            "eid": "e46",
+            "score": 0.772
+          },
+          {
+            "eid": "e39",
+            "score": 0.232
+          },
+          {
+            "eid": "e27",
+            "score": 0.185
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][4]/*[local-name()='input'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.0721
+    },
+    {
+      "index": 5,
+      "action": "click",
+      "b0_locator": "#add-order-line",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e51",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.692,
+        "margin": 0.166,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e51",
+        "topk": [
+          {
+            "eid": "e51",
+            "score": 0.692
+          },
+          {
+            "eid": "e53",
+            "score": 0.526
+          },
+          {
+            "eid": "e55",
+            "score": 0.197
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step05/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.0835
+    },
+    {
+      "index": 6,
+      "action": "select",
+      "b0_locator": "#order-sku-2",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e54",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][2]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+        "score": 0.636,
+        "margin": 0.01,
+        "reason": "",
+        "via": "ordinal",
+        "top1_eid": "e54",
+        "topk": [
+          {
+            "eid": "e54",
+            "score": 0.636
+          },
+          {
+            "eid": "e39",
+            "score": 0.626
+          },
+          {
+            "eid": "e27",
+            "score": 0.437
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step06/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][2]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.0851
+    },
+    {
+      "index": 7,
+      "action": "fill",
+      "b0_locator": "#order-qty-2",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e61",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][2]/*[local-name()='span'][4]/*[local-name()='input'][1]",
+        "score": 0.772,
+        "margin": 0.021,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e61",
+        "topk": [
+          {
+            "eid": "e61",
+            "score": 0.772
+          },
+          {
+            "eid": "e46",
+            "score": 0.751
+          },
+          {
+            "eid": "e54",
+            "score": 0.232
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step07/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][2]/*[local-name()='span'][4]/*[local-name()='input'][1]",
+      "url_after": "/orders/new",
+      "seconds": 0.1661
+    },
+    {
+      "index": 8,
+      "action": "click",
+      "b0_locator": "#save-order",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e68",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='button'][1]",
+        "score": 0.62,
+        "margin": 0.121,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e68",
+        "topk": [
+          {
+            "eid": "e68",
+            "score": 0.62
+          },
+          {
+            "eid": "e66",
+            "score": 0.499
+          },
+          {
+            "eid": "e48",
+            "score": 0.468
+          }
+        ]
+      },
+      "url_before": "/orders/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T024-step08/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='button'][1]",
+      "url_after": "/orders/ORD-1006?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.1694
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

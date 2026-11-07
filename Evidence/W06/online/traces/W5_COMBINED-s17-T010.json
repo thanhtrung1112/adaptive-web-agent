@@ -1,0 +1,377 @@
+{
+  "result": {
+    "task_id": "T010",
+    "module": "chain",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 17,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 11,
+    "steps_total": 11,
+    "heal_attempts": 9,
+    "heal_actions_succeeded": 9,
+    "abstentions": 0,
+    "seconds": 1.361,
+    "check": "ok; ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/customers?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.062
+    },
+    {
+      "index": 1,
+      "action": "fill",
+      "b0_locator": "#customer-search",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e33",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+        "score": 0.757,
+        "margin": 0.614,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e33",
+        "topk": [
+          {
+            "eid": "e33",
+            "score": 0.757
+          },
+          {
+            "eid": "e36",
+            "score": 0.143
+          },
+          {
+            "eid": "e39",
+            "score": 0.108
+          }
+        ]
+      },
+      "url_before": "/customers?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+      "url_after": "/customers?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.1301
+    },
+    {
+      "index": 2,
+      "action": "click",
+      "b0_locator": "#search-customers",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e36",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.631,
+        "margin": 0.446,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e36",
+        "topk": [
+          {
+            "eid": "e36",
+            "score": 0.631
+          },
+          {
+            "eid": "e39",
+            "score": 0.185
+          },
+          {
+            "eid": "e33",
+            "score": 0.165
+          }
+        ]
+      },
+      "url_before": "/customers?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/customers?email=vo.tam%40example.com&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17",
+      "seconds": 0.1565
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "b0_locator": "table a[href^='/customers/']",
+      "success": true,
+      "heal": null,
+      "url_before": "/customers?email=vo.tam%40example.com&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17",
+      "b0_count": 1,
+      "executed_locator": "table a[href^='/customers/']",
+      "url_after": "/customers/4",
+      "seconds": 0.0846
+    },
+    {
+      "index": 4,
+      "action": "click",
+      "b0_locator": "#customer-create-order",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e30",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.681,
+        "margin": 0.21,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e30",
+        "topk": [
+          {
+            "eid": "e30",
+            "score": 0.681
+          },
+          {
+            "eid": "e43",
+            "score": 0.471
+          },
+          {
+            "eid": "e21",
+            "score": 0.46
+          }
+        ]
+      },
+      "url_before": "/customers/4",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/orders/new?customer_id=4",
+      "seconds": 0.14
+    },
+    {
+      "index": 5,
+      "action": "select",
+      "b0_locator": "#order-sku-1",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e47",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='select'][1]",
+        "score": 0.777,
+        "margin": 0.36,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e47",
+        "topk": [
+          {
+            "eid": "e47",
+            "score": 0.777
+          },
+          {
+            "eid": "e33",
+            "score": 0.417
+          },
+          {
+            "eid": "e56",
+            "score": 0.204
+          }
+        ]
+      },
+      "url_before": "/orders/new?customer_id=4",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step05/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='select'][1]",
+      "url_after": "/orders/new?customer_id=4",
+      "seconds": 0.105
+    },
+    {
+      "index": 6,
+      "action": "fill",
+      "b0_locator": "#order-qty-1",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e56",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+        "score": 0.747,
+        "margin": 0.519,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e56",
+        "topk": [
+          {
+            "eid": "e56",
+            "score": 0.747
+          },
+          {
+            "eid": "e33",
+            "score": 0.228
+          },
+          {
+            "eid": "e47",
+            "score": 0.2
+          }
+        ]
+      },
+      "url_before": "/orders/new?customer_id=4",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step06/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+      "url_after": "/orders/new?customer_id=4",
+      "seconds": 0.078
+    },
+    {
+      "index": 7,
+      "action": "click",
+      "b0_locator": "#save-order",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e66",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.687,
+        "margin": 0.183,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e66",
+        "topk": [
+          {
+            "eid": "e66",
+            "score": 0.687
+          },
+          {
+            "eid": "e63",
+            "score": 0.504
+          },
+          {
+            "eid": "e47",
+            "score": 0.172
+          }
+        ]
+      },
+      "url_before": "/orders/new?customer_id=4",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step07/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/orders/ORD-1006?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.1542
+    },
+    {
+      "index": 8,
+      "action": "click",
+      "b0_locator": "#order-create-ticket",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e30",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.575,
+        "margin": 0.127,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e30",
+        "topk": [
+          {
+            "eid": "e30",
+            "score": 0.575
+          },
+          {
+            "eid": "e24",
+            "score": 0.448
+          },
+          {
+            "eid": "e21",
+            "score": 0.407
+          }
+        ]
+      },
+      "url_before": "/orders/ORD-1006?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step08/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/tickets/new?order_id=ORD-1006",
+      "seconds": 0.1206
+    },
+    {
+      "index": 9,
+      "action": "fill",
+      "b0_locator": "#ticket-subject",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e46",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+        "score": 0.644,
+        "margin": 0.446,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e46",
+        "topk": [
+          {
+            "eid": "e46",
+            "score": 0.644
+          },
+          {
+            "eid": "e33",
+            "score": 0.198
+          },
+          {
+            "eid": "e50",
+            "score": 0.136
+          }
+        ]
+      },
+      "url_before": "/tickets/new?order_id=ORD-1006",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step09/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+      "url_after": "/tickets/new?order_id=ORD-1006",
+      "seconds": 0.0795
+    },
+    {
+      "index": 10,
+      "action": "click",
+      "b0_locator": "#save-ticket",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e50",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.654,
+        "margin": 0.485,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e50",
+        "topk": [
+          {
+            "eid": "e50",
+            "score": 0.654
+          },
+          {
+            "eid": "e46",
+            "score": 0.169
+          },
+          {
+            "eid": "e33",
+            "score": 0.156
+          }
+        ]
+      },
+      "url_before": "/tickets/new?order_id=ORD-1006",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T010-step10/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/tickets/TCK-2003?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.1346
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

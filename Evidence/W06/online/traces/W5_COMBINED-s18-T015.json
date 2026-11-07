@@ -1,0 +1,118 @@
+{
+  "result": {
+    "task_id": "T015",
+    "module": "order",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 18,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 4,
+    "steps_total": 4,
+    "heal_attempts": 2,
+    "heal_actions_succeeded": 2,
+    "abstentions": 0,
+    "seconds": 0.5009,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0498
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "table a[href='/orders/ORD-1002']",
+      "success": true,
+      "heal": null,
+      "url_before": "/orders?mutation=W5_COMBINED&seed=18",
+      "b0_count": 1,
+      "executed_locator": "table a[href='/orders/ORD-1002']",
+      "url_after": "/orders/ORD-1002",
+      "seconds": 0.1084
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "b0_locator": "#order-status",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e33",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+        "score": 0.737,
+        "margin": 0.588,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e33",
+        "topk": [
+          {
+            "eid": "e33",
+            "score": 0.737
+          },
+          {
+            "eid": "e40",
+            "score": 0.149
+          },
+          {
+            "eid": "e25",
+            "score": 0.049
+          }
+        ]
+      },
+      "url_before": "/orders/ORD-1002",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T015-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+      "url_after": "/orders/ORD-1002",
+      "seconds": 0.0945
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "b0_locator": "#update-order-status",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e40",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='button'][1]",
+        "score": 0.72,
+        "margin": 0.538,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e40",
+        "topk": [
+          {
+            "eid": "e40",
+            "score": 0.72
+          },
+          {
+            "eid": "e33",
+            "score": 0.182
+          },
+          {
+            "eid": "e25",
+            "score": 0.123
+          }
+        ]
+      },
+      "url_before": "/orders/ORD-1002",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T015-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='button'][1]",
+      "url_after": "/orders/ORD-1002?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.1465
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

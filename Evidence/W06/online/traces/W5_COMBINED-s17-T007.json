@@ -1,0 +1,180 @@
+{
+  "result": {
+    "task_id": "T007",
+    "module": "support",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 17,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 5,
+    "steps_total": 5,
+    "heal_attempts": 4,
+    "heal_actions_succeeded": 4,
+    "abstentions": 0,
+    "seconds": 0.5887,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/tickets?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.0352
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "#create-ticket",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e30",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.589,
+        "margin": 0.072,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e30",
+        "topk": [
+          {
+            "eid": "e30",
+            "score": 0.589
+          },
+          {
+            "eid": "e24",
+            "score": 0.517
+          },
+          {
+            "eid": "e44",
+            "score": 0.504
+          }
+        ]
+      },
+      "url_before": "/tickets?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T007-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/tickets/new",
+      "seconds": 0.1723
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "b0_locator": "#ticket-order",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e33",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='select'][1]",
+        "score": 0.709,
+        "margin": 0.48,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e33",
+        "topk": [
+          {
+            "eid": "e33",
+            "score": 0.709
+          },
+          {
+            "eid": "e45",
+            "score": 0.229
+          },
+          {
+            "eid": "e49",
+            "score": 0.137
+          }
+        ]
+      },
+      "url_before": "/tickets/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T007-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='select'][1]",
+      "url_after": "/tickets/new",
+      "seconds": 0.085
+    },
+    {
+      "index": 3,
+      "action": "fill",
+      "b0_locator": "#ticket-subject",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e45",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+        "score": 0.644,
+        "margin": 0.446,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e45",
+        "topk": [
+          {
+            "eid": "e45",
+            "score": 0.644
+          },
+          {
+            "eid": "e33",
+            "score": 0.198
+          },
+          {
+            "eid": "e49",
+            "score": 0.136
+          }
+        ]
+      },
+      "url_before": "/tickets/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T007-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+      "url_after": "/tickets/new",
+      "seconds": 0.0691
+    },
+    {
+      "index": 4,
+      "action": "click",
+      "b0_locator": "#save-ticket",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e49",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.654,
+        "margin": 0.485,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e49",
+        "topk": [
+          {
+            "eid": "e49",
+            "score": 0.654
+          },
+          {
+            "eid": "e45",
+            "score": 0.169
+          },
+          {
+            "eid": "e33",
+            "score": 0.156
+          }
+        ]
+      },
+      "url_before": "/tickets/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T007-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/tickets/TCK-2003?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.1371
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}
