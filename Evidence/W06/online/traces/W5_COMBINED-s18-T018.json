@@ -1,0 +1,180 @@
+{
+  "result": {
+    "task_id": "T018",
+    "module": "order",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 18,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 5,
+    "steps_total": 5,
+    "heal_attempts": 4,
+    "heal_actions_succeeded": 4,
+    "abstentions": 0,
+    "seconds": 0.7533,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0418
+    },
+    {
+      "index": 1,
+      "action": "fill",
+      "b0_locator": "#orders-from",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e27",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+        "score": 0.735,
+        "margin": 0.093,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e27",
+        "topk": [
+          {
+            "eid": "e27",
+            "score": 0.735
+          },
+          {
+            "eid": "e31",
+            "score": 0.642
+          },
+          {
+            "eid": "e33",
+            "score": 0.15
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T018-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='input'][1]",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.1279
+    },
+    {
+      "index": 2,
+      "action": "fill",
+      "b0_locator": "#orders-to",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e31",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='input'][1]",
+        "score": 0.741,
+        "margin": 0.141,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e31",
+        "topk": [
+          {
+            "eid": "e31",
+            "score": 0.741
+          },
+          {
+            "eid": "e27",
+            "score": 0.6
+          },
+          {
+            "eid": "e33",
+            "score": 0.152
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T018-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='input'][1]",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0928
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "b0_locator": "#filter-orders",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e33",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][5]/*[local-name()='button'][1]",
+        "score": 0.624,
+        "margin": 0.347,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e33",
+        "topk": [
+          {
+            "eid": "e33",
+            "score": 0.624
+          },
+          {
+            "eid": "e35",
+            "score": 0.277
+          },
+          {
+            "eid": "e31",
+            "score": 0.176
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T018-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][5]/*[local-name()='button'][1]",
+      "url_after": "/orders?from=2026-09-16&to=2026-09-16&mutation=W5_COMBINED&seed=18&mutation=W5_COMBINED&seed=18&mutation=W5_COMBINED&seed=18",
+      "seconds": 0.1498
+    },
+    {
+      "index": 4,
+      "action": "download",
+      "b0_locator": "#export-orders",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e44",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.695,
+        "margin": 0.24,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e44",
+        "topk": [
+          {
+            "eid": "e44",
+            "score": 0.695
+          },
+          {
+            "eid": "e35",
+            "score": 0.455
+          },
+          {
+            "eid": "e47",
+            "score": 0.419
+          }
+        ]
+      },
+      "url_before": "/orders?from=2026-09-16&to=2026-09-16&mutation=W5_COMBINED&seed=18&mutation=W5_COMBINED&seed=18&mutation=W5_COMBINED&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T018-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/orders?from=2026-09-16&to=2026-09-16&mutation=W5_COMBINED&seed=18&mutation=W5_COMBINED&seed=18&mutation=W5_COMBINED&seed=18",
+      "seconds": 0.2556
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

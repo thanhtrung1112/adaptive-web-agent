@@ -1,0 +1,5 @@
+task_id,module,mutation,mutation_seed,success,precondition_success,steps_done,steps_total,heal_attempts,heal_actions_succeeded,abstentions,seconds,check,error
+T004,order,W5_COMBINED,17,True,False,9,9,8,8,0,1.5951,ok,
+T010,chain,W5_COMBINED,17,True,False,11,11,9,9,0,1.8601,ok; ok,
+T004,order,W5_COMBINED,18,True,False,9,9,8,8,0,1.7156,ok,
+T010,chain,W5_COMBINED,18,True,False,11,11,9,9,0,2.1969,ok; ok,

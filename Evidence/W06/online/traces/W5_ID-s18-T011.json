@@ -1,0 +1,217 @@
+{
+  "result": {
+    "task_id": "T011",
+    "module": "crm",
+    "mutation": "W5_ID",
+    "mutation_seed": 18,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 6,
+    "steps_total": 6,
+    "heal_attempts": 5,
+    "heal_actions_succeeded": 5,
+    "abstentions": 0,
+    "seconds": 0.5759,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/customers?mutation=W5_ID&seed=18",
+      "seconds": 0.0382
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "#add-customer",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e26",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]",
+        "score": 0.831,
+        "margin": 0.152,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e26",
+        "topk": [
+          {
+            "eid": "e26",
+            "score": 0.831
+          },
+          {
+            "eid": "e13",
+            "score": 0.679
+          },
+          {
+            "eid": "e50",
+            "score": 0.566
+          }
+        ]
+      },
+      "url_before": "/customers?mutation=W5_ID&seed=18",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_ID-s18-T011-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.145
+    },
+    {
+      "index": 2,
+      "action": "fill",
+      "b0_locator": "#customer-name",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e21",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='input'][1]",
+        "score": 0.867,
+        "margin": 0.378,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e21",
+        "topk": [
+          {
+            "eid": "e21",
+            "score": 0.867
+          },
+          {
+            "eid": "e27",
+            "score": 0.489
+          },
+          {
+            "eid": "e24",
+            "score": 0.414
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_ID-s18-T011-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='input'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.0753
+    },
+    {
+      "index": 3,
+      "action": "fill",
+      "b0_locator": "#customer-email",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e24",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][2]/*[local-name()='input'][1]",
+        "score": 0.866,
+        "margin": 0.441,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e24",
+        "topk": [
+          {
+            "eid": "e24",
+            "score": 0.866
+          },
+          {
+            "eid": "e27",
+            "score": 0.425
+          },
+          {
+            "eid": "e21",
+            "score": 0.413
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_ID-s18-T011-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][2]/*[local-name()='input'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.0458
+    },
+    {
+      "index": 4,
+      "action": "fill",
+      "b0_locator": "#customer-phone",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e27",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][3]/*[local-name()='input'][1]",
+        "score": 0.856,
+        "margin": 0.358,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e27",
+        "topk": [
+          {
+            "eid": "e27",
+            "score": 0.856
+          },
+          {
+            "eid": "e21",
+            "score": 0.498
+          },
+          {
+            "eid": "e24",
+            "score": 0.435
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_ID-s18-T011-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][3]/*[local-name()='input'][1]",
+      "url_after": "/customers/new",
+      "seconds": 0.0542
+    },
+    {
+      "index": 5,
+      "action": "click",
+      "b0_locator": "#save-customer",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e28",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+        "score": 0.842,
+        "margin": 0.666,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e28",
+        "topk": [
+          {
+            "eid": "e28",
+            "score": 0.842
+          },
+          {
+            "eid": "e21",
+            "score": 0.176
+          },
+          {
+            "eid": "e29",
+            "score": 0.164
+          }
+        ]
+      },
+      "url_before": "/customers/new",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_ID-s18-T011-step05/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+      "url_after": "/customers?mutation=W5_ID&seed=18",
+      "seconds": 0.1198
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

@@ -1,0 +1,118 @@
+{
+  "result": {
+    "task_id": "T008",
+    "module": "support",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 18,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 4,
+    "steps_total": 4,
+    "heal_attempts": 2,
+    "heal_actions_succeeded": 2,
+    "abstentions": 0,
+    "seconds": 0.4903,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/tickets?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0417
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "b0_locator": "table a[href='/tickets/TCK-2001']",
+      "success": true,
+      "heal": null,
+      "url_before": "/tickets?mutation=W5_COMBINED&seed=18",
+      "b0_count": 1,
+      "executed_locator": "table a[href='/tickets/TCK-2001']",
+      "url_after": "/tickets/TCK-2001",
+      "seconds": 0.1264
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "b0_locator": "#ticket-assignee",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e34",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+        "score": 0.661,
+        "margin": 0.443,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e34",
+        "topk": [
+          {
+            "eid": "e34",
+            "score": 0.661
+          },
+          {
+            "eid": "e44",
+            "score": 0.218
+          },
+          {
+            "eid": "e39",
+            "score": 0.138
+          }
+        ]
+      },
+      "url_before": "/tickets/TCK-2001",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T008-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='select'][1]",
+      "url_after": "/tickets/TCK-2001",
+      "seconds": 0.0933
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "b0_locator": "#assign-ticket",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e39",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='button'][1]",
+        "score": 0.577,
+        "margin": 0.162,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e39",
+        "topk": [
+          {
+            "eid": "e39",
+            "score": 0.577
+          },
+          {
+            "eid": "e47",
+            "score": 0.415
+          },
+          {
+            "eid": "e34",
+            "score": 0.164
+          }
+        ]
+      },
+      "url_before": "/tickets/TCK-2001",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s18-T008-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][3]/*[local-name()='button'][1]",
+      "url_after": "/tickets/TCK-2001?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.1302
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}

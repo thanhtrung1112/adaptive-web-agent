@@ -1,0 +1,56 @@
+{
+  "scope": "Online frozen B0 with conditional DOM healing; development MiniBiz; no LLM/oracle target mapping",
+  "expected_rows": 390,
+  "completed_rows": 390,
+  "complete": true,
+  "passed": 390,
+  "failed": 0,
+  "task_success_rate": 1.0,
+  "tasks_with_healing": 120,
+  "recovered_tasks": 120,
+  "task_recovery_rate": 1.0,
+  "healing_attempts": 500,
+  "heal_actions_succeeded": 500,
+  "abstentions": 0,
+  "wrong_heal_count": null,
+  "wrong_heal_note": "Not independently target-labelled online; do not infer zero from API task pass.",
+  "median_seconds": 0.4509,
+  "p95_seconds": 0.9235,
+  "by_mutation": {
+    "M0": {
+      "total": 30,
+      "passed": 30,
+      "tasks_with_healing": 0
+    },
+    "W5_CLASS": {
+      "total": 60,
+      "passed": 60,
+      "tasks_with_healing": 0
+    },
+    "W5_COMBINED": {
+      "total": 60,
+      "passed": 60,
+      "tasks_with_healing": 60
+    },
+    "W5_ID": {
+      "total": 60,
+      "passed": 60,
+      "tasks_with_healing": 60
+    },
+    "W5_ORDER": {
+      "total": 60,
+      "passed": 60,
+      "tasks_with_healing": 0
+    },
+    "W5_STRUCTURE": {
+      "total": 60,
+      "passed": 60,
+      "tasks_with_healing": 0
+    },
+    "W5_TEXT": {
+      "total": 60,
+      "passed": 60,
+      "tasks_with_healing": 0
+    }
+  }
+}

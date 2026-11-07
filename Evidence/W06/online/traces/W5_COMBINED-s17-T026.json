@@ -1,0 +1,180 @@
+{
+  "result": {
+    "task_id": "T026",
+    "module": "order",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 17,
+    "success": true,
+    "precondition_success": false,
+    "steps_done": 5,
+    "steps_total": 5,
+    "heal_attempts": 4,
+    "heal_actions_succeeded": 4,
+    "abstentions": 0,
+    "seconds": 1.0071,
+    "check": "ok",
+    "error": ""
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "b0_locator": null,
+      "success": true,
+      "heal": null,
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.046
+    },
+    {
+      "index": 1,
+      "action": "fill",
+      "b0_locator": "#orders-from",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e33",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+        "score": 0.742,
+        "margin": 0.136,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e33",
+        "topk": [
+          {
+            "eid": "e33",
+            "score": 0.742
+          },
+          {
+            "eid": "e39",
+            "score": 0.606
+          },
+          {
+            "eid": "e42",
+            "score": 0.143
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T026-step01/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][2]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.158
+    },
+    {
+      "index": 2,
+      "action": "fill",
+      "b0_locator": "#orders-to",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e39",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+        "score": 0.734,
+        "margin": 0.11,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e39",
+        "topk": [
+          {
+            "eid": "e39",
+            "score": 0.734
+          },
+          {
+            "eid": "e33",
+            "score": 0.624
+          },
+          {
+            "eid": "e42",
+            "score": 0.133
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T026-step02/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][4]/*[local-name()='span'][1]/*[local-name()='input'][1]",
+      "url_after": "/orders?mutation=W5_COMBINED&seed=17",
+      "seconds": 0.1179
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "b0_locator": "#filter-orders",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e42",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][5]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+        "score": 0.531,
+        "margin": 0.262,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e42",
+        "topk": [
+          {
+            "eid": "e42",
+            "score": 0.531
+          },
+          {
+            "eid": "e45",
+            "score": 0.269
+          },
+          {
+            "eid": "e33",
+            "score": 0.155
+          }
+        ]
+      },
+      "url_before": "/orders?mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T026-step03/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='span'][5]/*[local-name()='span'][1]/*[local-name()='button'][1]",
+      "url_after": "/orders?from=2026-08-30&to=2026-08-30&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17",
+      "seconds": 0.2032
+    },
+    {
+      "index": 4,
+      "action": "download",
+      "b0_locator": "#export-orders",
+      "success": true,
+      "heal": {
+        "status": "healed",
+        "eid": "e55",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+        "score": 0.64,
+        "margin": 0.191,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e55",
+        "topk": [
+          {
+            "eid": "e55",
+            "score": 0.64
+          },
+          {
+            "eid": "e45",
+            "score": 0.449
+          },
+          {
+            "eid": "e59",
+            "score": 0.443
+          }
+        ]
+      },
+      "url_before": "/orders?from=2026-08-30&to=2026-08-30&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17",
+      "b0_count": 0,
+      "snapshot": "snapshots/W5_COMBINED-s17-T026-step04/features.json",
+      "trigger": "missing",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='span'][1]/*[local-name()='span'][1]/*[local-name()='a'][1]",
+      "url_after": "/orders?from=2026-08-30&to=2026-08-30&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17&mutation=W5_COMBINED&seed=17",
+      "seconds": 0.409
+    }
+  ],
+  "record_states": [],
+  "recovery_definition": "Task-level recovery requires a healing trigger, all actions, and final API success. Action success alone does not prove correct target."
+}
