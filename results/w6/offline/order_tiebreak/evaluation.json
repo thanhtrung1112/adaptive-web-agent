@@ -1,0 +1,128 @@
+{
+  "dataset": "runs\\w4-trung-full",
+  "pages": 61,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "configs": {
+    "A_dom_order_guess": {
+      "min_margin": 0.0
+    },
+    "B_abstain_on_tie": {
+      "min_margin": 0.02
+    },
+    "C_ordinal_tiebreak": {
+      "min_margin": 0.02,
+      "use_order": true
+    }
+  },
+  "rows": [
+    {
+      "kind": "combined",
+      "config": "A_dom_order_guess",
+      "correct": 1668,
+      "WRONG": 18,
+      "abstain": 0
+    },
+    {
+      "kind": "combined",
+      "config": "B_abstain_on_tie",
+      "correct": 1652,
+      "WRONG": 5,
+      "abstain": 29
+    },
+    {
+      "kind": "combined",
+      "config": "C_ordinal_tiebreak",
+      "correct": 1678,
+      "WRONG": 5,
+      "abstain": 3
+    },
+    {
+      "kind": "decoy",
+      "config": "A_dom_order_guess",
+      "correct": 1686,
+      "WRONG": 0,
+      "abstain": 0
+    },
+    {
+      "kind": "decoy",
+      "config": "B_abstain_on_tie",
+      "correct": 1680,
+      "WRONG": 0,
+      "abstain": 6
+    },
+    {
+      "kind": "decoy",
+      "config": "C_ordinal_tiebreak",
+      "correct": 1680,
+      "WRONG": 0,
+      "abstain": 6
+    },
+    {
+      "kind": "ids",
+      "config": "A_dom_order_guess",
+      "correct": 1685,
+      "WRONG": 1,
+      "abstain": 0
+    },
+    {
+      "kind": "ids",
+      "config": "B_abstain_on_tie",
+      "correct": 1680,
+      "WRONG": 0,
+      "abstain": 6
+    },
+    {
+      "kind": "ids",
+      "config": "C_ordinal_tiebreak",
+      "correct": 1686,
+      "WRONG": 0,
+      "abstain": 0
+    },
+    {
+      "kind": "labels",
+      "config": "A_dom_order_guess",
+      "correct": 1686,
+      "WRONG": 0,
+      "abstain": 0
+    },
+    {
+      "kind": "labels",
+      "config": "B_abstain_on_tie",
+      "correct": 1686,
+      "WRONG": 0,
+      "abstain": 0
+    },
+    {
+      "kind": "labels",
+      "config": "C_ordinal_tiebreak",
+      "correct": 1686,
+      "WRONG": 0,
+      "abstain": 0
+    },
+    {
+      "kind": "wrap",
+      "config": "A_dom_order_guess",
+      "correct": 1683,
+      "WRONG": 3,
+      "abstain": 0
+    },
+    {
+      "kind": "wrap",
+      "config": "B_abstain_on_tie",
+      "correct": 1668,
+      "WRONG": 0,
+      "abstain": 18
+    },
+    {
+      "kind": "wrap",
+      "config": "C_ordinal_tiebreak",
+      "correct": 1686,
+      "WRONG": 0,
+      "abstain": 0
+    }
+  ]
+}
