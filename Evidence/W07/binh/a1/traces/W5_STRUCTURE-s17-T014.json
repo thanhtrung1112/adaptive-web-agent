@@ -1,0 +1,98 @@
+{
+  "result": {
+    "agent": "a1",
+    "task_id": "T014",
+    "module": "order",
+    "mutation": "W5_STRUCTURE",
+    "mutation_seed": 17,
+    "success": true,
+    "steps_done": 6,
+    "steps_total": 6,
+    "healing_attempts": 0,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 0.4807,
+    "error": "",
+    "check": "ok"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_STRUCTURE&seed=17",
+      "seconds": 0.0465
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders?mutation=W5_STRUCTURE&seed=17",
+      "executed_locator": "#create-order",
+      "url_after": "/orders/new",
+      "seconds": 0.1355
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new",
+      "executed_locator": "#order-customer",
+      "url_after": "/orders/new",
+      "seconds": 0.0397
+    },
+    {
+      "index": 3,
+      "action": "select",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new",
+      "executed_locator": "#order-sku-1",
+      "url_after": "/orders/new",
+      "seconds": 0.0131
+    },
+    {
+      "index": 4,
+      "action": "fill",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new",
+      "executed_locator": "#order-qty-1",
+      "url_after": "/orders/new",
+      "seconds": 0.0158
+    },
+    {
+      "index": 5,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new",
+      "executed_locator": "#save-order",
+      "url_after": "/orders/ORD-1006?mutation=W5_STRUCTURE&seed=17",
+      "seconds": 0.1018
+    }
+  ]
+}

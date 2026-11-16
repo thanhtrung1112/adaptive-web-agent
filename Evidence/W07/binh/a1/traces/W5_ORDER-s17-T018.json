@@ -1,0 +1,85 @@
+{
+  "result": {
+    "agent": "a1",
+    "task_id": "T018",
+    "module": "order",
+    "mutation": "W5_ORDER",
+    "mutation_seed": 17,
+    "success": true,
+    "steps_done": 5,
+    "steps_total": 5,
+    "healing_attempts": 0,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 0.5803,
+    "error": "",
+    "check": "ok"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/orders?mutation=W5_ORDER&seed=17",
+      "seconds": 0.0485
+    },
+    {
+      "index": 1,
+      "action": "fill",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders?mutation=W5_ORDER&seed=17",
+      "executed_locator": "#orders-from",
+      "url_after": "/orders?mutation=W5_ORDER&seed=17",
+      "seconds": 0.0809
+    },
+    {
+      "index": 2,
+      "action": "fill",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders?mutation=W5_ORDER&seed=17",
+      "executed_locator": "#orders-to",
+      "url_after": "/orders?mutation=W5_ORDER&seed=17",
+      "seconds": 0.0169
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders?mutation=W5_ORDER&seed=17",
+      "executed_locator": "#filter-orders",
+      "url_after": "/orders?from=2026-09-16&to=2026-09-16",
+      "seconds": 0.0832
+    },
+    {
+      "index": 4,
+      "action": "download",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders?from=2026-09-16&to=2026-09-16",
+      "executed_locator": "#export-orders",
+      "url_after": "/orders?from=2026-09-16&to=2026-09-16",
+      "seconds": 0.2269
+    }
+  ]
+}

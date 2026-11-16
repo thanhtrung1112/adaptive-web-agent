@@ -1,0 +1,464 @@
+{
+  "result": {
+    "agent": "a1",
+    "task_id": "T030",
+    "module": "chain",
+    "mutation": "W5_ID",
+    "mutation_seed": 17,
+    "success": true,
+    "steps_done": 13,
+    "steps_total": 13,
+    "healing_attempts": 11,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 1.9292,
+    "error": "",
+    "check": "ok; ok"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/customers?mutation=W5_ID&seed=17",
+      "seconds": 0.0428
+    },
+    {
+      "index": 1,
+      "action": "fill",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e20",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]",
+        "score": 0.857,
+        "margin": 0.698,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e20",
+        "topk": [
+          {
+            "eid": "e20",
+            "score": 0.857
+          },
+          {
+            "eid": "e21",
+            "score": 0.159
+          },
+          {
+            "eid": "e22",
+            "score": 0.124
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers?mutation=W5_ID&seed=17",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step01/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]",
+      "url_after": "/customers?mutation=W5_ID&seed=17",
+      "seconds": 0.15
+    },
+    {
+      "index": 2,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e21",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+        "score": 0.84,
+        "margin": 0.634,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e21",
+        "topk": [
+          {
+            "eid": "e21",
+            "score": 0.84
+          },
+          {
+            "eid": "e22",
+            "score": 0.206
+          },
+          {
+            "eid": "e20",
+            "score": 0.186
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers?mutation=W5_ID&seed=17",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step02/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+      "url_after": "/customers?email=pham.ha%40example.com&mutation=W5_ID&seed=17",
+      "seconds": 0.1718
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers?email=pham.ha%40example.com&mutation=W5_ID&seed=17",
+      "executed_locator": "table a[href^='/customers/']",
+      "url_after": "/customers/3",
+      "seconds": 0.1154
+    },
+    {
+      "index": 4,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e19",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]",
+        "score": 0.856,
+        "margin": 0.358,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e19",
+        "topk": [
+          {
+            "eid": "e19",
+            "score": 0.856
+          },
+          {
+            "eid": "e14",
+            "score": 0.498
+          },
+          {
+            "eid": "e13",
+            "score": 0.467
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers/3",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step04/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]",
+      "url_after": "/orders/new?customer_id=3",
+      "seconds": 0.1735
+    },
+    {
+      "index": 5,
+      "action": "select",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e30",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='select'][1]",
+        "score": 0.879,
+        "margin": 0.458,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e30",
+        "topk": [
+          {
+            "eid": "e30",
+            "score": 0.879
+          },
+          {
+            "eid": "e20",
+            "score": 0.421
+          },
+          {
+            "eid": "e35",
+            "score": 0.223
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new?customer_id=3",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step05/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='select'][1]",
+      "url_after": "/orders/new?customer_id=3",
+      "seconds": 0.1583
+    },
+    {
+      "index": 6,
+      "action": "fill",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e35",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='input'][1]",
+        "score": 0.868,
+        "margin": 0.626,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e35",
+        "topk": [
+          {
+            "eid": "e35",
+            "score": 0.868
+          },
+          {
+            "eid": "e20",
+            "score": 0.242
+          },
+          {
+            "eid": "e30",
+            "score": 0.234
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new?customer_id=3",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step06/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='div'][1]/*[local-name()='fieldset'][1]/*[local-name()='input'][1]",
+      "url_after": "/orders/new?customer_id=3",
+      "seconds": 0.0918
+    },
+    {
+      "index": 7,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e39",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+        "score": 0.845,
+        "margin": 0.35,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e39",
+        "topk": [
+          {
+            "eid": "e39",
+            "score": 0.845
+          },
+          {
+            "eid": "e38",
+            "score": 0.495
+          },
+          {
+            "eid": "e40",
+            "score": 0.192
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/new?customer_id=3",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step07/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+      "url_after": "/orders/ORD-1006?mutation=W5_ID&seed=17",
+      "seconds": 0.1644
+    },
+    {
+      "index": 8,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e19",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]",
+        "score": 0.828,
+        "margin": 0.374,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e19",
+        "topk": [
+          {
+            "eid": "e19",
+            "score": 0.828
+          },
+          {
+            "eid": "e15",
+            "score": 0.454
+          },
+          {
+            "eid": "e42",
+            "score": 0.421
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/orders/ORD-1006?mutation=W5_ID&seed=17",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step08/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]",
+      "url_after": "/tickets/new?order_id=ORD-1006",
+      "seconds": 0.1626
+    },
+    {
+      "index": 9,
+      "action": "fill",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e29",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]",
+        "score": 0.855,
+        "margin": 0.628,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e29",
+        "topk": [
+          {
+            "eid": "e29",
+            "score": 0.855
+          },
+          {
+            "eid": "e20",
+            "score": 0.227
+          },
+          {
+            "eid": "e31",
+            "score": 0.15
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/new?order_id=ORD-1006",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step09/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]",
+      "url_after": "/tickets/new?order_id=ORD-1006",
+      "seconds": 0.114
+    },
+    {
+      "index": 10,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e31",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='button'][1]",
+        "score": 0.844,
+        "margin": 0.667,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e31",
+        "topk": [
+          {
+            "eid": "e31",
+            "score": 0.844
+          },
+          {
+            "eid": "e29",
+            "score": 0.177
+          },
+          {
+            "eid": "e32",
+            "score": 0.167
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/new?order_id=ORD-1006",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step10/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='p'][1]/*[local-name()='button'][1]",
+      "url_after": "/tickets/TCK-2003?mutation=W5_ID&seed=17",
+      "seconds": 0.1673
+    },
+    {
+      "index": 11,
+      "action": "select",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e26",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]",
+        "score": 0.856,
+        "margin": 0.673,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e26",
+        "topk": [
+          {
+            "eid": "e26",
+            "score": 0.856
+          },
+          {
+            "eid": "e33",
+            "score": 0.183
+          },
+          {
+            "eid": "e30",
+            "score": 0.158
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2003?mutation=W5_ID&seed=17",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step11/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]",
+      "url_after": "/tickets/TCK-2003?mutation=W5_ID&seed=17",
+      "seconds": 0.0987
+    },
+    {
+      "index": 12,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e30",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+        "score": 0.842,
+        "margin": 0.382,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e30",
+        "topk": [
+          {
+            "eid": "e30",
+            "score": 0.842
+          },
+          {
+            "eid": "e35",
+            "score": 0.46
+          },
+          {
+            "eid": "e26",
+            "score": 0.176
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2003?mutation=W5_ID&seed=17",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s17-T030-step12/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+      "url_after": "/tickets/TCK-2003?mutation=W5_ID&seed=17",
+      "seconds": 0.1644
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+agent,task_id,module,mutation,mutation_seed,success,steps_done,steps_total,healing_attempts,fallback_attempts,llm_requests,llm_errors,seconds,error,check
+b0,T001,crm,M0,0,True,6,6,0,0,0,0,0.6688,,ok
+b0,T002,crm,M0,0,True,4,4,0,0,0,0,0.3843,,ok
+b0,T003,crm,M0,0,True,7,7,0,0,0,0,0.6604,,ok
+b0,T004,order,M0,0,True,9,9,0,0,0,0,0.5925,,ok
+b0,T005,order,M0,0,True,4,4,0,0,0,0,0.4453,,ok
+b0,T006,order,M0,0,True,5,5,0,0,0,0,0.8031,,ok
+b0,T007,support,M0,0,True,5,5,0,0,0,0,0.519,,ok
+b0,T008,support,M0,0,True,4,4,0,0,0,0,0.4322,,ok
+b0,T009,support,M0,0,True,4,4,0,0,0,0,0.4351,,ok
+b0,T010,chain,M0,0,True,11,11,0,0,0,0,1.1046,,ok; ok
+b0,T011,crm,M0,0,True,6,6,0,0,0,0,0.4668,,ok
+b0,T012,crm,M0,0,True,4,4,0,0,0,0,0.4004,,ok
+b0,T013,crm,M0,0,True,7,7,0,0,0,0,0.6414,,ok
+b0,T014,order,M0,0,True,6,6,0,0,0,0,0.4442,,ok
+b0,T015,order,M0,0,True,4,4,0,0,0,0,0.4085,,ok
+b0,T016,order,M0,0,True,4,4,0,0,0,0,0.418,,ok
+b0,T017,order,M0,0,True,4,4,0,0,0,0,0.4117,,ok
+b0,T018,order,M0,0,True,5,5,0,0,0,0,0.5223,,ok
+b0,T019,support,M0,0,True,4,4,0,0,0,0,0.469,,ok
+b0,T020,support,M0,0,True,7,7,0,0,0,0,0.6203,,ok
+b0,T021,crm,M0,0,True,6,6,0,0,0,0,0.465,,ok
+b0,T022,crm,M0,0,True,4,4,0,0,0,0,0.4134,,ok
+b0,T023,crm,M0,0,True,7,7,0,0,0,0,0.6584,,ok
+b0,T024,order,M0,0,True,9,9,0,0,0,0,0.6445,,ok
+b0,T025,order,M0,0,True,4,4,0,0,0,0,0.441,,ok
+b0,T026,order,M0,0,True,5,5,0,0,0,0,0.5757,,ok
+b0,T027,support,M0,0,True,4,4,0,0,0,0,0.4603,,ok
+b0,T028,support,M0,0,True,4,4,0,0,0,0,0.4645,,ok
+b0,T029,support,M0,0,True,7,7,0,0,0,0,0.6614,,ok
+b0,T030,chain,M0,0,True,13,13,0,0,0,0,1.1103,,ok; ok
+b0,T001,crm,W5_ID,17,False,1,6,0,0,0,0,0.3109,ValueError,/api/customers?email=minhanh@example.com: count=0 (cần 1)
+b0,T002,crm,W5_ID,17,False,1,4,0,0,0,0,0.3076,ValueError,/api/session/last_viewed_customer: email=None (cần 'tran.hoa@example.com')
+b0,T003,crm,W5_ID,17,False,1,7,0,0,0,0,0.2968,ValueError,/api/customers?email=nguyen.dung@example.com: phone='0900000002' (cần '0987654321')
+b0,T004,order,W5_ID,17,False,1,9,0,0,0,0,0.343,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T005,order,W5_ID,17,False,2,4,0,0,0,0,0.3864,ValueError,/api/orders/ORD-1003: status='shipped' (cần 'delivered')
+b0,T006,order,W5_ID,17,False,1,5,0,0,0,0,0.2752,ValueError,không có file tải về
+b0,T007,support,W5_ID,17,False,1,5,0,0,0,0,0.2492,ValueError,/api/tickets?order_id=ORD-1002: count=0 (cần 1)
+b0,T008,support,W5_ID,17,False,2,4,0,0,0,0,0.3676,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Hoàng Quang Huy')
+b0,T009,support,W5_ID,17,False,2,4,0,0,0,0,0.392,ValueError,/api/tickets/TCK-2002: status='in_progress' (cần 'closed')
+b0,T010,chain,W5_ID,17,False,1,11,0,0,0,0,0.3174,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1); /api/tickets?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T011,crm,W5_ID,17,False,1,6,0,0,0,0,0.2953,ValueError,/api/customers?email=saomai@example.com: count=0 (cần 1)
+b0,T012,crm,W5_ID,17,False,1,4,0,0,0,0,0.2952,ValueError,/api/session/last_viewed_customer: email=None (cần 'pham.ha@example.com')
+b0,T013,crm,W5_ID,17,False,1,7,0,0,0,0,0.2792,ValueError,/api/customers?email=tran.hoa@example.com: phone='0900000001' (cần '0912345678')
+b0,T014,order,W5_ID,17,False,1,6,0,0,0,0,0.2885,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T015,order,W5_ID,17,False,2,4,0,0,0,0,0.3788,ValueError,/api/orders/ORD-1002: status='pending' (cần 'confirmed')
+b0,T016,order,W5_ID,17,False,2,4,0,0,0,0,0.3886,ValueError,/api/orders/ORD-1004: status='confirmed' (cần 'shipped')
+b0,T017,order,W5_ID,17,False,2,4,0,0,0,0,0.4205,ValueError,/api/orders/ORD-1005: status='pending' (cần 'cancelled')
+b0,T018,order,W5_ID,17,False,1,5,0,0,0,0,0.2946,ValueError,không có file tải về
+b0,T019,support,W5_ID,17,False,2,4,0,0,0,0,0.3704,ValueError,/api/tickets/TCK-2002: assignee_name='Nguyễn Mai Lan' (cần 'Hoàng Quang Huy')
+b0,T020,support,W5_ID,17,False,1,7,0,0,0,0,0.262,ValueError,/api/tickets?order_id=ORD-1005: count=0 (cần 1)
+b0,T021,crm,W5_ID,17,False,1,6,0,0,0,0,0.3981,ValueError,/api/customers?email=anbinh@example.com: count=0 (cần 1)
+b0,T022,crm,W5_ID,17,False,1,4,0,0,0,0,0.3254,ValueError,/api/session/last_viewed_customer: email=None (cần 'nguyen.dung@example.com')
+b0,T023,crm,W5_ID,17,False,1,7,0,0,0,0,0.27,ValueError,/api/customers?email=vo.tam@example.com: phone='0900000004' (cần '0977772233')
+b0,T024,order,W5_ID,17,False,1,9,0,0,0,0,0.3076,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T025,order,W5_ID,17,False,2,4,0,0,0,0,0.398,ValueError,/api/orders/ORD-1001: status='confirmed' (cần 'cancelled')
+b0,T026,order,W5_ID,17,False,1,5,0,0,0,0,0.3092,ValueError,không có file tải về
+b0,T027,support,W5_ID,17,False,2,4,0,0,0,0,0.4294,ValueError,/api/tickets/TCK-2001: status='open' (cần 'closed')
+b0,T028,support,W5_ID,17,False,2,4,0,0,0,0,0.4329,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Nguyễn Mai Lan')
+b0,T029,support,W5_ID,17,False,1,7,0,0,0,0,0.3047,ValueError,/api/tickets?order_id=ORD-1004: count=0 (cần 1)
+b0,T030,chain,W5_ID,17,False,1,13,0,0,0,0,0.3393,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1); /api/tickets?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T001,crm,W5_ID,18,False,1,6,0,0,0,0,0.3358,ValueError,/api/customers?email=minhanh@example.com: count=0 (cần 1)
+b0,T002,crm,W5_ID,18,False,1,4,0,0,0,0,0.3318,ValueError,/api/session/last_viewed_customer: email=None (cần 'tran.hoa@example.com')
+b0,T003,crm,W5_ID,18,False,1,7,0,0,0,0,0.3478,ValueError,/api/customers?email=nguyen.dung@example.com: phone='0900000002' (cần '0987654321')
+b0,T004,order,W5_ID,18,False,1,9,0,0,0,0,0.3011,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T005,order,W5_ID,18,False,2,4,0,0,0,0,0.4401,ValueError,/api/orders/ORD-1003: status='shipped' (cần 'delivered')
+b0,T006,order,W5_ID,18,False,1,5,0,0,0,0,0.2884,ValueError,không có file tải về
+b0,T007,support,W5_ID,18,False,1,5,0,0,0,0,0.258,ValueError,/api/tickets?order_id=ORD-1002: count=0 (cần 1)
+b0,T008,support,W5_ID,18,False,2,4,0,0,0,0,0.3799,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Hoàng Quang Huy')
+b0,T009,support,W5_ID,18,False,2,4,0,0,0,0,0.3495,ValueError,/api/tickets/TCK-2002: status='in_progress' (cần 'closed')
+b0,T010,chain,W5_ID,18,False,1,11,0,0,0,0,0.3052,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1); /api/tickets?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T011,crm,W5_ID,18,False,1,6,0,0,0,0,0.2955,ValueError,/api/customers?email=saomai@example.com: count=0 (cần 1)
+b0,T012,crm,W5_ID,18,False,1,4,0,0,0,0,0.2795,ValueError,/api/session/last_viewed_customer: email=None (cần 'pham.ha@example.com')
+b0,T013,crm,W5_ID,18,False,1,7,0,0,0,0,0.294,ValueError,/api/customers?email=tran.hoa@example.com: phone='0900000001' (cần '0912345678')
+b0,T014,order,W5_ID,18,False,1,6,0,0,0,0,0.3082,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T015,order,W5_ID,18,False,2,4,0,0,0,0,0.4163,ValueError,/api/orders/ORD-1002: status='pending' (cần 'confirmed')
+b0,T016,order,W5_ID,18,False,2,4,0,0,0,0,0.3823,ValueError,/api/orders/ORD-1004: status='confirmed' (cần 'shipped')
+b0,T017,order,W5_ID,18,False,2,4,0,0,0,0,0.3944,ValueError,/api/orders/ORD-1005: status='pending' (cần 'cancelled')
+b0,T018,order,W5_ID,18,False,1,5,0,0,0,0,0.2868,ValueError,không có file tải về
+b0,T019,support,W5_ID,18,False,2,4,0,0,0,0,0.3821,ValueError,/api/tickets/TCK-2002: assignee_name='Nguyễn Mai Lan' (cần 'Hoàng Quang Huy')
+b0,T020,support,W5_ID,18,False,1,7,0,0,0,0,0.2851,ValueError,/api/tickets?order_id=ORD-1005: count=0 (cần 1)
+b0,T021,crm,W5_ID,18,False,1,6,0,0,0,0,0.299,ValueError,/api/customers?email=anbinh@example.com: count=0 (cần 1)
+b0,T022,crm,W5_ID,18,False,1,4,0,0,0,0,0.2775,ValueError,/api/session/last_viewed_customer: email=None (cần 'nguyen.dung@example.com')
+b0,T023,crm,W5_ID,18,False,1,7,0,0,0,0,0.2758,ValueError,/api/customers?email=vo.tam@example.com: phone='0900000004' (cần '0977772233')
+b0,T024,order,W5_ID,18,False,1,9,0,0,0,0,0.2667,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T025,order,W5_ID,18,False,2,4,0,0,0,0,0.4254,ValueError,/api/orders/ORD-1001: status='confirmed' (cần 'cancelled')
+b0,T026,order,W5_ID,18,False,1,5,0,0,0,0,0.2619,ValueError,không có file tải về
+b0,T027,support,W5_ID,18,False,2,4,0,0,0,0,0.3598,ValueError,/api/tickets/TCK-2001: status='open' (cần 'closed')
+b0,T028,support,W5_ID,18,False,2,4,0,0,0,0,0.3605,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Nguyễn Mai Lan')
+b0,T029,support,W5_ID,18,False,1,7,0,0,0,0,0.2781,ValueError,/api/tickets?order_id=ORD-1004: count=0 (cần 1)
+b0,T030,chain,W5_ID,18,False,1,13,0,0,0,0,0.3341,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1); /api/tickets?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T001,crm,W5_CLASS,17,True,6,6,0,0,0,0,0.5072,,ok
+b0,T002,crm,W5_CLASS,17,True,4,4,0,0,0,0,0.4188,,ok
+b0,T003,crm,W5_CLASS,17,True,7,7,0,0,0,0,0.7189,,ok
+b0,T004,order,W5_CLASS,17,True,9,9,0,0,0,0,0.5752,,ok
+b0,T005,order,W5_CLASS,17,True,4,4,0,0,0,0,0.4467,,ok
+b0,T006,order,W5_CLASS,17,True,5,5,0,0,0,0,0.6132,,ok
+b0,T007,support,W5_CLASS,17,True,5,5,0,0,0,0,0.4509,,ok
+b0,T008,support,W5_CLASS,17,True,4,4,0,0,0,0,0.4113,,ok
+b0,T009,support,W5_CLASS,17,True,4,4,0,0,0,0,0.422,,ok
+b0,T010,chain,W5_CLASS,17,True,11,11,0,0,0,0,0.9239,,ok; ok
+b0,T011,crm,W5_CLASS,17,True,6,6,0,0,0,0,0.4728,,ok
+b0,T012,crm,W5_CLASS,17,True,4,4,0,0,0,0,0.4154,,ok
+b0,T013,crm,W5_CLASS,17,True,7,7,0,0,0,0,0.6338,,ok
+b0,T014,order,W5_CLASS,17,True,6,6,0,0,0,0,0.5655,,ok
+b0,T015,order,W5_CLASS,17,True,4,4,0,0,0,0,0.4615,,ok
+b0,T016,order,W5_CLASS,17,True,4,4,0,0,0,0,0.4545,,ok
+b0,T017,order,W5_CLASS,17,True,4,4,0,0,0,0,0.4371,,ok
+b0,T018,order,W5_CLASS,17,True,5,5,0,0,0,0,0.5531,,ok
+b0,T019,support,W5_CLASS,17,True,4,4,0,0,0,0,0.4502,,ok
+b0,T020,support,W5_CLASS,17,True,7,7,0,0,0,0,0.6325,,ok
+b0,T021,crm,W5_CLASS,17,True,6,6,0,0,0,0,0.4625,,ok
+b0,T022,crm,W5_CLASS,17,True,4,4,0,0,0,0,0.4602,,ok
+b0,T023,crm,W5_CLASS,17,True,7,7,0,0,0,0,0.6667,,ok
+b0,T024,order,W5_CLASS,17,True,9,9,0,0,0,0,0.5874,,ok
+b0,T025,order,W5_CLASS,17,True,4,4,0,0,0,0,0.4526,,ok
+b0,T026,order,W5_CLASS,17,True,5,5,0,0,0,0,0.5762,,ok
+b0,T027,support,W5_CLASS,17,True,4,4,0,0,0,0,0.4414,,ok
+b0,T028,support,W5_CLASS,17,True,4,4,0,0,0,0,0.4262,,ok
+b0,T029,support,W5_CLASS,17,True,7,7,0,0,0,0,0.6114,,ok
+b0,T030,chain,W5_CLASS,17,True,13,13,0,0,0,0,1.1858,,ok; ok
+b0,T001,crm,W5_CLASS,18,True,6,6,0,0,0,0,0.4763,,ok
+b0,T002,crm,W5_CLASS,18,True,4,4,0,0,0,0,0.4537,,ok
+b0,T003,crm,W5_CLASS,18,True,7,7,0,0,0,0,0.73,,ok
+b0,T004,order,W5_CLASS,18,True,9,9,0,0,0,0,0.5851,,ok
+b0,T005,order,W5_CLASS,18,True,4,4,0,0,0,0,0.4511,,ok
+b0,T006,order,W5_CLASS,18,True,5,5,0,0,0,0,0.6159,,ok
+b0,T007,support,W5_CLASS,18,True,5,5,0,0,0,0,0.4856,,ok
+b0,T008,support,W5_CLASS,18,True,4,4,0,0,0,0,0.4763,,ok
+b0,T009,support,W5_CLASS,18,True,4,4,0,0,0,0,0.4581,,ok
+b0,T010,chain,W5_CLASS,18,True,11,11,0,0,0,0,1.0134,,ok; ok
+b0,T011,crm,W5_CLASS,18,True,6,6,0,0,0,0,0.5079,,ok
+b0,T012,crm,W5_CLASS,18,True,4,4,0,0,0,0,0.4201,,ok
+b0,T013,crm,W5_CLASS,18,True,7,7,0,0,0,0,0.7079,,ok
+b0,T014,order,W5_CLASS,18,True,6,6,0,0,0,0,0.5072,,ok
+b0,T015,order,W5_CLASS,18,True,4,4,0,0,0,0,0.4409,,ok
+b0,T016,order,W5_CLASS,18,True,4,4,0,0,0,0,0.453,,ok
+b0,T017,order,W5_CLASS,18,True,4,4,0,0,0,0,0.4443,,ok
+b0,T018,order,W5_CLASS,18,True,5,5,0,0,0,0,0.5615,,ok
+b0,T019,support,W5_CLASS,18,True,4,4,0,0,0,0,0.4479,,ok
+b0,T020,support,W5_CLASS,18,True,7,7,0,0,0,0,0.6297,,ok
+b0,T021,crm,W5_CLASS,18,True,6,6,0,0,0,0,0.5079,,ok
+b0,T022,crm,W5_CLASS,18,True,4,4,0,0,0,0,0.4654,,ok
+b0,T023,crm,W5_CLASS,18,True,7,7,0,0,0,0,0.7267,,ok
+b0,T024,order,W5_CLASS,18,True,9,9,0,0,0,0,0.6185,,ok
+b0,T025,order,W5_CLASS,18,True,4,4,0,0,0,0,0.4531,,ok
+b0,T026,order,W5_CLASS,18,True,5,5,0,0,0,0,0.5771,,ok
+b0,T027,support,W5_CLASS,18,True,4,4,0,0,0,0,0.4585,,ok
+b0,T028,support,W5_CLASS,18,True,4,4,0,0,0,0,0.4768,,ok
+b0,T029,support,W5_CLASS,18,True,7,7,0,0,0,0,0.6097,,ok
+b0,T030,chain,W5_CLASS,18,True,13,13,0,0,0,0,1.1775,,ok; ok
+b0,T001,crm,W5_TEXT,17,True,6,6,0,0,0,0,0.5053,,ok
+b0,T002,crm,W5_TEXT,17,True,4,4,0,0,0,0,0.438,,ok
+b0,T003,crm,W5_TEXT,17,True,7,7,0,0,0,0,0.7028,,ok
+b0,T004,order,W5_TEXT,17,True,9,9,0,0,0,0,0.6131,,ok
+b0,T005,order,W5_TEXT,17,True,4,4,0,0,0,0,0.5045,,ok
+b0,T006,order,W5_TEXT,17,True,5,5,0,0,0,0,0.5878,,ok
+b0,T007,support,W5_TEXT,17,True,5,5,0,0,0,0,0.4817,,ok
+b0,T008,support,W5_TEXT,17,True,4,4,0,0,0,0,0.4425,,ok
+b0,T009,support,W5_TEXT,17,True,4,4,0,0,0,0,0.4701,,ok
+b0,T010,chain,W5_TEXT,17,True,11,11,0,0,0,0,1.0165,,ok; ok
+b0,T011,crm,W5_TEXT,17,True,6,6,0,0,0,0,0.5205,,ok
+b0,T012,crm,W5_TEXT,17,True,4,4,0,0,0,0,0.4504,,ok
+b0,T013,crm,W5_TEXT,17,True,7,7,0,0,0,0,0.702,,ok
+b0,T014,order,W5_TEXT,17,True,6,6,0,0,0,0,0.5376,,ok
+b0,T015,order,W5_TEXT,17,True,4,4,0,0,0,0,0.4504,,ok
+b0,T016,order,W5_TEXT,17,True,4,4,0,0,0,0,0.4578,,ok
+b0,T017,order,W5_TEXT,17,True,4,4,0,0,0,0,0.45,,ok
+b0,T018,order,W5_TEXT,17,True,5,5,0,0,0,0,0.584,,ok
+b0,T019,support,W5_TEXT,17,True,4,4,0,0,0,0,0.4205,,ok
+b0,T020,support,W5_TEXT,17,True,7,7,0,0,0,0,0.538,,ok
+b0,T021,crm,W5_TEXT,17,True,6,6,0,0,0,0,0.4212,,ok
+b0,T022,crm,W5_TEXT,17,True,4,4,0,0,0,0,0.3753,,ok
+b0,T023,crm,W5_TEXT,17,True,7,7,0,0,0,0,0.6428,,ok
+b0,T024,order,W5_TEXT,17,True,9,9,0,0,0,0,0.6134,,ok
+b0,T025,order,W5_TEXT,17,True,4,4,0,0,0,0,0.4347,,ok
+b0,T026,order,W5_TEXT,17,True,5,5,0,0,0,0,0.5843,,ok
+b0,T027,support,W5_TEXT,17,True,4,4,0,0,0,0,0.4734,,ok
+b0,T028,support,W5_TEXT,17,True,4,4,0,0,0,0,0.4981,,ok
+b0,T029,support,W5_TEXT,17,True,7,7,0,0,0,0,0.6126,,ok
+b0,T030,chain,W5_TEXT,17,True,13,13,0,0,0,0,1.1247,,ok; ok
+b0,T001,crm,W5_TEXT,18,True,6,6,0,0,0,0,0.4757,,ok
+b0,T002,crm,W5_TEXT,18,True,4,4,0,0,0,0,0.4431,,ok
+b0,T003,crm,W5_TEXT,18,True,7,7,0,0,0,0,0.6953,,ok
+b0,T004,order,W5_TEXT,18,True,9,9,0,0,0,0,0.6179,,ok
+b0,T005,order,W5_TEXT,18,True,4,4,0,0,0,0,0.4531,,ok
+b0,T006,order,W5_TEXT,18,True,5,5,0,0,0,0,0.5855,,ok
+b0,T007,support,W5_TEXT,18,True,5,5,0,0,0,0,0.4917,,ok
+b0,T008,support,W5_TEXT,18,True,4,4,0,0,0,0,0.4177,,ok
+b0,T009,support,W5_TEXT,18,True,4,4,0,0,0,0,0.4572,,ok
+b0,T010,chain,W5_TEXT,18,True,11,11,0,0,0,0,1.0221,,ok; ok
+b0,T011,crm,W5_TEXT,18,True,6,6,0,0,0,0,0.5017,,ok
+b0,T012,crm,W5_TEXT,18,True,4,4,0,0,0,0,0.4348,,ok
+b0,T013,crm,W5_TEXT,18,True,7,7,0,0,0,0,0.734,,ok
+b0,T014,order,W5_TEXT,18,True,6,6,0,0,0,0,0.5259,,ok
+b0,T015,order,W5_TEXT,18,True,4,4,0,0,0,0,0.5059,,ok
+b0,T016,order,W5_TEXT,18,True,4,4,0,0,0,0,0.4625,,ok
+b0,T017,order,W5_TEXT,18,True,4,4,0,0,0,0,0.4725,,ok
+b0,T018,order,W5_TEXT,18,True,5,5,0,0,0,0,0.5803,,ok
+b0,T019,support,W5_TEXT,18,True,4,4,0,0,0,0,0.4639,,ok
+b0,T020,support,W5_TEXT,18,True,7,7,0,0,0,0,0.612,,ok
+b0,T021,crm,W5_TEXT,18,True,6,6,0,0,0,0,0.4943,,ok
+b0,T022,crm,W5_TEXT,18,True,4,4,0,0,0,0,0.4595,,ok
+b0,T023,crm,W5_TEXT,18,True,7,7,0,0,0,0,0.7316,,ok
+b0,T024,order,W5_TEXT,18,True,9,9,0,0,0,0,0.6123,,ok
+b0,T025,order,W5_TEXT,18,True,4,4,0,0,0,0,0.4759,,ok
+b0,T026,order,W5_TEXT,18,True,5,5,0,0,0,0,0.5815,,ok
+b0,T027,support,W5_TEXT,18,True,4,4,0,0,0,0,0.4659,,ok
+b0,T028,support,W5_TEXT,18,True,4,4,0,0,0,0,0.43,,ok
+b0,T029,support,W5_TEXT,18,True,7,7,0,0,0,0,0.6177,,ok
+b0,T030,chain,W5_TEXT,18,True,13,13,0,0,0,0,1.1199,,ok; ok
+b0,T001,crm,W5_ORDER,17,True,6,6,0,0,0,0,0.4756,,ok
+b0,T002,crm,W5_ORDER,17,True,4,4,0,0,0,0,0.446,,ok
+b0,T003,crm,W5_ORDER,17,True,7,7,0,0,0,0,0.7192,,ok
+b0,T004,order,W5_ORDER,17,True,9,9,0,0,0,0,0.6274,,ok
+b0,T005,order,W5_ORDER,17,True,4,4,0,0,0,0,0.4522,,ok
+b0,T006,order,W5_ORDER,17,True,5,5,0,0,0,0,0.5526,,ok
+b0,T007,support,W5_ORDER,17,True,5,5,0,0,0,0,0.4481,,ok
+b0,T008,support,W5_ORDER,17,True,4,4,0,0,0,0,0.4611,,ok
+b0,T009,support,W5_ORDER,17,True,4,4,0,0,0,0,0.4389,,ok
+b0,T010,chain,W5_ORDER,17,True,11,11,0,0,0,0,1.7403,,ok; ok
+b0,T011,crm,W5_ORDER,17,True,6,6,0,0,0,0,0.5196,,ok
+b0,T012,crm,W5_ORDER,17,True,4,4,0,0,0,0,0.4137,,ok
+b0,T013,crm,W5_ORDER,17,True,7,7,0,0,0,0,0.6451,,ok
+b0,T014,order,W5_ORDER,17,True,6,6,0,0,0,0,0.4661,,ok
+b0,T015,order,W5_ORDER,17,True,4,4,0,0,0,0,0.4127,,ok
+b0,T016,order,W5_ORDER,17,True,4,4,0,0,0,0,0.4276,,ok
+b0,T017,order,W5_ORDER,17,True,4,4,0,0,0,0,0.4577,,ok
+b0,T018,order,W5_ORDER,17,True,5,5,0,0,0,0,0.5521,,ok
+b0,T019,support,W5_ORDER,17,True,4,4,0,0,0,0,0.4177,,ok
+b0,T020,support,W5_ORDER,17,True,7,7,0,0,0,0,0.5595,,ok
+b0,T021,crm,W5_ORDER,17,True,6,6,0,0,0,0,0.4786,,ok
+b0,T022,crm,W5_ORDER,17,True,4,4,0,0,0,0,0.4047,,ok
+b0,T023,crm,W5_ORDER,17,True,7,7,0,0,0,0,0.6108,,ok
+b0,T024,order,W5_ORDER,17,True,9,9,0,0,0,0,0.5675,,ok
+b0,T025,order,W5_ORDER,17,True,4,4,0,0,0,0,0.4342,,ok
+b0,T026,order,W5_ORDER,17,True,5,5,0,0,0,0,0.5685,,ok
+b0,T027,support,W5_ORDER,17,True,4,4,0,0,0,0,0.4258,,ok
+b0,T028,support,W5_ORDER,17,True,4,4,0,0,0,0,0.4158,,ok
+b0,T029,support,W5_ORDER,17,True,7,7,0,0,0,0,0.5987,,ok
+b0,T030,chain,W5_ORDER,17,True,13,13,0,0,0,0,1.0692,,ok; ok
+b0,T001,crm,W5_ORDER,18,True,6,6,0,0,0,0,0.4478,,ok
+b0,T002,crm,W5_ORDER,18,True,4,4,0,0,0,0,0.3946,,ok
+b0,T003,crm,W5_ORDER,18,True,7,7,0,0,0,0,0.5965,,ok
+b0,T004,order,W5_ORDER,18,True,9,9,0,0,0,0,0.5216,,ok
+b0,T005,order,W5_ORDER,18,True,4,4,0,0,0,0,0.4091,,ok
+b0,T006,order,W5_ORDER,18,True,5,5,0,0,0,0,0.5531,,ok
+b0,T007,support,W5_ORDER,18,True,5,5,0,0,0,0,0.3993,,ok
+b0,T008,support,W5_ORDER,18,True,4,4,0,0,0,0,0.4521,,ok
+b0,T009,support,W5_ORDER,18,True,4,4,0,0,0,0,0.4205,,ok
+b0,T010,chain,W5_ORDER,18,True,11,11,0,0,0,0,0.9159,,ok; ok
+b0,T011,crm,W5_ORDER,18,True,6,6,0,0,0,0,0.4421,,ok
+b0,T012,crm,W5_ORDER,18,True,4,4,0,0,0,0,0.4148,,ok
+b0,T013,crm,W5_ORDER,18,True,7,7,0,0,0,0,0.6809,,ok
+b0,T014,order,W5_ORDER,18,True,6,6,0,0,0,0,0.5063,,ok
+b0,T015,order,W5_ORDER,18,True,4,4,0,0,0,0,0.4418,,ok
+b0,T016,order,W5_ORDER,18,True,4,4,0,0,0,0,0.4655,,ok
+b0,T017,order,W5_ORDER,18,True,4,4,0,0,0,0,0.4482,,ok
+b0,T018,order,W5_ORDER,18,True,5,5,0,0,0,0,0.5705,,ok
+b0,T019,support,W5_ORDER,18,True,4,4,0,0,0,0,0.4415,,ok
+b0,T020,support,W5_ORDER,18,True,7,7,0,0,0,0,0.6364,,ok
+b0,T021,crm,W5_ORDER,18,True,6,6,0,0,0,0,0.502,,ok
+b0,T022,crm,W5_ORDER,18,True,4,4,0,0,0,0,0.4476,,ok
+b0,T023,crm,W5_ORDER,18,True,7,7,0,0,0,0,0.7044,,ok
+b0,T024,order,W5_ORDER,18,True,9,9,0,0,0,0,0.5977,,ok
+b0,T025,order,W5_ORDER,18,True,4,4,0,0,0,0,0.5083,,ok
+b0,T026,order,W5_ORDER,18,True,5,5,0,0,0,0,0.6787,,ok
+b0,T027,support,W5_ORDER,18,True,4,4,0,0,0,0,0.4528,,ok
+b0,T028,support,W5_ORDER,18,True,4,4,0,0,0,0,0.4324,,ok
+b0,T029,support,W5_ORDER,18,True,7,7,0,0,0,0,0.6119,,ok
+b0,T030,chain,W5_ORDER,18,True,13,13,0,0,0,0,1.2115,,ok; ok
+b0,T001,crm,W5_STRUCTURE,17,True,6,6,0,0,0,0,0.4544,,ok
+b0,T002,crm,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4471,,ok
+b0,T003,crm,W5_STRUCTURE,17,True,7,7,0,0,0,0,0.7161,,ok
+b0,T004,order,W5_STRUCTURE,17,True,9,9,0,0,0,0,0.6308,,ok
+b0,T005,order,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4568,,ok
+b0,T006,order,W5_STRUCTURE,17,True,5,5,0,0,0,0,0.6016,,ok
+b0,T007,support,W5_STRUCTURE,17,True,5,5,0,0,0,0,0.4898,,ok
+b0,T008,support,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4568,,ok
+b0,T009,support,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4601,,ok
+b0,T010,chain,W5_STRUCTURE,17,True,11,11,0,0,0,0,1.0742,,ok; ok
+b0,T011,crm,W5_STRUCTURE,17,True,6,6,0,0,0,0,0.5097,,ok
+b0,T012,crm,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4488,,ok
+b0,T013,crm,W5_STRUCTURE,17,True,7,7,0,0,0,0,0.7132,,ok
+b0,T014,order,W5_STRUCTURE,17,True,6,6,0,0,0,0,0.5042,,ok
+b0,T015,order,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4554,,ok
+b0,T016,order,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4842,,ok
+b0,T017,order,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.462,,ok
+b0,T018,order,W5_STRUCTURE,17,True,5,5,0,0,0,0,0.5716,,ok
+b0,T019,support,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4515,,ok
+b0,T020,support,W5_STRUCTURE,17,True,7,7,0,0,0,0,0.5996,,ok
+b0,T021,crm,W5_STRUCTURE,17,True,6,6,0,0,0,0,0.4936,,ok
+b0,T022,crm,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4214,,ok
+b0,T023,crm,W5_STRUCTURE,17,True,7,7,0,0,0,0,0.7155,,ok
+b0,T024,order,W5_STRUCTURE,17,True,9,9,0,0,0,0,0.5956,,ok
+b0,T025,order,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4545,,ok
+b0,T026,order,W5_STRUCTURE,17,True,5,5,0,0,0,0,0.5929,,ok
+b0,T027,support,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4815,,ok
+b0,T028,support,W5_STRUCTURE,17,True,4,4,0,0,0,0,0.4434,,ok
+b0,T029,support,W5_STRUCTURE,17,True,7,7,0,0,0,0,0.6286,,ok
+b0,T030,chain,W5_STRUCTURE,17,True,13,13,0,0,0,0,1.1916,,ok; ok
+b0,T001,crm,W5_STRUCTURE,18,True,6,6,0,0,0,0,0.4582,,ok
+b0,T002,crm,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.464,,ok
+b0,T003,crm,W5_STRUCTURE,18,True,7,7,0,0,0,0,0.6743,,ok
+b0,T004,order,W5_STRUCTURE,18,True,9,9,0,0,0,0,0.5905,,ok
+b0,T005,order,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4532,,ok
+b0,T006,order,W5_STRUCTURE,18,True,5,5,0,0,0,0,0.5912,,ok
+b0,T007,support,W5_STRUCTURE,18,True,5,5,0,0,0,0,0.4654,,ok
+b0,T008,support,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4518,,ok
+b0,T009,support,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4699,,ok
+b0,T010,chain,W5_STRUCTURE,18,True,11,11,0,0,0,0,1.04,,ok; ok
+b0,T011,crm,W5_STRUCTURE,18,True,6,6,0,0,0,0,0.4881,,ok
+b0,T012,crm,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.459,,ok
+b0,T013,crm,W5_STRUCTURE,18,True,7,7,0,0,0,0,0.7134,,ok
+b0,T014,order,W5_STRUCTURE,18,True,6,6,0,0,0,0,0.5498,,ok
+b0,T015,order,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4667,,ok
+b0,T016,order,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4643,,ok
+b0,T017,order,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4446,,ok
+b0,T018,order,W5_STRUCTURE,18,True,5,5,0,0,0,0,0.601,,ok
+b0,T019,support,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4424,,ok
+b0,T020,support,W5_STRUCTURE,18,True,7,7,0,0,0,0,0.6011,,ok
+b0,T021,crm,W5_STRUCTURE,18,True,6,6,0,0,0,0,0.4812,,ok
+b0,T022,crm,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4278,,ok
+b0,T023,crm,W5_STRUCTURE,18,True,7,7,0,0,0,0,0.764,,ok
+b0,T024,order,W5_STRUCTURE,18,True,9,9,0,0,0,0,0.616,,ok
+b0,T025,order,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4563,,ok
+b0,T026,order,W5_STRUCTURE,18,True,5,5,0,0,0,0,0.5819,,ok
+b0,T027,support,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.461,,ok
+b0,T028,support,W5_STRUCTURE,18,True,4,4,0,0,0,0,0.4461,,ok
+b0,T029,support,W5_STRUCTURE,18,True,7,7,0,0,0,0,0.5964,,ok
+b0,T030,chain,W5_STRUCTURE,18,True,13,13,0,0,0,0,1.1009,,ok; ok
+b0,T001,crm,W5_COMBINED,17,False,1,6,0,0,0,0,0.3578,ValueError,/api/customers?email=minhanh@example.com: count=0 (cần 1)
+b0,T002,crm,W5_COMBINED,17,False,1,4,0,0,0,0,0.3582,ValueError,/api/session/last_viewed_customer: email=None (cần 'tran.hoa@example.com')
+b0,T003,crm,W5_COMBINED,17,False,1,7,0,0,0,0,0.3498,ValueError,/api/customers?email=nguyen.dung@example.com: phone='0900000002' (cần '0987654321')
+b0,T004,order,W5_COMBINED,17,False,1,9,0,0,0,0,0.3503,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T005,order,W5_COMBINED,17,False,2,4,0,0,0,0,0.4092,ValueError,/api/orders/ORD-1003: status='shipped' (cần 'delivered')
+b0,T006,order,W5_COMBINED,17,False,1,5,0,0,0,0,0.3225,ValueError,không có file tải về
+b0,T007,support,W5_COMBINED,17,False,1,5,0,0,0,0,0.2905,ValueError,/api/tickets?order_id=ORD-1002: count=0 (cần 1)
+b0,T008,support,W5_COMBINED,17,False,2,4,0,0,0,0,0.4747,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Hoàng Quang Huy')
+b0,T009,support,W5_COMBINED,17,False,2,4,0,0,0,0,0.4186,ValueError,/api/tickets/TCK-2002: status='in_progress' (cần 'closed')
+b0,T010,chain,W5_COMBINED,17,False,1,11,0,0,0,0,0.3484,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1); /api/tickets?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T011,crm,W5_COMBINED,17,False,1,6,0,0,0,0,0.3668,ValueError,/api/customers?email=saomai@example.com: count=0 (cần 1)
+b0,T012,crm,W5_COMBINED,17,False,1,4,0,0,0,0,0.3477,ValueError,/api/session/last_viewed_customer: email=None (cần 'pham.ha@example.com')
+b0,T013,crm,W5_COMBINED,17,False,1,7,0,0,0,0,0.3599,ValueError,/api/customers?email=tran.hoa@example.com: phone='0900000001' (cần '0912345678')
+b0,T014,order,W5_COMBINED,17,False,1,6,0,0,0,0,0.362,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T015,order,W5_COMBINED,17,False,2,4,0,0,0,0,0.4238,ValueError,/api/orders/ORD-1002: status='pending' (cần 'confirmed')
+b0,T016,order,W5_COMBINED,17,False,2,4,0,0,0,0,0.4113,ValueError,/api/orders/ORD-1004: status='confirmed' (cần 'shipped')
+b0,T017,order,W5_COMBINED,17,False,2,4,0,0,0,0,0.4663,ValueError,/api/orders/ORD-1005: status='pending' (cần 'cancelled')
+b0,T018,order,W5_COMBINED,17,False,1,5,0,0,0,0,0.3229,ValueError,không có file tải về
+b0,T019,support,W5_COMBINED,17,False,2,4,0,0,0,0,0.3987,ValueError,/api/tickets/TCK-2002: assignee_name='Nguyễn Mai Lan' (cần 'Hoàng Quang Huy')
+b0,T020,support,W5_COMBINED,17,False,1,7,0,0,0,0,0.2873,ValueError,/api/tickets?order_id=ORD-1005: count=0 (cần 1)
+b0,T021,crm,W5_COMBINED,17,False,1,6,0,0,0,0,0.348,ValueError,/api/customers?email=anbinh@example.com: count=0 (cần 1)
+b0,T022,crm,W5_COMBINED,17,False,1,4,0,0,0,0,0.3616,ValueError,/api/session/last_viewed_customer: email=None (cần 'nguyen.dung@example.com')
+b0,T023,crm,W5_COMBINED,17,False,1,7,0,0,0,0,0.3114,ValueError,/api/customers?email=vo.tam@example.com: phone='0900000004' (cần '0977772233')
+b0,T024,order,W5_COMBINED,17,False,1,9,0,0,0,0,0.3341,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T025,order,W5_COMBINED,17,False,2,4,0,0,0,0,0.4305,ValueError,/api/orders/ORD-1001: status='confirmed' (cần 'cancelled')
+b0,T026,order,W5_COMBINED,17,False,1,5,0,0,0,0,0.3188,ValueError,không có file tải về
+b0,T027,support,W5_COMBINED,17,False,2,4,0,0,0,0,0.4273,ValueError,/api/tickets/TCK-2001: status='open' (cần 'closed')
+b0,T028,support,W5_COMBINED,17,False,2,4,0,0,0,0,0.3977,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Nguyễn Mai Lan')
+b0,T029,support,W5_COMBINED,17,False,1,7,0,0,0,0,0.282,ValueError,/api/tickets?order_id=ORD-1004: count=0 (cần 1)
+b0,T030,chain,W5_COMBINED,17,False,1,13,0,0,0,0,0.3376,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1); /api/tickets?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T001,crm,W5_COMBINED,18,False,1,6,0,0,0,0,0.295,ValueError,/api/customers?email=minhanh@example.com: count=0 (cần 1)
+b0,T002,crm,W5_COMBINED,18,False,1,4,0,0,0,0,0.2929,ValueError,/api/session/last_viewed_customer: email=None (cần 'tran.hoa@example.com')
+b0,T003,crm,W5_COMBINED,18,False,1,7,0,0,0,0,0.3147,ValueError,/api/customers?email=nguyen.dung@example.com: phone='0900000002' (cần '0987654321')
+b0,T004,order,W5_COMBINED,18,False,1,9,0,0,0,0,0.3598,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T005,order,W5_COMBINED,18,False,2,4,0,0,0,0,0.3865,ValueError,/api/orders/ORD-1003: status='shipped' (cần 'delivered')
+b0,T006,order,W5_COMBINED,18,False,1,5,0,0,0,0,0.2974,ValueError,không có file tải về
+b0,T007,support,W5_COMBINED,18,False,1,5,0,0,0,0,0.2708,ValueError,/api/tickets?order_id=ORD-1002: count=0 (cần 1)
+b0,T008,support,W5_COMBINED,18,False,2,4,0,0,0,0,0.3865,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Hoàng Quang Huy')
+b0,T009,support,W5_COMBINED,18,False,2,4,0,0,0,0,0.402,ValueError,/api/tickets/TCK-2002: status='in_progress' (cần 'closed')
+b0,T010,chain,W5_COMBINED,18,False,1,11,0,0,0,0,0.3317,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1); /api/tickets?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T011,crm,W5_COMBINED,18,False,1,6,0,0,0,0,0.2864,ValueError,/api/customers?email=saomai@example.com: count=0 (cần 1)
+b0,T012,crm,W5_COMBINED,18,False,1,4,0,0,0,0,0.2952,ValueError,/api/session/last_viewed_customer: email=None (cần 'pham.ha@example.com')
+b0,T013,crm,W5_COMBINED,18,False,1,7,0,0,0,0,0.3059,ValueError,/api/customers?email=tran.hoa@example.com: phone='0900000001' (cần '0912345678')
+b0,T014,order,W5_COMBINED,18,False,1,6,0,0,0,0,0.3252,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1)
+b0,T015,order,W5_COMBINED,18,False,2,4,0,0,0,0,0.4246,ValueError,/api/orders/ORD-1002: status='pending' (cần 'confirmed')
+b0,T016,order,W5_COMBINED,18,False,2,4,0,0,0,0,0.4347,ValueError,/api/orders/ORD-1004: status='confirmed' (cần 'shipped')
+b0,T017,order,W5_COMBINED,18,False,2,4,0,0,0,0,0.4032,ValueError,/api/orders/ORD-1005: status='pending' (cần 'cancelled')
+b0,T018,order,W5_COMBINED,18,False,1,5,0,0,0,0,0.3047,ValueError,không có file tải về
+b0,T019,support,W5_COMBINED,18,False,2,4,0,0,0,0,0.3887,ValueError,/api/tickets/TCK-2002: assignee_name='Nguyễn Mai Lan' (cần 'Hoàng Quang Huy')
+b0,T020,support,W5_COMBINED,18,False,1,7,0,0,0,0,0.2766,ValueError,/api/tickets?order_id=ORD-1005: count=0 (cần 1)
+b0,T021,crm,W5_COMBINED,18,False,1,6,0,0,0,0,0.3195,ValueError,/api/customers?email=anbinh@example.com: count=0 (cần 1)
+b0,T022,crm,W5_COMBINED,18,False,1,4,0,0,0,0,0.3081,ValueError,/api/session/last_viewed_customer: email=None (cần 'nguyen.dung@example.com')
+b0,T023,crm,W5_COMBINED,18,False,1,7,0,0,0,0,0.3186,ValueError,/api/customers?email=vo.tam@example.com: phone='0900000004' (cần '0977772233')
+b0,T024,order,W5_COMBINED,18,False,1,9,0,0,0,0,0.3215,ValueError,/api/orders?customer_email=vo.tam@example.com: count=0 (cần 1)
+b0,T025,order,W5_COMBINED,18,False,2,4,0,0,0,0,0.4135,ValueError,/api/orders/ORD-1001: status='confirmed' (cần 'cancelled')
+b0,T026,order,W5_COMBINED,18,False,1,5,0,0,0,0,0.2934,ValueError,không có file tải về
+b0,T027,support,W5_COMBINED,18,False,2,4,0,0,0,0,0.379,ValueError,/api/tickets/TCK-2001: status='open' (cần 'closed')
+b0,T028,support,W5_COMBINED,18,False,2,4,0,0,0,0,0.41,ValueError,/api/tickets/TCK-2001: assignee_name=None (cần 'Nguyễn Mai Lan')
+b0,T029,support,W5_COMBINED,18,False,1,7,0,0,0,0,0.3259,ValueError,/api/tickets?order_id=ORD-1004: count=0 (cần 1)
+b0,T030,chain,W5_COMBINED,18,False,1,13,0,0,0,0,0.3634,ValueError,/api/orders?customer_email=pham.ha@example.com: count=0 (cần 1); /api/tickets?customer_email=pham.ha@example.com: count=0 (cần 1)

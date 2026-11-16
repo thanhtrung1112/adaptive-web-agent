@@ -1,0 +1,23 @@
+{
+  "version": "w7-fallback-v1",
+  "action": "click",
+  "objective": "Lưu thông tin khách hàng.",
+  "descriptor": {
+    "tag": "button",
+    "id": "",
+    "name": "",
+    "type": "",
+    "text": "Lưu",
+    "label": "",
+    "placeholder": "",
+    "href": "",
+    "form": "/save",
+    "path": "html > body > form > button",
+    "options": [],
+    "ord": 0,
+    "ord_n": 1
+  },
+  "trigger": "no_candidates",
+  "candidates": [],
+  "semantic_topk": []
+}

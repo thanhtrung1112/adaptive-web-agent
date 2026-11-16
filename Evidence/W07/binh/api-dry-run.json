@@ -1,0 +1,12 @@
+{
+  "mode": "dry-run",
+  "network_requests": 0,
+  "config": {
+    "model": "gpt-4.1-mini",
+    "timeout_seconds": 60,
+    "max_output_tokens": 64,
+    "max_requests": 1,
+    "max_reserved_output_tokens": 64,
+    "max_input_chars": 24000
+  }
+}

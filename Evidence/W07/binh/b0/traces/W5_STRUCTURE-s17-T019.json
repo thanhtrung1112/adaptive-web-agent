@@ -1,0 +1,72 @@
+{
+  "result": {
+    "agent": "b0",
+    "task_id": "T019",
+    "module": "support",
+    "mutation": "W5_STRUCTURE",
+    "mutation_seed": 17,
+    "success": true,
+    "steps_done": 4,
+    "steps_total": 4,
+    "healing_attempts": 0,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 0.4515,
+    "error": "",
+    "check": "ok"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/tickets?mutation=W5_STRUCTURE&seed=17",
+      "seconds": 0.0411
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets?mutation=W5_STRUCTURE&seed=17",
+      "executed_locator": "table a[href='/tickets/TCK-2002']",
+      "url_after": "/tickets/TCK-2002",
+      "seconds": 0.1428
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2002",
+      "executed_locator": "#ticket-assignee",
+      "url_after": "/tickets/TCK-2002",
+      "seconds": 0.0425
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2002",
+      "executed_locator": "#assign-ticket",
+      "url_after": "/tickets/TCK-2002?mutation=W5_STRUCTURE&seed=17",
+      "seconds": 0.0965
+    }
+  ]
+}

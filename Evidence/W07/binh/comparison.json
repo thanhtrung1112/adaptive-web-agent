@@ -1,0 +1,108 @@
+{
+  "scope": "Development replay only; no independent target labels or final LLM quality claims",
+  "runs": [
+    {
+      "agent": "b0",
+      "path": "C:\\Users\\admin\\Downloads\\adaptive-web-agent-main\\adaptive-web-agent-review\\runs\\w7-binh-final-b0-v1",
+      "scope": "W7 infrastructure replay; count trigger only; resolver policy pending Trung",
+      "expected_rows": 390,
+      "completed_rows": 390,
+      "complete": true,
+      "passed": 270,
+      "task_success_rate": 0.6923076923076923,
+      "median_seconds": 0.45305,
+      "p95_seconds": 0.764,
+      "llm_requests": 0,
+      "usage_complete": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_cost_usd": 0,
+      "cost_note": "Apply a dated official rate card; no invented price.",
+      "wrong_heal_count": null,
+      "target_accuracy_note": "Independent labels not yet integrated.",
+      "by_mutation": {
+        "M0": {
+          "total": 30,
+          "passed": 30
+        },
+        "W5_CLASS": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_COMBINED": {
+          "total": 60,
+          "passed": 0
+        },
+        "W5_ID": {
+          "total": 60,
+          "passed": 0
+        },
+        "W5_ORDER": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_STRUCTURE": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_TEXT": {
+          "total": 60,
+          "passed": 60
+        }
+      }
+    },
+    {
+      "agent": "a1",
+      "path": "C:\\Users\\admin\\Downloads\\adaptive-web-agent-main\\adaptive-web-agent-review\\runs\\w7-binh-final-a1-v1",
+      "scope": "W7 infrastructure replay; count trigger only; resolver policy pending Trung",
+      "expected_rows": 390,
+      "completed_rows": 390,
+      "complete": true,
+      "passed": 390,
+      "task_success_rate": 1.0,
+      "median_seconds": 0.5843,
+      "p95_seconds": 1.1791,
+      "llm_requests": 0,
+      "usage_complete": true,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_cost_usd": 0,
+      "cost_note": "Apply a dated official rate card; no invented price.",
+      "wrong_heal_count": null,
+      "target_accuracy_note": "Independent labels not yet integrated.",
+      "by_mutation": {
+        "M0": {
+          "total": 30,
+          "passed": 30
+        },
+        "W5_CLASS": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_COMBINED": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_ID": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_ORDER": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_STRUCTURE": {
+          "total": 60,
+          "passed": 60
+        },
+        "W5_TEXT": {
+          "total": 60,
+          "passed": 60
+        }
+      }
+    }
+  ],
+  "rates": null,
+  "a1_minus_b0_percentage_points": 30.76923076923077,
+  "a2_minus_a1_percentage_points": null
+}

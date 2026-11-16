@@ -1,0 +1,111 @@
+{
+  "result": {
+    "agent": "a1",
+    "task_id": "T029",
+    "module": "support",
+    "mutation": "W5_TEXT",
+    "mutation_seed": 17,
+    "success": true,
+    "steps_done": 7,
+    "steps_total": 7,
+    "healing_attempts": 0,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 0.6528,
+    "error": "",
+    "check": "ok"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/tickets?mutation=W5_TEXT&seed=17",
+      "seconds": 0.0444
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets?mutation=W5_TEXT&seed=17",
+      "executed_locator": "#create-ticket",
+      "url_after": "/tickets/new",
+      "seconds": 0.1323
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/new",
+      "executed_locator": "#ticket-order",
+      "url_after": "/tickets/new",
+      "seconds": 0.0418
+    },
+    {
+      "index": 3,
+      "action": "fill",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/new",
+      "executed_locator": "#ticket-subject",
+      "url_after": "/tickets/new",
+      "seconds": 0.016
+    },
+    {
+      "index": 4,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/new",
+      "executed_locator": "#save-ticket",
+      "url_after": "/tickets/TCK-2003?mutation=W5_TEXT&seed=17",
+      "seconds": 0.118
+    },
+    {
+      "index": 5,
+      "action": "fill",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2003?mutation=W5_TEXT&seed=17",
+      "executed_locator": "#ticket-note",
+      "url_after": "/tickets/TCK-2003?mutation=W5_TEXT&seed=17",
+      "seconds": 0.0485
+    },
+    {
+      "index": 6,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2003?mutation=W5_TEXT&seed=17",
+      "executed_locator": "#close-ticket",
+      "url_after": "/tickets/TCK-2003?mutation=W5_TEXT&seed=17",
+      "seconds": 0.1162
+    }
+  ]
+}

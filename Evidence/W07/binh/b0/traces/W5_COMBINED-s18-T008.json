@@ -1,0 +1,60 @@
+{
+  "result": {
+    "agent": "b0",
+    "task_id": "T008",
+    "module": "support",
+    "mutation": "W5_COMBINED",
+    "mutation_seed": 18,
+    "success": false,
+    "steps_done": 2,
+    "steps_total": 4,
+    "healing_attempts": 0,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 0.3865,
+    "error": "ValueError",
+    "check": "/api/tickets/TCK-2001: assignee_name=None (cần 'Hoàng Quang Huy')"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/tickets?mutation=W5_COMBINED&seed=18",
+      "seconds": 0.0465
+    },
+    {
+      "index": 1,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets?mutation=W5_COMBINED&seed=18",
+      "executed_locator": "table a[href='/tickets/TCK-2001']",
+      "url_after": "/tickets/TCK-2001",
+      "seconds": 0.1282
+    },
+    {
+      "index": 2,
+      "action": "select",
+      "success": false,
+      "b0_count": 0,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/tickets/TCK-2001",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_COMBINED-s18-T008-step02/features.json",
+      "error": "ValueError",
+      "seconds": 0.0845
+    }
+  ]
+}
