@@ -26,6 +26,7 @@ from w6.freeze import MANIFEST, ROOT, digest, validate_manifest, write_json
 from w6.run_heal import POLICY, SCRIPTS, action, load_record, locate, relative_url
 from w7.contracts import load_resolver, make_request, validate_decision
 from w7.context import runtime_candidates
+from w7.target_check import check_found, DEFAULT_THRESHOLD
 
 
 def source_hashes():
@@ -49,7 +50,7 @@ def validate_replacement(page, xpath, action_name, original_html):
 
 
 def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors,
-           provenance, *, resolver=None, client=None):
+           provenance, *, resolver=None, client=None, target_threshold=DEFAULT_THRESHOLD):
     if agent not in ("b0", "a1", "a2"):
         raise ValueError("Unknown agent")
     if agent == "a2" and (resolver is None or client is None):
@@ -102,6 +103,12 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
                                           use_order=POLICY["use_order"])
                             entry["semantic"] = result
                             xpath = result["xpath"] if result["status"] == "healed" else None
+                            if xpath is not None:
+                                chosen = next((c for c in candidates if c.get("xpath") == xpath), None)
+                                entry["target_check"] = check_found(descriptor, chosen or {}, task["goal"], target_threshold)
+                                if entry["target_check"]["likely_wrong"]:
+                                    xpath = None
+                                    entry["target_check"]["reason"] = "semantic_candidate_rejected"
                             if xpath is None and agent == "a2" and candidates:
                                 packet, bindings = make_request(descriptor, candidates, step["do"], result,
                                                                 objective=task["goal"])
@@ -112,6 +119,12 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
                                         decision = resolver(packet, CallScope(client))
                                         entry["fallback"] = decision
                                         xpath = validate_decision(decision, bindings)
+                                        if xpath:
+                                            chosen = next((c for c in candidates if c.get("xpath") == xpath), None)
+                                            entry["target_check"] = check_found(descriptor, chosen or {}, task["goal"], target_threshold)
+                                            if entry["target_check"]["likely_wrong"]:
+                                                xpath = None
+                                                entry["target_check"]["reason"] = "llm_candidate_rejected"
                                     finally:
                                         entry["llm_calls"] = client.calls[before:]
                             if not xpath:
@@ -151,6 +164,7 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
            "steps_done": sum(s["success"] for s in trace), "steps_total": len(SCRIPTS[task["id"]]),
            "healing_attempts": sum(s["semantic"] is not None for s in trace),
            "fallback_attempts": sum("fallback_request" in s for s in trace),
+           "wrong_target_rejections": sum(bool(s.get("target_check", {}).get("likely_wrong")) for s in trace),
            "llm_requests": len(calls), "llm_errors": sum(c["status"] != "completed" for c in calls),
            "seconds": round(time.perf_counter() - started, 4), "error": error, "check": check_message}
     write_json(out / "traces" / f"{run_id}.json", {"result": row, "steps": trace})
@@ -171,7 +185,8 @@ def summarize(rows, expected, calls=()):
             "llm_requests": len(calls), "usage_complete": all(u is not None for u in usages),
             "input_tokens": total("input_tokens"), "output_tokens": total("output_tokens"),
             "estimated_cost_usd": None, "cost_note": "Apply a dated official rate card; no invented price.",
-            "wrong_heal_count": None, "target_accuracy_note": "Independent labels not yet integrated.",
+            "wrong_heal_count": sum(r.get("wrong_target_rejections", 0) for r in rows) if rows else None,
+            "target_accuracy_note": "Guard rejections are counted; this is not an independent target-accuracy estimate.",
             "by_mutation": {m: {"total": len(rs := [r for r in rows if r["mutation"] == m]),
                                  "passed": sum(r["success"] for r in rs)} for m in sorted({r["mutation"] for r in rows})}}
 
@@ -189,6 +204,8 @@ def main():
     parser.add_argument("--max-output-tokens", type=int, default=512)
     parser.add_argument("--max-reserved-output-tokens", type=int, default=10240)
     parser.add_argument("--timeout", type=float, default=60)
+    parser.add_argument("--target-threshold", type=float, default=DEFAULT_THRESHOLD,
+                        help="threshold selected on the separate development challenge set")
     args = parser.parse_args()
     if args.agent != "b0" and not args.record:
         parser.error("A1/A2 require --record from w6.run_heal --mode record")
@@ -196,6 +213,8 @@ def main():
         parser.error("A2 requires --resolver; Trung's policy is deliberately not fabricated")
     if args.agent != "a2" and args.resolver:
         parser.error("--resolver is only allowed for A2")
+    if not 0 <= args.target_threshold <= 1:
+        parser.error("--target-threshold must be between 0 and 1")
     manifest = validate_manifest()
     tasks = json.loads((ROOT / "tasks/tasks_w4.json").read_text(encoding="utf-8"))
     if args.tasks and (len(set(args.tasks)) != len(args.tasks) or set(args.tasks) - {t["id"] for t in tasks}):
@@ -212,7 +231,8 @@ def main():
     rows = []
     expected = len(tasks) * sum(1 if m == "M0" else len(manifest["development_seeds"]) for m in modes)
     metadata = {"agent": args.agent, "resolver": args.resolver,
-                "policy": {**POLICY, "llm": args.agent == "a2", "fallback_trigger": "semantic_abstention_with_candidates"},
+                "policy": {**POLICY, "llm": args.agent == "a2", "fallback_trigger": "semantic_abstention_or_wrong_target_with_candidates",
+                           "wrong_target_threshold": args.target_threshold},
                 "started_at_utc": datetime.now(timezone.utc).isoformat(), "held_out_accessed": False,
                 "manifest_sha256_lf": digest(MANIFEST), "w7_source_sha256_lf": source_hashes(),
                 "record_sha256_lf": digest(args.record / "descriptors.json") if record else None,
@@ -242,7 +262,7 @@ def main():
                         for task in tasks:
                             row = replay(browser, base, task, mode, seed, args.agent, args.locator, out,
                                          record["descriptors"] if record else {}, metadata,
-                                         resolver=resolver, client=client)
+                                         resolver=resolver, client=client, target_threshold=args.target_threshold)
                             rows.append(row)
                             print(f"{args.agent} {mode} s{seed} {task['id']}: {row['success']}", flush=True)
                             write_json(out / "summary.json", summarize(rows, expected, client.calls if client else []))
