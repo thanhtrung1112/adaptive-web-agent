@@ -1,0 +1,221 @@
+{
+  "snapshot_id": "C03-before",
+  "task_id": "C03",
+  "state": "before",
+  "captured_at_utc": "2026-11-16T16:00:11.015279+00:00",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "html_sha256": "6295cec200965edb667ba06700e9155e8609c2719c745d8ce220165a333fcb55",
+  "provenance": {},
+  "schema_version": "0.1",
+  "url": "about:blank",
+  "title": "",
+  "elements": [
+    {
+      "element_id": "e1",
+      "parent_id": null,
+      "tag": "html",
+      "text": "SKU-100Số lượng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]"
+      }
+    },
+    {
+      "element_id": "e2",
+      "parent_id": "e1",
+      "tag": "head",
+      "text": "",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]"
+      }
+    },
+    {
+      "element_id": "e3",
+      "parent_id": "e1",
+      "tag": "body",
+      "text": "SKU-100Số lượng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 8,
+        "width": 1264,
+        "height": 696
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]"
+      }
+    },
+    {
+      "element_id": "e4",
+      "parent_id": "e3",
+      "tag": "form",
+      "text": "SKU-100Số lượng",
+      "attributes": {
+        "action": "/order"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 8,
+        "width": 1264,
+        "height": 67.90625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='form'][1]"
+      }
+    },
+    {
+      "element_id": "e5",
+      "parent_id": "e4",
+      "tag": "section",
+      "text": "SKU-100Số lượng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 8,
+        "width": 1264,
+        "height": 67.90625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='form'][1]/*[local-name()='section'][1]"
+      }
+    },
+    {
+      "element_id": "e6",
+      "parent_id": "e5",
+      "tag": "h2",
+      "text": "SKU-100",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 8,
+        "width": 1264,
+        "height": 27
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='form'][1]/*[local-name()='section'][1]/*[local-name()='h2'][1]"
+      }
+    },
+    {
+      "element_id": "e7",
+      "parent_id": "e5",
+      "tag": "label",
+      "text": "Số lượng",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 55.90625,
+        "width": 235.484375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='form'][1]/*[local-name()='section'][1]/*[local-name()='label'][1]"
+      }
+    },
+    {
+      "element_id": "e8",
+      "parent_id": "e7",
+      "tag": "input",
+      "text": "",
+      "attributes": {
+        "type": "number"
+      },
+      "label": "Số lượng",
+      "name_hint": "Số lượng",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": false,
+      "selected": null,
+      "bounding_box": {
+        "x": 66.484375,
+        "y": 54.90625,
+        "width": 177,
+        "height": 21
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='form'][1]/*[local-name()='section'][1]/*[local-name()='label'][1]/*[local-name()='input'][1]"
+      }
+    }
+  ]
+}

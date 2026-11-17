@@ -1,0 +1,122 @@
+{
+  "result": {
+    "agent": "a1",
+    "task_id": "T012",
+    "module": "crm",
+    "mutation": "W5_ID",
+    "mutation_seed": 18,
+    "success": true,
+    "steps_done": 4,
+    "steps_total": 4,
+    "healing_attempts": 2,
+    "fallback_attempts": 0,
+    "llm_requests": 0,
+    "llm_errors": 0,
+    "seconds": 0.5797,
+    "error": "",
+    "check": "ok"
+  },
+  "steps": [
+    {
+      "index": 0,
+      "action": "goto",
+      "success": true,
+      "b0_count": null,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "blank",
+      "url_after": "/customers?mutation=W5_ID&seed=18",
+      "seconds": 0.043
+    },
+    {
+      "index": 1,
+      "action": "fill",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e20",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]",
+        "score": 0.866,
+        "margin": 0.716,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e20",
+        "topk": [
+          {
+            "eid": "e20",
+            "score": 0.866
+          },
+          {
+            "eid": "e21",
+            "score": 0.15
+          },
+          {
+            "eid": "e22",
+            "score": 0.124
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers?mutation=W5_ID&seed=18",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s18-T012-step01/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='input'][1]",
+      "url_after": "/customers?mutation=W5_ID&seed=18",
+      "seconds": 0.151
+    },
+    {
+      "index": 2,
+      "action": "click",
+      "success": true,
+      "b0_count": 0,
+      "semantic": {
+        "status": "healed",
+        "eid": "e21",
+        "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+        "score": 0.84,
+        "margin": 0.634,
+        "reason": "",
+        "via": "score",
+        "top1_eid": "e21",
+        "topk": [
+          {
+            "eid": "e21",
+            "score": 0.84
+          },
+          {
+            "eid": "e22",
+            "score": 0.206
+          },
+          {
+            "eid": "e20",
+            "score": 0.186
+          }
+        ]
+      },
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers?mutation=W5_ID&seed=18",
+      "trigger": "missing",
+      "snapshot": "snapshots/W5_ID-s18-T012-step02/features.json",
+      "executed_locator": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]",
+      "url_after": "/customers?email=pham.ha%40example.com&mutation=W5_ID&seed=18",
+      "seconds": 0.1576
+    },
+    {
+      "index": 3,
+      "action": "click",
+      "success": true,
+      "b0_count": 1,
+      "semantic": null,
+      "fallback": null,
+      "llm_calls": [],
+      "url_before": "/customers?email=pham.ha%40example.com&mutation=W5_ID&seed=18",
+      "executed_locator": "table a[href^='/customers/']",
+      "url_after": "/customers/3",
+      "seconds": 0.1071
+    }
+  ]
+}

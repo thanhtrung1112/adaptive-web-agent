@@ -1,0 +1,1098 @@
+{
+  "snapshot_id": "W5_ID-s17-T009-step02",
+  "task_id": "T009",
+  "state": "W5_ID-s17-T009-step02",
+  "captured_at_utc": "2026-11-16T16:08:19.228387+00:00",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "html_sha256": "5b2e1c5f0b1663ebee941df613fb5d17c5e0a2c1aa3fccedc30a2d21da15a8a5",
+  "provenance": {
+    "agent": "a1",
+    "resolver": null,
+    "policy": {
+      "trigger": "B0_count_not_one",
+      "mode": "features",
+      "min_margin": 0.02,
+      "min_score": 0.0,
+      "use_order": true,
+      "max_heal_attempts_per_step": 1,
+      "wrong_target_check": false,
+      "llm": false,
+      "fallback_trigger": "semantic_abstention_with_candidates"
+    },
+    "started_at_utc": "2026-11-16T16:07:52.688289+00:00",
+    "held_out_accessed": false,
+    "manifest_sha256_lf": "ffd245c123e7993a75f26e2c4e7bb4cbe748a1d3da6681ade8221163f4d8e3d8",
+    "w7_source_sha256_lf": {
+      "llm/__init__.py": "f290f7456ffffeaeac69fb0f7baef8228c599e82d22ec61309924c80dd962907",
+      "llm/client.py": "f106cdf4fa79ce5a976f51c81cad726831a9e4e2ab3c44bb00c0f4c75f763b29",
+      "llm/smoke.py": "0abc07425ca05f2f45b31b77d2fd963b1f5d47dc8330430785d1644ff86092f4",
+      "planner/__init__.py": "159d8b55da34155ba5d1387893bada93a4f64590b732341dd2b431dae3d84736",
+      "planner/cases.json": "71577a9678469b12540ca635b54e892aa8c632cabd48272aa0e3b0992903f9ca",
+      "planner/core.py": "ab8e04f7fb740ef3dd393bef53e8d576655946a889549da0ce46ba1e5a36cfad",
+      "planner/evaluate.py": "37823b8af1bc37ee1cfb74ae2e0cc7cc1b8e6487f663993833df90bab7d630d4",
+      "planner/hybrid.py": "e8005b7460a5204507874df9c54ca3c05aeffc0e5879be52711b759a4c23f3e7",
+      "planner/intent.py": "95420963f94aacd5c90ae62a67b9a86060a87f474435727de587ed60180f2ed2",
+      "planner/run.py": "55ce1026af4263dea891906004392343bfabc842b0665c952feabc222b7baf99",
+      "planner/schema.json": "da35eec146b0ec88759143c7e31c214758c6c0f09077dbc101805a8e32cea655",
+      "planner/verify_m0.py": "c6e95f68ceef693adc9669319effe91f139c1b90a4d67b898d615042bec6c1b3",
+      "planner/workflows.py": "fca17f6f04650b62ebc1403640660f9a9ed673e27d48327c2cdf1a77191c1f61",
+      "requirements-w7.txt": "0ec3012c9bd7cec6e941959f7d7e57ab9094fd77ba340b669c9389a6c608548d",
+      "w7/__init__.py": "7d28e732579c55b20f33952b5b8b3889ff373cc3d30c750a433cecc5da15dc5b",
+      "w7/case_audit.py": "b533f3a8b47e2b0e4cc50336022812be057f922be44a9be1d0b59209dfe025f0",
+      "w7/challenge_eval.py": "e0434d2ead5aaf01c7434a8c16f43230a3e47395bd79b18d10351dae2c635d70",
+      "w7/context.py": "c26172ff45a3048e5f0d07f09c3b4d8fe42af7d264fc8901badee99392b2122d",
+      "w7/contracts.py": "d96a6b639bdfdcb13b4cb59ccc8d1b4bb7da08b85ea6d48114cd2f431261847e",
+      "w7/plan.py": "34139d51a401b10f477d1c8be05da67d59ac67c1607fb25aae7f5dbd0d648e20",
+      "w7/planner_adapter.py": "e674b1d65d828ff503d8d36a7639881c683ff74835aa951815ff8a8c386af508",
+      "w7/report.py": "2553aaacfa2cf781aa0beed6d28c2160248e3386113e7f3a120f4a80aa2ea51d",
+      "w7/run_agent.py": "42ead2c7fcb6dd1fee581e87f2a970aeebb2ee893d4b6eb9e13d2fa48bf018a6"
+    },
+    "record_sha256_lf": "711dab8a7b104277358e7e218b41025b86aea8cf7e7b94ad1fbad6d1408083bd",
+    "task_ids": [
+      "T001",
+      "T002",
+      "T003",
+      "T004",
+      "T005",
+      "T006",
+      "T007",
+      "T008",
+      "T009",
+      "T010",
+      "T011",
+      "T012",
+      "T013",
+      "T014",
+      "T015",
+      "T016",
+      "T017",
+      "T018",
+      "T019",
+      "T020",
+      "T021",
+      "T022",
+      "T023",
+      "T024",
+      "T025",
+      "T026",
+      "T027",
+      "T028",
+      "T029",
+      "T030"
+    ],
+    "mutations": [
+      "M0",
+      "W5_ID",
+      "W5_CLASS",
+      "W5_TEXT",
+      "W5_ORDER",
+      "W5_STRUCTURE",
+      "W5_COMBINED"
+    ],
+    "development_seeds": [
+      17,
+      18
+    ],
+    "locator": "css",
+    "git_commit": "a8d85d0111cbad1b7c521542deee8969a6157f38",
+    "git_status": " M .gitignore\n?? .env.example\n?? Evidence/W07/\n?? docs/w7-binh-handoff.md\n?? docs/weekly/W7.md\n?? llm/\n?? requirements-w7.txt\n?? tests/test_w7.py\n?? tests/test_w7_client.py\n?? w7/\n",
+    "browser_version": "153.0.8010.12"
+  },
+  "schema_version": "0.1",
+  "url": "http://127.0.0.1:57511/tickets/TCK-2002",
+  "title": "Chi tiết ticket | MiniBiz Benchmark",
+  "elements": [
+    {
+      "element_id": "e1",
+      "parent_id": null,
+      "tag": "html",
+      "text": "Chi tiết ticket | MiniBiz Benchmark MiniBiz Ứng dụng benchmark nghiệp vụ Web Khách hàng · Đơn hàng · Hỗ trợ Ticket TCK-2002 Đơn hàng: ORD-1003 Tiêu đề: Yêu cầu hoàn tiềnTrạng thái: in_progress Người xử lý: Nguyễn Mai LanGhi chú: Người xử lý Chọn nhân viên Hoàng Quang HuyNguyễn Mai Lan Gán Ghi chú Đóng ticket Về danh sách ticket",
+      "attributes": {
+        "lang": "vi"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 820.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]"
+      }
+    },
+    {
+      "element_id": "e2",
+      "parent_id": "e1",
+      "tag": "head",
+      "text": "Chi tiết ticket | MiniBiz Benchmark",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]"
+      }
+    },
+    {
+      "element_id": "e3",
+      "parent_id": "e2",
+      "tag": "meta",
+      "text": "",
+      "attributes": {
+        "charset": "UTF-8"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='meta'][1]"
+      }
+    },
+    {
+      "element_id": "e4",
+      "parent_id": "e2",
+      "tag": "meta",
+      "text": "",
+      "attributes": {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1.0"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='meta'][2]"
+      }
+    },
+    {
+      "element_id": "e5",
+      "parent_id": "e2",
+      "tag": "title",
+      "text": "Chi tiết ticket | MiniBiz Benchmark",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='title'][1]"
+      }
+    },
+    {
+      "element_id": "e6",
+      "parent_id": "e2",
+      "tag": "link",
+      "text": "",
+      "attributes": {
+        "rel": "stylesheet",
+        "href": "http://127.0.0.1:57511/static/style.css"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]/*[local-name()='link'][1]"
+      }
+    },
+    {
+      "element_id": "e7",
+      "parent_id": "e1",
+      "tag": "body",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web Khách hàng · Đơn hàng · Hỗ trợ Ticket TCK-2002 Đơn hàng: ORD-1003 Tiêu đề: Yêu cầu hoàn tiềnTrạng thái: in_progress Người xử lý: Nguyễn Mai LanGhi chú: Người xử lý Chọn nhân viên Hoàng Quang HuyNguyễn Mai Lan Gán Ghi chú Đóng ticket Về danh sách ticket",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 820.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]"
+      }
+    },
+    {
+      "element_id": "e8",
+      "parent_id": "e7",
+      "tag": "header",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {
+        "class": "site-header"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 75.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]"
+      }
+    },
+    {
+      "element_id": "e9",
+      "parent_id": "e8",
+      "tag": "div",
+      "text": "MiniBiz Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {
+        "class": "container"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 18,
+        "width": 1080,
+        "height": 38.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]"
+      }
+    },
+    {
+      "element_id": "e10",
+      "parent_id": "e9",
+      "tag": "a",
+      "text": "MiniBiz",
+      "attributes": {
+        "class": "brand",
+        "href": "/"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 18,
+        "width": 84,
+        "height": 38.390625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e11",
+      "parent_id": "e9",
+      "tag": "span",
+      "text": "Ứng dụng benchmark nghiệp vụ Web",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 204,
+        "y": 24.390625,
+        "width": 265.984375,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='header'][1]/*[local-name()='div'][1]/*[local-name()='span'][1]"
+      }
+    },
+    {
+      "element_id": "e12",
+      "parent_id": "e7",
+      "tag": "nav",
+      "text": "Khách hàng · Đơn hàng · Hỗ trợ",
+      "attributes": {
+        "class": "container",
+        "aria-label": "Điều hướng chính"
+      },
+      "label": null,
+      "name_hint": "Điều hướng chính",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 75.390625,
+        "width": 1080,
+        "height": 41.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]"
+      }
+    },
+    {
+      "element_id": "e13",
+      "parent_id": "e12",
+      "tag": "a",
+      "text": "Khách hàng",
+      "attributes": {
+        "href": "/customers"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 95.390625,
+        "width": 85.40625,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e14",
+      "parent_id": "e12",
+      "tag": "a",
+      "text": "Đơn hàng",
+      "attributes": {
+        "href": "/orders"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 199.625,
+        "y": 95.390625,
+        "width": 70.984375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][2]"
+      }
+    },
+    {
+      "element_id": "e15",
+      "parent_id": "e12",
+      "tag": "a",
+      "text": "Hỗ trợ",
+      "attributes": {
+        "href": "/tickets"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 284.828125,
+        "y": 95.390625,
+        "width": 45.171875,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='nav'][1]/*[local-name()='a'][3]"
+      }
+    },
+    {
+      "element_id": "e16",
+      "parent_id": "e7",
+      "tag": "main",
+      "text": "Ticket TCK-2002 Đơn hàng: ORD-1003 Tiêu đề: Yêu cầu hoàn tiềnTrạng thái: in_progress Người xử lý: Nguyễn Mai LanGhi chú: Người xử lý Chọn nhân viên Hoàng Quang HuyNguyễn Mai Lan Gán Ghi chú Đóng ticket Về danh sách ticket",
+      "attributes": {
+        "class": "container"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 116.984375,
+        "width": 1080,
+        "height": 703.40625
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]"
+      }
+    },
+    {
+      "element_id": "e17",
+      "parent_id": "e16",
+      "tag": "h1",
+      "text": "Ticket TCK-2002",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 170.421875,
+        "width": 1080,
+        "height": 51.1875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='h1'][1]"
+      }
+    },
+    {
+      "element_id": "e18",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Đơn hàng: ORD-1003",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 243.046875,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]"
+      }
+    },
+    {
+      "element_id": "e19",
+      "parent_id": "e18",
+      "tag": "a",
+      "text": "ORD-1003",
+      "attributes": {
+        "href": "/orders/ORD-1003"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 179.875,
+        "y": 247.046875,
+        "width": 76.484375,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][1]/*[local-name()='a'][1]"
+      }
+    },
+    {
+      "element_id": "e20",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Tiêu đề: Yêu cầu hoàn tiền",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 284.640625,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][2]"
+      }
+    },
+    {
+      "element_id": "e21",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Trạng thái: in_progress",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 326.234375,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][3]"
+      }
+    },
+    {
+      "element_id": "e22",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Người xử lý: Nguyễn Mai Lan",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 367.828125,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][4]"
+      }
+    },
+    {
+      "element_id": "e23",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Ghi chú:",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 409.421875,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][5]"
+      }
+    },
+    {
+      "element_id": "e24",
+      "parent_id": "e16",
+      "tag": "form",
+      "text": "Người xử lý Chọn nhân viên Hoàng Quang HuyNguyễn Mai Lan Gán",
+      "attributes": {
+        "method": "post",
+        "action": "/tickets/TCK-2002/assign"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 451.015625,
+        "width": 1080,
+        "height": 84.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]"
+      }
+    },
+    {
+      "element_id": "e25",
+      "parent_id": "e24",
+      "tag": "label",
+      "text": "Người xử lý",
+      "attributes": {
+        "for": "m061b4d03b21be477"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 451.015625,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='label'][1]"
+      }
+    },
+    {
+      "element_id": "e26",
+      "parent_id": "e24",
+      "tag": "select",
+      "text": "Chọn nhân viên Hoàng Quang HuyNguyễn Mai Lan",
+      "attributes": {
+        "id": "m061b4d03b21be477",
+        "name": "assignee_id",
+        "required": ""
+      },
+      "label": "Người xử lý",
+      "name_hint": "Người xử lý",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "2",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 490.609375,
+        "width": 171,
+        "height": 37
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]"
+      }
+    },
+    {
+      "element_id": "e27",
+      "parent_id": "e26",
+      "tag": "option",
+      "text": "Chọn nhân viên",
+      "attributes": {
+        "value": ""
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][1]"
+      }
+    },
+    {
+      "element_id": "e28",
+      "parent_id": "e26",
+      "tag": "option",
+      "text": "Hoàng Quang Huy",
+      "attributes": {
+        "value": "1"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "1",
+      "checked": null,
+      "selected": false,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][2]"
+      }
+    },
+    {
+      "element_id": "e29",
+      "parent_id": "e26",
+      "tag": "option",
+      "text": "Nguyễn Mai Lan",
+      "attributes": {
+        "value": "2",
+        "selected": ""
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": "2",
+      "checked": null,
+      "selected": true,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='select'][1]/*[local-name()='option'][3]"
+      }
+    },
+    {
+      "element_id": "e30",
+      "parent_id": "e24",
+      "tag": "button",
+      "text": "Gán",
+      "attributes": {
+        "id": "mc7673f72defff11f",
+        "type": "submit"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 275.453125,
+        "y": 486.609375,
+        "width": 70.25,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][1]/*[local-name()='button'][1]"
+      }
+    },
+    {
+      "element_id": "e31",
+      "parent_id": "e16",
+      "tag": "form",
+      "text": "Ghi chú Đóng ticket",
+      "attributes": {
+        "method": "post",
+        "action": "/tickets/TCK-2002/close"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 535.609375,
+        "width": 1080,
+        "height": 195.1875
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][2]"
+      }
+    },
+    {
+      "element_id": "e32",
+      "parent_id": "e31",
+      "tag": "label",
+      "text": "Ghi chú",
+      "attributes": {
+        "for": "me9e58aca30e87208"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 535.609375,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][2]/*[local-name()='label'][1]"
+      }
+    },
+    {
+      "element_id": "e33",
+      "parent_id": "e31",
+      "tag": "textarea",
+      "text": "",
+      "attributes": {
+        "id": "me9e58aca30e87208",
+        "name": "note",
+        "maxlength": "2000",
+        "required": ""
+      },
+      "label": "Ghi chú",
+      "name_hint": "Ghi chú",
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 569.203125,
+        "width": 480,
+        "height": 100
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][2]/*[local-name()='textarea'][1]"
+      }
+    },
+    {
+      "element_id": "e34",
+      "parent_id": "e31",
+      "tag": "p",
+      "text": "Đóng ticket",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 685.203125,
+        "width": 1080,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][2]/*[local-name()='p'][1]"
+      }
+    },
+    {
+      "element_id": "e35",
+      "parent_id": "e34",
+      "tag": "button",
+      "text": "Đóng ticket",
+      "attributes": {
+        "id": "m5c40309c39813712",
+        "type": "submit"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": "",
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 685.203125,
+        "width": 120.046875,
+        "height": 45.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='form'][2]/*[local-name()='p'][1]/*[local-name()='button'][1]"
+      }
+    },
+    {
+      "element_id": "e36",
+      "parent_id": "e16",
+      "tag": "p",
+      "text": "Về danh sách ticket",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 746.796875,
+        "width": 1080,
+        "height": 25.59375
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][6]"
+      }
+    },
+    {
+      "element_id": "e37",
+      "parent_id": "e36",
+      "tag": "a",
+      "text": "Về danh sách ticket",
+      "attributes": {
+        "href": "/tickets"
+      },
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 100,
+        "y": 750.796875,
+        "width": 139.640625,
+        "height": 17
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]/*[local-name()='p'][6]/*[local-name()='a'][1]"
+      }
+    }
+  ]
+}

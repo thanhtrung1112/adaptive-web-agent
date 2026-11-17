@@ -1,0 +1,3544 @@
+{
+  "manifest_sha256_lf": "ffd245c123e7993a75f26e2c4e7bb4cbe748a1d3da6681ade8221163f4d8e3d8",
+  "locator": "css",
+  "scripts_sha256_lf": {
+    "baseline/scripts.py": "f63e6972721944f2968c481247ab051c15af40f1052a93cb2900626467f25638",
+    "baseline/w4_scripts.py": "161b29d53e1b9b5681fee7d0865902535416ab0924a5f00cff163d709577fb3b"
+  },
+  "task_success": {
+    "T001": true,
+    "T002": true,
+    "T003": true,
+    "T004": true,
+    "T005": true,
+    "T006": true,
+    "T007": true,
+    "T008": true,
+    "T009": true,
+    "T010": true,
+    "T011": true,
+    "T012": true,
+    "T013": true,
+    "T014": true,
+    "T015": true,
+    "T016": true,
+    "T017": true,
+    "T018": true,
+    "T019": true,
+    "T020": true,
+    "T021": true,
+    "T022": true,
+    "T023": true,
+    "T024": true,
+    "T025": true,
+    "T026": true,
+    "T027": true,
+    "T028": true,
+    "T029": true,
+    "T030": true
+  },
+  "descriptors": {
+    "T001:1": {
+      "step": {
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "add-customer",
+        "name": "",
+        "type": "",
+        "text": "Thêm khách hàng",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/new",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 10
+      },
+      "snapshot": "snapshots/M0-s0-T001-step01/features.json"
+    },
+    "T001:2": {
+      "step": {
+        "do": "fill",
+        "value": "Lê Minh Anh",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-name",
+        "name": "name",
+        "type": "text",
+        "text": "",
+        "label": "Tên khách hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[1] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T001-step02/features.json"
+    },
+    "T001:3": {
+      "step": {
+        "do": "fill",
+        "value": "minhanh@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-email",
+        "name": "email",
+        "type": "email",
+        "text": "",
+        "label": "Email",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[2] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T001-step03/features.json"
+    },
+    "T001:4": {
+      "step": {
+        "do": "fill",
+        "value": "0901234567",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "text": "",
+        "label": "Số điện thoại",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[3] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T001-step04/features.json"
+    },
+    "T001:5": {
+      "step": {
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-customer",
+        "name": "",
+        "type": "submit",
+        "text": "Lưu",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T001-step05/features.json"
+    },
+    "T002:1": {
+      "step": {
+        "do": "fill",
+        "value": "tran.hoa@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T002-step01/features.json"
+    },
+    "T002:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T002-step02/features.json"
+    },
+    "T002:3": {
+      "step": {
+        "do": "click",
+        "email": "tran.hoa@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='tran.hoa@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Trần Hoa",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/1",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T002-step03/features.json"
+    },
+    "T003:1": {
+      "step": {
+        "do": "fill",
+        "value": "nguyen.dung@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T003-step01/features.json"
+    },
+    "T003:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T003-step02/features.json"
+    },
+    "T003:3": {
+      "step": {
+        "do": "click",
+        "email": "nguyen.dung@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='nguyen.dung@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Nguyễn Văn Dũng",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/2",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T003-step03/features.json"
+    },
+    "T003:4": {
+      "step": {
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "edit-customer",
+        "name": "",
+        "type": "",
+        "text": "Sửa",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/2/edit",
+        "form": "",
+        "path": "html > body > main > p[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T003-step04/features.json"
+    },
+    "T003:5": {
+      "step": {
+        "do": "fill",
+        "value": "0987654321",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "text": "",
+        "label": "Số điện thoại",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/2/edit",
+        "path": "html > body > main > form > p > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T003-step05/features.json"
+    },
+    "T003:6": {
+      "step": {
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-customer",
+        "name": "",
+        "type": "submit",
+        "text": "Lưu",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/2/edit",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T003-step06/features.json"
+    },
+    "T004:1": {
+      "step": {
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "create-order",
+        "name": "",
+        "type": "",
+        "text": "Tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/new",
+        "form": "",
+        "path": "html > body > main > p[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T004-step01/features.json"
+    },
+    "T004:2": {
+      "step": {
+        "do": "select",
+        "label": "Phạm Thu Hà — pham.ha@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-customer",
+        "name": "customer_id",
+        "type": "",
+        "text": "",
+        "label": "Khách hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chọn khách hàng",
+          "Trần Hoa — tran.hoa@example.com",
+          "Nguyễn Văn Dũng — nguyen.dung@example.com",
+          "Phạm Thu Hà — pham.ha@example.com",
+          "Võ Thanh Tâm — vo.tam@example.com"
+        ],
+        "ord": 0,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T004-step02/features.json"
+    },
+    "T004:3": {
+      "step": {
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-1",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T004-step03/features.json"
+    },
+    "T004:4": {
+      "step": {
+        "do": "fill",
+        "value": "1",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-1",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T004-step04/features.json"
+    },
+    "T004:5": {
+      "step": {
+        "do": "click",
+        "css": "#add-order-line",
+        "xpath": "//button[normalize-space()='Thêm dòng']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "add-order-line",
+        "name": "",
+        "type": "button",
+        "text": "Thêm dòng",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T004-step05/features.json"
+    },
+    "T004:6": {
+      "step": {
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 2,
+        "css": "#order-sku-2",
+        "xpath": "(//select[@name='sku'])[2]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-2",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset[2] > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 2,
+        "ord_n": 3
+      },
+      "snapshot": "snapshots/M0-s0-T004-step06/features.json"
+    },
+    "T004:7": {
+      "step": {
+        "do": "fill",
+        "value": "3",
+        "n": 2,
+        "css": "#order-qty-2",
+        "xpath": "(//input[@name='qty'])[2]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-2",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset[2] > input",
+        "options": [],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T004-step07/features.json"
+    },
+    "T004:8": {
+      "step": {
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-order",
+        "name": "",
+        "type": "submit",
+        "text": "Xác nhận tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T004-step08/features.json"
+    },
+    "T005:1": {
+      "step": {
+        "do": "click",
+        "oid": "ORD-1003",
+        "css": "table a[href='/orders/ORD-1003']",
+        "xpath": "//table//a[normalize-space()='ORD-1003']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "ORD-1003",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/ORD-1003",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[3] > td[1] > a",
+        "options": [],
+        "ord": 8,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T005-step01/features.json"
+    },
+    "T005:2": {
+      "step": {
+        "do": "select",
+        "label": "Đã giao",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-status",
+        "name": "status",
+        "type": "",
+        "text": "",
+        "label": "Trạng thái đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1003/status",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chờ xác nhận",
+          "Đã xác nhận",
+          "Đang giao",
+          "Đã giao",
+          "Đã hủy"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T005-step02/features.json"
+    },
+    "T005:3": {
+      "step": {
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "update-order-status",
+        "name": "",
+        "type": "submit",
+        "text": "Cập nhật",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1003/status",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T005-step03/features.json"
+    },
+    "T006:1": {
+      "step": {
+        "do": "fill",
+        "value": "2026-09-01",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "orders-from",
+        "name": "from",
+        "type": "date",
+        "text": "",
+        "label": "Từ ngày (UTC)",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > input[1]",
+        "options": [],
+        "ord": 0,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T006-step01/features.json"
+    },
+    "T006:2": {
+      "step": {
+        "do": "fill",
+        "value": "2026-09-15",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "orders-to",
+        "name": "to",
+        "type": "date",
+        "text": "",
+        "label": "Đến ngày (UTC)",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > input[2]",
+        "options": [],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T006-step02/features.json"
+    },
+    "T006:3": {
+      "step": {
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "filter-orders",
+        "name": "",
+        "type": "submit",
+        "text": "Lọc",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T006-step03/features.json"
+    },
+    "T006:4": {
+      "step": {
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "export-orders",
+        "name": "",
+        "type": "",
+        "text": "Xuất CSV",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/export.csv?from=2026-09-01&to=2026-09-15",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 10
+      },
+      "snapshot": "snapshots/M0-s0-T006-step04/features.json"
+    },
+    "T007:1": {
+      "step": {
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "create-ticket",
+        "name": "",
+        "type": "",
+        "text": "Tạo ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/new",
+        "form": "",
+        "path": "html > body > main > p > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T007-step01/features.json"
+    },
+    "T007:2": {
+      "step": {
+        "do": "select",
+        "label": "ORD-1002 — nguyen.dung@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-order",
+        "name": "order_id",
+        "type": "",
+        "text": "",
+        "label": "Đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chọn đơn hàng",
+          "ORD-1001 — tran.hoa@example.com",
+          "ORD-1002 — nguyen.dung@example.com",
+          "ORD-1003 — tran.hoa@example.com",
+          "ORD-1004 — nguyen.dung@example.com",
+          "ORD-1005 — tran.hoa@example.com"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T007-step02/features.json"
+    },
+    "T007:3": {
+      "step": {
+        "do": "fill",
+        "value": "Giao hàng chậm",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "ticket-subject",
+        "name": "subject",
+        "type": "",
+        "text": "",
+        "label": "Tiêu đề",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T007-step03/features.json"
+    },
+    "T007:4": {
+      "step": {
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gửi",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T007-step04/features.json"
+    },
+    "T008:1": {
+      "step": {
+        "do": "click",
+        "tid": "TCK-2001",
+        "css": "table a[href='/tickets/TCK-2001']",
+        "xpath": "//table//a[normalize-space()='TCK-2001']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "TCK-2001",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/TCK-2001",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[1] > td[1] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T008-step01/features.json"
+    },
+    "T008:2": {
+      "step": {
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-assignee",
+        "name": "assignee_id",
+        "type": "",
+        "text": "",
+        "label": "Người xử lý",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2001/assign",
+        "path": "html > body > main > form[1] > select",
+        "options": [
+          "Chọn nhân viên",
+          "Hoàng Quang Huy",
+          "Nguyễn Mai Lan"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T008-step02/features.json"
+    },
+    "T008:3": {
+      "step": {
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "assign-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gán",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2001/assign",
+        "path": "html > body > main > form[1] > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T008-step03/features.json"
+    },
+    "T009:1": {
+      "step": {
+        "do": "click",
+        "tid": "TCK-2002",
+        "css": "table a[href='/tickets/TCK-2002']",
+        "xpath": "//table//a[normalize-space()='TCK-2002']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "TCK-2002",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/TCK-2002",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[2] > td[1] > a",
+        "options": [],
+        "ord": 7,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T009-step01/features.json"
+    },
+    "T009:2": {
+      "step": {
+        "do": "fill",
+        "value": "Đã hoàn tiền cho khách",
+        "css": "#ticket-note",
+        "xpath": "//label[normalize-space()='Ghi chú']/following-sibling::textarea[1]"
+      },
+      "descriptor": {
+        "tag": "textarea",
+        "id": "ticket-note",
+        "name": "note",
+        "type": "",
+        "text": "",
+        "label": "Ghi chú",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2002/close",
+        "path": "html > body > main > form[2] > textarea",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T009-step02/features.json"
+    },
+    "T009:3": {
+      "step": {
+        "do": "click",
+        "css": "#close-ticket",
+        "xpath": "//button[normalize-space()='Đóng ticket']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "close-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Đóng ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2002/close",
+        "path": "html > body > main > form[2] > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T009-step03/features.json"
+    },
+    "T010:1": {
+      "step": {
+        "do": "fill",
+        "value": "vo.tam@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T010-step01/features.json"
+    },
+    "T010:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T010-step02/features.json"
+    },
+    "T010:3": {
+      "step": {
+        "do": "click",
+        "email": "vo.tam@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='vo.tam@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Võ Thanh Tâm",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/4",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T010-step03/features.json"
+    },
+    "T010:4": {
+      "step": {
+        "do": "click",
+        "css": "#customer-create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "customer-create-order",
+        "name": "",
+        "type": "",
+        "text": "Tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/new?customer_id=4",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T010-step04/features.json"
+    },
+    "T010:5": {
+      "step": {
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-1",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T010-step05/features.json"
+    },
+    "T010:6": {
+      "step": {
+        "do": "fill",
+        "value": "2",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-1",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T010-step06/features.json"
+    },
+    "T010:7": {
+      "step": {
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-order",
+        "name": "",
+        "type": "submit",
+        "text": "Xác nhận tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T010-step07/features.json"
+    },
+    "T010:8": {
+      "step": {
+        "do": "click",
+        "css": "#order-create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "order-create-ticket",
+        "name": "",
+        "type": "",
+        "text": "Tạo ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/new?order_id=ORD-1006",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 6
+      },
+      "snapshot": "snapshots/M0-s0-T010-step08/features.json"
+    },
+    "T010:9": {
+      "step": {
+        "do": "fill",
+        "value": "Hỏi thời gian giao",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "ticket-subject",
+        "name": "subject",
+        "type": "",
+        "text": "",
+        "label": "Tiêu đề",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T010-step09/features.json"
+    },
+    "T010:10": {
+      "step": {
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gửi",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T010-step10/features.json"
+    },
+    "T011:1": {
+      "step": {
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "add-customer",
+        "name": "",
+        "type": "",
+        "text": "Thêm khách hàng",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/new",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 10
+      },
+      "snapshot": "snapshots/M0-s0-T011-step01/features.json"
+    },
+    "T011:2": {
+      "step": {
+        "do": "fill",
+        "value": "Công ty Sao Mai",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-name",
+        "name": "name",
+        "type": "text",
+        "text": "",
+        "label": "Tên khách hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[1] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T011-step02/features.json"
+    },
+    "T011:3": {
+      "step": {
+        "do": "fill",
+        "value": "saomai@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-email",
+        "name": "email",
+        "type": "email",
+        "text": "",
+        "label": "Email",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[2] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T011-step03/features.json"
+    },
+    "T011:4": {
+      "step": {
+        "do": "fill",
+        "value": "0901112233",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "text": "",
+        "label": "Số điện thoại",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[3] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T011-step04/features.json"
+    },
+    "T011:5": {
+      "step": {
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-customer",
+        "name": "",
+        "type": "submit",
+        "text": "Lưu",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T011-step05/features.json"
+    },
+    "T012:1": {
+      "step": {
+        "do": "fill",
+        "value": "pham.ha@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T012-step01/features.json"
+    },
+    "T012:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T012-step02/features.json"
+    },
+    "T012:3": {
+      "step": {
+        "do": "click",
+        "email": "pham.ha@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='pham.ha@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Phạm Thu Hà",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/3",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T012-step03/features.json"
+    },
+    "T013:1": {
+      "step": {
+        "do": "fill",
+        "value": "tran.hoa@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T013-step01/features.json"
+    },
+    "T013:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T013-step02/features.json"
+    },
+    "T013:3": {
+      "step": {
+        "do": "click",
+        "email": "tran.hoa@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='tran.hoa@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Trần Hoa",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/1",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T013-step03/features.json"
+    },
+    "T013:4": {
+      "step": {
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "edit-customer",
+        "name": "",
+        "type": "",
+        "text": "Sửa",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/1/edit",
+        "form": "",
+        "path": "html > body > main > p[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T013-step04/features.json"
+    },
+    "T013:5": {
+      "step": {
+        "do": "fill",
+        "value": "0912345678",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "text": "",
+        "label": "Số điện thoại",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/1/edit",
+        "path": "html > body > main > form > p > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T013-step05/features.json"
+    },
+    "T013:6": {
+      "step": {
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-customer",
+        "name": "",
+        "type": "submit",
+        "text": "Lưu",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/1/edit",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T013-step06/features.json"
+    },
+    "T014:1": {
+      "step": {
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "create-order",
+        "name": "",
+        "type": "",
+        "text": "Tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/new",
+        "form": "",
+        "path": "html > body > main > p[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T014-step01/features.json"
+    },
+    "T014:2": {
+      "step": {
+        "do": "select",
+        "label": "Phạm Thu Hà — pham.ha@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-customer",
+        "name": "customer_id",
+        "type": "",
+        "text": "",
+        "label": "Khách hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chọn khách hàng",
+          "Trần Hoa — tran.hoa@example.com",
+          "Nguyễn Văn Dũng — nguyen.dung@example.com",
+          "Phạm Thu Hà — pham.ha@example.com",
+          "Võ Thanh Tâm — vo.tam@example.com"
+        ],
+        "ord": 0,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T014-step02/features.json"
+    },
+    "T014:3": {
+      "step": {
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-1",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T014-step03/features.json"
+    },
+    "T014:4": {
+      "step": {
+        "do": "fill",
+        "value": "4",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-1",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T014-step04/features.json"
+    },
+    "T014:5": {
+      "step": {
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-order",
+        "name": "",
+        "type": "submit",
+        "text": "Xác nhận tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T014-step05/features.json"
+    },
+    "T015:1": {
+      "step": {
+        "do": "click",
+        "oid": "ORD-1002",
+        "css": "table a[href='/orders/ORD-1002']",
+        "xpath": "//table//a[normalize-space()='ORD-1002']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "ORD-1002",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/ORD-1002",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[2] > td[1] > a",
+        "options": [],
+        "ord": 7,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T015-step01/features.json"
+    },
+    "T015:2": {
+      "step": {
+        "do": "select",
+        "label": "Đã xác nhận",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-status",
+        "name": "status",
+        "type": "",
+        "text": "",
+        "label": "Trạng thái đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1002/status",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chờ xác nhận",
+          "Đã xác nhận",
+          "Đang giao",
+          "Đã giao",
+          "Đã hủy"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T015-step02/features.json"
+    },
+    "T015:3": {
+      "step": {
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "update-order-status",
+        "name": "",
+        "type": "submit",
+        "text": "Cập nhật",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1002/status",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T015-step03/features.json"
+    },
+    "T016:1": {
+      "step": {
+        "do": "click",
+        "oid": "ORD-1004",
+        "css": "table a[href='/orders/ORD-1004']",
+        "xpath": "//table//a[normalize-space()='ORD-1004']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "ORD-1004",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/ORD-1004",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[4] > td[1] > a",
+        "options": [],
+        "ord": 9,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T016-step01/features.json"
+    },
+    "T016:2": {
+      "step": {
+        "do": "select",
+        "label": "Đang giao",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-status",
+        "name": "status",
+        "type": "",
+        "text": "",
+        "label": "Trạng thái đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1004/status",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chờ xác nhận",
+          "Đã xác nhận",
+          "Đang giao",
+          "Đã giao",
+          "Đã hủy"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T016-step02/features.json"
+    },
+    "T016:3": {
+      "step": {
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "update-order-status",
+        "name": "",
+        "type": "submit",
+        "text": "Cập nhật",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1004/status",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T016-step03/features.json"
+    },
+    "T017:1": {
+      "step": {
+        "do": "click",
+        "oid": "ORD-1005",
+        "css": "table a[href='/orders/ORD-1005']",
+        "xpath": "//table//a[normalize-space()='ORD-1005']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "ORD-1005",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/ORD-1005",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[5] > td[1] > a",
+        "options": [],
+        "ord": 10,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T017-step01/features.json"
+    },
+    "T017:2": {
+      "step": {
+        "do": "select",
+        "label": "Đã hủy",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-status",
+        "name": "status",
+        "type": "",
+        "text": "",
+        "label": "Trạng thái đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1005/status",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chờ xác nhận",
+          "Đã xác nhận",
+          "Đang giao",
+          "Đã giao",
+          "Đã hủy"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T017-step02/features.json"
+    },
+    "T017:3": {
+      "step": {
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "update-order-status",
+        "name": "",
+        "type": "submit",
+        "text": "Cập nhật",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1005/status",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T017-step03/features.json"
+    },
+    "T018:1": {
+      "step": {
+        "do": "fill",
+        "value": "2026-09-16",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "orders-from",
+        "name": "from",
+        "type": "date",
+        "text": "",
+        "label": "Từ ngày (UTC)",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > input[1]",
+        "options": [],
+        "ord": 0,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T018-step01/features.json"
+    },
+    "T018:2": {
+      "step": {
+        "do": "fill",
+        "value": "2026-09-16",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "orders-to",
+        "name": "to",
+        "type": "date",
+        "text": "",
+        "label": "Đến ngày (UTC)",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > input[2]",
+        "options": [],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T018-step02/features.json"
+    },
+    "T018:3": {
+      "step": {
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "filter-orders",
+        "name": "",
+        "type": "submit",
+        "text": "Lọc",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T018-step03/features.json"
+    },
+    "T018:4": {
+      "step": {
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "export-orders",
+        "name": "",
+        "type": "",
+        "text": "Xuất CSV",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/export.csv?from=2026-09-16&to=2026-09-16",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 8
+      },
+      "snapshot": "snapshots/M0-s0-T018-step04/features.json"
+    },
+    "T019:1": {
+      "step": {
+        "do": "click",
+        "tid": "TCK-2002",
+        "css": "table a[href='/tickets/TCK-2002']",
+        "xpath": "//table//a[normalize-space()='TCK-2002']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "TCK-2002",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/TCK-2002",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[2] > td[1] > a",
+        "options": [],
+        "ord": 7,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T019-step01/features.json"
+    },
+    "T019:2": {
+      "step": {
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-assignee",
+        "name": "assignee_id",
+        "type": "",
+        "text": "",
+        "label": "Người xử lý",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2002/assign",
+        "path": "html > body > main > form[1] > select",
+        "options": [
+          "Chọn nhân viên",
+          "Hoàng Quang Huy",
+          "Nguyễn Mai Lan"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T019-step02/features.json"
+    },
+    "T019:3": {
+      "step": {
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "assign-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gán",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2002/assign",
+        "path": "html > body > main > form[1] > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T019-step03/features.json"
+    },
+    "T020:1": {
+      "step": {
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "create-ticket",
+        "name": "",
+        "type": "",
+        "text": "Tạo ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/new",
+        "form": "",
+        "path": "html > body > main > p > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T020-step01/features.json"
+    },
+    "T020:2": {
+      "step": {
+        "do": "select",
+        "label": "ORD-1005 — tran.hoa@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-order",
+        "name": "order_id",
+        "type": "",
+        "text": "",
+        "label": "Đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chọn đơn hàng",
+          "ORD-1001 — tran.hoa@example.com",
+          "ORD-1002 — nguyen.dung@example.com",
+          "ORD-1003 — tran.hoa@example.com",
+          "ORD-1004 — nguyen.dung@example.com",
+          "ORD-1005 — tran.hoa@example.com"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T020-step02/features.json"
+    },
+    "T020:3": {
+      "step": {
+        "do": "fill",
+        "value": "Cần xác nhận địa chỉ",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "ticket-subject",
+        "name": "subject",
+        "type": "",
+        "text": "",
+        "label": "Tiêu đề",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T020-step03/features.json"
+    },
+    "T020:4": {
+      "step": {
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gửi",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T020-step04/features.json"
+    },
+    "T020:5": {
+      "step": {
+        "do": "select",
+        "label": "Hoàng Quang Huy",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-assignee",
+        "name": "assignee_id",
+        "type": "",
+        "text": "",
+        "label": "Người xử lý",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2003/assign",
+        "path": "html > body > main > form[1] > select",
+        "options": [
+          "Chọn nhân viên",
+          "Hoàng Quang Huy",
+          "Nguyễn Mai Lan"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T020-step05/features.json"
+    },
+    "T020:6": {
+      "step": {
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "assign-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gán",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2003/assign",
+        "path": "html > body > main > form[1] > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T020-step06/features.json"
+    },
+    "T021:1": {
+      "step": {
+        "do": "click",
+        "css": "#add-customer",
+        "xpath": "//a[normalize-space()='Thêm khách hàng']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "add-customer",
+        "name": "",
+        "type": "",
+        "text": "Thêm khách hàng",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/new",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 10
+      },
+      "snapshot": "snapshots/M0-s0-T021-step01/features.json"
+    },
+    "T021:2": {
+      "step": {
+        "do": "fill",
+        "value": "Công ty An & Bình",
+        "css": "#customer-name",
+        "xpath": "//label[normalize-space()='Tên khách hàng']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-name",
+        "name": "name",
+        "type": "text",
+        "text": "",
+        "label": "Tên khách hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[1] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T021-step02/features.json"
+    },
+    "T021:3": {
+      "step": {
+        "do": "fill",
+        "value": "anbinh@example.com",
+        "css": "#customer-email",
+        "xpath": "//label[normalize-space()='Email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-email",
+        "name": "email",
+        "type": "email",
+        "text": "",
+        "label": "Email",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[2] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T021-step03/features.json"
+    },
+    "T021:4": {
+      "step": {
+        "do": "fill",
+        "value": "0902223344",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "text": "",
+        "label": "Số điện thoại",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > p[3] > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T021-step04/features.json"
+    },
+    "T021:5": {
+      "step": {
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-customer",
+        "name": "",
+        "type": "submit",
+        "text": "Lưu",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T021-step05/features.json"
+    },
+    "T022:1": {
+      "step": {
+        "do": "fill",
+        "value": "nguyen.dung@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T022-step01/features.json"
+    },
+    "T022:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T022-step02/features.json"
+    },
+    "T022:3": {
+      "step": {
+        "do": "click",
+        "email": "nguyen.dung@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='nguyen.dung@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Nguyễn Văn Dũng",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/2",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T022-step03/features.json"
+    },
+    "T023:1": {
+      "step": {
+        "do": "fill",
+        "value": "vo.tam@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T023-step01/features.json"
+    },
+    "T023:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T023-step02/features.json"
+    },
+    "T023:3": {
+      "step": {
+        "do": "click",
+        "email": "vo.tam@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='vo.tam@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Võ Thanh Tâm",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/4",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T023-step03/features.json"
+    },
+    "T023:4": {
+      "step": {
+        "do": "click",
+        "css": "#edit-customer",
+        "xpath": "//a[normalize-space()='Sửa']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "edit-customer",
+        "name": "",
+        "type": "",
+        "text": "Sửa",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/4/edit",
+        "form": "",
+        "path": "html > body > main > p[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T023-step04/features.json"
+    },
+    "T023:5": {
+      "step": {
+        "do": "fill",
+        "value": "0977772233",
+        "css": "#customer-phone",
+        "xpath": "//label[normalize-space()='Số điện thoại']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "text": "",
+        "label": "Số điện thoại",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/4/edit",
+        "path": "html > body > main > form > p > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T023-step05/features.json"
+    },
+    "T023:6": {
+      "step": {
+        "do": "click",
+        "css": "#save-customer",
+        "xpath": "//button[normalize-space()='Lưu']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-customer",
+        "name": "",
+        "type": "submit",
+        "text": "Lưu",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers/4/edit",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T023-step06/features.json"
+    },
+    "T024:1": {
+      "step": {
+        "do": "click",
+        "css": "#create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "create-order",
+        "name": "",
+        "type": "",
+        "text": "Tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/new",
+        "form": "",
+        "path": "html > body > main > p[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T024-step01/features.json"
+    },
+    "T024:2": {
+      "step": {
+        "do": "select",
+        "label": "Võ Thanh Tâm — vo.tam@example.com",
+        "css": "#order-customer",
+        "xpath": "//label[normalize-space()='Khách hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-customer",
+        "name": "customer_id",
+        "type": "",
+        "text": "",
+        "label": "Khách hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chọn khách hàng",
+          "Trần Hoa — tran.hoa@example.com",
+          "Nguyễn Văn Dũng — nguyen.dung@example.com",
+          "Phạm Thu Hà — pham.ha@example.com",
+          "Võ Thanh Tâm — vo.tam@example.com"
+        ],
+        "ord": 0,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T024-step02/features.json"
+    },
+    "T024:3": {
+      "step": {
+        "do": "select",
+        "label": "SKU-100 — Bàn phím",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-1",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T024-step03/features.json"
+    },
+    "T024:4": {
+      "step": {
+        "do": "fill",
+        "value": "3",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-1",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T024-step04/features.json"
+    },
+    "T024:5": {
+      "step": {
+        "do": "click",
+        "css": "#add-order-line",
+        "xpath": "//button[normalize-space()='Thêm dòng']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "add-order-line",
+        "name": "",
+        "type": "button",
+        "text": "Thêm dòng",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T024-step05/features.json"
+    },
+    "T024:6": {
+      "step": {
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 2,
+        "css": "#order-sku-2",
+        "xpath": "(//select[@name='sku'])[2]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-2",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset[2] > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 2,
+        "ord_n": 3
+      },
+      "snapshot": "snapshots/M0-s0-T024-step06/features.json"
+    },
+    "T024:7": {
+      "step": {
+        "do": "fill",
+        "value": "2",
+        "n": 2,
+        "css": "#order-qty-2",
+        "xpath": "(//input[@name='qty'])[2]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-2",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset[2] > input",
+        "options": [],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T024-step07/features.json"
+    },
+    "T024:8": {
+      "step": {
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-order",
+        "name": "",
+        "type": "submit",
+        "text": "Xác nhận tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T024-step08/features.json"
+    },
+    "T025:1": {
+      "step": {
+        "do": "click",
+        "oid": "ORD-1001",
+        "css": "table a[href='/orders/ORD-1001']",
+        "xpath": "//table//a[normalize-space()='ORD-1001']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "ORD-1001",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/ORD-1001",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[1] > td[1] > a",
+        "options": [],
+        "ord": 6,
+        "ord_n": 12
+      },
+      "snapshot": "snapshots/M0-s0-T025-step01/features.json"
+    },
+    "T025:2": {
+      "step": {
+        "do": "select",
+        "label": "Đã hủy",
+        "css": "#order-status",
+        "xpath": "//label[normalize-space()='Trạng thái đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-status",
+        "name": "status",
+        "type": "",
+        "text": "",
+        "label": "Trạng thái đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1001/status",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chờ xác nhận",
+          "Đã xác nhận",
+          "Đang giao",
+          "Đã giao",
+          "Đã hủy"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T025-step02/features.json"
+    },
+    "T025:3": {
+      "step": {
+        "do": "click",
+        "css": "#update-order-status",
+        "xpath": "//button[normalize-space()='Cập nhật']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "update-order-status",
+        "name": "",
+        "type": "submit",
+        "text": "Cập nhật",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/ORD-1001/status",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T025-step03/features.json"
+    },
+    "T026:1": {
+      "step": {
+        "do": "fill",
+        "value": "2026-08-30",
+        "css": "#orders-from",
+        "xpath": "//label[normalize-space()='Từ ngày (UTC)']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "orders-from",
+        "name": "from",
+        "type": "date",
+        "text": "",
+        "label": "Từ ngày (UTC)",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > input[1]",
+        "options": [],
+        "ord": 0,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T026-step01/features.json"
+    },
+    "T026:2": {
+      "step": {
+        "do": "fill",
+        "value": "2026-08-30",
+        "css": "#orders-to",
+        "xpath": "//label[normalize-space()='Đến ngày (UTC)']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "orders-to",
+        "name": "to",
+        "type": "date",
+        "text": "",
+        "label": "Đến ngày (UTC)",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > input[2]",
+        "options": [],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T026-step02/features.json"
+    },
+    "T026:3": {
+      "step": {
+        "do": "click",
+        "css": "#filter-orders",
+        "xpath": "//button[normalize-space()='Lọc']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "filter-orders",
+        "name": "",
+        "type": "submit",
+        "text": "Lọc",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T026-step03/features.json"
+    },
+    "T026:4": {
+      "step": {
+        "do": "download",
+        "css": "#export-orders",
+        "xpath": "//a[normalize-space()='Xuất CSV']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "export-orders",
+        "name": "",
+        "type": "",
+        "text": "Xuất CSV",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/export.csv?from=2026-08-30&to=2026-08-30",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T026-step04/features.json"
+    },
+    "T027:1": {
+      "step": {
+        "do": "click",
+        "tid": "TCK-2001",
+        "css": "table a[href='/tickets/TCK-2001']",
+        "xpath": "//table//a[normalize-space()='TCK-2001']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "TCK-2001",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/TCK-2001",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[1] > td[1] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T027-step01/features.json"
+    },
+    "T027:2": {
+      "step": {
+        "do": "fill",
+        "value": "Đã xác nhận thông tin đơn",
+        "css": "#ticket-note",
+        "xpath": "//label[normalize-space()='Ghi chú']/following-sibling::textarea[1]"
+      },
+      "descriptor": {
+        "tag": "textarea",
+        "id": "ticket-note",
+        "name": "note",
+        "type": "",
+        "text": "",
+        "label": "Ghi chú",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2001/close",
+        "path": "html > body > main > form[2] > textarea",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T027-step02/features.json"
+    },
+    "T027:3": {
+      "step": {
+        "do": "click",
+        "css": "#close-ticket",
+        "xpath": "//button[normalize-space()='Đóng ticket']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "close-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Đóng ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2001/close",
+        "path": "html > body > main > form[2] > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T027-step03/features.json"
+    },
+    "T028:1": {
+      "step": {
+        "do": "click",
+        "tid": "TCK-2001",
+        "css": "table a[href='/tickets/TCK-2001']",
+        "xpath": "//table//a[normalize-space()='TCK-2001']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "TCK-2001",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/TCK-2001",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr[1] > td[1] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T028-step01/features.json"
+    },
+    "T028:2": {
+      "step": {
+        "do": "select",
+        "label": "Nguyễn Mai Lan",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-assignee",
+        "name": "assignee_id",
+        "type": "",
+        "text": "",
+        "label": "Người xử lý",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2001/assign",
+        "path": "html > body > main > form[1] > select",
+        "options": [
+          "Chọn nhân viên",
+          "Hoàng Quang Huy",
+          "Nguyễn Mai Lan"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T028-step02/features.json"
+    },
+    "T028:3": {
+      "step": {
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "assign-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gán",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2001/assign",
+        "path": "html > body > main > form[1] > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T028-step03/features.json"
+    },
+    "T029:1": {
+      "step": {
+        "do": "click",
+        "css": "#create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "create-ticket",
+        "name": "",
+        "type": "",
+        "text": "Tạo ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/new",
+        "form": "",
+        "path": "html > body > main > p > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 9
+      },
+      "snapshot": "snapshots/M0-s0-T029-step01/features.json"
+    },
+    "T029:2": {
+      "step": {
+        "do": "select",
+        "label": "ORD-1004 — nguyen.dung@example.com",
+        "css": "#ticket-order",
+        "xpath": "//label[normalize-space()='Đơn hàng']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-order",
+        "name": "order_id",
+        "type": "",
+        "text": "",
+        "label": "Đơn hàng",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > select",
+        "options": [
+          "Chọn đơn hàng",
+          "ORD-1001 — tran.hoa@example.com",
+          "ORD-1002 — nguyen.dung@example.com",
+          "ORD-1003 — tran.hoa@example.com",
+          "ORD-1004 — nguyen.dung@example.com",
+          "ORD-1005 — tran.hoa@example.com"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T029-step02/features.json"
+    },
+    "T029:3": {
+      "step": {
+        "do": "fill",
+        "value": "Cần kiểm tra đóng gói",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "ticket-subject",
+        "name": "subject",
+        "type": "",
+        "text": "",
+        "label": "Tiêu đề",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T029-step03/features.json"
+    },
+    "T029:4": {
+      "step": {
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gửi",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T029-step04/features.json"
+    },
+    "T029:5": {
+      "step": {
+        "do": "fill",
+        "value": "Đã kiểm tra đóng gói",
+        "css": "#ticket-note",
+        "xpath": "//label[normalize-space()='Ghi chú']/following-sibling::textarea[1]"
+      },
+      "descriptor": {
+        "tag": "textarea",
+        "id": "ticket-note",
+        "name": "note",
+        "type": "",
+        "text": "",
+        "label": "Ghi chú",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2003/close",
+        "path": "html > body > main > form[2] > textarea",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T029-step05/features.json"
+    },
+    "T029:6": {
+      "step": {
+        "do": "click",
+        "css": "#close-ticket",
+        "xpath": "//button[normalize-space()='Đóng ticket']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "close-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Đóng ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2003/close",
+        "path": "html > body > main > form[2] > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T029-step06/features.json"
+    },
+    "T030:1": {
+      "step": {
+        "do": "fill",
+        "value": "pham.ha@example.com",
+        "css": "#customer-search",
+        "xpath": "//label[normalize-space()='Tìm khách hàng theo email']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "text": "",
+        "label": "Tìm khách hàng theo email",
+        "placeholder": "Nhập email đầy đủ",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step01/features.json"
+    },
+    "T030:2": {
+      "step": {
+        "do": "click",
+        "css": "#search-customers",
+        "xpath": "//button[normalize-space()='Tìm']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "search-customers",
+        "name": "",
+        "type": "submit",
+        "text": "Tìm",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/customers",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step02/features.json"
+    },
+    "T030:3": {
+      "step": {
+        "do": "click",
+        "email": "pham.ha@example.com",
+        "css": "table a[href^='/customers/']",
+        "xpath": "//table//tr[td[normalize-space()='pham.ha@example.com']]//a"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "",
+        "name": "",
+        "type": "",
+        "text": "Phạm Thu Hà",
+        "label": "",
+        "placeholder": "",
+        "href": "/customers/3",
+        "form": "",
+        "path": "html > body > main > table > tbody > tr > td[2] > a",
+        "options": [],
+        "ord": 5,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T030-step03/features.json"
+    },
+    "T030:4": {
+      "step": {
+        "do": "click",
+        "css": "#customer-create-order",
+        "xpath": "//a[normalize-space()='Tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "customer-create-order",
+        "name": "",
+        "type": "",
+        "text": "Tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "/orders/new?customer_id=3",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 7
+      },
+      "snapshot": "snapshots/M0-s0-T030-step04/features.json"
+    },
+    "T030:5": {
+      "step": {
+        "do": "select",
+        "label": "SKU-205 — Chuột máy tính",
+        "n": 1,
+        "css": "#order-sku-1",
+        "xpath": "(//select[@name='sku'])[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "order-sku-1",
+        "name": "sku",
+        "type": "",
+        "text": "",
+        "label": "Sản phẩm",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > select",
+        "options": [
+          "Chọn sản phẩm",
+          "SKU-100 — Bàn phím",
+          "SKU-205 — Chuột máy tính"
+        ],
+        "ord": 1,
+        "ord_n": 2
+      },
+      "snapshot": "snapshots/M0-s0-T030-step05/features.json"
+    },
+    "T030:6": {
+      "step": {
+        "do": "fill",
+        "value": "5",
+        "n": 1,
+        "css": "#order-qty-1",
+        "xpath": "(//input[@name='qty'])[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "order-qty-1",
+        "name": "qty",
+        "type": "number",
+        "text": "",
+        "label": "Số lượng",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > div > fieldset > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step06/features.json"
+    },
+    "T030:7": {
+      "step": {
+        "do": "click",
+        "css": "#save-order",
+        "xpath": "//button[normalize-space()='Xác nhận tạo đơn']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-order",
+        "name": "",
+        "type": "submit",
+        "text": "Xác nhận tạo đơn",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/orders/new",
+        "path": "html > body > main > form > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step07/features.json"
+    },
+    "T030:8": {
+      "step": {
+        "do": "click",
+        "css": "#order-create-ticket",
+        "xpath": "//a[normalize-space()='Tạo ticket']"
+      },
+      "descriptor": {
+        "tag": "a",
+        "id": "order-create-ticket",
+        "name": "",
+        "type": "",
+        "text": "Tạo ticket",
+        "label": "",
+        "placeholder": "",
+        "href": "/tickets/new?order_id=ORD-1006",
+        "form": "",
+        "path": "html > body > main > p[1] > a",
+        "options": [],
+        "ord": 4,
+        "ord_n": 6
+      },
+      "snapshot": "snapshots/M0-s0-T030-step08/features.json"
+    },
+    "T030:9": {
+      "step": {
+        "do": "fill",
+        "value": "Hỏi lịch giao",
+        "css": "#ticket-subject",
+        "xpath": "//label[normalize-space()='Tiêu đề']/following-sibling::input[1]"
+      },
+      "descriptor": {
+        "tag": "input",
+        "id": "ticket-subject",
+        "name": "subject",
+        "type": "",
+        "text": "",
+        "label": "Tiêu đề",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > input",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step09/features.json"
+    },
+    "T030:10": {
+      "step": {
+        "do": "click",
+        "css": "#save-ticket",
+        "xpath": "//button[normalize-space()='Gửi']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "save-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gửi",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/new",
+        "path": "html > body > main > form > p > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step10/features.json"
+    },
+    "T030:11": {
+      "step": {
+        "do": "select",
+        "label": "Nguyễn Mai Lan",
+        "css": "#ticket-assignee",
+        "xpath": "//label[normalize-space()='Người xử lý']/following-sibling::select[1]"
+      },
+      "descriptor": {
+        "tag": "select",
+        "id": "ticket-assignee",
+        "name": "assignee_id",
+        "type": "",
+        "text": "",
+        "label": "Người xử lý",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2003/assign",
+        "path": "html > body > main > form[1] > select",
+        "options": [
+          "Chọn nhân viên",
+          "Hoàng Quang Huy",
+          "Nguyễn Mai Lan"
+        ],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step11/features.json"
+    },
+    "T030:12": {
+      "step": {
+        "do": "click",
+        "css": "#assign-ticket",
+        "xpath": "//button[normalize-space()='Gán']"
+      },
+      "descriptor": {
+        "tag": "button",
+        "id": "assign-ticket",
+        "name": "",
+        "type": "submit",
+        "text": "Gán",
+        "label": "",
+        "placeholder": "",
+        "href": "",
+        "form": "/tickets/TCK-2003/assign",
+        "path": "html > body > main > form[1] > button",
+        "options": [],
+        "ord": 0,
+        "ord_n": 1
+      },
+      "snapshot": "snapshots/M0-s0-T030-step12/features.json"
+    }
+  }
+}

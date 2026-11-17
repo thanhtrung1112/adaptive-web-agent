@@ -1,0 +1,22 @@
+{
+  "scope": "API connectivity only; not model quality or browser task success",
+  "metadata": {
+    "provider": "openai",
+    "sdk_version": "3.51.0",
+    "config": {
+      "model": "gpt-4.1-mini",
+      "timeout_seconds": 60,
+      "max_output_tokens": 64,
+      "max_requests": 1,
+      "max_reserved_output_tokens": 64,
+      "max_input_chars": 24000
+    },
+    "sdk_max_retries": 0,
+    "api_base": "https://api.openai.com/v1",
+    "store": false
+  },
+  "response": {
+    "ok": true
+  },
+  "success": true
+}

@@ -1,0 +1,67 @@
+{
+  "version": "w7-fallback-v1",
+  "action": "click",
+  "objective": "Lưu thông tin khách hàng.",
+  "descriptor": {
+    "tag": "button",
+    "id": "",
+    "name": "",
+    "type": "",
+    "text": "Lưu",
+    "label": "",
+    "placeholder": "",
+    "href": "",
+    "form": "/save",
+    "path": "html > body > form > section > button",
+    "options": [],
+    "ord": 0,
+    "ord_n": 1
+  },
+  "trigger": "ambiguous_order",
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "tag": "button",
+      "id": "",
+      "name": "",
+      "type": "",
+      "text": "Lưu",
+      "label": "",
+      "placeholder": "",
+      "href": "",
+      "form": "/save",
+      "path": "html > body > form > section[1] > button",
+      "options": [],
+      "ord": 0,
+      "ord_n": 2,
+      "context_text": "Lưu"
+    },
+    {
+      "candidate_id": "c2",
+      "tag": "button",
+      "id": "",
+      "name": "",
+      "type": "",
+      "text": "Lưu",
+      "label": "",
+      "placeholder": "",
+      "href": "",
+      "form": "/save",
+      "path": "html > body > form > section[2] > button",
+      "options": [],
+      "ord": 1,
+      "ord_n": 2,
+      "context_text": "Lưu"
+    }
+  ],
+  "semantic_topk": [
+    {
+      "candidate_id": "c1",
+      "score": 0.95
+    },
+    {
+      "candidate_id": "c2",
+      "score": 0.95
+    }
+  ]
+}

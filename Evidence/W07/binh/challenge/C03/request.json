@@ -1,0 +1,67 @@
+{
+  "version": "w7-fallback-v1",
+  "action": "fill",
+  "objective": "Nhập số lượng cho sản phẩm SKU-100.",
+  "descriptor": {
+    "tag": "input",
+    "id": "",
+    "name": "",
+    "type": "number",
+    "text": "",
+    "label": "Số lượng",
+    "placeholder": "",
+    "href": "",
+    "form": "/order",
+    "path": "html > body > form > section > label > input",
+    "options": [],
+    "ord": 0,
+    "ord_n": 1
+  },
+  "trigger": "ambiguous_order",
+  "candidates": [
+    {
+      "candidate_id": "c1",
+      "tag": "input",
+      "id": "",
+      "name": "",
+      "type": "number",
+      "text": "",
+      "label": "Số lượng",
+      "placeholder": "",
+      "href": "",
+      "form": "/order",
+      "path": "html > body > form > section[1] > label > input",
+      "options": [],
+      "ord": 0,
+      "ord_n": 2,
+      "context_text": "SKU-200Số lượng"
+    },
+    {
+      "candidate_id": "c2",
+      "tag": "input",
+      "id": "",
+      "name": "",
+      "type": "number",
+      "text": "",
+      "label": "Số lượng",
+      "placeholder": "",
+      "href": "",
+      "form": "/order",
+      "path": "html > body > form > section[2] > label > input",
+      "options": [],
+      "ord": 1,
+      "ord_n": 2,
+      "context_text": "SKU-100Số lượng"
+    }
+  ],
+  "semantic_topk": [
+    {
+      "candidate_id": "c1",
+      "score": 0.944
+    },
+    {
+      "candidate_id": "c2",
+      "score": 0.944
+    }
+  ]
+}

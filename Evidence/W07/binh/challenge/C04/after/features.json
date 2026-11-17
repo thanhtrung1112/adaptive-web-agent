@@ -1,0 +1,117 @@
+{
+  "snapshot_id": "C04-after",
+  "task_id": "C04",
+  "state": "after",
+  "captured_at_utc": "2026-11-16T16:00:11.088105+00:00",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "html_sha256": "00268f8a7d7523d2bf7d9eaef3deb65f648cdb49fe34a8e1cc239692e24e545c",
+  "provenance": {},
+  "schema_version": "0.1",
+  "url": "about:blank",
+  "title": "",
+  "elements": [
+    {
+      "element_id": "e1",
+      "parent_id": null,
+      "tag": "html",
+      "text": "Chức năng hiện không khả dụng.",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]"
+      }
+    },
+    {
+      "element_id": "e2",
+      "parent_id": "e1",
+      "tag": "head",
+      "text": "",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": false,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='head'][1]"
+      }
+    },
+    {
+      "element_id": "e3",
+      "parent_id": "e1",
+      "tag": "body",
+      "text": "Chức năng hiện không khả dụng.",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 8,
+        "width": 1264,
+        "height": 704
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]"
+      }
+    },
+    {
+      "element_id": "e4",
+      "parent_id": "e3",
+      "tag": "main",
+      "text": "Chức năng hiện không khả dụng.",
+      "attributes": {},
+      "label": null,
+      "name_hint": null,
+      "visible": true,
+      "enabled": true,
+      "readonly": false,
+      "value": null,
+      "checked": null,
+      "selected": null,
+      "bounding_box": {
+        "x": 8,
+        "y": 8,
+        "width": 1264,
+        "height": 18
+      },
+      "locator": {
+        "strategy": "xpath",
+        "value": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='main'][1]"
+      }
+    }
+  ]
+}

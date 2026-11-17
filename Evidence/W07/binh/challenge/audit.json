@@ -1,0 +1,34 @@
+{
+  "scope": "Development DOM fixtures; no model calls or MiniBiz task-success claim",
+  "cases": [
+    {
+      "case_id": "C01",
+      "semantic_status": "abstain",
+      "reason": "ambiguous_order",
+      "candidates": 2,
+      "natural_fallback": true
+    },
+    {
+      "case_id": "C02",
+      "semantic_status": "abstain",
+      "reason": "ambiguous_order",
+      "candidates": 2,
+      "natural_fallback": true
+    },
+    {
+      "case_id": "C03",
+      "semantic_status": "abstain",
+      "reason": "ambiguous_order",
+      "candidates": 2,
+      "natural_fallback": true
+    },
+    {
+      "case_id": "C04",
+      "semantic_status": "abstain",
+      "reason": "no_candidates",
+      "candidates": 0,
+      "natural_fallback": false
+    }
+  ],
+  "llm_requests": 0
+}
