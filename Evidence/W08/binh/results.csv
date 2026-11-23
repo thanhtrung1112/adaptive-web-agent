@@ -1,0 +1,41 @@
+task_id,module,agent,mutation,mutation_seed,success,steps_done,seconds,check,error,replay_matches,trace
+T001,crm,b0-css,M0,0,True,6,0.8309,ok,,,traces/T001.json
+T002,crm,b0-css,M0,0,True,4,0.5702,ok,,,traces/T002.json
+T003,crm,b0-css,M0,0,True,7,0.8958,ok,,,traces/T003.json
+T004,order,b0-css,M0,0,True,9,0.7626,ok,,,traces/T004.json
+T005,order,b0-css,M0,0,True,4,0.5267,ok,,,traces/T005.json
+T006,order,b0-css,M0,0,True,5,1.0686,ok,,,traces/T006.json
+T007,support,b0-css,M0,0,True,5,0.5697,ok,,,traces/T007.json
+T008,support,b0-css,M0,0,True,4,0.4963,ok,,,traces/T008.json
+T009,support,b0-css,M0,0,True,4,0.5962,ok,,,traces/T009.json
+T010,chain,b0-css,M0,0,True,11,1.4638,ok; ok,,,traces/T010.json
+T011,crm,b0-css,M0,0,True,6,0.6053,ok,,,traces/T011.json
+T012,crm,b0-css,M0,0,True,4,0.515,ok,,,traces/T012.json
+T013,crm,b0-css,M0,0,True,7,0.9052,ok,,,traces/T013.json
+T014,order,b0-css,M0,0,True,6,0.6202,ok,,,traces/T014.json
+T015,order,b0-css,M0,0,True,4,0.5552,ok,,,traces/T015.json
+T016,order,b0-css,M0,0,True,4,0.5618,ok,,,traces/T016.json
+T017,order,b0-css,M0,0,True,4,0.533,ok,,,traces/T017.json
+T018,order,b0-css,M0,0,True,5,0.7299,ok,,,traces/T018.json
+T019,support,b0-css,M0,0,True,4,0.4877,ok,,,traces/T019.json
+T020,support,b0-css,M0,0,True,7,0.7342,ok,,,traces/T020.json
+T021,crm,b0-css,M0,0,True,6,0.5593,ok,,,traces/T021.json
+T022,crm,b0-css,M0,0,True,4,0.4643,ok,,,traces/T022.json
+T023,crm,b0-css,M0,0,True,7,0.8378,ok,,,traces/T023.json
+T024,order,b0-css,M0,0,True,9,0.7012,ok,,,traces/T024.json
+T025,order,b0-css,M0,0,True,4,0.5016,ok,,,traces/T025.json
+T026,order,b0-css,M0,0,True,5,0.658,ok,,,traces/T026.json
+T027,support,b0-css,M0,0,True,4,0.5259,ok,,,traces/T027.json
+T028,support,b0-css,M0,0,True,4,0.4594,ok,,,traces/T028.json
+T029,support,b0-css,M0,0,True,7,0.6964,ok,,,traces/T029.json
+T030,chain,b0-css,M0,0,True,13,1.4804,ok; ok,,,traces/T030.json
+T031,crm,b0-css,M0,0,True,9,0.9537,ok; ok,,,traces/T031.json
+T032,crm,b0-css,M0,0,True,7,0.9173,ok; ok,,,traces/T032.json
+T033,order,b0-css,M0,0,True,8,1.0255,ok; ok,,,traces/T033.json
+T034,order,b0-css,M0,0,True,5,0.717,ok; ok,,,traces/T034.json
+T035,order,b0-css,M0,0,True,11,1.0017,ok,,,traces/T035.json
+T036,support,b0-css,M0,0,True,8,1.001,ok; ok,,,traces/T036.json
+T037,support,b0-css,M0,0,True,9,1.0721,ok,,,traces/T037.json
+T038,support,b0-css,M0,0,True,4,0.5358,ok; ok,,,traces/T038.json
+T039,chain,b0-css,M0,0,True,16,1.9272,ok; ok; ok,,,traces/T039.json
+T040,chain,b0-css,M0,0,True,16,2.0157,ok; ok; ok,,,traces/T040.json

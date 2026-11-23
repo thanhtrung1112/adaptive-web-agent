@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "case": {
+    "task_id": "T003",
+    "task_sha256": "52c0d58225637f98a7f06c11df0fed377083b5017104bd2f2275a524fd3cd639",
+    "seed": "seed_v1",
+    "seed_sha256_lf": "638bb0fa96d8e603f7604d40b07d6703b3d0438e9c61205de45cb8c04dddf888",
+    "app_and_checker_sha256": "c9adfe05d6b193c6192304f9603a15825ade1754eaf7ef1465a75318b3a84d90",
+    "mutation": "M0",
+    "mutation_seed": 0
+  },
+  "agent": "b0-css",
+  "success": true,
+  "steps": [
+    {
+      "index": 0,
+      "request": {
+        "action": "navigate",
+        "url": "/customers"
+      },
+      "target": null,
+      "before_url": null,
+      "after_url": "/customers?mutation=M0&seed=0",
+      "success": true,
+      "decision": null,
+      "seconds": 0.0601
+    },
+    {
+      "index": 1,
+      "request": {
+        "action": "fill",
+        "locator": {
+          "strategy": "css",
+          "value": "#customer-search"
+        },
+        "value": "nguyen.dung@example.com"
+      },
+      "target": {
+        "tag": "input",
+        "path": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "id": "customer-search",
+        "name": "email",
+        "type": "search",
+        "href": null,
+        "form": "/customers",
+        "text": null,
+        "labels": [
+          "Tìm khách hàng theo email"
+        ]
+      },
+      "before_url": "/customers?mutation=M0&seed=0",
+      "after_url": "/customers?mutation=M0&seed=0",
+      "success": true,
+      "decision": null,
+      "seconds": 0.1422
+    },
+    {
+      "index": 2,
+      "request": {
+        "action": "click",
+        "locator": {
+          "strategy": "css",
+          "value": "#search-customers"
+        }
+      },
+      "target": {
+        "tag": "button",
+        "path": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "id": "search-customers",
+        "name": null,
+        "type": "submit",
+        "href": null,
+        "form": "/customers",
+        "text": "Tìm",
+        "labels": []
+      },
+      "before_url": "/customers?mutation=M0&seed=0",
+      "after_url": "/customers?email=nguyen.dung%40example.com",
+      "success": true,
+      "decision": null,
+      "seconds": 0.1215
+    },
+    {
+      "index": 3,
+      "request": {
+        "action": "click",
+        "locator": {
+          "strategy": "css",
+          "value": "table a[href^='/customers/']"
+        }
+      },
+      "target": {
+        "tag": "a",
+        "path": [
+          1,
+          2,
+          3,
+          1,
+          0,
+          1,
+          0
+        ],
+        "id": "",
+        "name": null,
+        "type": null,
+        "href": "/customers/2",
+        "form": null,
+        "text": "Nguyễn Văn Dũng",
+        "labels": []
+      },
+      "before_url": "/customers?email=nguyen.dung%40example.com",
+      "after_url": "/customers/2",
+      "success": true,
+      "decision": null,
+      "seconds": 0.1583
+    },
+    {
+      "index": 4,
+      "request": {
+        "action": "click",
+        "locator": {
+          "strategy": "css",
+          "value": "#edit-customer"
+        }
+      },
+      "target": {
+        "tag": "a",
+        "path": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "id": "edit-customer",
+        "name": null,
+        "type": null,
+        "href": "/customers/2/edit",
+        "form": null,
+        "text": "Sửa",
+        "labels": []
+      },
+      "before_url": "/customers/2",
+      "after_url": "/customers/2/edit",
+      "success": true,
+      "decision": null,
+      "seconds": 0.1732
+    },
+    {
+      "index": 5,
+      "request": {
+        "action": "fill",
+        "locator": {
+          "strategy": "css",
+          "value": "#customer-phone"
+        },
+        "value": "0987654321"
+      },
+      "target": {
+        "tag": "input",
+        "path": [
+          1,
+          2,
+          2,
+          0,
+          1
+        ],
+        "id": "customer-phone",
+        "name": "phone",
+        "type": "tel",
+        "href": null,
+        "form": "/customers/2/edit",
+        "text": null,
+        "labels": [
+          "Số điện thoại"
+        ]
+      },
+      "before_url": "/customers/2/edit",
+      "after_url": "/customers/2/edit",
+      "success": true,
+      "decision": null,
+      "seconds": 0.1026
+    },
+    {
+      "index": 6,
+      "request": {
+        "action": "click",
+        "locator": {
+          "strategy": "css",
+          "value": "#save-customer"
+        }
+      },
+      "target": {
+        "tag": "button",
+        "path": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "id": "save-customer",
+        "name": null,
+        "type": "submit",
+        "href": null,
+        "form": "/customers/2/edit",
+        "text": "Lưu",
+        "labels": []
+      },
+      "before_url": "/customers/2/edit",
+      "after_url": "/customers/2",
+      "success": true,
+      "decision": null,
+      "seconds": 0.1374
+    }
+  ],
+  "precheck": {
+    "passed": false,
+    "message": "/api/customers?email=nguyen.dung@example.com: phone='0900000002' (cần '0987654321')",
+    "api": {
+      "/api/customers?email=nguyen.dung@example.com": {
+        "count": 1,
+        "customers": [
+          {
+            "id": 2,
+            "name": "Nguyễn Văn Dũng",
+            "email": "nguyen.dung@example.com",
+            "phone": "0900000002"
+          }
+        ]
+      }
+    },
+    "csv_sha256_lf": null
+  },
+  "seconds": 0.8958,
+  "verification": {
+    "passed": true,
+    "message": "ok",
+    "api": {
+      "/api/customers?email=nguyen.dung@example.com": {
+        "count": 1,
+        "customers": [
+          {
+            "id": 2,
+            "name": "Nguyễn Văn Dũng",
+            "email": "nguyen.dung@example.com",
+            "phone": "0987654321"
+          }
+        ]
+      }
+    },
+    "csv_sha256_lf": null
+  },
+  "download": null
+}

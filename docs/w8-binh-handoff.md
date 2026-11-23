@@ -38,3 +38,9 @@ Selector trong ví dụ minh họa đầu ra sau khi chọn phần tử. Adapter
 - Bộ chấm dùng API thật của browser context và kiểm tra CSV bằng nội dung tải lại. Kết quả phải khớp quan sát gốc. So sánh bỏ qua thời điểm tạo đơn do đồng hồ sinh lúc chạy. Thời lượng và cổng localhost phục vụ ghi nhận môi trường, không tham gia so sánh.
 
 Mốc bàn giao của Bình là ca `T003` cập nhật số điện thoại và replay lại đúng kết quả API sau khi reset. Phần Trung nối agent vào giao diện này, sau đó hai phần được ghép trên `T003`, `T004`, `T007` và `T010`. Số liệu B0 dùng để kiểm tra khả năng giải và bộ chấm của tập tác vụ.
+
+## Kết quả bàn giao của Bình
+
+- **40/40 tác vụ đạt** bằng B0 CSS trên MiniBiz M0. Cột `trace` trong CSV là đường dẫn tương đối trong thư mục run. [Tổng hợp](../Evidence/W08/binh/summary.json) · [Bảng 40 tác vụ](../Evidence/W08/binh/results.csv) · [Metadata](../Evidence/W08/binh/metadata.json)
+- **T003** qua 7 thao tác. API trước replay trả số `0900000002` từ seed. Sau replay, API trả `0987654321` và khớp lượt ghi gốc. [Trace gốc](../Evidence/W08/binh/T003.original.json) · [Trace replay](../Evidence/W08/binh/T003.replay.json)
+- Ba lượt đối chiếu bổ sung cũng khớp các checkpoint và kết quả chấm. T006 kiểm tra CSV, T010 kiểm tra liên kết ticket với đơn vừa tạo, và T003 chạy XPath trên W5_ID seed 17. [Kết quả bốn lượt replay](../Evidence/W08/binh/replay-checks.json)
