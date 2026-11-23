@@ -2,8 +2,21 @@
 """Detect likely wrong-target matches from observed semantic context."""
 import re
 import unicodedata
+from urllib.parse import urljoin, urlsplit
 
 DEFAULT_THRESHOLD = 0.20
+
+
+def check_link_destination(page_url, recorded_href, candidate_href):
+    """Match a read-only link whose destination is part of the recorded task contract."""
+    source = urlsplit(page_url)
+    recorded = urlsplit(urljoin(page_url, recorded_href))
+    candidate = urlsplit(urljoin(page_url, candidate_href))
+    matches = bool(recorded_href and candidate_href and source.scheme in ("http", "https")
+                   and (source.scheme, source.netloc) == (recorded.scheme, recorded.netloc)
+                   and recorded == candidate)
+    return {"likely_wrong": not matches,
+            "reason": "same_recorded_destination" if matches else "different_recorded_destination"}
 
 
 def _terms(value):

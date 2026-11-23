@@ -1,0 +1,1146 @@
+[
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "unchanged",
+    "agent": "b0",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "task_seconds": 1.2709,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "unchanged",
+    "agent": "a1",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "task_seconds": 1.5362,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "unchanged",
+    "agent": "a2",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "task_seconds": 1.2909,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "relabeled",
+    "agent": "b0",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 0.7208,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "relabeled",
+    "agent": "a1",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.1956,
+    "outcome": "no_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.763,
+      "margin": 0.007,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e352",
+      "topk": [
+        {
+          "eid": "e352",
+          "score": 0.763
+        },
+        {
+          "eid": "e354",
+          "score": 0.756
+        },
+        {
+          "eid": "e346",
+          "score": 0.72
+        }
+      ]
+    },
+    "task_seconds": 0.9445,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "relabeled",
+    "agent": "a2",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": true,
+    "proposals": [
+      {
+        "method": "llm",
+        "text": "5. Lists, sets, and dictionaries",
+        "href": "https://docs.python.org/3.13/tutorial/datastructures.html",
+        "correct": true,
+        "guard": {
+          "likely_wrong": false,
+          "reason": "same_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 1.8755,
+    "outcome": "correct_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.763,
+      "margin": 0.007,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e352",
+      "topk": [
+        {
+          "eid": "e352",
+          "score": 0.763
+        },
+        {
+          "eid": "e354",
+          "score": 0.756
+        },
+        {
+          "eid": "e346",
+          "score": 0.72
+        }
+      ]
+    },
+    "fallback_trigger": "ambiguous_order",
+    "fallback_decision": {
+      "decision": "select",
+      "candidate_id": "c52",
+      "reason": "Candidate c52's text '5. Lists, sets, and dictionaries' exactly matches the objective to open the Data Structures tutorial for lists, sets, and dictionaries, while others are subsections."
+    },
+    "final_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "task_seconds": 2.8734,
+    "llm_call_ids": [
+      0
+    ]
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "removed",
+    "agent": "b0",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 0.9836,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "removed",
+    "agent": "a1",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.2993,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.763,
+      "margin": 0.007,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e351",
+      "topk": [
+        {
+          "eid": "e351",
+          "score": 0.763
+        },
+        {
+          "eid": "e353",
+          "score": 0.756
+        },
+        {
+          "eid": "e345",
+          "score": 0.72
+        }
+      ]
+    },
+    "task_seconds": 1.0474,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-DATA",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "removed",
+    "agent": "a2",
+    "expected_url": "https://docs.python.org/3.13/tutorial/datastructures.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": true,
+    "recovery_seconds": 1.2349,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.763,
+      "margin": 0.007,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e351",
+      "topk": [
+        {
+          "eid": "e351",
+          "score": 0.763
+        },
+        {
+          "eid": "e353",
+          "score": 0.756
+        },
+        {
+          "eid": "e345",
+          "score": 0.72
+        }
+      ]
+    },
+    "fallback_trigger": "ambiguous_order",
+    "fallback_decision": {
+      "decision": "abstain",
+      "candidate_id": null,
+      "reason": "No single candidate covers lists, sets, and dictionaries together; candidates represent individual subsections only."
+    },
+    "task_seconds": 1.9974,
+    "llm_call_ids": [
+      1
+    ]
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "unchanged",
+    "agent": "b0",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "task_seconds": 0.9902,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "unchanged",
+    "agent": "a1",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "task_seconds": 1.0182,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "unchanged",
+    "agent": "a2",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "task_seconds": 0.8747,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "relabeled",
+    "agent": "b0",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 0.7872,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "relabeled",
+    "agent": "a1",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.1896,
+    "outcome": "no_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.72,
+      "margin": 0.015,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e387",
+      "topk": [
+        {
+          "eid": "e387",
+          "score": 0.72
+        },
+        {
+          "eid": "e390",
+          "score": 0.705
+        },
+        {
+          "eid": "e401",
+          "score": 0.691
+        }
+      ]
+    },
+    "task_seconds": 0.9628,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "relabeled",
+    "agent": "a2",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": true,
+    "proposals": [
+      {
+        "method": "llm",
+        "text": "7. Reading and writing data",
+        "href": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+        "correct": true,
+        "guard": {
+          "likely_wrong": false,
+          "reason": "same_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 1.4922,
+    "outcome": "correct_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.72,
+      "margin": 0.015,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e387",
+      "topk": [
+        {
+          "eid": "e387",
+          "score": 0.72
+        },
+        {
+          "eid": "e390",
+          "score": 0.705
+        },
+        {
+          "eid": "e401",
+          "score": 0.691
+        }
+      ]
+    },
+    "fallback_trigger": "ambiguous_order",
+    "fallback_decision": {
+      "decision": "select",
+      "candidate_id": "c75",
+      "reason": "Candidate c75's text '7. Reading and writing data' directly matches the objective to open the Input and Output tutorial for reading and writing data, and its href points to 'inputoutput.html', consistent with the descriptor's href."
+    },
+    "final_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "task_seconds": 2.3634,
+    "llm_call_ids": [
+      2
+    ]
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "removed",
+    "agent": "b0",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 0.7827,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "removed",
+    "agent": "a1",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.1911,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.705,
+      "margin": 0.014,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e389",
+      "topk": [
+        {
+          "eid": "e389",
+          "score": 0.705
+        },
+        {
+          "eid": "e400",
+          "score": 0.691
+        },
+        {
+          "eid": "e529",
+          "score": 0.686
+        }
+      ]
+    },
+    "task_seconds": 0.9679,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "PY-IO",
+    "site": "https://docs.python.org/3.13/tutorial/index.html",
+    "scenario": "removed",
+    "agent": "a2",
+    "expected_url": "https://docs.python.org/3.13/tutorial/inputoutput.html",
+    "target_present": false,
+    "proposals": [
+      {
+        "method": "llm",
+        "text": "7.2. Reading and Writing Files",
+        "href": "inputoutput.html#reading-and-writing-files",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 1.4345,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "abstain",
+      "eid": null,
+      "xpath": "",
+      "score": 0.705,
+      "margin": 0.014,
+      "reason": "ambiguous_order",
+      "via": "",
+      "top1_eid": "e389",
+      "topk": [
+        {
+          "eid": "e389",
+          "score": 0.705
+        },
+        {
+          "eid": "e400",
+          "score": 0.691
+        },
+        {
+          "eid": "e529",
+          "score": 0.686
+        }
+      ]
+    },
+    "fallback_trigger": "ambiguous_order",
+    "fallback_decision": {
+      "decision": "select",
+      "candidate_id": "c80",
+      "reason": "Candidate c80's text '7.2. Reading and Writing Files' directly matches the objective to open the Input and Output tutorial section for reading and writing data."
+    },
+    "task_seconds": 2.1594,
+    "llm_call_ids": [
+      3
+    ]
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "unchanged",
+    "agent": "b0",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://www.sqlite.org/lang.html",
+    "task_seconds": 2.811,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "unchanged",
+    "agent": "a1",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://www.sqlite.org/lang.html",
+    "task_seconds": 3.5195,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "unchanged",
+    "agent": "a2",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://www.sqlite.org/lang.html",
+    "task_seconds": 2.893,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "relabeled",
+    "agent": "b0",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 2.3765,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "relabeled",
+    "agent": "a1",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": true,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "SQL functions",
+        "href": "lang_corefunc.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.4604,
+    "outcome": "no_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e73",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][5]/*[local-name()='ul'][1]/*[local-name()='li'][2]/*[local-name()='a'][1]",
+      "score": 0.696,
+      "margin": 0.029,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e73",
+      "topk": [
+        {
+          "eid": "e73",
+          "score": 0.696
+        },
+        {
+          "eid": "e68",
+          "score": 0.667
+        },
+        {
+          "eid": "e92",
+          "score": 0.644
+        }
+      ]
+    },
+    "task_seconds": 3.7289,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "relabeled",
+    "agent": "a2",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": true,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "SQL functions",
+        "href": "lang_corefunc.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      },
+      {
+        "method": "llm",
+        "text": "SQL language reference",
+        "href": "https://www.sqlite.org/lang.html",
+        "correct": true,
+        "guard": {
+          "likely_wrong": false,
+          "reason": "same_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 2.2462,
+    "outcome": "correct_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e73",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][5]/*[local-name()='ul'][1]/*[local-name()='li'][2]/*[local-name()='a'][1]",
+      "score": 0.696,
+      "margin": 0.029,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e73",
+      "topk": [
+        {
+          "eid": "e73",
+          "score": 0.696
+        },
+        {
+          "eid": "e68",
+          "score": 0.667
+        },
+        {
+          "eid": "e92",
+          "score": 0.644
+        }
+      ]
+    },
+    "fallback_trigger": "heuristic_target_rejected",
+    "fallback_decision": {
+      "decision": "select",
+      "candidate_id": "c13",
+      "reason": "Candidate c13's text 'SQL language reference' and href 'https://www.sqlite.org/lang.html' closely match the objective to open the SQLite SQL Syntax and language reference, and its path matches the descriptor path exactly."
+    },
+    "final_url": "https://www.sqlite.org/lang.html",
+    "task_seconds": 7.3076,
+    "llm_call_ids": [
+      4
+    ]
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "removed",
+    "agent": "b0",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 4.5266,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "removed",
+    "agent": "a1",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": false,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "SQL functions",
+        "href": "lang_corefunc.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.4938,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e72",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][5]/*[local-name()='ul'][1]/*[local-name()='li'][2]/*[local-name()='a'][1]",
+      "score": 0.696,
+      "margin": 0.052,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e72",
+      "topk": [
+        {
+          "eid": "e72",
+          "score": 0.696
+        },
+        {
+          "eid": "e91",
+          "score": 0.644
+        },
+        {
+          "eid": "e97",
+          "score": 0.638
+        }
+      ]
+    },
+    "task_seconds": 3.5261,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-LANG",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "removed",
+    "agent": "a2",
+    "expected_url": "https://www.sqlite.org/lang.html",
+    "target_present": false,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "SQL functions",
+        "href": "lang_corefunc.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      },
+      {
+        "method": "llm",
+        "text": "SQL functions",
+        "href": "lang_corefunc.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 2.0867,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e72",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][5]/*[local-name()='ul'][1]/*[local-name()='li'][2]/*[local-name()='a'][1]",
+      "score": 0.696,
+      "margin": 0.052,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e72",
+      "topk": [
+        {
+          "eid": "e72",
+          "score": 0.696
+        },
+        {
+          "eid": "e91",
+          "score": 0.644
+        },
+        {
+          "eid": "e97",
+          "score": 0.638
+        }
+      ]
+    },
+    "fallback_trigger": "heuristic_target_rejected",
+    "fallback_decision": {
+      "decision": "select",
+      "candidate_id": "c14",
+      "reason": "Candidate c14's text 'SQL functions' is the closest match to 'SQL Syntax and language reference' among the options, and its path indicates it is under the relevant section."
+    },
+    "task_seconds": 5.7996,
+    "llm_call_ids": [
+      5
+    ]
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "unchanged",
+    "agent": "b0",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://www.sqlite.org/cli.html",
+    "task_seconds": 5.7305,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "unchanged",
+    "agent": "a1",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://www.sqlite.org/cli.html",
+    "task_seconds": 3.7521,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "unchanged",
+    "agent": "a2",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "baseline_success",
+    "baseline_count": 1,
+    "final_url": "https://www.sqlite.org/cli.html",
+    "task_seconds": 4.6384,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "relabeled",
+    "agent": "b0",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": true,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 2.4121,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "relabeled",
+    "agent": "a1",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": true,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "The TCL Interface Spec",
+        "href": "tclsqlite.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.1448,
+    "outcome": "no_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e94",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][8]/*[local-name()='a'][1]",
+      "score": 0.767,
+      "margin": 0.076,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e94",
+      "topk": [
+        {
+          "eid": "e94",
+          "score": 0.767
+        },
+        {
+          "eid": "e85",
+          "score": 0.691
+        },
+        {
+          "eid": "e92",
+          "score": 0.647
+        }
+      ]
+    },
+    "task_seconds": 2.3747,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "relabeled",
+    "agent": "a2",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": true,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "The TCL Interface Spec",
+        "href": "tclsqlite.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 1.8892,
+    "outcome": "no_recovery",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e94",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][8]/*[local-name()='a'][1]",
+      "score": 0.767,
+      "margin": 0.076,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e94",
+      "topk": [
+        {
+          "eid": "e94",
+          "score": 0.767
+        },
+        {
+          "eid": "e85",
+          "score": 0.691
+        },
+        {
+          "eid": "e92",
+          "score": 0.647
+        }
+      ]
+    },
+    "fallback_trigger": "heuristic_target_rejected",
+    "fallback_decision": {
+      "decision": "abstain",
+      "candidate_id": null,
+      "reason": "No candidate exactly matches the descriptor text 'The CLI (Command-Line Interface)' or href 'cli.html'; closest candidate 'Using the SQLite shell' has different text and href, so selection is ambiguous."
+    },
+    "task_seconds": 4.1956,
+    "llm_call_ids": [
+      6
+    ]
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "removed",
+    "agent": "b0",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": false,
+    "proposals": [],
+    "attempted_recovery": false,
+    "recovery_seconds": null,
+    "outcome": "locator_failed",
+    "baseline_count": 0,
+    "task_seconds": 2.265,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "removed",
+    "agent": "a1",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": false,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "The TCL Interface Spec",
+        "href": "tclsqlite.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 0.1503,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e93",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][8]/*[local-name()='a'][1]",
+      "score": 0.767,
+      "margin": 0.076,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e93",
+      "topk": [
+        {
+          "eid": "e93",
+          "score": 0.767
+        },
+        {
+          "eid": "e85",
+          "score": 0.691
+        },
+        {
+          "eid": "e95",
+          "score": 0.641
+        }
+      ]
+    },
+    "task_seconds": 2.5138,
+    "llm_call_ids": []
+  },
+  {
+    "case_id": "SQL-CLI",
+    "site": "https://www.sqlite.org/docs.html",
+    "scenario": "removed",
+    "agent": "a2",
+    "expected_url": "https://www.sqlite.org/cli.html",
+    "target_present": false,
+    "proposals": [
+      {
+        "method": "heuristic",
+        "text": "The TCL Interface Spec",
+        "href": "tclsqlite.html",
+        "correct": false,
+        "guard": {
+          "likely_wrong": true,
+          "reason": "different_recorded_destination"
+        }
+      }
+    ],
+    "attempted_recovery": true,
+    "recovery_seconds": 1.553,
+    "outcome": "correct_abstention",
+    "baseline_count": 0,
+    "semantic": {
+      "status": "healed",
+      "eid": "e93",
+      "xpath": "/*[local-name()='html'][1]/*[local-name()='body'][1]/*[local-name()='div'][2]/*[local-name()='ul'][1]/*[local-name()='li'][8]/*[local-name()='a'][1]",
+      "score": 0.767,
+      "margin": 0.076,
+      "reason": "",
+      "via": "score",
+      "top1_eid": "e93",
+      "topk": [
+        {
+          "eid": "e93",
+          "score": 0.767
+        },
+        {
+          "eid": "e85",
+          "score": 0.691
+        },
+        {
+          "eid": "e95",
+          "score": 0.641
+        }
+      ]
+    },
+    "fallback_trigger": "heuristic_target_rejected",
+    "fallback_decision": {
+      "decision": "abstain",
+      "candidate_id": null,
+      "reason": "No candidate matches the descriptor text 'The CLI (Command-Line Interface)' or href 'cli.html' exactly; insufficient evidence to select."
+    },
+    "task_seconds": 3.9325,
+    "llm_call_ids": [
+      7
+    ]
+  }
+]

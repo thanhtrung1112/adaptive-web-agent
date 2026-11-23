@@ -1,0 +1,170 @@
+{
+  "metadata": {
+    "date_utc": "2026-11-23T13:40:25.399434+00:00",
+    "agents": [
+      "b0",
+      "a1",
+      "a2"
+    ],
+    "link_guard": "destination",
+    "expected_rows": 36,
+    "rates": {
+      "date": "2026-11-23",
+      "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+      "input_per_million": 0.4,
+      "cached_input_per_million": 0.1,
+      "output_per_million": 1.6
+    },
+    "source_sha256_lf": {
+      "llm/__init__.py": "f290f7456ffffeaeac69fb0f7baef8228c599e82d22ec61309924c80dd962907",
+      "llm/client.py": "ee2ce4097a689b5498e46f50c539c5260d7fb479c7ae1e5be7ba55e3101e4627",
+      "llm/fallback.py": "46738f396d409ddd786c43fb01f9e52a6e62e2621a67b63df69dbc277f8940dd",
+      "llm/smoke.py": "858f8960c91d48f21af62807244a1454957c3a20e13f66dc02b1d653d9c19136",
+      "planner/__init__.py": "159d8b55da34155ba5d1387893bada93a4f64590b732341dd2b431dae3d84736",
+      "planner/cases.json": "71577a9678469b12540ca635b54e892aa8c632cabd48272aa0e3b0992903f9ca",
+      "planner/core.py": "ab8e04f7fb740ef3dd393bef53e8d576655946a889549da0ce46ba1e5a36cfad",
+      "planner/evaluate.py": "37823b8af1bc37ee1cfb74ae2e0cc7cc1b8e6487f663993833df90bab7d630d4",
+      "planner/hybrid.py": "e8005b7460a5204507874df9c54ca3c05aeffc0e5879be52711b759a4c23f3e7",
+      "planner/intent.py": "95420963f94aacd5c90ae62a67b9a86060a87f474435727de587ed60180f2ed2",
+      "planner/run.py": "55ce1026af4263dea891906004392343bfabc842b0665c952feabc222b7baf99",
+      "planner/schema.json": "da35eec146b0ec88759143c7e31c214758c6c0f09077dbc101805a8e32cea655",
+      "planner/verify_m0.py": "c6e95f68ceef693adc9669319effe91f139c1b90a4d67b898d615042bec6c1b3",
+      "planner/workflows.py": "fca17f6f04650b62ebc1403640660f9a9ed673e27d48327c2cdf1a77191c1f61",
+      "requirements-w7.txt": "fec1e158d6c9569e303ebedacda1c7b03b794d7f1297c72d6611a4e7e0318c85",
+      "w7/__init__.py": "7d28e732579c55b20f33952b5b8b3889ff373cc3d30c750a433cecc5da15dc5b",
+      "w7/case_audit.py": "884d3f0f027257b536cc2d94443ad0b0bf68a9e5cb66c1386142cca62859b1ff",
+      "w7/challenge_eval.py": "e0434d2ead5aaf01c7434a8c16f43230a3e47395bd79b18d10351dae2c635d70",
+      "w7/context.py": "c26172ff45a3048e5f0d07f09c3b4d8fe42af7d264fc8901badee99392b2122d",
+      "w7/contracts.py": "d96a6b639bdfdcb13b4cb59ccc8d1b4bb7da08b85ea6d48114cd2f431261847e",
+      "w7/demo.py": "1a16b4c0a09bc0adfef1c9c92fcddc06f66d8eb691956753adbeb86d4b2950d1",
+      "w7/plan.py": "34139d51a401b10f477d1c8be05da67d59ac67c1607fb25aae7f5dbd0d648e20",
+      "w7/planner_adapter.py": "e674b1d65d828ff503d8d36a7639881c683ff74835aa951815ff8a8c386af508",
+      "w7/real_site_eval.py": "44c2cd65232944ba3b96ba5704b7d49d7a3910fbab44d9bb8bfc9291874c3198",
+      "w7/report.py": "2553aaacfa2cf781aa0beed6d28c2160248e3386113e7f3a120f4a80aa2ea51d",
+      "w7/run_agent.py": "127cf3320f0e52a5b61bbcaa2a747bb12e3ffb498bb0663e57f686bab3227618",
+      "w7/target_check.py": "9e528b2ccbcfe7dd24d7605d9f20974ba3512b70b377af7331ca6ca90d625561"
+    },
+    "guard_threshold": 0.2,
+    "llm": {
+      "provider": "openai",
+      "sdk_version": "3.51.0",
+      "config": {
+        "model": "gpt-4.1-mini",
+        "timeout_seconds": 20,
+        "max_output_tokens": 256,
+        "max_requests": 8,
+        "max_reserved_output_tokens": 2048,
+        "max_input_chars": 24000
+      },
+      "sdk_max_retries": 0,
+      "api_base": "https://api.openai.com/v1",
+      "store": false
+    },
+    "browser": {
+      "channel": "chrome",
+      "version": "158.0.8127.36"
+    }
+  },
+  "completed_rows": 36,
+  "by_agent": {
+    "b0": {
+      "cases": 12,
+      "outcomes": {
+        "baseline_success": 4,
+        "locator_failed": 8
+      },
+      "recovery_attempts": 0,
+      "wrong_recoveries": 0,
+      "wrong_recovery_rate": null,
+      "wrong_proposals": 0,
+      "wrong_proposals_rejected": 0,
+      "task_seconds": {
+        "n": 12,
+        "median": 1.76795,
+        "p95": 5.7305
+      },
+      "recovery_seconds": {
+        "n": 0,
+        "median": null,
+        "p95": null
+      },
+      "provider_seconds": {
+        "n": 0,
+        "median": null,
+        "p95": null
+      },
+      "llm_calls": 0,
+      "llm_errors": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_cost_usd": 0
+    },
+    "a1": {
+      "cases": 12,
+      "outcomes": {
+        "baseline_success": 4,
+        "correct_abstention": 4,
+        "no_recovery": 4
+      },
+      "recovery_attempts": 8,
+      "wrong_recoveries": 0,
+      "wrong_recovery_rate": 0.0,
+      "wrong_proposals": 4,
+      "wrong_proposals_rejected": 4,
+      "task_seconds": {
+        "n": 12,
+        "median": 1.95545,
+        "p95": 3.7521
+      },
+      "recovery_seconds": {
+        "n": 8,
+        "median": 0.19335,
+        "p95": 0.4938
+      },
+      "provider_seconds": {
+        "n": 0,
+        "median": null,
+        "p95": null
+      },
+      "llm_calls": 0,
+      "llm_errors": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "estimated_cost_usd": 0
+    },
+    "a2": {
+      "cases": 12,
+      "outcomes": {
+        "baseline_success": 4,
+        "correct_abstention": 4,
+        "correct_recovery": 3,
+        "no_recovery": 1
+      },
+      "recovery_attempts": 8,
+      "wrong_recoveries": 0,
+      "wrong_recovery_rate": 0.0,
+      "wrong_proposals": 6,
+      "wrong_proposals_rejected": 6,
+      "task_seconds": {
+        "n": 12,
+        "median": 2.8832,
+        "p95": 7.3076
+      },
+      "recovery_seconds": {
+        "n": 8,
+        "median": 1.7142499999999998,
+        "p95": 2.2462
+      },
+      "provider_seconds": {
+        "n": 8,
+        "median": 1.4674,
+        "p95": 1.7049
+      },
+      "llm_calls": 8,
+      "llm_errors": 0,
+      "input_tokens": 10567,
+      "output_tokens": 408,
+      "estimated_cost_usd": 0.0048796
+    }
+  }
+}
