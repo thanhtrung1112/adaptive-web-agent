@@ -86,17 +86,24 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
                     if step["do"] == "goto":
                         step["url"] = context_url(step["url"], mutation, seed)
                     else:
-                        count = locate(page, step, locator).count()
+                        original_locator = locate(page, step, locator)
+                        count = original_locator.count()
                         entry["b0_count"] = count
-                        if count != 1:
-                            entry["trigger"] = "missing" if count == 0 else "multiple"
+                        descriptor = descriptors[f"{task['id']}:{i}"]["descriptor"] if agent != "b0" else {}
+                        trigger = None if count == 1 else ("missing" if count == 0 else "multiple")
+                        if count == 1 and step["do"] == "click" and descriptor.get("tag") == "a" and descriptor.get("href"):
+                            observed = original_locator.evaluate("el => ({tag: el.localName, href: el.getAttribute('href') || ''})")
+                            entry["baseline_target_check"] = check_found(descriptor, observed, page_url=page.url)
+                            if entry["baseline_target_check"]["likely_wrong"]:
+                                trigger = "wrong_destination"
+                        if trigger:
+                            entry["trigger"] = trigger
                             sid = f"{run_id}-step{i:02d}"
                             html, snapshot = capture(page, sid, task["id"], sid, provenance)
                             save_snapshot(out / "snapshots" / sid, html, snapshot)
                             entry["snapshot"] = f"snapshots/{sid}/features.json"
                             if agent == "b0":
                                 raise ValueError("B0 locator did not match exactly once")
-                            descriptor = descriptors[f"{task['id']}:{i}"]["descriptor"]
                             candidates = runtime_candidates(snapshot)
                             result = heal(descriptor, candidates, mode=POLICY["mode"],
                                           min_margin=POLICY["min_margin"], min_score=POLICY["min_score"],
@@ -105,12 +112,14 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
                             xpath = result["xpath"] if result["status"] == "healed" else None
                             if xpath is not None:
                                 chosen = next((c for c in candidates if c.get("xpath") == xpath), None)
-                                entry["target_check"] = check_found(descriptor, chosen or {}, task["goal"], target_threshold)
+                                entry["target_check"] = check_found(descriptor, chosen or {}, task["goal"], target_threshold,
+                                                                    page_url=page.url if step["do"] == "click" else None)
                                 if entry["target_check"]["likely_wrong"]:
                                     xpath = None
-                                    entry["target_check"]["reason"] = "semantic_candidate_rejected"
+                                    entry["heuristic_rejection"] = entry["target_check"]
                             if xpath is None and agent == "a2" and candidates:
-                                packet, bindings = make_request(descriptor, candidates, step["do"], result,
+                                fallback_reason = entry.get("heuristic_rejection", {}).get("reason", result["reason"])
+                                packet, bindings = make_request(descriptor, candidates, step["do"], {**result, "reason": fallback_reason},
                                                                 objective=task["goal"])
                                 if bindings:
                                     entry["fallback_request"] = packet
@@ -121,10 +130,10 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
                                         xpath = validate_decision(decision, bindings)
                                         if xpath:
                                             chosen = next((c for c in candidates if c.get("xpath") == xpath), None)
-                                            entry["target_check"] = check_found(descriptor, chosen or {}, task["goal"], target_threshold)
+                                            entry["target_check"] = check_found(descriptor, chosen or {}, task["goal"], target_threshold,
+                                                                                page_url=page.url if step["do"] == "click" else None)
                                             if entry["target_check"]["likely_wrong"]:
                                                 xpath = None
-                                                entry["target_check"]["reason"] = "llm_candidate_rejected"
                                     finally:
                                         entry["llm_calls"] = client.calls[before:]
                             if not xpath:
@@ -164,7 +173,8 @@ def replay(browser, base, task, mutation, seed, agent, locator, out, descriptors
            "steps_done": sum(s["success"] for s in trace), "steps_total": len(SCRIPTS[task["id"]]),
            "healing_attempts": sum(s["semantic"] is not None for s in trace),
            "fallback_attempts": sum("fallback_request" in s for s in trace),
-           "wrong_target_rejections": sum(bool(s.get("target_check", {}).get("likely_wrong")) for s in trace),
+           "wrong_target_rejections": sum(any(s.get(key, {}).get("likely_wrong") for key in
+                                             ("baseline_target_check", "heuristic_rejection", "target_check")) for s in trace),
            "llm_requests": len(calls), "llm_errors": sum(c["status"] != "completed" for c in calls),
            "seconds": round(time.perf_counter() - started, 4), "error": error, "check": check_message}
     write_json(out / "traces" / f"{run_id}.json", {"result": row, "steps": trace})
@@ -176,7 +186,7 @@ def summarize(rows, expected, calls=()):
     usages = [c.get("usage") for c in calls]
     def total(key):
         return sum(u[key] for u in usages) if all(u is not None and isinstance(u.get(key), int) for u in usages) else None
-    return {"scope": "W7 infrastructure replay; count trigger only; resolver policy pending Trung",
+    return {"scope": "W7 MiniBiz development replay with optional LLM fallback",
             "expected_rows": expected, "completed_rows": len(rows), "complete": len(rows) == expected,
             "passed": sum(r["success"] for r in rows),
             "task_success_rate": sum(r["success"] for r in rows) / len(rows) if rows else None,
@@ -232,6 +242,8 @@ def main():
     expected = len(tasks) * sum(1 if m == "M0" else len(manifest["development_seeds"]) for m in modes)
     metadata = {"agent": args.agent, "resolver": args.resolver,
                 "policy": {**POLICY, "llm": args.agent == "a2", "fallback_trigger": "semantic_abstention_or_wrong_target_with_candidates",
+                           "wrong_target_check": "a1_and_a2",
+                           "recorded_destination_check": "same_origin_link_or_form_ignoring_mutation_transport",
                            "wrong_target_threshold": args.target_threshold},
                 "started_at_utc": datetime.now(timezone.utc).isoformat(), "held_out_accessed": False,
                 "manifest_sha256_lf": digest(MANIFEST), "w7_source_sha256_lf": source_hashes(),

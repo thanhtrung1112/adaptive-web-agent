@@ -9,12 +9,14 @@ from unittest.mock import patch
 import pytest
 from playwright.sync_api import sync_playwright
 
+from app.seed import reset_database
 from dom_snapshot.run import isolated_app
 from planner.core import make_request
 from planner.workflows import compile_intent
 from w6.freeze import ROOT, validate_manifest
-from w6.run_heal import replay as record_replay
+from w6.run_heal import load_record, locate, replay as record_replay
 from w7.contracts import make_request as fallback_request, validate_decision
+from w7.demo import execute_step
 from w7.planner_adapter import bind_step, semantic_steps
 from w7.run_agent import replay, summarize
 from w7.report import compare, price_usage
@@ -130,6 +132,46 @@ class BrowserInfrastructureTests(unittest.TestCase):
         row, _ = self.run_agent("a1")
         self.assertTrue(row["success"], row)
         self.assertEqual(row["llm_requests"], 0)
+
+    def test_crm_natural_plan_executes_and_saves_the_new_phone(self):
+        reset_database()
+        email, phone = "nguyen.dung@example.com", "0987654321"
+        request = make_request(f"Đổi số điện thoại của {email} thành {phone}.", max_steps=30)
+        intent = {"operations": [{"kind": "update_phone", "items": [], "slots": [
+            {"key": "customer_email", "value": email, "source": email},
+            {"key": "phone", "value": phone, "source": phone}]}]}
+        compiled = compile_intent(intent, request)
+        steps = semantic_steps(compiled["plan"], compiled["workflow"], request, intent)
+        trace = []
+        with self.browser.new_context() as context:
+            page = context.new_page()
+            endpoint = self.base + "/api/customers"
+            query = {"email": email}
+            self.assertNotEqual(context.request.get(endpoint, params=query).json()["customers"][0]["phone"], phone)
+            for step in steps:
+                execute_step(page, self.base, step, None, trace)
+            self.assertEqual(context.request.get(endpoint, params=query).json()["customers"][0]["phone"], phone)
+        self.assertEqual(len(trace), len(steps))
+
+    def test_crm_replay_heals_a_single_match_for_the_wrong_destination(self):
+        tasks = json.loads((ROOT / "tasks/tasks_w4.json").read_text(encoding="utf-8"))
+        task = next(task for task in tasks if task["id"] == "T003")
+        record = load_record(ROOT / "Evidence/W07/binh/record", [task["id"]], validate_manifest(), "css")
+        out = self.out / self._testMethodName
+        out.mkdir()
+
+        def wrong_locator(page, step, strategy):
+            if step.get("css") == "#edit-customer":
+                return page.get_by_role("link", name="Tạo đơn", exact=True)
+            return locate(page, step, strategy)
+
+        with patch("w7.run_agent.locate", side_effect=wrong_locator):
+            row = replay(self.browser, self.base, task, "M0", 0, "a1", "css", out, record["descriptors"], {})
+        self.assertTrue(row["success"], row)
+        trace = json.loads(next((out / "traces").glob("*.json")).read_text(encoding="utf-8"))
+        edit = next(step for step in trace["steps"] if step.get("trigger") == "wrong_destination")
+        self.assertEqual(edit["b0_count"], 1)
+        self.assertEqual(edit["target_check"]["reason"], "same_recorded_destination")
 
     def test_a2_requires_trungs_policy(self):
         with self.assertRaisesRegex(ValueError, "requires a resolver"):
