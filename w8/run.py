@@ -16,6 +16,7 @@ from dom_snapshot.run import isolated_app
 from w6.freeze import ROOT, digest, write_json
 from w8.fixtures import REFERENCE_SCRIPTS
 from w8.harness import MUTATIONS, replay_case, run_case
+from w8.agent import producer as w7_agent_producer
 
 TASK_FILE = ROOT / "tasks/tasks_w8.json"
 
@@ -75,7 +76,10 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     record = commands.add_parser("record", help="Run handwritten reference scripts")
     record.add_argument("--tasks", nargs="+", help="Default: all 40 W8 tasks")
-    record.add_argument("--locator", choices=("css", "xpath"), default="css")
+    record.add_argument("--agent", choices=("b0", "w7"), default="b0",
+                        help="b0 handwritten reference scripts; w7 semantic Agent")
+    record.add_argument("--locator", choices=("css", "xpath"), default="css",
+                        help="B0 locator strategy (ignored by --agent w7)")
     record.add_argument("--mutation", choices=MUTATIONS, default="M0")
     record.add_argument("--seed", type=int, default=0, help="DOM mutation seed, independent of seed_v1")
     replay = commands.add_parser("replay", help="Replay one successful W8 trace")
@@ -109,7 +113,8 @@ def main():
     if original is not None:
         metadata["input_trace_sha256_lf"] = digest(args.trace)
     else:
-        metadata.update(mutation=args.mutation, mutation_seed=args.seed, locator=args.locator)
+        metadata.update(mutation=args.mutation, mutation_seed=args.seed,
+                        agent=args.agent, locator=args.locator if args.agent == "b0" else None)
     rows = []
     try:
         with isolated_app(args.output) as base, sync_playwright() as pw, pw.chromium.launch() as browser:
@@ -117,8 +122,14 @@ def main():
             for task_id in selection:
                 task = tasks[task_id]
                 if original is None:
-                    trace = run_case(browser, base, task, args.output, reference_producer(args.locator),
-                                     agent=f"b0-{args.locator}", mutation=args.mutation, mutation_seed=args.seed)
+                    if args.agent == "w7":
+                        task_producer = w7_agent_producer
+                        agent_name = "w7-semantic-llm"
+                    else:
+                        task_producer = reference_producer(args.locator)
+                        agent_name = f"b0-{args.locator}"
+                    trace = run_case(browser, base, task, args.output, task_producer,
+                                     agent=agent_name, mutation=args.mutation, mutation_seed=args.seed)
                 else:
                     trace = replay_case(browser, base, task, args.output, original)
                 rows.append(row_from_trace(task, trace))
