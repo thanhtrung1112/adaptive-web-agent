@@ -62,3 +62,26 @@ def test_check_found_detects_wrong_business_context_and_accepts_target():
 def test_check_found_threshold_validation():
     with pytest.raises(ValueError):
         check_found({}, {}, "", threshold=1.5)
+
+
+@pytest.mark.parametrize(("href", "rejected"), [
+    ("/customers/2/edit?mutation=W5_ID&seed=17&next=detail", False),
+    ("/customers/3/edit?next=detail", True),
+    ("/customers/2/edit?next=orders", True),
+    ("https://outside.example/customers/2/edit?next=detail", True),
+])
+def test_recorded_customer_link_uses_record_identity(href, rejected):
+    descriptor = {"tag": "a", "text": "Sửa", "href": "/customers/2/edit?next=detail"}
+    candidate = {"tag": "a", "text": "Sửa", "href": href}
+    assert check_found(descriptor, candidate, page_url="http://localhost/customers/2")["likely_wrong"] is rejected
+
+
+def test_save_button_must_submit_the_recorded_form():
+    descriptor = {"tag": "button", "text": "Lưu", "type": "submit", "ord_n": 1, "form": "/customers/2/edit"}
+    page_url = "http://localhost/customers/2/edit"
+    found = check_found(descriptor, {**descriptor, "form": "/customers/2/edit?seed=17"}, page_url=page_url)
+    assert found["reason"] == "unique_submit_in_recorded_form"
+    wrong = check_found(descriptor, {**descriptor, "form": "/customers/3/edit"}, page_url=page_url)
+    assert wrong["likely_wrong"] is True
+    ambiguous = check_found(descriptor, {**descriptor, "ord_n": 2}, page_url=page_url)
+    assert ambiguous["likely_wrong"] is True

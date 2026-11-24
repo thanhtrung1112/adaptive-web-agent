@@ -2,8 +2,23 @@
 """Detect likely wrong-target matches from observed semantic context."""
 import re
 import unicodedata
+from urllib.parse import urljoin, urlsplit
+
+from w7.contracts import without_mutation_context
 
 DEFAULT_THRESHOLD = 0.20
+
+
+def check_link_destination(page_url, recorded_href, candidate_href):
+    """Match a read-only link whose destination is part of the recorded task contract."""
+    source = urlsplit(page_url)
+    recorded = urlsplit(urljoin(page_url, recorded_href))
+    candidate = urlsplit(urljoin(page_url, candidate_href))
+    matches = bool(recorded_href and candidate_href and source.scheme in ("http", "https")
+                   and (source.scheme, source.netloc) == (recorded.scheme, recorded.netloc)
+                   and recorded == candidate)
+    return {"likely_wrong": not matches,
+            "reason": "same_recorded_destination" if matches else "different_recorded_destination"}
 
 
 def _terms(value):
@@ -18,7 +33,7 @@ def _terms(value):
     }
 
 
-def check_found(descriptor, candidate, objective="", threshold=DEFAULT_THRESHOLD):
+def check_found(descriptor, candidate, objective="", threshold=DEFAULT_THRESHOLD, *, page_url=None):
     """Return diagnostics; low objective/context overlap means wrong target is plausible."""
     if not isinstance(descriptor, dict) or not isinstance(candidate, dict):
         raise TypeError("descriptor and candidate must be dictionaries")
@@ -26,7 +41,25 @@ def check_found(descriptor, candidate, objective="", threshold=DEFAULT_THRESHOLD
     if not 0 <= threshold <= 1:
         raise ValueError("threshold must be between 0 and 1")
 
-    goal = _terms(objective)
+    tag = descriptor.get("tag")
+    link = tag == "a" and bool(descriptor.get("href"))
+    destination_key = "href" if link else "form"
+    if page_url and descriptor.get(destination_key):
+        observed = candidate.get(destination_key, "") if candidate.get("tag") == tag else ""
+        # Preserve the record path, business query and fragment when ignoring mutation transport.
+        try:
+            result = check_link_destination(without_mutation_context(page_url),
+                                            without_mutation_context(descriptor[destination_key]),
+                                            without_mutation_context(observed))
+        except ValueError:
+            result = {"likely_wrong": True, "reason": "invalid_destination"}
+        if link or result["likely_wrong"]:
+            return {"found": True, "score": float(not result["likely_wrong"]), "threshold": threshold, **result}
+        if (descriptor.get("type") == candidate.get("type") == "submit"
+                and descriptor.get("ord_n") == candidate.get("ord_n") == 1):
+            return {"found": True, "score": 1.0, "threshold": threshold,
+                    "likely_wrong": False, "reason": "unique_submit_in_recorded_form"}
+
 
     observed = _terms(" ".join(
         str(candidate.get(k, ""))

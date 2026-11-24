@@ -13,6 +13,12 @@ DECISION_SCHEMA = {
 FEATURES = ("tag", "id", "name", "type", "text", "label", "placeholder", "href", "form", "path", "options", "ord", "ord_n", "context_text")
 
 
+def without_mutation_context(value):
+    url = urlsplit(value)
+    return urlunsplit(url._replace(query=urlencode([(key, val) for key, val in parse_qsl(url.query, keep_blank_values=True)
+                                                     if key not in ("mutation", "seed")])))
+
+
 def safe_features(control):
     result = {}
     for key in FEATURES:
@@ -20,9 +26,7 @@ def safe_features(control):
             continue
         value = control[key]
         if key in ("form", "href"):
-            url = urlsplit(value)
-            value = urlunsplit(url._replace(query=urlencode([(k, v) for k, v in parse_qsl(url.query)
-                                                             if k not in ("mutation", "seed")])))
+            value = without_mutation_context(value)
         if isinstance(value, str):
             value = value[:1000]
         elif isinstance(value, list):
