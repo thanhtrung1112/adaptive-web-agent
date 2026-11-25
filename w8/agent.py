@@ -13,11 +13,11 @@ from llm.fallback import resolve as resolve_fallback
 from planner.core import make_request
 from w6.run_heal import POLICY
 from w7.context import runtime_candidates
-from w7.contracts import compatible, make_request as make_fallback_request, validate_decision
+from w7.contracts import compatible, make_request as make_fallback_request, validate_decision, without_mutation_context
 from w7.plan import plan_with_client
 from w7.planner_adapter import bind_step, step_descriptor
 from w7.run_agent import validate_replacement
-from w7.target_check import check_found, DEFAULT_THRESHOLD
+from w7.target_check import check_found, check_link_destination, DEFAULT_THRESHOLD
 
 
 def _resolve_target(page, base, step, client, trace_index):
@@ -37,50 +37,21 @@ def _resolve_target(page, base, step, client, trace_index):
         and (not descriptor["tag"] or candidate["tag"] == descriptor["tag"])
     ]
 
-    if control == "search_submit":
+    if control in ("search_submit", "save_phone"):
+        path = urlsplit(page.url).path
+        pattern = r"/customers" if control == "search_submit" else r"/customers/\d+/edit"
+        if not re.fullmatch(pattern, path):
+            raise ValueError(f"Unexpected customer form page for {control}")
+        descriptor.update(type="submit", form=path, ord_n=1)
         candidates = [
             candidate for candidate in candidates
-            if candidate.get("tag") == "button"
-            and candidate.get("id") == "search-customers"
-            and " ".join(
-                str(candidate.get("text", "")).casefold().split()
-            ) == "t\u00ecm"
+            if candidate["type"] == "submit"
+            and not check_link_destination(
+                page.url, path, without_mutation_context(candidate["form"]),
+            )["likely_wrong"]
         ]
-
         if len(candidates) != 1:
-            raise ValueError(
-                "Customer search must identify exactly one search button"
-            )
-
-        descriptor.update({
-            "tag": "button",
-            "id": "search-customers",
-            "text": "T\u00ecm",
-            "label": "T\u00ecm",
-        })
-
-    elif control == "save_phone":
-        candidates = [
-            candidate for candidate in candidates
-            if candidate.get("tag") == "button"
-            and candidate.get("id") == "save-customer"
-            and " ".join(
-                str(candidate.get("text", "")).casefold().split()
-            ) == "l\u01b0u"
-        ]
-
-        if len(candidates) != 1:
-            raise ValueError(
-                "Customer edit must identify exactly one save button"
-            )
-
-        descriptor.update({
-            "tag": "button",
-            "id": "save-customer",
-            "text": "L\u01b0u",
-            "label": "L\u01b0u",
-        })
-
+            raise ValueError(f"Expected one submit button for customer form {path}")
     elif control == "customer_open":
         email = context["argument"].casefold()
         candidates = [
@@ -131,7 +102,7 @@ def _resolve_target(page, base, step, client, trace_index):
                 ),
             }
 
-        if exact and not descriptor["href"]:
+        if exact and not (descriptor["href"] or descriptor["form"]):
             matches = exact == {xpath}
             return {
                 "likely_wrong": not matches,
@@ -139,7 +110,7 @@ def _resolve_target(page, base, step, client, trace_index):
             }
 
         return check_found(
-            descriptor, candidate, step["target"], DEFAULT_THRESHOLD,
+            descriptor, candidate, step["target"], DEFAULT_THRESHOLD, page_url=page.url,
         )
 
     semantic = heal(
