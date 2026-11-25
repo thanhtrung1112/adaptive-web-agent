@@ -1,0 +1,172 @@
+{
+  "source_commit": "0a89494e7b9822104e245188317ed078932bb935",
+  "checks": [
+    {
+      "task_id": "T003",
+      "source": "b0-css",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "steps": 7,
+      "original_trace_sha256_lf": "f6dc77698cf5e52912d79709004425d914df1214fdb48b35855a162f7fb8f33d",
+      "replay_trace_sha256_lf": "36896513b0bea4cd818392950cb08a44f86f4c5b2a91d601d147257e4895dc3a",
+      "verification": {
+        "passed": true,
+        "message": "ok",
+        "api": {
+          "/api/customers?email=nguyen.dung@example.com": {
+            "count": 1,
+            "customers": [
+              {
+                "id": 2,
+                "name": "Nguyễn Văn Dũng",
+                "email": "nguyen.dung@example.com",
+                "phone": "0987654321"
+              }
+            ]
+          }
+        },
+        "csv_sha256_lf": null
+      },
+      "replay_matches": true
+    },
+    {
+      "task_id": "T006",
+      "source": "b0-css",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "steps": 5,
+      "original_trace_sha256_lf": "a5ee3323eafa4f30f42dcd6c3104926751d8be64ff35464b9d9564f44b2ed2d5",
+      "replay_trace_sha256_lf": "62dc6ae05320ee63c562ba14c013b90207f25ff07fc63dc33e35a6e114568f9d",
+      "verification": {
+        "passed": true,
+        "message": "ok",
+        "api": {
+          "/api/orders?from=2026-09-01&to=2026-09-15": {
+            "count": 3,
+            "orders": [
+              {
+                "id": "ORD-1002",
+                "customer_id": 2,
+                "status": "pending",
+                "customer_name": "Nguyễn Văn Dũng",
+                "customer_email": "nguyen.dung@example.com",
+                "items": [
+                  {
+                    "sku": "SKU-205",
+                    "qty": 1
+                  }
+                ]
+              },
+              {
+                "id": "ORD-1003",
+                "customer_id": 1,
+                "status": "shipped",
+                "customer_name": "Trần Hoa",
+                "customer_email": "tran.hoa@example.com",
+                "items": [
+                  {
+                    "sku": "SKU-100",
+                    "qty": 2
+                  }
+                ]
+              },
+              {
+                "id": "ORD-1004",
+                "customer_id": 2,
+                "status": "confirmed",
+                "customer_name": "Nguyễn Văn Dũng",
+                "customer_email": "nguyen.dung@example.com",
+                "items": [
+                  {
+                    "sku": "SKU-100",
+                    "qty": 1
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "csv_sha256_lf": "9fcfa7069f30bc331c45a67b76255789718171ede473dccfb8a2e577a416bbbd"
+      },
+      "replay_matches": true
+    },
+    {
+      "task_id": "T010",
+      "source": "b0-css",
+      "mutation": "M0",
+      "mutation_seed": 0,
+      "steps": 11,
+      "original_trace_sha256_lf": "65d0574a3e0c07518d2c6ba8160da0a78164300e67cf6d2e3cc774ef23c4cfd4",
+      "replay_trace_sha256_lf": "6f6c0949e4063cf18e1b9d03417728f77e3c417ee051aa8245f25b2e708db931",
+      "verification": {
+        "passed": true,
+        "message": "ok; ok",
+        "api": {
+          "/api/orders?customer_email=vo.tam@example.com": {
+            "count": 1,
+            "orders": [
+              {
+                "id": "ORD-1006",
+                "customer_id": 4,
+                "status": "pending",
+                "customer_name": "Võ Thanh Tâm",
+                "customer_email": "vo.tam@example.com",
+                "items": [
+                  {
+                    "sku": "SKU-100",
+                    "qty": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "/api/tickets?customer_email=vo.tam@example.com": {
+            "count": 1,
+            "tickets": [
+              {
+                "id": "TCK-2003",
+                "order_id": "ORD-1006",
+                "subject": "Hỏi thời gian giao",
+                "status": "open",
+                "assignee_id": null,
+                "note": "",
+                "customer_email": "vo.tam@example.com",
+                "assignee_name": null
+              }
+            ]
+          }
+        },
+        "csv_sha256_lf": null
+      },
+      "replay_matches": true
+    },
+    {
+      "task_id": "T003",
+      "source": "b0-xpath",
+      "mutation": "W5_ID",
+      "mutation_seed": 17,
+      "steps": 7,
+      "original_trace_sha256_lf": "4bd986b0f12c0879681fcd99a72f2ec124c027949ad4e85c9b2d7b2c88291683",
+      "replay_trace_sha256_lf": "af75e4a3eb05e65b0438719e9f2b895dcac90a549d7e65b5a33074d687ba7220",
+      "verification": {
+        "passed": true,
+        "message": "ok",
+        "api": {
+          "/api/customers?email=nguyen.dung@example.com": {
+            "count": 1,
+            "customers": [
+              {
+                "id": 2,
+                "name": "Nguyễn Văn Dũng",
+                "email": "nguyen.dung@example.com",
+                "phone": "0987654321"
+              }
+            ]
+          }
+        },
+        "csv_sha256_lf": null
+      },
+      "replay_matches": true
+    }
+  ]
+}

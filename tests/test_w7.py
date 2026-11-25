@@ -115,7 +115,7 @@ class BrowserInfrastructureTests(unittest.TestCase):
         out.mkdir()
         row = replay(self.browser, self.base, self.task, mutation, 0 if mutation == "M0" else 17,
                      agent, "css", out, self.descriptors, {}, resolver=resolver, client=client)
-        trace = json.loads(next((out / "traces").glob("*.json")).read_text())
+        trace = json.loads(next((out / "traces").glob("*.json")).read_text(encoding="utf-8"))
         return row, trace
 
     def test_b0_on_m0_does_not_invoke_healer(self):
